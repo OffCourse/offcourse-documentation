@@ -8,4 +8,4 @@ job: founder and developer
 linkedin: https://www.linkedin.com/in/yeehaa
 img: janhein.jpg
 ---
-Story about JH.
+Being an educator and a coder, whenever Jan Hein sees a problem, he builds the solution himself. Which is what he did.

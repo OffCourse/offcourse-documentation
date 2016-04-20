@@ -4,8 +4,6 @@ title: Offcourse
 date: 31-12-2015
 anchor: Home
 ---
-## Compose your learning
+There is an easy way to organize your own learning. One that is simple and fun. One that allows you to learn anything from anywhere with an internet connection.
 
-It's hard to structure and organize your own learning, especially when you're new to a topic. Do you have a hard time finding accurate and reliable sources on a topic you know little about? 
-
-Finding good content is difficult. We are building a future of learning that's distributed, free and open source. Offcourse_ is an online learning hub for collecting and sharing learning resources. It makes it simple and fun to start learning something new from anywhere with an internet connection.
+Get on your learning track with Offcourse_, an online learning hub that gives you the tools to collect and share valuable content in one place. It’s free. It’s open source. It’s easy to use. 

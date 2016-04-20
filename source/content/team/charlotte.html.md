@@ -8,4 +8,4 @@ job: researcher and editor
 linkedin: https://www.linkedin.com/in/cevoostrum
 img: charlotte.jpg
 ---
-Story about Charlotte.
+The devil’s (or the user’s) advocate. Charlotte keeps tabs on our your needs through relentless questions, tests and research.

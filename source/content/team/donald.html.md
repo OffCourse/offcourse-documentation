@@ -8,4 +8,4 @@ job: designer
 linkedin: https://nl.linkedin.com/in/donaldroos/nl
 img: donald.jpg
 ---
-Story about Charlotte.
+Typographer by day, storyteller by night. Donald builds the story of Offcourse_ character by character. 
