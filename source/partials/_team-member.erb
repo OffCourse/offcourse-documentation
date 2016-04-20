@@ -9,7 +9,7 @@
     <a class="team-member__a" href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
       <h3 class="team-member__name"><%= person.data.name %></h3>
     </a>
-    <p class="team-member__job"><%= person.data.job %></p>
+    <p class="team-member__job"><%= person.body %></p>
     <% end %>
     <% if extra_info > 1 %>
     <p>Links: <a class="team-member__a" href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
