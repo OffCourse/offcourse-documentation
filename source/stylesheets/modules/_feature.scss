@@ -1,38 +1,8 @@
 .feature {
   display: flex;
   width: 100%;
-  margin: 0 0 $gridUnit * 3 0;
 }
 
-.feature__meta {
-  width: 90%;
-}
-
-.feature__meta--fw {
-  width: 100%;
-}
-
-.feature__title {
-
-}
-
-a.feature__title:hover {
-  border-bottom: $gridUnit/2 solid $black;
-}
-
-.feature__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10%;
-  margin: 0 0 0 $gridUnit*3;
-
-  background: black;
-  color: $lightgray;
-  border: $gridUnit solid $black;
-  font-size: $gridUnit*3;
-}
-
-.feature--boxed {
-  padding: $gridUnit * 3 0;
+.feature-item {
+  padding-top: $gridUnit * 3;
 }

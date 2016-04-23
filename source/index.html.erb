@@ -4,14 +4,14 @@ layout: main
 ---
 
 <div class="layout__item-fw layout__item-fw-center">
-  <article class="layout__item layout__item--padding-t-xs layout__item--padding-b-xxs">
+  <article class="layout__item">
     <h1 class="textbar textbar--big textbar--margin-bottom">Offcourse_</h1>
     <div class="markdown"><%= blog('frontpage').articles[0].body %></div>
   </article>
 </div>
 
-<div id="<%= blog('frontpage').articles[1].data.anchor %>" class="layout__item layout__item--padding-t-l layout__item--padding-b-xl">
-  <div class="layout__item-fw layout__item--padding-b-xs">
+<div id="<%= blog('frontpage').articles[1].data.anchor %>" class="layout__item layout__item--padding-t-xxs">
+  <div class="layout__item-fw">
     <h1><%= blog('frontpage').articles[1].data.title %></h1>
   </div>
   <% for entity in blog('frontpage').articles[1].data.concepts %>
@@ -25,6 +25,6 @@ layout: main
   <% end %>
 </div>
 
-<div class="layout__item layout__item--padding-t-l layout__item--padding-b-xl">
+<div class="layout__item layout__item--padding-t-xxs">
   <h1><%= blog('frontpage').articles[2].data.title %></h1>
 </div>
