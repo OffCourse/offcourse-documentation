@@ -1,6 +1,0 @@
-<div class="layout__item-fw layout__item--padding-b-xxs">
-  <h3>Projects:</h3>
-</div>
-<% blog('projects').articles.each do |post| %>
-<%= partial(:"partials/feature", :locals => { :reference => post })  %>
-<% end %>
