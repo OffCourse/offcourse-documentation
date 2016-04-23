@@ -1,0 +1,15 @@
+---
+title: Offcourse
+layout: main
+---
+
+<div id="<%= blog('frontpage').articles[3].data.anchor %>" class="layout__item layout__item--padding-b-xs">
+  <%= partial("partials/navigation", :locals => { :which_is_link_active => 3 }) %>
+  <article class="layout__item-fw layout__item--padding-b-xs">
+    <h1 class="textbar"><%= blog('frontpage').articles[3].data.title %></h1>
+    <div class="markdown"><%= blog('frontpage').articles[3].body %></div>
+  </article>
+  <% blog('team').articles.reverse_each do |person| %>
+    <%= partial("partials/team-member", :locals => { :person => person, :extra_info => 0 }) %>
+  <% end %>
+</div>

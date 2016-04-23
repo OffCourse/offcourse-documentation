@@ -3,8 +3,6 @@ title: Offcourse
 layout: main
 ---
 
-<img id="<%= blog('frontpage').articles[0].data.anchor %>"class="layout__item-fw" src="./images/fw-links.svg" alt="">
-
 <div class="layout__item-fw layout__item-fw-center">
   <article class="layout__item layout__item--padding-t-xs layout__item--padding-b-xxs">
     <h1 class="textbar textbar--big textbar--margin-bottom">Offcourse_</h1>
@@ -12,8 +10,7 @@ layout: main
   </article>
 </div>
 
-<div id="<%= blog('frontpage').articles[1].data.anchor %>" class="layout__item layout__item--padding-b-xl">
-  <%= partial("partials/navigation", :locals => { :which_is_link_active => 1 }) %>
+<div id="<%= blog('frontpage').articles[1].data.anchor %>" class="layout__item layout__item--padding-t-l layout__item--padding-b-xl">
   <div class="layout__item-fw layout__item--padding-b-xs">
     <h1 class="textbar"><%= blog('frontpage').articles[1].data.title %></h1>
   </div>
@@ -26,37 +23,4 @@ layout: main
     </div>
   </div>
   <% end %>
-</div>
-
-<img class="layout__item-fw layout__item--padding-t-s layout__item--padding-b-s brand-tertiary " src="./images/fw-electronics.svg" alt="">
-
-<div id="<%= blog('frontpage').articles[2].data.anchor %>" class="layout__item layout__item--padding-b-xl">
-  <%= partial("partials/navigation", :locals => { :which_is_link_active => 2 }) %>
-  <article class="layout__item-fw layout__item--padding-b-xs">
-    <h1 class="textbar"><%= blog('frontpage').articles[2].data.title %></h1>
-    <div class="markdown"><%= blog('frontpage').articles[2].body %></div>
-  </article>
-</div>
-
-<img class="layout__item-fw layout__item--padding-t-s layout__item--padding-b-s layout__item--padding-lr-s brand-tertiary" src="./images/fw-people.svg" alt="">
-
-<div id="<%= blog('frontpage').articles[3].data.anchor %>" class="layout__item layout__item--padding-b-xs">
-  <%= partial("partials/navigation", :locals => { :which_is_link_active => 3 }) %>
-  <article class="layout__item-fw layout__item--padding-b-xs">
-    <h1 class="textbar"><%= blog('frontpage').articles[3].data.title %></h1>
-    <div class="markdown"><%= blog('frontpage').articles[3].body %></div>
-  </article>
-  <% blog('team').articles.reverse_each do |person| %>
-    <%= partial("partials/team-member", :locals => { :person => person, :extra_info => 0 }) %>
-  <% end %>
-</div>
-
-<div id="<%= blog('frontpage').articles[4].data.anchor %>" class="layout__item layout__item--padding-b-xl">
-  <%= partial("partials/navigation", :locals => { :which_is_link_active => 4 }) %>
-  <article class="layout__item-fw layout__item--padding-b-xs">
-    <h1 class="textbar"><%= blog('frontpage').articles[4].data.title %></h1>
-    <%= blog('frontpage').articles[4].body %>
-  </article>
-  <%= partial("partials/projects") %>
-  <%= partial("partials/publications", :locals => { :search_query => 0 }) %>
 </div>
