@@ -24,11 +24,11 @@ h1, h2, h3, h4 ,h5, h6 {
 }
 
 h1 {
-  font-size: $gridUnit * 3.5;
+  font-size: $gridUnit * 4;
 }
 
 h2 {
-  font-size: $gridUnit * 3.25;
+  font-size: $gridUnit * 3.5;
 }
 
 h3 {
@@ -38,6 +38,7 @@ h3 {
 h4 {
   font-size: $gridUnit * 2.5; 
 }
+
 h5 {
   font-size: $gridUnit * 2; 
 }

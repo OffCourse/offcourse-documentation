@@ -12,7 +12,7 @@ layout: main
 
 <div id="<%= blog('frontpage').articles[1].data.anchor %>" class="layout__item layout__item--padding-t-l layout__item--padding-b-xl">
   <div class="layout__item-fw layout__item--padding-b-xs">
-    <h1 class="textbar"><%= blog('frontpage').articles[1].data.title %></h1>
+    <h1><%= blog('frontpage').articles[1].data.title %></h1>
   </div>
   <% for entity in blog('frontpage').articles[1].data.concepts %>
   <div class="feature feature--boxed">
@@ -23,4 +23,8 @@ layout: main
     </div>
   </div>
   <% end %>
+</div>
+
+<div class="layout__item layout__item--padding-t-l layout__item--padding-b-xl">
+  <h1><%= blog('frontpage').articles[2].data.title %></h1>
 </div>
