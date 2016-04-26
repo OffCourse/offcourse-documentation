@@ -8,7 +8,7 @@
 
 (def colors        {:black       "#000000"
                     :white       "#FFFFFF"
-                    :dark-gray   "#3d3d3d"
+                    :dark-gray   "#3d3d3e"
                     :medium-gray "#e0e4e1"
                     :light-gray  "#f4f6f4"
                     :very-light-gray  "#f8f9f8"
