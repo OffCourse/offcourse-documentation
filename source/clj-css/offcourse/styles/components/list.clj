@@ -4,15 +4,9 @@
 
 (defn list-component [{:keys [templates borders colors fonts units]}]
 
-  [[v/list        (merge (:column-component templates))
-    [v/list--item (merge (:row-component templates)
-                       (:recycled-paper templates)
-                       (:title templates)
-                       {:margin-bottom   (:sixth units)
-                        :align-items     :center
-                        :font-size       (:subtitle-font units)
-                        :padding         (:half units)
-                        :height          (:one-and-half units)})]]
+  [[v/list        (merge (:column-component templates))]
+   [v/list--item  (:list-item templates)
+    [v/hovered (:selected templates)]]
 
    [v/edit-list
     [v/list--item (merge {:justify-content :space-between
@@ -31,4 +25,7 @@
    [v/todo-list
     [v/list--item {:justify-content :flex-start}
      [v/hovered (:selected templates)]
-     [v/selected (:highlighted templates)]]]])
+     [v/selected (:highlighted templates)
+      [v/checkbox-button
+       [v/selected {:background-color (:night colors)}]]]]]])
+
