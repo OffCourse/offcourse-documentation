@@ -9,7 +9,7 @@ active: team
       <h1> <%= blog('frontpage').articles[3].data.title %></h1>
       <%= blog('frontpage').articles[3].body %>
       <% blog('team').articles.reverse_each do |person| %>
-      <%= partial("partials/team-member", :locals => { :person => person, :extra_info => 0 }) %>
+      <%= partial("partials/team-member", :locals => { :person => person}) %>
       <% end %>
     </article>
   </div>

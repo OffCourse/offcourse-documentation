@@ -1,20 +1,11 @@
-<div class="team-member">
-  <img class="team-member__image" src="/images/people/<%= person.data.img %>" alt="">
-  <div class="team-member__meta">
-    <% if extra_info > 0 %>
-    <h3 class="team-member__name team-member__name--margin"><%= person.data.name %></h3>
-    <p class="team-member__job"><%= person.data.job %></p>
-    <p>Joined: <time><%= person.data.date %></time></p>
-    <% else %>
-    <a class="team-member__a" href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
-      <h3 class="team-member__name"><%= person.data.name %></h3>
+<div class="container">
+  <div>
+    <img src="/images/people/<%= person.data.img %>" alt="">
+  </div>
+  <div>
+    <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
+      <h2 class="title"><%= person.data.name %></h2>
     </a>
-    <p class="team-member__job"><%= person.body %></p>
-    <% end %>
-    <% if extra_info > 1 %>
-    <p>Links: <a class="team-member__a" href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
-      > LinkedIn <
-    </a></p>
-    <% end %>
+    <p><%= person.body %></p>
   </div>
 </div>
