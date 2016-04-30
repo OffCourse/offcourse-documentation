@@ -1,17 +1,11 @@
 ---
 title: Offcourse
 layout: main
-active: features
+active: signup
 ---
 <div class="main--section">
   <div class="viewer">
     <article class="viewer--content">
-      <h1><%= blog('frontpage').articles[1].data.title %></h1>
-      <% for entity in blog('frontpage').articles[1].data.concepts %>
-      <h2 class="title"><%= entity.concept %></h2>
-      <p><%= entity.summery %></p>
-      <p><%= entity.feature %></p>
-      <% end %>
       <h1><%= blog('frontpage').articles[2].data.title %></h1>
       <%= blog('frontpage').articles[2].body %>
       <div class="container">
@@ -20,3 +14,4 @@ active: features
     </article>
   </div>
 </div>
+

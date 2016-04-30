@@ -38,27 +38,7 @@
                       Learn about Offcourse_
                     </a>
                   </div>
-                  <div class="card--section">
-                    <ul data-list-type="todo" class="list">
-                      
-                      <li data-item-type="todo" class="list--item" data-selected="true">
-                        <a href="/#">
-                          <span>Features</span>
-                        </a>
-                      </li>
-                      <li data-item-type="todo" class="list--item">
-                        <a href="/team.html">
-                          <span>Team</span>
-                        </a>
-                      </li>
-                      <li data-item-type="todo" class="list--item">
-                        <a href="/signup.html">
-                          <span>Signup</span>
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </div>
+                  <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
                   <div class="card--section">
                     <div class="labels">
                       <span class="label"><a href="#">Learn!</a></span>

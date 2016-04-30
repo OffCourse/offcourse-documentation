@@ -1,5 +1,5 @@
 ---
-layout: team-member
+layout: post
 title: Offcouse - Team
 date: 01-06-2014
 name: Reika Egawa-Chavers

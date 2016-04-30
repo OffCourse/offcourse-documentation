@@ -1,5 +1,5 @@
 ---
-layout: team-member
+layout: post
 title: Offcouse - Team
 date: 01-09-2014
 name: Robert-Jan Korteschiel

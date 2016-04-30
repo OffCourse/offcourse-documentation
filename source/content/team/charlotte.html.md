@@ -1,5 +1,5 @@
 ---
-layout: team-member
+layout: post
 title: Offcouse - Team
 date: 01-03-2014
 name: Charlotte van Oostrum

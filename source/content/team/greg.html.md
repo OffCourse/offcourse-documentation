@@ -1,5 +1,5 @@
 ---
-layout: team-member
+layout: post
 title: Offcouse - Team
 date: 01-06-2015
 name: Greg Rodriguez Varias
