@@ -20,7 +20,7 @@ page '/*.txt', layout: false
 
 configure :development do
   # Reload the browser automatically whenever files change
-  ignore 'content/*'
+  ignore 'clj-css/*'
   activate :autoprefixer
   activate :livereload
 end
