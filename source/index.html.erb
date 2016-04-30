@@ -2,95 +2,20 @@
 title: Offcourse
 layout: main
 ---
-<div id="container">
-  <div class="layout">
-    <div class="layout--section">
-      <div class="menubar">
-        <div class="menubar--section">
-          <div class="logo">
-            <a href="/flags/featured">Offcourse_</a></div>
-          </div>
-        <div class="menubar--section">
-          <ul class="actions-panel">
-            <li data-button-type="textbar" class="button" data-reactid=".0.0.0.1.0.$sign-in">Sign In</li>
-          </ul>
-        </div>
+<div class="main--section">
+  <div class="viewer">
+    <article class="viewer--content">
+      <h1><%= blog('frontpage').articles[1].data.title %></h1>
+      <% for entity in blog('frontpage').articles[1].data.concepts %>
+      <h2 class="title"><%= entity.concept %></h2>
+      <p><%= entity.summery %></p>
+      <p><%= entity.feature %></p>
+      <% end %>
+      <h1><%= blog('frontpage').articles[2].data.title %></h1>
+      <%= blog('frontpage').articles[2].body %>
+      <div class="container">
+        <div class="button" data-button-type="textbar">Join</div>
       </div>
-    </div>
-    <div class="layout--section">
-      <div class="main">
-        <div class="main--section">
-          <div class="dashboard">
-            <div class="dashboard--main">
-              <div class="container">
-                <div class="card">
-                  <div class="card--section">
-                    <a href="/marijn/courses/get-more-street-cred" class="title">
-                      What is Offcourse_?
-                    </a>
-                  </div>
-                  <div class="card--section">
-                    <%= blog('frontpage').articles[0].body %>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="card">
-                  <div class="card--section">
-                    <a href="/marijn/courses/get-more-street-cred" class="title">
-                      Learn about Offcourse_
-                    </a>
-                  </div>
-                  <div class="card--section">
-                    <ul data-list-type="todo" class="list">
-                      <li data-item-type="todo" class="list--item">
-                        <a href="/marijn/courses/get-more-street-cred/checkpoints/talk-dirty-with-reika">
-                          <span>Home</span>
-                        </a>
-                      </li>
-                      <li data-item-type="todo" class="list--item" data-selected="true">
-                        <a href="/marijn/courses/get-more-street-cred/checkpoints/pair-with-greg">
-                          <span>Features</span>
-                        </a>
-                      </li>
-                      <li data-item-type="todo" class="list--item">
-                        <a href="/marijn/courses/get-more-street-cred/checkpoints/scheme-with-charlotte">
-                          <span>Signup</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="card--section">
-                    <div class="labels">
-                      <span class="label"><a href="/tags/dev-ops">Learn!</a></span>
-                      <span class="label"><a href="/tags/dev-ops">Get Credit!</a></span>
-                      <span class="label"><a href="/tags/dev-ops">Structure!</a></span>
-                      <span class="label"><a href="/tags/dev-ops">Curate!</a></span>
-                      <span class="label"><a href="/tags/dev-ops">Explore!</a></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main--section">
-          <div class="viewer">
-            <article class="viewer--content">
-              
-              <h1><%= blog('frontpage').articles[1].data.title %></h1>
-              <% for entity in blog('frontpage').articles[1].data.concepts %>
-              <h2><%= entity.concept %></h2>
-              <p><%= entity.summery %></p>
-              <p><%= entity.feature %></p>
-              <% end %>
-              <h1><%= blog('frontpage').articles[2].data.title %></h1>
-              <%= blog('frontpage').articles[2].body %>
-              <div class="btn">Join</div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
+    </article>
   </div>
 </div>

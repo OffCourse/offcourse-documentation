@@ -1,9 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   box-sizing: border-box;
 }
 
@@ -268,7 +265,7 @@ html, body, #container {
   margin: 0;
 }
 
-.list .list--item {
+.list--item {
   line-height: 2.25rem;
   font-family: NittiGroteskBold;
   height: 2.8125rem;
@@ -282,6 +279,11 @@ html, body, #container {
   background-color: #f4f6f4;
   display: flex;
   color: #000000;
+}
+
+.list--item:hover {
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .list[data-list-type="edit"] .list--item {
@@ -317,6 +319,106 @@ html, body, #container {
 .list[data-list-type="todo"] .list--item[data-selected="true"] {
   background-color: #F96220;
   color: #000000;
+}
+
+.list[data-list-type="todo"] .list--item[data-selected="true"] .button[data-button-type="checkbox"][data-selected="true"] {
+  background-color: #000000;
+}
+
+.sheets {
+  display: block;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  padding-top: 1.875rem;
+  flex: 1;
+  background-color: #f4f6f4;
+  padding-right: 1.875rem;
+}
+
+.sheet {
+  border-bottom: solid 0.3125rem #e0e4e1;
+  justify-content: center;
+  margin: 0;
+  align-items: flex-start;
+  padding: 0;
+  flex-direction: row;
+  background-color: #FFFFFF;
+  display: flex;
+  flex: 1;
+  color: #000000;
+}
+
+.sheet:hover {
+  border-color: #F96220;
+}
+
+.sheet .content {
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.sheet .content .title {
+  font-family: NittiGroteskBold;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  font-weight: 500;
+  padding: 0;
+  padding-bottom: 1.25rem;
+}
+
+.sheet--section {
+  display: flex;
+  flex-direction: column;
+  padding: 1.875rem;
+  margin: 0;
+  flex: 2;
+  justify-content: center;
+}
+
+.sheet--section:first-child {
+  flex: 0 0 26.25rem;
+}
+
+.sheet--section:first-child .list .list--item {
+  background-color: #FFFFFF;
+  padding-top: 0;
+  line-height: 1.25rem;
+  height: 100%;
+  padding-bottom: 0;
+  margin-bottom: 1.875rem;
+  font-size: 1.125rem;
+  font-family: NittiGrotesk;
+}
+
+.sheet--section:first-child .list .list--item:hover {
+  color: #F96220;
+}
+
+.sheet--section:first-child .list .list--item:first-child {
+  line-height: 2.25rem;
+  font-family: NittiGroteskBold;
+  height: 2.8125rem;
+  margin: 0;
+  align-items: center;
+  padding: 0.9375rem;
+  flex-direction: row;
+  margin-bottom: 1.875rem;
+  font-weight: 500;
+  font-size: 1.375rem;
+  background-color: #f4f6f4;
+  display: flex;
+  color: #000000;
+}
+
+.sheet--section:first-child .list .list--item:first-child:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.sheet--section:nth-child(2n) {
+  padding-left: 0;
 }
 
 .form {

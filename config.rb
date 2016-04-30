@@ -20,6 +20,7 @@ page '/*.txt', layout: false
 
 configure :development do
   # Reload the browser automatically whenever files change
+  ignore 'clj-css/*'
   activate :autoprefixer
   activate :livereload
 end
@@ -39,6 +40,7 @@ end
 configure :build do
   # Minify CSS on build
   # activate :minify_css
+  ignore 'clj-css/*'
   activate :autoprefixer
 
   # Minify Javascript on build
