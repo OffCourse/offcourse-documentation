@@ -2,7 +2,7 @@ language: ruby
 cache: 
   bundler: true
 rvm:
-  - 2.2.0
+  - 2.2.4
 install: 
 - bundle install --path vendor/bundle
 script:
