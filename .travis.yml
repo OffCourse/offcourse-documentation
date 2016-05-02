@@ -1,10 +1,15 @@
-language: ruby
+language: 
+- ruby
+- clojure
 cache: 
   bundler: true
 rvm:
-  - 2.3.0
+- 2.3.0
+jdk:
+- oraclejdk8
 install: 
 - bundle install --path vendor/bundle
+- wget -O boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
 script:
 - bundle exec middleman build
 deploy:
