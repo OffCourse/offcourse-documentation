@@ -8,7 +8,7 @@
 
 (deftask css []
   (set-env! 
-    :source-paths #(conj % "source-css"))
+    :source-paths #(conj % "source-cljcss/"))
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :vendors ["webkit" "moz"]
                          :auto-prefix #{:user-select :column-count :column-gap}
@@ -20,6 +20,7 @@
         (target)))
 
 (deftask dev []
-  (println "Task dev")
+  (println "External pipeline: Boot \n\n")
+  (println "Task: Development (dev)")
   (comp (watch)
-       (css)))
+        (css)))

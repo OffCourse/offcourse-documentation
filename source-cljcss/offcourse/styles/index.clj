@@ -1,4 +1,4 @@
-; index something else else
+;  Add comment something else
 
 (ns offcourse.styles.index
   (:require [garden.def :refer [defstyles]]
