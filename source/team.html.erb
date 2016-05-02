@@ -4,14 +4,27 @@ layout: main
 active: team
 ---
 <div class="main--section">
-  <div class="viewer">
-    <article class="viewer--content">
-      <h1> <%= blog('frontpage').articles[3].data.title %></h1>
-      <%= blog('frontpage').articles[3].body %>
-      <% blog('team').articles.reverse_each do |person| %>
-      <%= partial("partials/team-member", :locals => { :person => person}) %>
-      <% end %>
-    </article>
+  <div class="sheets">
+    <% blog('team').articles.reverse_each do |person| %>
+    <div class="container">
+      <div class="sheet">
+        <div class="sheet--section">
+          <div class="list">
+            <img src="/images/people/<%= person.data.img %>" alt="" height="200px">
+          </div>
+          <div>
+        </div>
+        </div>
+        <div class="sheet--section">
+          <article class="content">
+            <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
+              <h1 class="title"><%= person.data.name %></h1>
+            </a>
+            <p><%= person.body %></p>
+          </article>
+        </div>
+      </div>
+    </div>
+  <% end %>
   </div>
 </div>
-

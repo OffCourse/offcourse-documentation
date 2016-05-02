@@ -4,19 +4,26 @@ layout: main
 active: features
 ---
 <div class="main--section">
-  <div class="viewer">
-    <article class="viewer--content">
-      <h1><%= blog('frontpage').articles[1].data.title %></h1>
-      <% for entity in blog('frontpage').articles[1].data.concepts %>
-      <h2 class="title"><%= entity.concept %></h2>
-      <p><%= entity.summery %></p>
-      <p><%= entity.feature %></p>
-      <% end %>
-      <h1><%= blog('frontpage').articles[2].data.title %></h1>
-      <%= blog('frontpage').articles[2].body %>
-      <div class="container">
-        <a href="/signup.html"><div class="button" data-button-type="textbar">Join</div></a>
+  <div class="sheets">
+  <% for entity in blog('frontpage').articles[1].data.concepts %>
+    <div class="container">
+      <div class="sheet">
+        <div class="sheet--section">
+          <div class="list">
+            <img src="images/people/donald.jpg" height="200px" width="auto" alt="">
+          </div>
+          <div>
+        </div>
+        </div>
+        <a href="/reika/courses/make-devops-your-thing/checkpoints/tame-the-command-line" class="sheet--section">
+          <article class="content">
+            <h1 class="title"><%= entity.concept %></h1>
+            <p><%= entity.summery %></p>
+          </article>
+        </a>
       </div>
-    </article>
+    </div>
+  <% end %>
   </div>
 </div>
+
