@@ -1,3 +1,5 @@
+ruby '2.3'
+
 # If you do not have OpenSSL installed, change
 # the following line to use 'http://'
 source 'https://rubygems.org'
@@ -9,7 +11,7 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '= 4.0.0'
+gem 'middleman', '>= 4.1.7'
 gem "middleman-blog"
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
