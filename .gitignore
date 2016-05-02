@@ -9,6 +9,7 @@
 
 # Ignore the build directory
 /build
+/.build-boot
 
 # Ignore cache
 /.sass-cache

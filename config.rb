@@ -21,6 +21,7 @@ page '/*.txt', layout: false
 configure :development do
   # Reload the browser automatically whenever files change
   ignore 'clj-css/*'
+  ignore '.build-boot/*'
   activate :autoprefixer
   activate :livereload
 end
@@ -41,6 +42,7 @@ configure :build do
   # Minify CSS on build
   # activate :minify_css
   ignore 'clj-css/*'
+  ignore '.build-boot/*'
   activate :autoprefixer
 
   # Minify Javascript on build
@@ -73,3 +75,11 @@ activate :blog do |blog|
   blog.sources = "content/team/{title}.html"
   blog.permalink = "team/{title}.html"
 end
+
+# Integrate Clojure Garden CSS Transpilation
+
+activate :external_pipeline,
+  name: :garden,
+  command: "boot css",
+  source: ".build-boot",
+  latency: 2

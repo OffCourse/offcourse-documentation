@@ -12,9 +12,9 @@
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :vendors ["webkit" "moz"]
                          :auto-prefix #{:user-select :column-count :column-gap}
-                         :output-to    "main.css.scss"
+                         :output-to    "main.css"
                          :pretty-print true}
-                 target {:dir #{"source/stylesheets/"}})
+                 target {:dir #{".build-boot/stylesheets/"}})
   (comp (watch)
         (garden)
         (target)))
