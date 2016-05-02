@@ -15,6 +15,9 @@
                          :output-to    "main.css"
                          :pretty-print true}
                  target {:dir #{".build-boot/stylesheets/"}})
-  (comp (watch)
-        (garden)
+  (comp (garden)
         (target)))
+
+(deftask dev []
+  comp (watch)
+       (css))
