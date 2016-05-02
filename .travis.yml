@@ -13,7 +13,7 @@ install:
 - chmod 755 boot
 - ./boot -V
 script:
-- bundle exec middleman build
+- bundle exec middleman build_travis
 deploy:
   provider: script
   script: sh deploy.sh

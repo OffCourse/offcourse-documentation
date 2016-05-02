@@ -41,6 +41,18 @@ configure :build do
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
+    command: "boot css",
+    source: ".build-boot",
+    latency: 2
+
+end
+
+# Travis-specific configuration
+configure :build_travis do
+
+  # Integrate Clojure Garden CSS Transpilation
+  activate :external_pipeline,
+    name: :garden,
     command: "./boot css",
     source: ".build-boot",
     latency: 2
