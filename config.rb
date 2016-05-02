@@ -80,6 +80,6 @@ end
 
 activate :external_pipeline,
   name: :garden,
-  command: "boot -V && boot css",
+  command: "boot css",
   source: ".build-boot",
   latency: 2
