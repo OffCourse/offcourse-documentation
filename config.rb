@@ -4,10 +4,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# Ignore dirs
-ignore 'clj-css/*'
-ignore '.build-boot/*'
-
 # Activate blog gems
 activate :blog do |blog|
   blog.name = "frontpage"

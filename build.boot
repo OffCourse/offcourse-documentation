@@ -8,16 +8,18 @@
 
 (deftask css []
   (set-env! 
-    :source-paths #(conj % "source/clj-css"))
+    :source-paths #(conj % "source-css"))
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :vendors ["webkit" "moz"]
                          :auto-prefix #{:user-select :column-count :column-gap}
                          :output-to    "main.css"
                          :pretty-print true}
                  target {:dir #{".build-boot/stylesheets/"}})
+  (println "Task: CSS")
   (comp (garden)
         (target)))
 
 (deftask dev []
-  comp (watch)
-       (css))
+  (println "Task dev")
+  (comp (watch)
+       (css)))
