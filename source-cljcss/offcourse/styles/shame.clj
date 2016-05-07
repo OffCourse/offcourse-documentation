@@ -6,10 +6,11 @@
              [arithmetic :refer [/ + *]]
              [selectors :as s]]))
 
-; Shame file to style the mailchimp form - o horror - with ID's
-; Nice exercise to get a feel for this garden CSS
+; Shame file to style the mailchimp form
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
   [[:#mce-EMAIL-LABEL (merge (:title templates))]
+   [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
+                                 {:padding-top (:half units)})]
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:width "100%"
                         :margin [[(:half units) 0 (:half units) 0]]
@@ -17,8 +18,6 @@
                         :background (:medium colors)}]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:background (:primary colors)})]]
-   [:#mce-success-response (merge (:title templates)
-                                  {:background (:primary colors)})]
+   [:#mce-success-response (merge (:subtitle templates)
+                                  {:padding-bottom (:half units)})]
    [:.filtered-image {:filter "grayscale(100%)"}]])
-
-; Not sure what I think of transpiling CSS like this. It feels like you're sacrificing readability for composition. 
