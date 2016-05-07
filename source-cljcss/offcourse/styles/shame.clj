@@ -7,4 +7,7 @@
              [selectors :as s]]))
 
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
-  [:#mce-EMAIL {:background :purple}])
+  [[:#mce-EMAIL {:background :red
+                 :width (* (:full units) 10)}]
+   [:#mce-EMAIL-LABEL {:background :red
+                       :subtitle fonts}]])
