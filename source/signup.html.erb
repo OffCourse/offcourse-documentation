@@ -8,8 +8,8 @@ active: signup
     <article class="viewer--content">
       <h1><%= blog('frontpage').articles[2].data.title %></h1>
       <%= blog('frontpage').articles[2].body %>
-      <div class="container">
-        <div class="button" data-button-type="textbar">Join</div>
+      <div class=container>
+         <%= partial("partials/signup-mailchimp") %>
       </div>
     </article>
   </div>
