@@ -20,4 +20,5 @@
                                                     {:background (:primary colors)})]]
    [:#mce-success-response (merge (:subtitle templates)
                                   {:padding-bottom (:half units)})]
-   [:.filtered-image {:filter "grayscale(100%)"}]])
+   [:.team--image {:width "100%"
+                  :filter "grayscale(100%)"}]])

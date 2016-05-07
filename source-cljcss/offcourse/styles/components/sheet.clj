@@ -1,6 +1,6 @@
 (ns offcourse.styles.components.sheet
   (:refer-clojure :exclude [rem + - * /])
-  (:require [garden.arithmetic :refer [*]]
+  (:require [garden.arithmetic :refer [* /]]
             [garden.units :as u :refer [percent px rem]]
             [offcourse.styles.vocabulary :as v]))
 
@@ -28,7 +28,7 @@
                             {:flex 2
                              :padding (:full units)
                              :justify-content :center})
-    [v/first {:flex [[0 0 (:column units)]]}
+    [v/first {:flex [[0 0 (/ (:column units) 2)]]}
      [v/list
       [v/list--item {:background-color (:day colors)
                      :padding-top 0
