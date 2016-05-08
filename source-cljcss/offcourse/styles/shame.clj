@@ -6,7 +6,7 @@
              [arithmetic :refer [/ + *]]
              [selectors :as s]]))
 
-; Shame file to style the mailchimp form
+; Shame file to style the mailchimp form and images
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
   [[:#mce-EMAIL-LABEL (merge (:title templates))]
    [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
@@ -17,7 +17,8 @@
                         :padding [[(:half units)]]
                         :background (:medium colors)}]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
-                                                    {:background (:primary colors)})]]
+                                                    {:color (:night colors)
+                                                     :background (:primary colors)})]]
    [:#mce-success-response (merge (:subtitle templates)
                                   {:padding-bottom (:half units)})]
    [:.team--image :.feature--image {:width "100%"

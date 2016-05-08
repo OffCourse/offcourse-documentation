@@ -5,6 +5,18 @@ active: features
 ---
 <div class="main--section">
   <div class="sheets">
+
+    <div class="container">
+      <div class="sheet">
+        <a href="/reika/courses/make-devops-your-thing/checkpoints/tame-the-command-line" class="sheet--section sheet--section--without">
+          <article class="content">
+            <h1 class="title"><%= blog('frontpage').articles[0].data.title %></h1>
+            <p><%= blog('frontpage').articles[0].body %></p>
+          </article>
+        </a>
+      </div>
+    </div>
+
   <% for entity in blog('frontpage').articles[1].data.concepts %>
     <div class="container">
       <div class="sheet">

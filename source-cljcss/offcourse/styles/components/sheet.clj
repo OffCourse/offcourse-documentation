@@ -42,5 +42,8 @@
        [v/first (merge (:list-item templates)
                        {:margin-bottom (:full units)})
         [v/hovered (:selected templates)]]]]]
-    [v/second {:padding-left 0}]]])
+    [v/second {:padding-left 0}]]
+  [v/sheet--section--without
+    [v/first {:flex :unset}]]])
+
 

@@ -18,6 +18,7 @@
 (s/defclass sheets)
 (s/defclass sheet)
 (s/defclass sheet--section)
+(s/defclass sheet--section--without)
 
 (s/defclass strips)
 (s/defclass strip)
