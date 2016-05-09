@@ -12,17 +12,13 @@ active: team
           <div class="list">
             <img src="/images/people/<%= person.data.img %>" class="team--image">
           </div>
-          <div>
         </div>
-        </div>
-        <div class="sheet--section">
+        <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="sheet--section">
           <article class="content">
-            <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
-              <h1 class="title"><%= person.data.name %></h1>
-            </a>
+            <h1 class="title"><%= person.data.name %></h1>
             <p><%= person.body %></p>
           </article>
-        </div>
+        </a>
       </div>
     </div>
   <% end %>

@@ -22,4 +22,9 @@
    [:#mce-success-response (merge (:subtitle templates)
                                   {:padding-bottom (:half units)})]
    [:.team--image :.feature--image {:width "100%"
-                                   :filter "grayscale(100%)"}]])
+                                   :filter "grayscale(100%)"}]
+   (let [{:keys [min-width max-width percent]} (first breakpoints)]
+     (at-media {:min-width min-width :max-width max-width}
+               [:.main {:flex-direction :column}]
+               [:.dashboard {:width "100%"}]
+               [:.sheets {:padding (:full units)}]))])

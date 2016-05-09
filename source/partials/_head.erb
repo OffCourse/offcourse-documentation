@@ -30,22 +30,6 @@
     <meta name="theme-color" content="#ffffff">
     <!-- end favicons -->
 
-    <!-- inline SVG filter -->
-    <svg style="display: none" class="filter-for-images">
-      <filter id="yellow-filter" color-interpolation-filters="sRGB"
-              x="0" y="0" height="100%" width="100%">
-        <feColorMatrix type="matrix"
-          values="0.8980392156862745 0 0 0  0 
-                  0.8117647058823529 0 0 0  0  
-                  0.2235294117647059 0 0 0  0 
-                    0  0 0 1  0" />
-      </filter>
-      <filter id="sharpen">
-        <feConvolveMatrix order="3 3" preserveAlpha="true" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0"/>
-      </filter>
-    </svg>
-    <!-- end filter -->
-
     <title><%= current_page.data.title || "Offcourse" %></title>
 
     <%= stylesheet_link_tag :main %>
