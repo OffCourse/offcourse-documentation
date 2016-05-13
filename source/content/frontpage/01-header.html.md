@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Offcourse
+title: Structure Your Learning
 date: 31-12-2015
 anchor: Home
 ---
