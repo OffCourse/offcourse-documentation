@@ -6,13 +6,11 @@
   [[v/layout        (merge (:column-component templates)
                            (:paper templates)
                            {:flex 1
-                            :height           (vh 100)
+                            :height           (vh 300)
                             :align-content    :stretch
                             :overflow         :hidden})
     [v/layout--section (merge (:row-component templates)
-                              {:flex 1})
-     [v/first {:background-color (:primary colors)
-               :flex [[0 0 (:three units)]]}]]]
+                              {:flex 1})]]
 
    [v/main (merge (:row-component templates)
                   (:recycled-paper templates)

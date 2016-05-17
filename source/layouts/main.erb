@@ -1,29 +1,7 @@
 <%= partial "partials/head" %>
 <div id="container">
   <div class="layout">
-    <div class="layout--section">
-      <div class="menubar">
-        <div class="menubar--section">
-          <div class="logo">
-            <a href="/#">Offcourse_</a></div>
-          </div>
-        <div class="menubar--section">
-          <ul class="actions-panel">
-            <a href="http://offcourse-staging.s3-website-us-west-2.amazonaws.com/flags/featured">
-              <li data-button-type="textbar" class="button">Preview</li>
-            </a>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="layout--section">
-      <div class="main">
-        <div class="main--section">
-          <div class="dashboard">
-            <div class="dashboard--main">
-              <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
-              <%= partial("partials/card-form") %>
-            </div>
-          </div>
-        </div>
-        <%= yield %>
+    <%= yield %>
+  </div>
+</div>
+<%= partial "partials/footer" %>
