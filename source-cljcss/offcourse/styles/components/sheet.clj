@@ -7,11 +7,10 @@
 (defn sheet [{:keys [templates borders colors fonts units]}]
 
   [[v/sheets (merge (:column-component templates)
-                   {:padding-top (:full units)
+                   {:padding (:full units)
                     :display :block
                     :flex             1
-                    :background-color (:light colors)
-                    :padding-right    (:full units)})]
+                    :background-color (:light colors)})]
 
    [v/sheet (merge (:row-component templates)
                    (:sheet templates)

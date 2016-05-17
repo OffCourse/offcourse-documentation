@@ -9,6 +9,11 @@
 (s/defclass main)
 (s/defclass main--section)
 
+;; HEADER
+(s/defclass header)
+(s/defclass header--list)
+(s/defclass header--textbar)
+
 ;; ELEMENTS
 (s/defclass list)
 (def todo-list (list (s/attr :data-list-type := :todo)))

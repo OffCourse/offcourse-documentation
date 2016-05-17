@@ -31,6 +31,8 @@
    :base-line-height     (fnk [atom] (* atom 20))
    :title-font           (fnk [atom] (* atom 32))
    :title-line-height    (fnk [atom] (* atom 36))
+   :header-font          (fnk [atom] (* atom 64))
+   :header-line-height   (fnk [atom] (* atom 72))
    :half                 (fnk [full] (/ full 2))
    :third                (fnk [full] (/ full 3))
    :sixth                (fnk [full] (/ full 6))
