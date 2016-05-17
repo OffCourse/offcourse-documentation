@@ -10,10 +10,10 @@
                       :flex 1
                       :height (vh 100)
                       :padding (:full units)})]
-   [v/header--list (merge {})]
+   [v/header--list (merge (:column-component templates)
+                          {:align-items :flex-start})]
    [v/header--textbar (merge (:textbar templates)
-                             {:display :inline-flex
-                              :font-size (:header-font units)
+                             {:font-size (:header-font units)
                               :line-height (:header-line-height units)
                               :margin-right (:sixth units)
                               :margin-bottom (:third units)})]])
