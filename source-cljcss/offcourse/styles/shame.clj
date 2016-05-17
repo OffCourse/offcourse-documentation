@@ -8,14 +8,16 @@
 
 ; Shame file, but somehow interesting to seperate changes from the base code
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
-  [[:#mce-EMAIL-LABEL (merge (:title templates))]
+  [[:#mc_embed_signup (merge (:row-component templates)
+                             {:width (px 400)})]
+   [:#mce-EMAIL-LABEL (merge (:title templates))]
    [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
                                  {:padding-top (:half units)})]
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:width "100%"
                         :margin [[(:half units) 0 (:half units) 0]]
                         :padding [[(:half units)]]
-                        :background (:medium colors)}]
+                        :background (:light colors)}]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:color (str (:night colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]

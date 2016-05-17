@@ -14,6 +14,10 @@
 (s/defclass header--list)
 (s/defclass header--textbar)
 
+;; PREVIEWBAR
+(s/defclass previewbar)
+(s/defclass previewbar--button)
+
 ;; ELEMENTS
 (s/defclass list)
 (def todo-list (list (s/attr :data-list-type := :todo)))

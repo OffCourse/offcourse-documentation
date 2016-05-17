@@ -54,6 +54,8 @@
 
    :recycled-paper   (fnk [colors] {:background-color (:light colors)
                                     :color            (:night colors)})
+   :smudged-paper   (fnk [colors] {:background-color  (:medium colors)
+                                    :color            (:night colors)})
    :tiny-font        (fnk [units fonts] {:font-size   (:tag-font units)
                                          :font-family (:base fonts)
                                          :font-weight 300})
