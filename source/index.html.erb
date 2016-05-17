@@ -41,7 +41,7 @@ layout: main
     <div class="main--section">
       <div class="cards">
       <% for concept in blog('frontpage').articles[1].data.concepts %>
-        <%= partial("partials/card", :locals => { :concept => concept }) %>
+        <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
       <% end %>
       </div>
     </div>
@@ -131,23 +131,9 @@ layout: main
 </div>
 <div class="layout--section">
   <div class="main">
-    <div class="sheets">
+    <div class="cards">
       <% blog('team').articles.reverse_each do |person| %>
-      <div class="container">
-        <div class="sheet">
-          <div class="sheet--section">
-            <div class="list">
-              <img src="/images/people/<%= person.data.img %>" class="team--image">
-            </div>
-          </div>
-          <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="sheet--section">
-            <article class="content">
-              <h1 class="title"><%= person.data.name %></h1>
-              <p><%= person.body %></p>
-            </article>
-          </a>
-        </div>
-      </div>
+      <%= partial("partials/card-person", :locals => { :person => person }) %>
     <% end %>
     </div>
   </div>

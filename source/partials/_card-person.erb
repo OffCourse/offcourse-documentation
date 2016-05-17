@@ -1,0 +1,15 @@
+<div class="container">
+  <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>">
+  <div class="card">
+    <div class="card--section">
+      <img src="/images/people/<%= person.data.img %>" class="team--image">
+    </div>
+    <div class="card--section">
+      <p class="title">
+        <%= person.data.name %>
+      </p>
+      <p><%= person.body %></p>
+    </div>
+  </div>
+  </a>
+</div>
