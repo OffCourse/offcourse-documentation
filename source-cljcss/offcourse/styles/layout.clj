@@ -6,7 +6,6 @@
   [[v/layout        (merge (:column-component templates)
                            (:paper templates)
                            {:flex 1
-                            :height           (vh 300)
                             :align-content    :stretch
                             :overflow         :hidden})
     [v/layout--section (merge (:row-component templates)

@@ -4,11 +4,13 @@ layout: main
 active: features
 ---
 <div class="layout--section">
-  <div class="main">
+  <div class="main" style="background: #F96220;>
     <div class="main--section">
-      <div>Offcourse_</div>
-      <div>Structure your Learning</div>
-      <div>Present your Learning</div>
+      <ul>
+        <li data-button-type="textbar" class="button">Offcourse_</li>
+        <li data-button-type="textbar" class="button">Structure your Learning</li>
+        <li data-button-type="textbar" class="button">Present your Learning</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -37,70 +39,94 @@ active: features
 </div>
 <div class="layout--section">
   <div class="main">
-    <!-- Features -->
-  </div>
-</div>
-<div class="layout--section">
-  <div class="main">
-    <!-- Preview -->
-  </div>
-</div>
-<div class="layout--section">
-  <div class="main">
-    <!-- Roadmap -->
-  </div>
-</div>
-<div class="layout--section">
-  <div class="main">
-    <!-- Preview -->
-  </div>
-</div>
-<div class="layout--section">
-  <div class="main">
-    <!-- team -->
-  </div>
-</div>
-<div class="layout--section">
-  <div class="main">
-    <!-- Footer-->
-  </div>
-</div>
-<!-- 
-
-<div class="main--section">
-  <div class="sheets">
-
-    <div class="container">
-      <div class="sheet">
-        <div class="sheet--section sheet--section--without">
-          <article class="content">
-            <h1 class="title"><%= blog('frontpage').articles[0].data.title %></h1>
-            <p><%= blog('frontpage').articles[0].body %></p>
-          </article>
-        </div>
+    <div class="main--section">
+      <div class="cards">
+        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
+        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
+        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
       </div>
     </div>
-
-  <% for entity in blog('frontpage').articles[1].data.concepts %>
-    <div class="container">
-      <div class="sheet">
-        <div class="sheet--section">
-          <div class="list">
-            <img src="images/cth-icon.svg" class="feature--image">
+  </div>
+</div>
+<div class="layout--section">
+  <div class="menubar">
+    <div class="menubar--section">
+      <div class="actions-panel">
+        <li data-button-type="textbar" class="button">Preview</li>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="layout--section">
+  <div class="main">
+    <div class="sheets">
+      <div class="container">
+        <div class="sheet">
+          <div class="sheet--section sheet--section--without">
+            <article class="content">
+              <h1 class="title">Roadmap</h1>
+              <!-- <h1 class="title"><%= blog('frontpage').articles[0].data.title %></h1> -->
+              <p><%= blog('frontpage').articles[0].body %></p>
+            </article>
           </div>
-          <div>
-        </div>
-        </div>
-        <div class="sheet--section">
-          <article class="content">
-            <h1 class="title"><%= entity.concept %></h1>
-            <p><%= entity.summery %></p>
-          </article>
         </div>
       </div>
+      <% for entity in blog('frontpage').articles[1].data.concepts %>
+      <div class="container">
+        <div class="sheet">
+          <div class="sheet--section">
+            <div class="list">
+              <img src="images/cth-icon.svg" class="feature--image">
+            </div>
+            <div>
+          </div>
+          </div>
+          <div class="sheet--section">
+            <article class="content">
+              <h1 class="title"><%= entity.concept %></h1>
+              <p><%= entity.summery %></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    <% end %>
     </div>
-  <% end %>
   </div>
 </div>
-
- -->
+<div class="layout--section">
+  <div class="menubar">
+    <div class="menubar--section">
+      <div class="actions-panel">
+        <li data-button-type="textbar" class="button">Preview</li>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="layout--section">
+  <div class="main">
+    <div class="sheets">
+      <% blog('team').articles.reverse_each do |person| %>
+      <div class="container">
+        <div class="sheet">
+          <div class="sheet--section">
+            <div class="list">
+              <img src="/images/people/<%= person.data.img %>" class="team--image">
+            </div>
+          </div>
+          <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="sheet--section">
+            <article class="content">
+              <h1 class="title"><%= person.data.name %></h1>
+              <p><%= person.body %></p>
+            </article>
+          </a>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<div class="layout--section" style="background: black;">
+  <div class="main" style="background: black; color: white; height: 200px;">
+    Some footer text
+  </div>
+</div>
