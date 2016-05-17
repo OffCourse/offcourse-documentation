@@ -2,22 +2,13 @@
   <div class="card">
     <div class="card--section">
       <a href="/#" class="title">
-        Learn about Offcourse_
+        <%= concept.concept %>
       </a>
     </div>
     <div class="card--section">
-      <ul data-list-type="todo" class="list">
-        <li data-item-type="todo" class="list--item" <% if active == "features" %>data-selected="true"<% end %> >
-          <a href="/#">
-            <span>About</span>
-          </a>
-        </li>
-        <li data-item-type="todo" class="list--item" <% if active == "team" %>data-selected="true"<% end %>>
-          <a href="/team.html" >
-            <span>Team</span>
-          </a>
-        </li>
-      </ul>
+      <p class="text">
+        <%= concept.summery %>
+      </p>
     </div>
   </div>
 </div>

@@ -1,7 +1,6 @@
 ---
 title: Offcourse
 layout: main
-active: features
 ---
 <div class="layout--section">
   <div class="main" style="background: #F96220;>
@@ -41,9 +40,9 @@ active: features
   <div class="main">
     <div class="main--section">
       <div class="cards">
-        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
-        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
-        <%= partial("partials/card", :locals => { :active => current_page.data.active }) %>
+      <% for concept in blog('frontpage').articles[1].data.concepts %>
+        <%= partial("partials/card", :locals => { :concept => concept }) %>
+      <% end %>
       </div>
     </div>
   </div>
@@ -64,14 +63,13 @@ active: features
         <div class="sheet">
           <div class="sheet--section sheet--section--without">
             <article class="content">
-              <h1 class="title">Roadmap</h1>
-              <!-- <h1 class="title"><%= blog('frontpage').articles[0].data.title %></h1> -->
-              <p><%= blog('frontpage').articles[0].body %></p>
+              <h1 class="title"><%= blog('frontpage').articles[2].data.title %></h1>
+              <p><%= blog('frontpage').articles[2].body %></p>
             </article>
           </div>
         </div>
       </div>
-      <% for entity in blog('frontpage').articles[1].data.concepts %>
+      <% for log in blog('frontpage').articles[2].data.changelog %>
       <div class="container">
         <div class="sheet">
           <div class="sheet--section">
@@ -83,13 +81,42 @@ active: features
           </div>
           <div class="sheet--section">
             <article class="content">
-              <h1 class="title"><%= entity.concept %></h1>
-              <p><%= entity.summery %></p>
+              <h1 class="title"><%= log.concept %></h1>
+              <p><%= log.summery %></p>
             </article>
           </div>
         </div>
       </div>
-    <% end %>
+      <% end %>
+      <div class="container">
+        <div class="sheet">
+          <div class="sheet--section sheet--section--without">
+            <article class="content">
+              <h1 class="title"><%= blog('frontpage').articles[3].data.title %></h1>
+              <p><%= blog('frontpage').articles[3].body %></p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <% for log in blog('frontpage').articles[3].data.changelog %>
+      <div class="container">
+        <div class="sheet">
+          <div class="sheet--section">
+            <div class="list">
+              <img src="images/cth-icon.svg" class="feature--image">
+            </div>
+            <div>
+          </div>
+          </div>
+          <div class="sheet--section">
+            <article class="content">
+              <h1 class="title"><%= log.concept %></h1>
+              <p><%= log.summery %></p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>
