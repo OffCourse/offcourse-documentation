@@ -10,7 +10,6 @@
              [list :refer [list-component]]
              [menubar :refer [menubar]]
              [header :refer [header]]
-             [previewbar :refer [previewbar]]
              [viewer :refer [viewer]]]))
 
 (defn navigation-panel [{:keys [templates units fonts colors]}]
@@ -19,5 +18,5 @@
 (defn components [config]
   (let [components [list-component sheet form strip
                     button dashboard menubar header navigation-panel
-                    viewer label-component previewbar cards]]
+                    viewer label-component cards]]
     (for [component components] (component config))))

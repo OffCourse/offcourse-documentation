@@ -12,7 +12,10 @@
 ;; HEADER
 (s/defclass header)
 (s/defclass header--list)
+(s/defclass header--sublist)
 (s/defclass header--textbar)
+(s/defclass header--textbar-small)
+(s/defclass header--textbar-inverse)
 
 ;; PREVIEWBAR
 (s/defclass previewbar)

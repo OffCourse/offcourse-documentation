@@ -5,15 +5,23 @@
 (defn header [{:keys [templates colors units]}]
   [[v/header (merge (:row-component templates)
                      (:highlighted templates)
-                     {:justify-content :space-between
+                     {:justify-content :center
                       :align-items :center
                       :flex 1
                       :height (vh 100)
                       :padding (:full units)})]
    [v/header--list (merge (:column-component templates)
                           {:align-items :flex-start})]
+   [v/header--sublist (merge (:row-component templates)
+                             {:align-items :flex-start})]
    [v/header--textbar (merge (:textbar templates)
                              {:font-size (:header-font units)
                               :line-height (:header-line-height units)
                               :margin-right (:sixth units)
-                              :margin-bottom (:third units)})]])
+                              :margin-bottom (:third units)})]
+   [v/header--textbar-small (merge (:textbar templates)
+                             {:font-size (:subheader-font units)
+                              :line-height (:subheader-line-height units)
+                              :margin-right (:sixth units)
+                              :margin-bottom (:third units)})]
+   [v/header--textbar-inverse (merge (:paper templates))]])
