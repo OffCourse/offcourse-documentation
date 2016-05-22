@@ -12,9 +12,7 @@
 
    [v/main (merge (:row-component templates)
                   (:recycled-paper templates)
-                  {:width (percent 100)
-                   :flex 1
-                   :flex-wrap :wrap})]
+                  {:flex 1})]
    [v/main--section
     [v/last (merge (:column-component templates)
                    (:recycled-paper templates)
