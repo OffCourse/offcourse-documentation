@@ -17,11 +17,10 @@
    [v/header--textbar (merge (:textbar templates)
                              {:font-size (:header-font units)
                               :line-height (:header-line-height units)
-                              :margin-right (:sixth units)
+                              :margin-right (:third units)
                               :margin-bottom (:third units)})]
    [v/header--textbar-small (merge (:textbar templates)
                              {:font-size (:subheader-font units)
                               :line-height (:subheader-line-height units)
-                              :margin-right (:sixth units)
                               :margin-bottom (:third units)})]
    [v/header--textbar-inverse (merge (:paper templates))]])
