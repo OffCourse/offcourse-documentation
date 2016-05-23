@@ -47,7 +47,7 @@
              [:.sticky {:position :sticky
                         :padding [[(:full units) 0 (:full units) 0]]
                         :top (:full units)}])
-   ;responsiveness 
+   ;responsiveness working
    (let [{:keys [min-width max-width percent]} (first breakpoints)]
      (at-media {:min-width min-width :max-width max-width}
                [v/header--textbar (merge {:font-size (/ (:header-font units) 2)
