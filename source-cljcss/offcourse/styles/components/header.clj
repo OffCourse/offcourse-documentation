@@ -7,7 +7,8 @@
   [[v/header--container (:row-component templates)
                         (:highlighted templates)
                         {:justify-content :center
-                         :width (percent 100)}]
+                         :width (percent 100)
+                         :overflow :hidden}]
    [v/header (merge (:row-component templates)
                     {:justify-content :center
                      :align-items :center
