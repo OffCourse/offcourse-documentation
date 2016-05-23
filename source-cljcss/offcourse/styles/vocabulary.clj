@@ -41,6 +41,7 @@
 (s/defclass cards-person)
 (s/defclass card-person)
 (s/defclass card-person--image)
+(s/defclass button-container)
 
 (s/defclass logo)
 

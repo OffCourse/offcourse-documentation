@@ -64,4 +64,5 @@
      [v/last {:padding-top (:third units)}]
      [v/card-person--image {:height (:five units)
                             :filter "grayscale(100%)"}]]
+    [v/button-container (merge (:row-component templates))]
     [v/content (merge (:text templates))]]])
