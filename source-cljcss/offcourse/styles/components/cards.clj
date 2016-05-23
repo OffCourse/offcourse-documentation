@@ -48,19 +48,20 @@
                    (:recycled-paper templates)
                    {:padding          (:full units)
                     :column-gap       (:column-gap units)})
-    [v/container {:display :inline-block}]]
+    [v/container {:display :inline-block
+                  :width (percent 100)}]]
 
    (for [breakpoint breakpoints] (calculate-breakpoint-person breakpoint units))
 
    [v/card-person (merge (:row-component templates)
                          (:sheet templates)
-                         {:padding [[0]]
-                          :flex 1})
+                         {:padding [[0]]})
     [v/hovered (:highlighted borders)]
     [v/card--section (merge (:column-component templates)
-                            {:padding [[0 (:full units)]]})
+                            {:padding [[0 (:full units) 0]]})
      [v/first {:padding-left    0
                :padding-right   0}]
+     [v/last {:padding-top (:third units)}]
      [v/card-person--image {:height (:five units)
                             :filter "grayscale(100%)"}]]
     [v/content (merge (:text templates))]]])
