@@ -43,6 +43,9 @@
 (s/defclass card-person--image)
 (s/defclass button-container)
 
+(s/defclass labels)
+(s/defclass label)
+
 (s/defclass logo)
 
 ;; this one must disappear

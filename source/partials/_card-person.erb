@@ -8,7 +8,7 @@
         <%= person.data.name %>
       </p>
       <p class="content"><%= person.data.job %></p>
-      <div class="button-container">
+      <div class="labels">
         <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="label">LinkedIn</a>
         <a href="<%= person.data.twitter || 'https://twitter.com/search?q=' + person.data.name %>" data-button-type="textbar" class="label">Twitter</a>
       </div>
