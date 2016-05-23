@@ -26,6 +26,8 @@
                                   {:padding-bottom (:half units)})]
    [:.team--image :.feature--image {:width "100%"
                                    :filter "grayscale(100%)"}]
+   [:.example--image {:width "100%"
+                      :filter "grayscale(100%)"}]
    ;responsiveness 
    (let [{:keys [min-width max-width percent]} (first breakpoints)]
      (at-media {:min-width min-width :max-width max-width}

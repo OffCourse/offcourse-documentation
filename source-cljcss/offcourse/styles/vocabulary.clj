@@ -10,7 +10,9 @@
 (s/defclass main--section)
 
 ;; HEADER
+(s/defclass header--container)
 (s/defclass header)
+(s/defclass header--section)
 (s/defclass header--list)
 (s/defclass header--sublist)
 (s/defclass header--textbar)

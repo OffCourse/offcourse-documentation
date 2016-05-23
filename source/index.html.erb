@@ -3,16 +3,20 @@ title: Offcourse
 layout: main
 ---
 <div class="layout--section">
-  <div class="header">
-    <div class="header--section">
-      <ul class="header--list">
-        <li class="header--textbar">Offcourse_</li>
-        <li class="header--textbar header--textbar-inverse">Organize your</li>
-        <li class="header--sublist">
-          <div class="header--textbar header--textbar-inverse">Learning</div>
-          <div class="header--textbar-small">Offcourse.io</div>
-        </li>
-      </ul>
+  <div class="header--container">
+    <div class="header">
+      <div class="header--section">
+      </div>
+      <div class="header--section">
+        <ul class="header--list">
+          <li class="header--textbar">Offcourse_</li>
+          <li class="header--textbar header--textbar-inverse">Organize your</li>
+          <li class="header--sublist">
+            <div class="header--textbar header--textbar-inverse">Learning</div>
+            <div class="header--textbar-small">Offcourse.io</div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
@@ -30,11 +34,9 @@ layout: main
       <div class="sheets">
         <div class="container">
           <div class="sheet">
-            <div class="sheet--section sheet--section--without">
-              <article class="content">
-                <p><%= blog('frontpage').articles[0].body %></p>
-              </article>
-            </div>
+            <article class="content">
+              <%= blog('frontpage').articles[0].body %>
+            </article>
           </div>
         </div>
       </div>
@@ -46,29 +48,23 @@ layout: main
       <div class="sheets">
         <div class="container">
           <div class="sheet">
-            <div class="sheet--section sheet--section--without">
-              <article class="content">
-                <p><%= blog('frontpage').articles[0].body %></p>
-              </article>
-            </div>
+            <article class="content">
+              <img class="example--image" src="./images/iteration-current.png" />
+            </article>
           </div>
         </div>
         <div class="container">
           <div class="sheet">
-            <div class="sheet--section sheet--section--without">
-              <article class="content">
-                <%= partial("partials/signup-mailchimp") %>
-              </article>
-            </div>
+            <article class="content">
+              <%= partial("partials/signup-mailchimp") %>
+            </article>
           </div>
         </div>
         <div class="container">
           <div class="sheet">
-            <div class="sheet--section sheet--section--without">
-              <article class="content">
-                <p><%= blog('frontpage').articles[0].body %></p>
-              </article>
-            </div>
+            <article class="content">
+              <p><%= blog('frontpage').articles[0].body %></p>
+            </article>
           </div>
         </div>
       </div>
