@@ -11,7 +11,7 @@
     :source-paths #(conj % "source-cljcss/"))
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :vendors ["webkit" "moz"]
-                         :auto-prefix #{:user-select :column-count :column-gap :filter}
+                         :auto-prefix #{:position :user-select :column-count :column-gap :filter}
                          :output-to    "main.css"
                          :pretty-print true}
                  target {:dir #{".build-boot/stylesheets/"}})

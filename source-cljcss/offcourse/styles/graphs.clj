@@ -30,7 +30,7 @@
    :tag-font             (fnk [atom] (* atom 18))
    :base-line-height     (fnk [atom] (* atom 20))
    :title-font           (fnk [atom] (* atom 32))
-   :title-line-height    (fnk [atom] (* atom 36))
+   :title-line-height    (fnk [atom] (* atom 40))
    :header-font          (fnk [atom] (* atom 128))
    :header-line-height   (fnk [atom] (* atom 148))
    :subheader-font       (fnk [atom] (* atom 64))

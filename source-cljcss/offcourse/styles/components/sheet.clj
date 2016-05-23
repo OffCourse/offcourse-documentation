@@ -17,15 +17,17 @@
                     :align-items      :flex-start
                     :padding (:full units)})
     [v/hovered (:highlighted borders)]
-    [v/content (:text templates)
+    [v/content
      [v/title (merge (:title templates)
                  {:padding 0
                   :padding-bottom (:two-third units)})]]
-    [v/content-emphasis
-     [:p (merge (:title templates)
-                {:padding-bottom (:full units)})
-      [v/last (merge (:text templates)
-              {:padding-bottom 0
-               :margin 0})]]]]])
+    
+    [v/emphasis (merge (:title templates)
+                         {:padding-bottom (:full units)})]
+    [v/emphasis-textbar (merge (:textbar templates))]
+    [v/content
+     [:p (merge (:text templates)
+                {:padding-bottom 0
+                 :margin-bottom 0})]]]])
 
 

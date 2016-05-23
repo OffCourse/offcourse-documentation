@@ -34,14 +34,14 @@ layout: main
       <div class="sheets">
         <div class="container">
           <div class="sheet">
-            <article class="content content-emphasis">
+            <article class="content">
               <%= blog('frontpage').articles[0].body %>
             </article>
           </div>
         </div>
       </div>
       <div class="container-without">
-        <div class="main--header">Features</div>
+        <div class="main--header" id="features">Features</div>
       </div>
       <div class="cards">
         <% for concept in blog('frontpage').articles[1].data.concepts %>
@@ -49,7 +49,7 @@ layout: main
         <% end %>
       </div>
       <div class="container-without">
-        <div class="main--header">Preview</div>
+        <div class="main--header" id="preview">Preview</div>
       </div>
       <div class="sheets">
         <div class="container">
@@ -61,7 +61,7 @@ layout: main
         </div>
       </div>
       <div class="container-without">
-        <div class="main--header">Signup</div>
+        <div class="main--header" id="signup">Signup</div>
       </div>
       <div class="sheets">
         <div class="container">
@@ -73,7 +73,7 @@ layout: main
         </div>
       </div>
       <div class="container-without">
-        <div class="main--header">Team</div>
+        <div class="main--header" id="team">Team</div>
       </div>
       <div class="cards-person">
         <% blog('team').articles.reverse_each do |person| %>
@@ -85,6 +85,6 @@ layout: main
 </div>
 
 <div class="layout--section" style="background: black;">
-  <div class="main" style="background: black; color: white; height: 400px;">
+  <div class="main" style="background: black; color: white; height: 20vh;">
   </div>
 </div>

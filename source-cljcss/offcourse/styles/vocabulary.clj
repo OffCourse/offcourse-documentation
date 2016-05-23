@@ -62,6 +62,8 @@
 (s/defclass subtitle)
 (s/defclass content)
 (s/defclass content-emphasis)
+(s/defclass emphasis)
+(s/defclass emphasis-textbar)
 
 ;; MODIFIERS
 (s/defpseudoclass hover)

@@ -3,6 +3,7 @@
             [offcourse.styles
              [config :refer [config]]
              [global :refer [global]]
+             [helpers :refer [helpers]]
              [layout :refer [layout]]
              [shame :refer [shame]]
              [typography :refer [typography]]]

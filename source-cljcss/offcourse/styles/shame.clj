@@ -26,7 +26,7 @@
                         {:justify-content :center
                                       :background (:night colors)
                                       :flex 1
-                                      :padding [[0 0 0 (:full units)]]})]
+                                      :padding [[0 0 0 0]]})]
    [:#mc-embedded-subscribe (merge (:textbar templates)
                                    {:flex 0
                                     :font-size   (* (:atom units) 42) 
@@ -42,6 +42,9 @@
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
                       :filter "grayscale(100%)"}]
+   [:.sticky {:position :sticky
+              :padding [[(:full units) 0 (:full units) 0]]
+              :top (:full units)}]
    ;responsiveness 
    (let [{:keys [min-width max-width percent]} (first breakpoints)]
      (at-media {:min-width min-width :max-width max-width}
