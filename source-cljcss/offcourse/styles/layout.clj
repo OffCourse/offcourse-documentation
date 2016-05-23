@@ -17,5 +17,11 @@
     [v/last (merge (:column-component templates)
                    (:recycled-paper templates)
                    {:flex 3})]]
+   [v/main--header (merge (:textbar templates)
+                             {:font-size (:subheader-font units)
+                              :line-height (:subheader-line-height units)
+                              :margin-left (:full units)})]
    [v/container (merge (:row-component templates)
-                       {:padding [[0 0 (:two-third units) 0]]})]])
+                       {:padding [[0 0 (:two-third units) 0]]})]
+   [v/container-without (merge (:row-component templates)
+                               )]])

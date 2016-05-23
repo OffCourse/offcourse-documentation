@@ -4,10 +4,12 @@
 
 ;; LAYOUT
 (s/defclass container)
+(s/defclass container-without)
 (s/defclass layout)
 (s/defclass layout--section)
 (s/defclass main)
 (s/defclass main--section)
+(s/defclass main--header)
 
 ;; HEADER
 (s/defclass header--container)

@@ -40,10 +40,16 @@ layout: main
           </div>
         </div>
       </div>
+      <div class="container-without">
+        <div class="main--header">Features</div>
+      </div>
       <div class="cards">
         <% for concept in blog('frontpage').articles[1].data.concepts %>
         <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
         <% end %>
+      </div>
+      <div class="container-without">
+        <div class="main--header">Preview</div>
       </div>
       <div class="sheets">
         <div class="container">
@@ -53,6 +59,11 @@ layout: main
             </article>
           </div>
         </div>
+      </div>
+      <div class="container-without">
+        <div class="main--header">Signup</div>
+      </div>
+      <div class="sheets">
         <div class="container">
           <div class="sheet">
             <article class="content">
@@ -60,6 +71,9 @@ layout: main
             </article>
           </div>
         </div>
+      </div>
+      <div class="container-without">
+        <div class="main--header">Team</div>
       </div>
       <div class="cards-person">
         <% blog('team').articles.reverse_each do |person| %>
