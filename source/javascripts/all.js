@@ -1,1 +1,1 @@
-//= require_tree .
+// = require stickyfill.min.js

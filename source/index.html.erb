@@ -2,8 +2,6 @@
 title: Offcourse
 layout: main
 ---
-
-
 <div class="layout--section">
   <div class="header">
     <div class="header--section">
@@ -43,6 +41,35 @@ layout: main
         <% for concept in blog('frontpage').articles[1].data.concepts %>
         <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
         <% end %>
+      </div>
+      <div class="sheets">
+        <div class="container">
+          <div class="sheet">
+            <div class="sheet--section sheet--section--without">
+              <article class="content">
+                <p><%= blog('frontpage').articles[0].body %></p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="sheet">
+            <div class="sheet--section sheet--section--without">
+              <article class="content">
+                <%= partial("partials/signup-mailchimp") %>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="sheet">
+            <div class="sheet--section sheet--section--without">
+              <article class="content">
+                <p><%= blog('frontpage').articles[0].body %></p>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="cards">
         <% blog('team').articles.reverse_each do |person| %>

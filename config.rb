@@ -19,7 +19,7 @@ end
 
 # General configuration
 configure :development do
-
+  
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
