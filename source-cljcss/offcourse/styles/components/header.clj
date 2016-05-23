@@ -8,8 +8,7 @@
                      {:justify-content :center
                       :align-items :center
                       :flex 1
-                      :height (vh 100)
-                      :padding (:full units)})]
+                      :padding [[(:four units)(:full units)]]})]
    [v/header--list (merge (:column-component templates)
                           {:align-items :flex-start})]
    [v/header--sublist (merge (:row-component templates)
@@ -18,6 +17,7 @@
                              {:font-size (:header-font units)
                               :line-height (:header-line-height units)
                               :margin-right (:third units)
+                              :padding [[ 0 (:full units)]]
                               :margin-bottom (:third units)})]
    [v/header--textbar-small (merge (:textbar templates)
                              {:font-size (:subheader-font units)

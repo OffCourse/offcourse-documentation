@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Structure Your Learning
+title: 
 date: 31-12-2015
 anchor: Home
 ---
-There’s an easy way to structure your learning. One that is simple and fun. One that allows you to learn any skill from anywhere with an internet connection and maps it all. It’s called Offcourse_ and we are building it.
+There’s an easy way to organise your own learning. One that is simple and fun. One that allows you to learn any skill from anywhere with an internet connection and maps it all. It’s called Offcourse_ and we are building it. 
 
-Offcourse_ will allow you to structure your learning in an online hub that gives you the tools to collect, share and track all your learning in one place. It’s free, it’s open source, and designed to recommend learning tracks specifically for you. So no more Javascript 101, but specific lists on how to learn Clojure or become a functional programmer. 
+Offcourse_ will allow you to collect, share and track the best content in one place. Offcourse_ is free, open source, and design to recommend learning tracks specifically for you. 
