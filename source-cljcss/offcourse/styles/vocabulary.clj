@@ -19,10 +19,6 @@
 (s/defclass header--textbar-small)
 (s/defclass header--textbar-inverse)
 
-;; PREVIEWBAR
-(s/defclass previewbar)
-(s/defclass previewbar--button)
-
 ;; ELEMENTS
 (s/defclass list)
 (def todo-list (list (s/attr :data-list-type := :todo)))
@@ -42,24 +38,14 @@
 (s/defclass card)
 (s/defclass card--section)
 
-(s/defclass viewer)
-(s/defclass viewer--content)
-(def viewer-header :h1)
-(def viewer-text :p)
+(s/defclass cards-person)
+(s/defclass card-person)
+(s/defclass card-person--image)
 
 (s/defclass logo)
 
-(s/defclass labels)
-(s/defclass label)
-
 ;; this one must disappear
 (s/defclass dashboard)
-
-(s/defclass menubar)
-(s/defclass menubar--section)
-
-(s/defclass form)
-(s/defclass form--input)
 
 (s/defclass button)
 (def textbar-button (button (s/attr :data-button-type := :textbar)))
