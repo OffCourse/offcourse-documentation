@@ -1,26 +1,26 @@
 <div id="mc_embed_signup">
   <form action="//charlottevanoostrum.us13.list-manage.com/subscribe/post?u=3888907a37a3a88f5d6d88573&amp;id=50f09646ac" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-  
+      <label for="mce-EMAIL" id="mce-EMAIL-LABEL"><%= blog('frontpage').articles[2].data.title %></label>
       <div class="mc-field-group">
-        <label for="mce-EMAIL" id="mce-EMAIL-LABEL"><%= blog('frontpage').articles[2].data.title %></label>
-        <div for="mce-EMAIL" id="mce-EMAIL-LABEL-TWO"><%= blog('frontpage').articles[2].body %></div>
         <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="off">
+        <div id="mce-submit">
+          <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="previewbar--button">
+        </div>
       </div>
 
       <div id="mce-responses" class="clear">
         <div class="response" id="mce-error-response" style="display:none"></div>
         <div class="response" id="mce-success-response" style="display:none"></div>
-      </div> 
+      </div>
+
+      <div for="mce-EMAIL" id="mce-EMAIL-LABEL-TWO"><%= blog('frontpage').articles[2].body %></div>
 
       <!-- anti-bot -->
       <div style="position: absolute; left: -5000px;" aria-hidden="true">
         <input type="text" name="b_3888907a37a3a88f5d6d88573_50f09646ac" tabindex="-1" value="">
       </div>
       <!-- /anti-bot -->
-      <div id="mce-submit">
-        <input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe" class="previewbar--button">
-      </div>
     </div>
   </form>
 </div>

@@ -69,6 +69,7 @@
 (s/defclass title)
 (s/defclass subtitle)
 (s/defclass content)
+(s/defclass content-emphasis)
 
 ;; MODIFIERS
 (s/defpseudoclass hover)

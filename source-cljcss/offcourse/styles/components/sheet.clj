@@ -20,7 +20,8 @@
     [v/content (:text templates)
      [v/title (merge (:title templates)
                  {:padding 0
-                  :padding-bottom (:two-third units)})]
+                  :padding-bottom (:two-third units)})]]
+    [v/content-emphasis
      [:p [v/first (merge (:title templates)
                          {:padding-bottom (:full units)})]]]]])
 

@@ -34,7 +34,7 @@ layout: main
       <div class="sheets">
         <div class="container">
           <div class="sheet">
-            <article class="content">
+            <article class="content content-emphasis">
               <%= blog('frontpage').articles[0].body %>
             </article>
           </div>
@@ -60,13 +60,6 @@ layout: main
             </article>
           </div>
         </div>
-        <div class="container">
-          <div class="sheet">
-            <article class="content">
-              <p><%= blog('frontpage').articles[0].body %></p>
-            </article>
-          </div>
-        </div>
       </div>
       <div class="cards">
         <% blog('team').articles.reverse_each do |person| %>
@@ -78,7 +71,6 @@ layout: main
 </div>
 
 <div class="layout--section" style="background: black;">
-  <div class="main" style="background: black; color: white; height: 200px;">
-    Some footer text
+  <div class="main" style="background: black; color: white; height: 400px;">
   </div>
 </div>

@@ -8,8 +8,9 @@
 
 ; Shame file, but somehow interesting to seperate changes from the base code
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
-  [[:#mc_embed_signup_scroll (merge (:row-component templates)
+  [[:#mc_embed_signup_scroll (merge (:column-component templates)
                                     {:align-items :center})]
+   [:.mc-field-group (merge (:row-component templates))]
    [:#mce-EMAIL-LABEL (merge (:title templates))]
    [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
                                  {:padding-top (:half units)})]
