@@ -18,16 +18,24 @@
    [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
                                  {})]
    [:#mce-EMAIL (merge (:subtitle templates))
-                       {:width "100%"
+                       {:flex 2
                         :padding [[(:half units)]]
                         :background (:light colors)}]
+
+   [:#mce-submit (merge (:row-component templates)
+                        {:justify-content :center
+                                      :background (:night colors)
+                                      :flex 1
+                                      :padding [[0 0 0 (:full units)]]})]
    [:#mc-embedded-subscribe (merge (:textbar templates)
-                                   {:font-size   (* (:atom units) 42) 
+                                   {:flex 0
+                                    :font-size   (* (:atom units) 42) 
                                     :line-height (* (:atom units) 60) })]
+
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:color (str (:night colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]
-   [:#mce-submit {:padding [[0 0 0 (:full units)]]}]
+
    [:#mce-success-response (merge (:subtitle templates)
                                   {:padding-bottom (:half units)})]
    [:.feature--image {:width "100%"
