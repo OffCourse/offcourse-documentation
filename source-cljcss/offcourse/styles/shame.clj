@@ -52,7 +52,16 @@
                                                      :color (str (:day colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]
 
-   [:#mce-success-response (merge (:title templates))]
+   [:#mce-success-response (merge (:title templates)
+                                  {:padding-top (:full units)})]
+   [:#mce-responses {:width (percent 100)}]
+   [:#mce-error-response (merge (:subtitle templates)
+                                {:width (percent 100)
+                                 :padding (:third units)
+                                 :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
+                                 :margin "0 !important"
+                                 :color (str (:day colors) " !important")
+                                 :background (str (:primary colors) " !important")})]
    [:.feature--image {:width "100%"
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
