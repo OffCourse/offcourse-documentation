@@ -29,24 +29,24 @@
                         :font-weight 500
                         :background (:light colors)}]
    [:#mce-submit (merge (:row-component templates)
-                        {:justify-content :center
-                         :background (:night colors)
-                         :flex 1
-                         :padding [[0 0 0 0]]})]
+                    {:flex 1
+                     :align-items :stretch})]
    [:#mc-embedded-subscribe (merge (:textbar templates)
-                                   {:background (:primary colors)
-                                    :font-family (:title fonts)
+                                   {:width (percent 100)
+                                    :padding [[(:half units) 0]]
+
                                     :justify-content :center
+                                    :align-items :center
+                                    :background (:primary colors)
+                                    :font-family (:title fonts)
+                                    :font-weight 500
                                     :font-size   (:title-font units) 
                                     :line-height (:title-line-height units)
-                                    :font-weight 500
-                                    :align-items :center
-                                    :-webkit-appearance :none
                                     :cursor      :pointer})
     [v/hovered {:background (:night colors)}]]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:width (percent 100)
-                                                     :padding-left (:full units)
+                                                     :padding-left (str (:full units) " !important")
                                                      :margin "0 !important"
                                                      :color (str (:day colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]
