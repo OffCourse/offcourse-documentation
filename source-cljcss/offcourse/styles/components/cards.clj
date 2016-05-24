@@ -31,7 +31,8 @@
 
    [v/card (merge (:column-component templates)
                   (:sheet templates)
-                  {:padding [[0 (:full units)]]
+                  {:align-items      :stretch
+                   :padding [[0 (:full units)]]
                    :flex 1})
     [v/hovered (:highlighted borders)]
 

@@ -2,21 +2,19 @@
 title: Offcourse
 layout: main
 ---
-<div class="layout--section">
-  <div class="header--container">
-    <div class="header">
-      <div class="header--section">
-      </div>
-      <div class="header--section">
-        <ul class="header--list">
-          <li class="header--textbar">Offcourse_</li>
-          <li class="header--textbar header--textbar-inverse">Organize your</li>
-          <li class="header--sublist">
-            <div class="header--textbar header--textbar-inverse">Learning</div>
-            <div class="header--textbar-small">Offcourse.io</div>
-          </li>
-        </ul>
-      </div>
+<div class="layout--section header">
+  <div class="main">
+    <div class="main--section">
+    </div>
+    <div class="main--section header--container">
+      <ul class="header--list">
+        <li class="header--textbar">Offcourse_</li>
+        <li class="header--textbar header--textbar-inverse">Organize your</li>
+        <li class="header--sublist">
+          <div class="header--textbar header--textbar-inverse">Learning</div>
+          <div class="header--textbar-small">Offcourse.io</div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -49,18 +47,6 @@ layout: main
         <% end %>
       </div>
       <div class="container-without">
-        <div class="main--header" id="preview">Preview</div>
-      </div>
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <article class="content">
-              <img class="example--image" src="./images/iteration-current.png" />
-            </article>
-          </div>
-        </div>
-      </div>
-      <div class="container-without">
         <div class="main--header" id="signup">Signup</div>
       </div>
       <div class="sheets">
@@ -68,6 +54,18 @@ layout: main
           <div class="sheet">
             <article class="content">
               <%= partial("partials/signup-mailchimp") %>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="container-without">
+        <div class="main--header" id="preview">Preview</div>
+      </div>
+      <div class="sheets">
+        <div class="container">
+          <div class="sheet">
+            <article class="content">
+              <img class="example--image" src="./images/iteration-current.png" />
             </article>
           </div>
         </div>
