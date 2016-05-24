@@ -4,4 +4,4 @@ title: Start structuring your learning today
 date: 27-12-2015
 anchor: Signup
 ---
-Offcourse_ isn’t finished yet, but until then you will receive hand picked,<br> curated lists on topics ranging from how to learn Clojure or become a functional programmer.
+Offcourse is WIP, but join our mailing list and be the first to know about a release. In the mean time, you’ll receive hand picked lists on topics ranging from how to learn Clojure to become a functional programmer.
