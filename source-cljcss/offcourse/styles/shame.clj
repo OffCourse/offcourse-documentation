@@ -53,7 +53,8 @@
                [v/header--textbar (merge {:font-size (/ (:header-font units) 2)
                                           :line-height (/ (:header-line-height units) 2)})]
                [v/header--textbar-small (merge {:display :none})]
-               [v/header--section (merge {:flex 0})]
+               [v/header--section (merge {:flex 0})
+                 [v/last {:padding 0}]]
                [:.main {:flex-direction :column}]
                [:.dashboard {:width "100%"
                              :padding [[0 (:full units)]]}]
