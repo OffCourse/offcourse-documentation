@@ -55,7 +55,8 @@
                [v/header--textbar-small (merge {:display :none})]
                [v/header--section (merge {:flex 0})]
                [:.main {:flex-direction :column}]
-               [:.dashboard {:width "100%"}]
+               [:.dashboard {:width "100%"
+                             :padding [[0 (:full units)]]}]
                [:.sheets {:padding (:full units)}]
                [:.layout {:height "unset"}]))])
 
