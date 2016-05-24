@@ -9,36 +9,49 @@
 
 ; Shame file, but somehow interesting to seperate changes from the base code
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
-  [[:#mc_embed_signup_scroll (merge (:column-component templates)
-                                    {:align-items :flex-start})]
-   [:.mc-field-group (merge (:row-component templates))
+  [[:#mc_embed_signup {:width (percent 100)}]
+   [:#mc_embed_signup_scroll (merge (:column-component templates)
+                                    {:width (percent 100)
+                                     :align-items :flex-start})]
+   [:.mc-field-group (merge (:row-component templates)
                             {:width (percent 100)
-                             :padding [[(:half units) 0]]}]
+                             :flex-wrap :wrap})]
    [:#mce-EMAIL-LABEL (merge (:title templates)
-                             {:padding [[(:half units) 0]]})]
+                             {:padding [[0 0 (:full units) 0]]})]
    [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
-                                 {})]
+                                 {:padding-top (:full units)})]
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:flex 2
-                        :padding [[(:half units)]]
+                        :padding [[(:half units)(:half units)(:half units)(:full units)]]
+                        :font-family (:title fonts)
+                        :font-size  (:title-font units) 
+                        :line-height (:title-line-height units)
+                        :font-weight 500
                         :background (:light colors)}]
-
    [:#mce-submit (merge (:row-component templates)
                         {:justify-content :center
-                                      :background (:night colors)
-                                      :flex 1
-                                      :padding [[0 0 0 0]]})]
+                         :background (:night colors)
+                         :flex 1
+                         :padding [[0 0 0 0]]})]
    [:#mc-embedded-subscribe (merge (:textbar templates)
-                                   {:font-size   (* (:atom units) 42) 
-                                    :line-height (* (:atom units) 60)
+                                   {:background (:primary colors)
+                                    :font-family (:title fonts)
+                                    :justify-content :center
+                                    :font-size   (:title-font units) 
+                                    :line-height (:title-line-height units)
+                                    :font-weight 500
                                     :align-items :center
-                                    :-webkit-appearance :none})]
+                                    :-webkit-appearance :none
+                                    :cursor      :pointer})
+    [v/hovered {:background (:night colors)}]]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
-                                                    {:color (str (:night colors) " !important")
+                                                    {:width (percent 100)
+                                                     :padding-left (:full units)
+                                                     :margin "0 !important"
+                                                     :color (str (:day colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]
 
-   [:#mce-success-response (merge (:subtitle templates)
-                                  {:padding-bottom (:half units)})]
+   [:#mce-success-response (merge (:title templates))]
    [:.feature--image {:width "100%"
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
