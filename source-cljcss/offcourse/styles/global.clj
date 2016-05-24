@@ -15,7 +15,8 @@
          :text-decoration :inherit}]
    [:input {:display :flex
             :flex 1}]
-   [:html {:font-family (:base fonts)}]
+   [:html {:position :relative
+           :font-family (:base fonts)}]
    [:input {:border :none} [:&:focus {:outline :none}]]
    [:html  :body :#container (:component templates)]
    (for [{:keys [min-width max-width percent]} breakpoints]

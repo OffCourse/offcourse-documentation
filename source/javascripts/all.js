@@ -1,5 +1,4 @@
-// Sticky
-// $( '#nav-sticky' ).fixedsticky();
+
 
 // Anchorscroll
 $(function() {
