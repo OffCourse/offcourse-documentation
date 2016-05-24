@@ -1,11 +1,13 @@
 (ns offcourse.styles.shame
   (:refer-clojure :exclude [+ - * /])
   (:require [offcourse.styles.vocabulary :as v]
+            [clojure.string :as str]
             [garden
              [units :as u :refer [percent px]]
              [stylesheet :refer [at-media]]
              [arithmetic :refer [/ + *]]
-             [selectors :as s]]))
+             [selectors :as s]
+             [util :as util]]))
 
 ; Shame file, but somehow interesting to seperate changes from the base code
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
@@ -45,7 +47,7 @@
     [v/hovered {:background (:night colors)}]]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:width (percent 100)
-                                                     :padding-left (str (:full units) " !important")
+                                                     :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
                                                      :margin "0 !important"
                                                      :color (str (:day colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]
