@@ -1,9 +1,5 @@
 language: 
 - ruby
-- clojure
-- node_js
-node_js:
-  - "5"
 rvm:
 - 2.3.0
 jdk:
@@ -11,6 +7,8 @@ jdk:
 cache: 
   bundler: true
 install:
+- nvm install 0.12
+- nvm use 0.12
 - npm install --global postcss-cli autoprefixer 
 - bundle install --path vendor/bundle
 - wget -O boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh
