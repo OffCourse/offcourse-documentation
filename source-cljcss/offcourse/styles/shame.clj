@@ -34,7 +34,6 @@
    [:#mc-embedded-subscribe (merge (:textbar templates)
                                    {:width (percent 100)
                                     :padding [[(:half units) 0]]
-
                                     :justify-content :center
                                     :align-items :center
                                     :background (:primary colors)
@@ -55,7 +54,9 @@
    [:.feature--image {:width "100%"
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
-                      :filter "grayscale(100%)"}]
+                      :filter "grayscale(100%)"
+                      :transition [["all" "1s" "ease" "1s"]]}
+    [v/hovered {:filter "none"}]]
    (at-media {:min-width (px 768)} 
              [:.sticky {:position :sticky
                         :padding [[(:full units) 0 (:full units) 0]]
