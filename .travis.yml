@@ -1,7 +1,7 @@
 language: 
 - ruby
 - clojure
--node_js
+- node_js
 node_js:
   - "5"
 rvm:
