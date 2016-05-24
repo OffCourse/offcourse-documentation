@@ -6,10 +6,10 @@
   [[v/layout        (merge (:column-component templates)
                            (:paper templates)
                            {:flex 1})
-    [v/layout--section (merge (:row-component templates)
+    [v/layout--section (merge 
                               (:recycled-paper templates)
-                              {:flex 0
-                               :justify-content :center})]]
+                              {
+                               })]]
    [v/main (merge (:row-component templates)
                   
                   {:flex [[0 1 (:max-content-width units)]]})]

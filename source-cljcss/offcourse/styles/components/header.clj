@@ -15,10 +15,9 @@
                      :flex [[0 1 (:max-content-width units)]]
                      :padding [[(:four units)(:full units)]]})]
    [v/header--section (merge (:row-component templates)
-                             {:flex 1})]
-   [v/header--section (merge (:row-component templates)
                              {:flex 1})
     [v/last {:flex 3
+             :overflow :hidden
              :padding-left (:full units)}]] 
    [v/header--list (merge (:column-component templates)
                           {:align-items :flex-start})]
