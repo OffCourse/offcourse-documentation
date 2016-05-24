@@ -29,10 +29,10 @@
                                       :flex 1
                                       :padding [[0 0 0 0]]})]
    [:#mc-embedded-subscribe (merge (:textbar templates)
-                                   {:flex 0
-                                    :font-size   (* (:atom units) 42) 
-                                    :line-height (* (:atom units) 60) })]
-
+                                   {:font-size   (* (:atom units) 42) 
+                                    :line-height (* (:atom units) 60)
+                                    :align-items :center
+                                    :-webkit-appearance :none})]
    [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
                                                     {:color (str (:night colors) " !important")
                                                      :background (str (:primary colors) " !important")})]]

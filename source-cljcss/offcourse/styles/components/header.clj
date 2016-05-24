@@ -7,8 +7,7 @@
   [[v/header--container (:row-component templates)
                         (:highlighted templates)
                         {:justify-content :center
-                         :width (percent 100)
-                         :overflow :hidden}]
+                         :width (percent 100)}]
    [v/header (merge (:row-component templates)
                     {:justify-content :center
                      :align-items :center
@@ -17,7 +16,7 @@
    [v/header--section (merge (:row-component templates)
                              {:flex 1})
     [v/last {:flex 3
-             :overflow :hidden
+             :overflow :visible
              :padding-left (:full units)}]] 
    [v/header--list (merge (:column-component templates)
                           {:align-items :flex-start})]
