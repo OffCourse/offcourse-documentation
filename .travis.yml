@@ -1,12 +1,15 @@
 language: 
 - ruby
 - clojure
-cache: 
-  bundler: true
+-node_js
+node_js:
+  - "5"
 rvm:
 - 2.3.0
 jdk:
 - oraclejdk8
+cache: 
+  bundler: true
 install:
 - npm install --global postcss-cli autoprefixer 
 - bundle install --path vendor/bundle
