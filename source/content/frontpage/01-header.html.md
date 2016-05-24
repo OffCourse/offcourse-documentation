@@ -4,7 +4,7 @@ title:
 date: 31-12-2015
 anchor: Home
 ---
-<div class="emphasis">There’s an easy way to organise your own learning. One that is simple and fun. One that allows you to learn any skill from anywhere with an internet connection and maps it all.</div>
+<div class="emphasis">There’s an easy way to organize your own learning. One that is simple and fun. One that allows you to learn any skill from anywhere with an internet connection and maps it all.</div>
 
 <div class="container"><div class="emphasis-textbar">It’s called Offcourse_ and we are building it.</div></div>
 
