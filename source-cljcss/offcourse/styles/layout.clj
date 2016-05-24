@@ -4,15 +4,12 @@
 
 (defn layout [{:keys [templates units colors]}]
   [[v/layout        (merge (:column-component templates)
-                           (:paper templates)
-                           {:flex 1})
-    [v/layout--section (merge 
-                              (:recycled-paper templates)
-                              {
-                               })]]
+                           (:paper templates))
+    [v/layout--section (merge (:recycled-paper templates)
+                              (:row-component templates)
+                              {:justify-content :center})]]
    [v/main (merge (:row-component templates)
-                  
-                  {:flex [[0 1 (:max-content-width units)]]})]
+                  {:width (:max-content-width units)})]
    [v/main--section (merge {:flex 1})
     [v/last (merge (:column-component templates)
                    (:recycled-paper templates)
