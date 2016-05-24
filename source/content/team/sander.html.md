@@ -4,7 +4,7 @@ title: Offcouse - Team
 date: 01-06-2014
 name: Sander Reukema
 summery:
-job: business development
+job: business developer and analyst
 linkedin: https://nl.linkedin.com/in/sanderreukema
 img: sander.png
 ---
