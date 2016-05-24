@@ -6,7 +6,6 @@ name: Sander Reukema
 summery:
 job: business development
 linkedin: https://nl.linkedin.com/in/sanderreukema
-twitter: https://twitter.com/bureaudonald
 img: sander.png
 ---
 Typographer by day, storyteller by night. Donald builds the story of Offcourse_ character by character. 
