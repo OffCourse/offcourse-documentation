@@ -23,7 +23,7 @@
                   :padding-bottom (:two-third units)})]]
     
     [v/emphasis (merge (:title templates)
-                         {:padding-bottom (:full units)})]
+                       {:padding-bottom (:full units)})]
     [v/emphasis-textbar (merge (:textbar templates))]
     [v/content
      [:p (merge (:text templates)

@@ -77,8 +77,8 @@
                                     :line-height (:subtitle-line-height units)
                                     :font-family (:base fonts)
                                     :font-weight 300})
-   :text    (fnk [units fonts]     {:font-size     (* 1.5 (:base-font units))
-                                    :line-height   (* 1.5 (:base-line-height units))
+   :text    (fnk [units fonts]     {:font-size     (:subtitle-font units)
+                                    :line-height   (:subtitle-line-height units)
                                     :margin-bottom (:full units)})
    :component        (fnk [] {:display        :flex
                               :flex-direction :column

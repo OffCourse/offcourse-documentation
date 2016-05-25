@@ -34,6 +34,8 @@ layout: main
           <div class="sheet">
             <article class="content">
               <%= blog('frontpage').articles[0].body %>
+              <br>
+              <%= partial("partials/signup-mailchimp") %>
             </article>
           </div>
         </div>
@@ -45,16 +47,6 @@ layout: main
         <% for concept in blog('frontpage').articles[1].data.concepts %>
         <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
         <% end %>
-      </div>
-      <div class="container-without">
-        <div class="main--header" id="signup">Signup</div>
-      </div>
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <%= partial("partials/signup-mailchimp") %>
-          </div>
-        </div>
       </div>
       <div class="container-without">
         <div class="main--header" id="preview">Preview</div>
@@ -75,6 +67,16 @@ layout: main
         <% blog('team').articles.reverse_each do |person| %>
         <%= partial("partials/card-person", :locals => { :person => person }) %>
         <% end %>
+      </div>
+      <div class="container-without">
+        <div class="main--header" id="signup">Signup</div>
+      </div>
+      <div class="sheets">
+        <div class="container">
+          <div class="sheet">
+            <%= partial("partials/signup-mailchimp") %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

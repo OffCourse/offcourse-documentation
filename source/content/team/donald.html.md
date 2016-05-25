@@ -4,7 +4,7 @@ title: Offcouse - Team
 date: 01-05-2014
 name: Donald Roos
 summery:
-job: designer
+job: typographer, ui/ux designer
 linkedin: https://nl.linkedin.com/in/donaldroos/nl
 twitter: https://twitter.com/bureaudonald
 img: donald.jpg

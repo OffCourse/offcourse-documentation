@@ -20,7 +20,7 @@
                              :flex-wrap :wrap})]
    [:#mce-EMAIL-LABEL (merge (:title templates)
                              {:padding [[0 0 (:full units) 0]]})]
-   [:#mce-EMAIL-LABEL-TWO (merge (:subtitle templates)
+   [:#mce-EMAIL-LABEL-TWO (merge (:text templates)
                                  {:padding-top (:full units)})]
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:flex 2
