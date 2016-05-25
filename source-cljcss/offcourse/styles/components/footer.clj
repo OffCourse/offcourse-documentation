@@ -11,21 +11,25 @@
                     {:padding [[(:three units) 0]]
                      :background (:night colors)
                      :color (:day colors)
+                     :padding-left (* (:atom units) 60)
                       })
     [v/footer--container (merge (:row-component templates)
                                 {:align-items :flex-start})]]
-   [v/footer--textbar (merge (:textbar templates)
+   [v/footer--textbar (merge (:logo :templates)
+                             (:negative :templates)
+                             (:component :templates)
                              (:title templates)
-                             {:flex-direction :row
-                              :font-size       (:subtitle-font units)
+                             {:outline :none
+                              :flex-direction :row
+                              :font-size (:subtitle-font units)
                               :padding [[(:third units) (:half units)]]
-                              :border [[:none :none (:default borders) :none]]
+                              :border-bottom (:default borders)
                               :margin-right (:full units)
                               :margin-bottom (:full units)
                               :background (:day colors)
                               :color (:night colors)
                               :cursor :pointer})
     [v/hovered (:highlighted borders)]]
-   [v/footer--icon {:height (:full units)
-                    :width  (:full units)
-                    :margin-right (:full units)}]])
+   [v/footer--header (merge (:title templates)
+                            {:padding [[0 0 (:third units) 0]]
+                             :color (:day colors)})]])

@@ -24,9 +24,8 @@
 ; Footer
 (s/defclass footer)
 (s/defclass footer--container)
-(s/defclass footer--icon)
+(s/defclass footer--header)
 (s/defclass footer--textbar)
-
 
 ;; ELEMENTS
 (s/defclass list)
