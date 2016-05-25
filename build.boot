@@ -16,7 +16,7 @@
                          :pretty-print true}
                  target {:dir #{".build-boot/stylesheets/"}}
                  autoprefixer {:files ["main.css"]
-                               :browsers "> 1%"})
+                               :browsers "last 5 versions"})
   (println "Task: CSS")
   (comp (garden)
         (autoprefixer)
