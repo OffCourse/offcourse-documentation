@@ -10,7 +10,7 @@ concepts:
   image: images/collect.png
 - concept: Share your collections with peers
   summery: | 
-    By sharing your collections, you’ll get in touch with people from all over the world. You can copy and edit their collections, and make them just right for you. Imagine the different perspectives, and what you’ll learn from them. 
+    Share your collections and get in touch with people from all over the world. You can copy and edit their collections, and make them just right for you. Imagine the different perspectives, and what you’ll learn from them. 
   image: images/share.png
 - concept: Track your progress for future employers
   summery: | 
