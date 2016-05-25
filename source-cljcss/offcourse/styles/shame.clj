@@ -50,7 +50,7 @@
                                                      :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
                                                      :margin "0 !important"
                                                      :color (str (:day colors) " !important")
-                                                     :background (str (:primary colors) " !important")})]]
+                                                     :background (str (:night colors) " !important")})]]
 
    [:#mce-success-response (merge (:title templates)
                                   {:padding-top (:full units)})]
@@ -61,7 +61,7 @@
                                  :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
                                  :margin "0 !important"
                                  :color (str (:day colors) " !important")
-                                 :background (str (:primary colors) " !important")})]
+                                 :background (str (:night colors) " !important")})]
    [:.feature--image {:width "100%"
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"

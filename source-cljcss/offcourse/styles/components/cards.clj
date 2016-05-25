@@ -63,7 +63,8 @@
      [v/first {:padding-left    0
                :padding-right   0}]
      [v/last {:padding-top (:third units)}]
-     [v/card-person--image {:height (:five units)
+     [v/card-person--image {:height (:four units)
                             :filter "grayscale(100%)"}]]
     [v/button-container (merge (:row-component templates))]
-    [v/content (merge (:text templates))]]])
+    [v/content (merge (:text templates)
+                      {:margin-bottom (:third units)})]]])
