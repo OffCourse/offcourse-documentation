@@ -49,7 +49,7 @@
                    (:recycled-paper templates)
                    {:padding          (:full units)
                     :column-gap       (:column-gap units)})
-    [v/container {:display :inline-block
+    [v/container {:display :block
                   :width (percent 100)}]]
 
    (for [breakpoint breakpoints] (calculate-breakpoint-person breakpoint units))

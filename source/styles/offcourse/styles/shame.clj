@@ -21,7 +21,8 @@
    [:#mce-EMAIL-LABEL (merge (:title templates)
                              {:padding [[0 0 (:full units) 0]]})]
    [:#mce-EMAIL-LABEL-TWO (merge (:text templates)
-                                 {:padding-top (:full units)})]
+                                 {:width (percent 100)
+                                  :padding-top (:full units)})]
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:flex 2
                         :padding [[(:half units)(:half units)(:half units)(:full units)]]
@@ -63,7 +64,7 @@
                                  :color (str (:day colors) " !important")
                                  :background (str (:night colors) " !important")})]
    [:.feature--image {:width "100%"
-                      :max-height (rem 25)
+                      :max-height (rem 20)
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
                       :filter "grayscale(100%)"
