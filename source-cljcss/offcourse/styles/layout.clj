@@ -13,7 +13,8 @@
                               {:justify-content :center})]
    [v/main (merge (:row-component templates)
                   {:width (:max-content-width units)
-                   :padding-bottom (:two units)})]
+                   :padding-bottom (:two units)})
+    [v/first {:padding-bottom 0} ]]
    [v/main--section (merge {:flex 1})
     [v/last (merge (:column-component templates)
                    {:flex 3})]]
