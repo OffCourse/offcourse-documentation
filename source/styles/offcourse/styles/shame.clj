@@ -1,9 +1,9 @@
 (ns offcourse.styles.shame
-  (:refer-clojure :exclude [+ - * /])
+  (:refer-clojure :exclude [rem + - * /])
   (:require [offcourse.styles.vocabulary :as v]
             [clojure.string :as str]
             [garden
-             [units :as u :refer [percent px]]
+             [units :as u :refer [rem percent px]]
              [stylesheet :refer [at-media]]
              [arithmetic :refer [/ + *]]
              [selectors :as s]
@@ -63,6 +63,7 @@
                                  :color (str (:day colors) " !important")
                                  :background (str (:night colors) " !important")})]
    [:.feature--image {:width "100%"
+                      :max-height (rem 25)
                       :filter "grayscale(100%)"}]
    [:.example--image {:width "100%"
                       :filter "grayscale(100%)"
