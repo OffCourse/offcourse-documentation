@@ -7,7 +7,7 @@ Production branch builds automatically to: [http://offcourse.io](http://offcours
 Master branch builds automatically to: [http://user-staging.offcourse.io](http://info-staging.offcourse.io)
 [![Build Status](https://travis-ci.org/OffCourse/offcourse-info-user.svg?branch=master)](https://travis-ci.org/OffCourse/offcourse-info-user)
 
-The builds will take about 30 seconds to a minute to complete. After a succesfull build Github pages has to regenerate the site, which might take a bit of time too.
+The builds will take about 5 minutes to complete. After a succesfull build Github pages has to regenerate the site, which might take a bit of time too.
 
 ## Technical info
 
