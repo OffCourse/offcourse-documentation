@@ -10,7 +10,7 @@
 
 (deftask css []
   (set-env! 
-    :source-paths #(conj % "source-cljcss/"))
+    :source-paths #(conj % "source/styles"))
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :output-to    "main.css"
                          :pretty-print true}

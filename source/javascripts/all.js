@@ -48,19 +48,13 @@
 //     }
 // });
 
-
-
-
-
-
 // Anchorscroll
 $(function() {
-  console.log("startgin")
   $('a[href*="#"]:not([href="#"])').bind('click', function(e) {
-    console.log("running")
     e.preventDefault;
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
+      console.log(target)
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
