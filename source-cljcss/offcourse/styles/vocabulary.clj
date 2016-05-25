@@ -25,6 +25,7 @@
 (s/defclass footer)
 (s/defclass footer--container)
 (s/defclass footer--icon)
+(s/defclass footer--textbar)
 
 
 ;; ELEMENTS
