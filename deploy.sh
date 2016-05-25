@@ -6,7 +6,7 @@ then
 elif [ $TRAVIS_BRANCH = "production" ]
 then
   GH_REF="github.com/offcourse/offcourse-info-production.git"
-  echo user.offcourse.io > build/CNAME
+  echo offcourse.io > build/CNAME
 fi
 
 # Make sure GH doesn't Jekyll build
