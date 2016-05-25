@@ -8,7 +8,7 @@
 
 (defn footer [{:keys [templates colors units borders]}]
   [[v/footer (merge (:highlighted templates)
-                    {:padding [[(:three units) 0]]
+                    {:padding [[(:two units) 0]]
                      :background (:night colors)
                      :color (:day colors)
                      :padding-left (* (:atom units) 60)
@@ -22,9 +22,9 @@
                              {:outline :none
                               :flex-direction :row
                               :font-size (:subtitle-font units)
-                              :padding [[(:third units) (:half units)]]
+                              :padding [[(:sixth units) (:half units)]]
                               :border-bottom (:default borders)
-                              :margin-right (:full units)
+                              :margin-right (:sixth units)
                               :margin-bottom (:full units)
                               :background (:day colors)
                               :color (:night colors)

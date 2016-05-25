@@ -25,7 +25,7 @@
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:flex 2
                         :padding [[(:half units)(:half units)(:half units)(:full units)]]
-                        :font-family (:base-font fonts)
+                        :font-family (:base fonts)
                         :font-size  (:title-font units) 
                         :line-height (:title-line-height units)
                         :font-weight 300
@@ -39,7 +39,7 @@
                                     :justify-content :center
                                     :align-items :center
                                     :background (:primary colors)
-                                    :font-family (:base-font fonts)
+                                    :font-family (:base fonts)
                                     :font-weight 300
                                     :font-size   (:title-font units) 
                                     :line-height (:title-line-height units)

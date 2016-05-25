@@ -11,7 +11,7 @@
    [v/layout--section (merge (:recycled-paper templates)
                              (:row-component templates)
                              {:justify-content :center
-                              :padding-bottom (:four units)})
+                              :padding-bottom (:two units)})
     [v/first {:padding-bottom 0} ]]
    [v/main (merge (:row-component templates)
                   {:width (:max-content-width units)})]

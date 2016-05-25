@@ -62,8 +62,8 @@
                             {:padding [[0 (:full units) 0]]})
      [v/first {:padding-left    0
                :padding-right   0}]
-     [v/last {:padding (:half units)}]
-     [v/card-person--image {:height (:five units)
+     [v/last {:padding [[(:half units)(:half units)(:third units)(:two-third units)]]}]
+     [v/card-person--image {:height (* (:atom units) 140) 
                             :filter "grayscale(100%)"}]]
     [v/button-container (merge (:row-component templates))]
     [v/content (merge (:text templates)
