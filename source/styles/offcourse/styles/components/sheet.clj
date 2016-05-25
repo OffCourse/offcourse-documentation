@@ -8,7 +8,6 @@
   [[v/sheets (merge (:column-component templates)
                    {:padding (:full units)
                     :display :block
-                    :flex             1
                     :background-color (:light colors)})]
    [v/sheet (merge (:row-component templates)
                    (:sheet templates)

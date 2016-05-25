@@ -25,7 +25,7 @@
                    (:recycled-paper templates)
                    {:padding          (:full units)
                     :column-gap       (:column-gap units)})
-    [v/container {:display :inline-block}]]
+    [v/container {:display :block}]]
 
    (for [breakpoint breakpoints] (calculate-breakpoint breakpoint units))
 
