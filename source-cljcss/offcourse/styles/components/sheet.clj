@@ -28,6 +28,11 @@
     [v/content
      [:p (merge (:text templates)
                 {:padding-bottom 0
-                 :margin-bottom 0})]]]])
+                 :margin-bottom 0})]]
+    [v/content-padded
+     [:p (merge (:text templates)
+                {:padding-bottom (:two-third units)
+                 :margin-bottom 0})
+      [v/last {:padding-bottom 0}]]]]])
 
 

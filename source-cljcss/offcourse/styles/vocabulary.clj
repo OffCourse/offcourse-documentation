@@ -68,6 +68,7 @@
 (s/defclass subtitle)
 (s/defclass content)
 (s/defclass content-emphasis)
+(s/defclass content-padded)
 (s/defclass emphasis)
 (s/defclass emphasis-textbar)
 
