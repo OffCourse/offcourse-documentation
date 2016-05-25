@@ -21,6 +21,12 @@
 (s/defclass header--textbar-small)
 (s/defclass header--textbar-inverse)
 
+; Footer
+(s/defclass footer)
+(s/defclass footer--container)
+(s/defclass footer--icon)
+
+
 ;; ELEMENTS
 (s/defclass list)
 (def todo-list (list (s/attr :data-list-type := :todo)))

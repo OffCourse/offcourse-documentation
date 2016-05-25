@@ -9,12 +9,12 @@
   [[v/layout        (merge (:column-component templates)
                            (:paper templates))]
    [v/layout--section (merge (:recycled-paper templates)
-                              (:row-component templates)
-                              {:justify-content :center})]
-   [v/main (merge (:row-component templates)
-                  {:width (:max-content-width units)
-                   :padding-bottom (:four units)})
+                             (:row-component templates)
+                             {:justify-content :center
+                              :padding-bottom (:four units)})
     [v/first {:padding-bottom 0} ]]
+   [v/main (merge (:row-component templates)
+                  {:width (:max-content-width units)})]
    [v/main--section (merge {:flex 1})
     [v/last (merge (:column-component templates)
                    {:flex 3})]]

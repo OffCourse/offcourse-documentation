@@ -1,5 +1,5 @@
 (ns offcourse.styles.components.header
-  (:refer-clojure :exclude [first last])
+  (:refer-clojure :exclude [first last + - * /])
   (:require [garden
               [arithmetic :refer [* + - /]]
               [units :as u :refer [vh percent]]]
