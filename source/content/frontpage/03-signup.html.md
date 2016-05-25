@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Start organzing your learning today
+title: Start organizing your learning today
 date: 27-12-2015
 anchor: Signup
 ---
