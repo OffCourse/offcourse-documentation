@@ -7,7 +7,7 @@
 
 (defn header [{:keys [templates colors units]}]
   [[v/header (merge (:highlighted templates))
-    [v/header--container (merge {:padding [[(:four units) 0 (:four units) (* (:atom units) 35)]]})]]
+    [v/header--container (merge {:padding [[(:four units) 0 (:four units) (* (:atom units) 40)]]})]]
    [v/header--list (merge (:column-component templates)
                           {:align-items :flex-start})]
    [v/header--sublist (merge (:row-component templates)
@@ -16,7 +16,7 @@
                              {:font-size (:header-font units)
                               :line-height (:header-line-height units)
                               :margin-right (:third units)
-                              :padding [[ 0 (:full units) 0 (:full units)]]
+                              :padding [[ 0 (:full units) 0 (* (:atom units) 25)]]
                               :margin-bottom (:third units)})]
    [v/header--textbar-small (merge (:textbar templates)
                              {:font-size (:subheader-font units)

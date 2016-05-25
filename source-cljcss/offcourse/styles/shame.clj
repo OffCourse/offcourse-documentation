@@ -25,10 +25,10 @@
    [:#mce-EMAIL (merge (:subtitle templates))
                        {:flex 2
                         :padding [[(:half units)(:half units)(:half units)(:full units)]]
-                        :font-family (:title fonts)
+                        :font-family (:base-font fonts)
                         :font-size  (:title-font units) 
                         :line-height (:title-line-height units)
-                        :font-weight 500
+                        :font-weight 300
                         :background (:light colors)}]
    [:#mce-submit (merge (:row-component templates)
                     {:flex 1
@@ -39,8 +39,8 @@
                                     :justify-content :center
                                     :align-items :center
                                     :background (:primary colors)
-                                    :font-family (:title fonts)
-                                    :font-weight 500
+                                    :font-family (:base-font fonts)
+                                    :font-weight 300
                                     :font-size   (:title-font units) 
                                     :line-height (:title-line-height units)
                                     :cursor      :pointer})
