@@ -4,7 +4,7 @@ title: Offcouse - Team
 date: 01-03-2013
 name: Jan Hein Hoogstad
 summery:
-job: founder and developer
+job: founder
 linkedin: https://www.linkedin.com/in/yeehaa
 twitter: https://twitter.com/yeehaa
 img: janhein.jpg
