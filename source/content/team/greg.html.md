@@ -4,7 +4,7 @@ title: Offcouse - Team
 date: 01-06-2015
 name: Greg Rodriguez Varias
 summery:
-job: developer
+job: front-end developer
 linkedin: https://www.linkedin.com/in/gregrv/nl
 img: greg.jpg
 ---
