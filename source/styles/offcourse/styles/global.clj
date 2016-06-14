@@ -15,6 +15,8 @@
          :text-decoration :inherit}]
    [:html {:position :relative
            :font-family (:base fonts)}]
+   [:input {:border :none} 
+    [:&:focus {:outline :none}]]
    (for [{:keys [min-width max-width percent]} breakpoints]
      (at-media {:min-width min-width :max-width max-width}
                [:html {:font-size   percent
