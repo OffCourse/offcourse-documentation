@@ -6,5 +6,6 @@ name: Amar Shah
 summery:
 job: back-end developer
 linkedin: https://www.linkedin.com/in/amar-shah-54a5933
+twitter: https://twitter.com/amar47shah
 img: amar.jpg
 ---
