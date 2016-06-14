@@ -13,12 +13,8 @@
          :margin-right :none}]
    [:a  {:color :inherit
          :text-decoration :inherit}]
-   [:input {:display :flex
-            :flex 1}]
    [:html {:position :relative
            :font-family (:base fonts)}]
-   [:input {:border :none} [:&:focus {:outline :none}]]
-   [:html  :body :#container (:component templates)]
    (for [{:keys [min-width max-width percent]} breakpoints]
      (at-media {:min-width min-width :max-width max-width}
                [:html {:font-size   percent
