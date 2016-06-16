@@ -49,7 +49,9 @@
    })
 
 (def templates-graph
-  {:highlighted      (fnk [colors] {:background-color (:primary colors)
+  {
+   ; Color Templates
+   :highlighted      (fnk [colors] {:background-color (:primary colors)
                                     :color            (:night colors)})
    :selected         (fnk [colors] {:background-color (:night colors)
                                     :color            (:day colors)})
@@ -64,6 +66,8 @@
                                     :color            (:night colors)})
    :smudged-paper   (fnk [colors] {:background-color  (:medium colors)
                                     :color            (:night colors)})
+
+   ; Font Templates
    :tiny-font        (fnk [units fonts] {:font-size   (:tag-font units)
                                          :font-family (:base fonts)
                                          :font-weight 300})
@@ -86,12 +90,16 @@
    :text    (fnk [units fonts]     {:font-size     (:subtitle-font units)
                                     :line-height   (:subtitle-line-height units)
                                     :margin-bottom (:full units)})
+
+   ; Component Templates
    :component        (fnk [] {:display        :flex
                               :flex-direction :column
                               :padding        0
                               :margin         0})
    :column-component (fnk [component] component)
    :row-component    (fnk [component] (merge component {:flex-direction :row}))
+
+   ; Special Templates
    :buttonless       (fnk [units] {:outline          :none
                                    :padding          [[0 (:third units)]]
                                    :border           :none})
@@ -118,6 +126,7 @@
                       :very-light (:very-light-gray raw-colors)
                       :day     (:white raw-colors)
                       :primary (base-color raw-colors)})
+
    :breakpoints (fnk [raw-breakpoints]
                      (map (fn [{:keys [min-width max-width percent column-count]}]
                             {:min-width (px min-width)
@@ -125,6 +134,7 @@
                              :percent   (u/percent percent)
                              :column-count column-count})
                           raw-breakpoints))
+
    :fonts       (fnk [raw-fonts base-font logo-font title-font]
                      {:base  base-font
                       :logo  logo-font
@@ -134,7 +144,9 @@
    :borders     (fnk [units colors]
                      {:default [[:solid (:sixth units) (:medium colors)]]
                       :highlighted {:border-color [(:primary colors)]}})
+
    :units       (fnk [base-unit] (-compose units-graph {:base-unit base-unit}))
+   
    :templates   (fnk [units fonts colors borders]
                      (-compose templates-graph {:units  units
                                                 :fonts fonts
