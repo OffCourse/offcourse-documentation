@@ -10,9 +10,7 @@
   [[v/footer (merge (:highlighted templates)
                     {:padding [[(:two units) 0]]
                      :background (:night colors)
-                     :color (:day colors)
-                     :padding-left (* (:atom units) 60)
-                      })
+                     :color (:day colors)})
     [v/footer--container (merge (:row-component templates)
                                 {:align-items :flex-start})]]
    [v/footer--textbar (merge (:logo :templates)

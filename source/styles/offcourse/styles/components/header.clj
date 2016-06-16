@@ -7,7 +7,7 @@
 
 (defn header [{:keys [templates colors units]}]
   [[v/header              (merge    (:highlighted         templates))
-    [v/header--container  (merge    {:padding             [[(:four units) 0 (:four units) (* (:atom units) 40)]]})]]
+    [v/header--container  (merge    {:padding             [[(:four units) 0 ]]})]]
    [v/header--list        (merge    (:column-component    templates)
                                     {:align-items         :flex-start})]
    [v/header--sublist     (merge    (:row-component       templates)
