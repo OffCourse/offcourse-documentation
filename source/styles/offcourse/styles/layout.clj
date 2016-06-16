@@ -13,17 +13,11 @@
                              {:justify-content :center
                               :padding-bottom (:two units)})
     [v/first {:padding-bottom 0} ]]
-   [v/main (merge (:row-component templates)
+   [v/grid (merge (:row-component templates)
                   {:width (:max-content-width units)})]
-   [v/main--section (merge {:flex 1})
-    [v/last (merge (:column-component templates)
-                   {:flex 3})]]
-   [v/main--header (merge (:textbar templates)
-                          {:font-size (:subheader-font units)
-                           :padding [[0 (:full units)]]
-                           :line-height (:subheader-line-height units)
-                           :margin-top (:two units)
-                           :margin-left (* (:full units) 1)})]
+   [v/grid--section (merge (:column-component templates)
+                           {:flex 1})
+    [v/last (merge {:flex 3})]]
    [v/container (merge (:row-component templates)
                        {:padding [[0 0 (:two-third units) 0]]})]
    [v/container-without (merge (:row-component templates))]])

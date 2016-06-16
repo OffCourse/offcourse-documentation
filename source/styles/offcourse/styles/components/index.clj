@@ -3,6 +3,7 @@
              [dashboard :refer [dashboard]]
              [cards :refer [cards]]
              [button :refer [button]]
+             [logo :refer [logo]]
              [label :refer [label-component]]
              [list :refer [list-component]]
              [sheet :refer [sheet]]
@@ -10,5 +11,5 @@
              [header :refer [header]]]))
 
 (defn components [config]
-  (let [components [dashboard sheet button label-component list-component header cards footer]]
+  (let [components [dashboard sheet button logo label-component list-component header cards footer]]
     (for [component components] (component config))))

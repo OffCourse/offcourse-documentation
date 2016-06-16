@@ -7,9 +7,8 @@
 (s/defclass container-without)
 (s/defclass layout)
 (s/defclass layout--section)
-(s/defclass main)
-(s/defclass main--section)
-(s/defclass main--header)
+(s/defclass grid)
+(s/defclass grid--section)
 
 ;; HEADER
 (s/defclass header)

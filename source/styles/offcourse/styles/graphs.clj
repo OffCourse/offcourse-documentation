@@ -17,7 +17,7 @@
    :two                  (fnk [full] (* full 2))
    :one-and-half         (fnk [full] (* full 1.5))
    :one-and-quarter      (fnk [full] (* full 1.25))
-   :full                 (fnk [base-unit] (rem (/ base-unit 16)))
+   :full                 (fnk [base-unit] (rem (/ base-unit 16))) ; entry def
    :two-third            (fnk [third] (* third 2))
    :half                 (fnk [full] (/ full 2))
    :third                (fnk [full] (/ full 3))
