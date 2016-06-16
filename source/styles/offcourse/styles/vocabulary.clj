@@ -3,12 +3,12 @@
   (:require [garden.selectors :as s]))
 
 ; Layout
-(s/defclass container)
-(s/defclass container-without)
 (s/defclass layout)
 (s/defclass layout--section)
 (s/defclass grid)
 (s/defclass grid--section)
+(s/defclass container)
+(s/defclass container--top-padded)
 
 ; Header
 (s/defclass header)
@@ -21,6 +21,7 @@
 (s/defclass header--textbar-inverse)
 
 ; Logo Title
+(s/defclass logo--container)
 (s/defclass logo)
 (s/defclass logo--padded)
 (s/defclass logo--inverse)

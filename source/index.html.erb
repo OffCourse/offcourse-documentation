@@ -32,15 +32,19 @@ layout: main
     </div>
 
     <div class="grid--section">
-      <div class="sheet">
-        <article class="content">
-          <%= blog('frontpage').articles[0].body %>
-        </article>
+      <div class="sheets">
+        <div class="sheet">
+          <article class="content">
+            <%= blog('frontpage').articles[0].body %>
+          </article>
+        </div>
       </div>
-      <div class="sheet">
-        <%= partial("partials/signup-mailchimp") %>
+      <div class="sheets">
+        <div class="sheet">
+          <%= partial("partials/signup-mailchimp") %>
+        </div>
       </div>
-      <div class="container">
+      <div class="container container--top-padded">
         <div class="logo logo--padded" id="features">Features</div>
       </div>
       <div class="cards">
@@ -48,23 +52,27 @@ layout: main
         <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
         <% end %>
       </div>
-      <div class="container">
+      <div class="container container--top-padded">
         <div class="logo logo--padded" id="preview">Preview</div>
       </div>
-      <div class="sheet">
-        <article class="content">
-          <img class="example--image" src="./images/iteration-current.png" />
-        </article>
+      <div class="sheets">
+        <div class="sheet">
+          <article class="content">
+            <img class="example--image" src="./images/iteration-current.png" />
+          </article>
+        </div>
       </div>
-      <div class="container">
+      <div class="container container--top-padded">
         <div class="logo logo--padded" id="mission">Mission</div>
       </div>
-      <div class="sheet">
-        <article class="content-padded">
-          <%= blog('frontpage').articles[3].body %>
-        </article>
+      <div class="sheets">
+        <div class="sheet">
+          <article class="content-padded">
+            <%= blog('frontpage').articles[3].body %>
+          </article>
+        </div>
       </div>
-      <div class="container">
+      <div class="container container--top-padded">
         <div class="logo logo--padded" id="team">Team</div>
       </div>
       <div class="cards-person">
@@ -72,14 +80,16 @@ layout: main
         <%= partial("partials/card-person", :locals => { :person => person }) %>
         <% end %>
       </div>
-      <div class="container">
+      <div class="container container--top-padded">
         <div class="logo logo--padded" id="signup">Signup</div>
       </div>
-      <div id="join" class="sheet">
-        <%= partial("partials/signup-mailchimp") %>
+      <div class="sheets">
+        <div id="join" class="sheet">
+          <%= partial("partials/signup-mailchimp") %>
+        </div>
       </div>
     </div>
-    
+
   </div>
 </div>
 

@@ -23,7 +23,7 @@
 (defn cards [{:keys [templates breakpoints borders colors units]}]
   [[v/cards (merge (:row-component templates)
                    (:recycled-paper templates)
-                   {:padding          (:full units)
+                   {:padding          [[(:full units) 0]]
                     :column-gap       (:column-gap units)})
     [v/container {:display :block}]]
 
@@ -47,7 +47,7 @@
 
    [v/cards-person (merge (:row-component templates)
                    (:recycled-paper templates)
-                   {:padding          (:full units)
+                   {:padding          [[(:full units) 0]]
                     :column-gap       (:column-gap units)})
     [v/container {:display :inline-block
                   :width (percent 100)}]]
