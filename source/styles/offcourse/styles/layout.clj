@@ -18,6 +18,4 @@
    [v/grid--section (merge (:column-component templates)
                            {:flex 1})
     [v/last (merge {:flex 3})]]
-   [v/container (merge (:row-component templates)
-                       {:padding [[0 0 (:two-third units) 0]]})]
-   [v/container-without (merge (:row-component templates))]])
+   [v/container (merge (:row-component templates))]])
