@@ -21,7 +21,6 @@
 (s/defclass header--textbar-inverse)
 
 ; Logo Title
-(s/defclass logo--container)
 (s/defclass logo)
 (s/defclass logo--padded)
 (s/defclass logo--inverse)
@@ -74,7 +73,6 @@
 (s/defclass content-emphasis)
 (s/defclass content-padded)
 (s/defclass emphasis)
-(s/defclass emphasis-textbar)
 
 ;; MODIFIERS
 (s/defpseudoclass hover)
