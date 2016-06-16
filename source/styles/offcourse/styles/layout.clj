@@ -16,6 +16,7 @@
    [v/grid (merge (:row-component templates)
                   {:width (:max-content-width units)})]
    [v/grid--section (merge (:column-component templates)
-                           {:flex 1})
+                           {:padding (:full units)
+                            :flex 1})
     [v/last (merge {:flex 3})]]
    [v/container (merge (:row-component templates))]])

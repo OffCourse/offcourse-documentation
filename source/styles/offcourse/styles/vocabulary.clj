@@ -2,7 +2,7 @@
   (:refer-clojure :exclude [first second last list])
   (:require [garden.selectors :as s]))
 
-;; LAYOUT
+; Layout
 (s/defclass container)
 (s/defclass container-without)
 (s/defclass layout)
@@ -10,7 +10,7 @@
 (s/defclass grid)
 (s/defclass grid--section)
 
-;; HEADER
+; Header
 (s/defclass header)
 (s/defclass header--container)
 (s/defclass header--section)
@@ -20,13 +20,19 @@
 (s/defclass header--textbar-small)
 (s/defclass header--textbar-inverse)
 
+; Logo Title
+(s/defclass logo)
+(s/defclass logo--padded)
+(s/defclass logo--inverse)
+(s/defclass logo--large)
+
 ; Footer
 (s/defclass footer)
 (s/defclass footer--container)
 (s/defclass footer--header)
 (s/defclass footer--textbar)
 
-;; ELEMENTS
+; Components
 (s/defclass list)
 (def todo-list (list (s/attr :data-list-type := :todo)))
 (def edit-list (list (s/attr :data-list-type := :edit)))
@@ -52,8 +58,6 @@
 
 (s/defclass labels)
 (s/defclass label)
-
-(s/defclass logo)
 
 ;; this one must disappear
 (s/defclass dashboard)

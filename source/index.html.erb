@@ -4,17 +4,15 @@ layout: main
 ---
 <div class="layout--section header">
   <div class="grid">
-    <div class="grid--section">
-      
-    </div>
+    <div class="grid--section"></div>
     <div class="grid--section">
      <div class="header--container">
         <ul class="header--list">
-          <li class="header--textbar">Offcourse_</li>
-          <li class="header--textbar header--textbar-inverse">Organize Your</li>
+          <li class="logo logo--large">Offcourse_</li>
+          <li class="logo logo--large logo--inverse">Organize Your</li>
           <li class="header--sublist">
-            <div class="header--textbar header--textbar-inverse">Learning</div>
-            <div class="header--textbar-small">Offcourse.io</div>
+            <div class="logo logo--large logo--inverse">Learning</div>
+            <div class="logo">Offcourse.io</div>
           </li>
         </ul>
       </div>
@@ -24,6 +22,7 @@ layout: main
 
 <div class="layout--section">
   <div class="grid">
+
     <div class="grid--section">
       <div class="dashboard">
         <div class="dashboard--main">
@@ -31,25 +30,18 @@ layout: main
         </div>
       </div>
     </div>
+
     <div class="grid--section">
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <article class="content">
-              <%= blog('frontpage').articles[0].body %>
-            </article>
-          </div>
-        </div>
+      <div class="sheet">
+        <article class="content">
+          <%= blog('frontpage').articles[0].body %>
+        </article>
       </div>
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <%= partial("partials/signup-mailchimp") %>
-          </div>
-        </div>
+      <div class="sheet">
+        <%= partial("partials/signup-mailchimp") %>
       </div>
       <div class="container">
-        <div class="logo" id="features">Features</div>
+        <div class="logo logo--padded" id="features">Features</div>
       </div>
       <div class="cards">
         <% for concept in blog('frontpage').articles[1].data.concepts %>
@@ -57,31 +49,23 @@ layout: main
         <% end %>
       </div>
       <div class="container">
-        <div class="logo" id="preview">Preview</div>
+        <div class="logo logo--padded" id="preview">Preview</div>
       </div>
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <article class="content">
-              <img class="example--image" src="./images/iteration-current.png" />
-            </article>
-          </div>
-        </div>
+      <div class="sheet">
+        <article class="content">
+          <img class="example--image" src="./images/iteration-current.png" />
+        </article>
       </div>
       <div class="container">
-        <div class="logo" id="mission">Mission</div>
+        <div class="logo logo--padded" id="mission">Mission</div>
       </div>
-      <div class="sheets">
-        <div class="container">
-          <div class="sheet">
-            <article class="content-padded">
-              <%= blog('frontpage').articles[3].body %>
-            </article>
-          </div>
-        </div>
+      <div class="sheet">
+        <article class="content-padded">
+          <%= blog('frontpage').articles[3].body %>
+        </article>
       </div>
       <div class="container">
-        <div class="logo" id="team">Team</div>
+        <div class="logo logo--padded" id="team">Team</div>
       </div>
       <div class="cards-person">
         <% blog('team').articles.reverse_each do |person| %>
@@ -89,16 +73,13 @@ layout: main
         <% end %>
       </div>
       <div class="container">
-        <div class="logo" id="signup">Signup</div>
+        <div class="logo logo--padded" id="signup">Signup</div>
       </div>
-      <div class="sheets">
-        <div class="container">
-          <div id="join" class="sheet">
-            <%= partial("partials/signup-mailchimp") %>
-          </div>
-        </div>
+      <div id="join" class="sheet">
+        <%= partial("partials/signup-mailchimp") %>
       </div>
     </div>
+    
   </div>
 </div>
 
