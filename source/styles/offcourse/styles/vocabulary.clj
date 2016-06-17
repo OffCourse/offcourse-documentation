@@ -40,6 +40,9 @@
 (s/defclass form--row)
 (s/defclass form--input)
 (s/defclass form--subscribe)
+(s/defclass form--response)
+(s/defclass form--error)
+(s/defclass form--success)
 
 ; Footer
 (s/defclass footer)
