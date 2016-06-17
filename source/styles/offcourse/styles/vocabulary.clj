@@ -12,16 +12,30 @@
 (s/defclass container--pad-t-two)
 (s/defclass container--pad-tb-four)
 
+; Typography
+(s/defclass title)
+(s/defclass subtitle)
+(s/defclass text)
+(s/defclass content)
+
 ; Header
 (s/defclass header)
 (s/defclass header--column)
 (s/defclass header--row)
 
-; Logo Title
+; Logo
 (s/defclass logo)
 (s/defclass logo--padded)
 (s/defclass logo--inverse)
 (s/defclass logo--large)
+
+; Sheet
+(s/defclass sheet)
+
+; Form
+(s/defclass form--row)
+(s/defclass form--input)
+(s/defclass form--subscribe)
 
 ; Footer
 (s/defclass footer)
@@ -35,14 +49,6 @@
 (def edit-list (list (s/attr :data-list-type := :edit)))
 (s/defclass list--item)
 
-(s/defclass sheets)
-(s/defclass sheet)
-(s/defclass sheet--section)
-(s/defclass sheet--section--without)
-
-(s/defclass strips)
-(s/defclass strip)
-(s/defclass strip--section)
 
 (s/defclass cards)
 (s/defclass card)
@@ -61,13 +67,6 @@
 (def icon-button (button (s/attr :data-button-type := :icon)))
 (def checkbox-button (button (s/attr :data-button-type := :checkbox)))
 
-(s/defclass title)
-(s/defclass subtitle)
-(s/defclass content)
-(s/defclass content-emphasis)
-(s/defclass content-padded)
-(s/defclass emphasis)
-
 ;; MODIFIERS
 (s/defpseudoclass hover)
 (s/defpseudoclass disabled)
@@ -78,6 +77,6 @@
 (def disabled (s/& disabled))
 (def hovered (s/& hover))
 (def first (s/& first-child))
-(def last (s/& last-child))
 (def second (s/& (s/nth-child 2)))
 (def third (s/& (s/nth-child 3)))
+(def last (s/& last-child))

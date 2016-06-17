@@ -11,4 +11,5 @@
 (defn typography [{:keys [templates fonts]}]
   [(map make-at-font-face (:raw         fonts))
    [v/title               (:title       templates)]
-   [v/subtitle            (:subtitle    templates)]])
+   [v/subtitle            (:subtitle    templates)]
+   [v/text                (:text        templates)]])
