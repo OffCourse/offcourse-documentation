@@ -9,6 +9,6 @@
                  :src (str "url('/fonts/" file-name ".woff') " "format('woff')")}))
 
 (defn typography [{:keys [templates fonts]}]
-  [(map make-at-font-face (:raw fonts))
-   [v/title (:title templates)]
-   [v/subtitle (:subtitle templates)]])
+  [(map make-at-font-face (:raw         fonts))
+   [v/title               (:title       templates)]
+   [v/subtitle            (:subtitle    templates)]])

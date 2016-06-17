@@ -7,10 +7,12 @@
 
 (defn content [{:keys [templates colors units fonts]}]
   [[v/content   
-     [:p                (merge (:text templates)
-                               {:padding-bottom (:two-third units)
-                                :margin-bottom 0})
-      [v/last                  {:padding-bottom 0}]]]])
+    [:h1               (merge  (:title              templates)
+                               {:padding-bottom    (:two-third units)})]
+    [:h2                       (:subtitle           templates)]
+    [:p                (merge  (:text               templates)
+                               {:padding-bottom    (:two-third units)})
+     [v/last                   {:padding-bottom     0}]]]])
 
     ; [v/content        
     ;  [v/title           (merge (:title templates)

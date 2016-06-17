@@ -70,21 +70,17 @@
 
 
    ; Font Templates
-   :tiny-font         (fnk [units fonts]     {:font-size          (:tag-font units)
-                                              :font-family        (:base fonts)
-                                              :font-weight         300})
-
    :banner            (fnk [units fonts]     {:font-size          (* 2 (:title-font units))
                                               :line-height        (* 1.8 (:title-line-height units))
                                               :margin-bottom      (:full units)
                                               :font-family        (:title fonts)})
 
-   :title             (fnk [units fonts]     {:font-family        (:title fonts)
+   :logo              (fnk [fonts units]     {:font-family        (:logo fonts)
                                               :font-size          (:title-font units)
                                               :line-height        (:title-line-height units)
                                               :font-weight         500})
 
-   :logo              (fnk [fonts units]     {:font-family        (:logo fonts)
+   :title             (fnk [units fonts]     {:font-family        (:title fonts)
                                               :font-size          (:title-font units)
                                               :line-height        (:title-line-height units)
                                               :font-weight         500})
@@ -95,9 +91,11 @@
                                               :font-weight         300})
 
    :text              (fnk [units fonts]     {:font-size          (:subtitle-font units)
-                                              :line-height        (:subtitle-line-height units)
-                                              :margin-bottom      (:full units)})
+                                              :line-height        (:subtitle-line-height units)})
 
+   :tiny-font         (fnk [units fonts]     {:font-size          (:tag-font units)
+                                              :font-family        (:base fonts)
+                                              :font-weight         300})
 
    ; Component Templates
    :component         (fnk []                {:display        :flex

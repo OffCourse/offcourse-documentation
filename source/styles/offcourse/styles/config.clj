@@ -6,19 +6,19 @@
             :NittiGroteskBold ["NittiGroteskBold" "NGB"]
             :NittiBold        ["NittiBold" "NB"]})
 
-(def colors  {:black       "#000000"
-              :white       "#FFFFFF"
-              :dark-gray   "#3d3d3d"
-              :medium-gray "#a0a0a0"
-              :light-gray  "#f4f6f4"
-              :very-light-gray  "#f8f9f8"
-              :yellow      "#E5CF39"
-              :green       "#19A196"
-              :green-dark  "#3A676E"
-              :orange      "#F96220"
-              :orange-dark "#A25418"
-              :blue        "#75C7B3"
-              :red         "#E34D2F"})
+(def colors  {:black              "#000000"
+              :white              "#FFFFFF"
+              :dark-gray          "#3d3d3d"
+              :medium-gray        "#a0a0a0"
+              :light-gray         "#f4f6f4"
+              :very-light-gray    "#f8f9f8"
+              :yellow             "#E5CF39"
+              :green              "#19A196"
+              :green-dark         "#3A676E"
+              :orange             "#F96220"
+              :orange-dark        "#A25418"
+              :blue               "#75C7B3"
+              :red                "#E34D2F"})
 
 (def breakpoints [{:min-width 0    :max-width 767  :percent 55  :column-count 1}
                   {:min-width 768  :max-width 899  :percent 60  :column-count 3}
