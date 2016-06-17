@@ -44,6 +44,10 @@
 (s/defclass form--error)
 (def and--form--error (s/& (form--error)))
 
+; Images
+(s/defclass image)
+(s/defclass image--filtered)
+
 ; Footer
 (s/defclass footer)
 (s/defclass footer--container)

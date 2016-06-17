@@ -45,21 +45,3 @@
    [v/form--success   (merge     (:title                templates)
                                  {:padding-top         (:two-third units)})]
   ]) 
-
-   ; [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
-   ;                                                  {:width (percent 100)
-   ;                                                   :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
-   ;                                                   :margin "0 !important"
-   ;                                                   :color (str (:day colors) " !important")
-   ;                                                   :background (str (:night colors) " !important")})]]
-
-   ; [:#mce-success-response (merge (:title templates)
-   ;                                {:padding-top (:full units)})]
-   ; [:#mce-responses {:width (percent 100)}]
-   ; [:#mce-error-response (merge (:subtitle templates)
-   ;                              {:width (percent 100)
-   ;                               :padding (:third units)
-   ;                               :padding-left (str (float (:magnitude (:full units))) (name (:unit (:full units))) " !important")
-   ;                               :margin "0 !important"
-   ;                               :color (str (:day colors) " !important")
-   ;                               :background (str (:night colors) " !important")})]
