@@ -13,19 +13,18 @@
 
 ; Header
 (s/defclass header)
-(s/defclass header--container)
-(s/defclass header--section)
-(s/defclass header--list)
-(s/defclass header--sublist)
-(s/defclass header--textbar)
-(s/defclass header--textbar-small)
-(s/defclass header--textbar-inverse)
+(s/defclass header--column)
+(s/defclass header--row)
 
 ; Logo Title
 (s/defclass logo)
 (s/defclass logo--padded)
 (s/defclass logo--inverse)
 (s/defclass logo--large)
+
+
+
+
 
 ; Footer
 (s/defclass footer)
