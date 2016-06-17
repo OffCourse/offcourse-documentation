@@ -5,6 +5,7 @@
               [units :as u :refer [vh percent]]]
             [offcourse.styles.vocabulary :as v]))
 
+; Child element selectors unavoidable due to markdown parsing
 (defn content [{:keys [templates colors units fonts]}]
   [[v/content   
     [:h1               (merge  (:title              templates)
