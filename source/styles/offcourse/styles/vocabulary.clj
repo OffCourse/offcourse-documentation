@@ -10,6 +10,8 @@
 (s/defclass container)
 
 ; Helpers
+(s/defclass padding-b-twothird)
+(s/defclass padding-t-twothird)
 (s/defclass padding-tb-one)
 (s/defclass padding-t-two)
 (s/defclass padding-tb-four)
