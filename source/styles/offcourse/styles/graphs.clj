@@ -115,55 +115,60 @@
                                    :border           :none})
 
    :list-item         (fnk [row-component recycled-paper title units]
-                           (merge row-component 
-                                  recycled-paper 
-                                  title
+                           (merge  row-component 
+                                   recycled-paper 
+                                   title
                                   {:margin-bottom   (:sixth units)
-                                   :align-items     :center
+                                   :align-items      :center
                                    :font-size       (:subtitle-font units)
                                    :padding         (:half units)
                                    :height          (:one-and-half units)}))
    :textbar          (fnk [units component buttonless logo negative]
-                          (merge logo
-                                 negative
-                                 component
-                                 buttonless))})
+                           (merge  logo
+                                   negative
+                                   component
+                                   buttonless))})
 
 (def config-graph
   {:colors      (fnk [raw-colors base-color]
-                     {:night   (:black raw-colors)
-                      :dark    (:dark-gray   raw-colors)
-                      :medium  (:medium-gray raw-colors)
-                      :light   (:light-gray  raw-colors)
-                      :very-light (:very-light-gray raw-colors)
-                      :day     (:white raw-colors)
-                      :primary (base-color raw-colors)})
+                             {:night   (:black raw-colors)
+                              :dark    (:dark-gray   raw-colors)
+                              :medium  (:medium-gray raw-colors)
+                              :light   (:light-gray  raw-colors)
+                              :very-light (:very-light-gray raw-colors)
+                              :day     (:white raw-colors)
+                              :primary (base-color raw-colors)})
 
    :breakpoints (fnk [raw-breakpoints]
                      (map (fn [{:keys [min-width max-width percent column-count]}]
-                            {:min-width (px min-width)
-                             :max-width (px max-width)
-                             :percent   (u/percent percent)
-                             :column-count column-count})
+                             {:min-width (px min-width)
+                              :max-width (px max-width)
+                              :percent   (u/percent percent)
+                              :column-count column-count})
                           raw-breakpoints))
 
    :fonts       (fnk [raw-fonts base-font logo-font title-font]
-                     {:base  base-font
-                      :logo  logo-font
-                      :title title-font
-                      :raw   (vals raw-fonts)})
+                             {:base  base-font
+                              :logo  logo-font
+                              :title title-font
+                              :raw   (vals raw-fonts)})
 
    :borders     (fnk [units colors]
-                     {:default [[:solid (:sixth units) (:medium colors)]]
-                      :highlighted {:border-color [(:primary colors)]}})
+                             {:default [[:solid (:sixth units) (:medium colors)]]
+                              :highlighted {:border-color [(:primary colors)]}})
 
-   :units       (fnk [base-unit] (-compose units-graph {:base-unit base-unit}))
+   :units       (fnk [base-unit] 
+                      (-compose 
+                             units-graph 
+                             {:base-unit base-unit}))
    
    :templates   (fnk [units fonts colors borders]
-                     (-compose templates-graph {:units  units
-                                                :fonts fonts
-                                                :colors colors
-                                                :borders borders}))})
+                      (-compose 
+                             templates-graph 
+                             {:units  units
+                              :fonts fonts
+                              :colors colors
+                              :borders borders}))})
 
 
 (def compose (partial -compose config-graph))
