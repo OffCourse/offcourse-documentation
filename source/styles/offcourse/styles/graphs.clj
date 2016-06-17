@@ -115,7 +115,9 @@
                                    :border           :none})
 
    :list-item         (fnk [row-component recycled-paper title units]
-                           (merge row-component recycled-paper title
+                           (merge row-component 
+                                  recycled-paper 
+                                  title
                                   {:margin-bottom   (:sixth units)
                                    :align-items     :center
                                    :font-size       (:subtitle-font units)
