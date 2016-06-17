@@ -72,7 +72,6 @@
     [v/hovered {:filter "none"}]]
    (at-media {:min-width (px 768)} 
              [:.sticky {:position :sticky
-                        :padding [[(:full units) 0 (:full units) 0]]
                         :top (:full units)}])
    ;responsiveness working
    (let [{:keys [min-width max-width percent]} (first breakpoints)]

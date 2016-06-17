@@ -22,24 +22,20 @@ layout: main
 
 <div class="layout--section">
   <div class="grid">
-  
+
     <div class="grid--section">
-      <div class="dashboard">
-        <div class="dashboard--main">
-          <%= partial("partials/card-nav", :locals => { :active => current_page.data.active }) %>
-        </div>
-      </div>
+      <%= partial("partials/card-nav", :locals => { :active => current_page.data.active }) %>
     </div>
 
     <div class="grid--section">
-      <div class="sheets">
+      <div class="container container--pad-tb-one">
         <div class="sheet">
           <article class="content">
             <%= blog('frontpage').articles[0].body %>
           </article>
         </div>
       </div>
-      <div class="sheets">
+      <div class="container container--pad-tb-one">
         <div class="sheet">
           <%= partial("partials/signup-mailchimp") %>
         </div>
@@ -55,7 +51,7 @@ layout: main
       <div class="container container--pad-t-two">
         <div class="logo logo--padded" id="preview">Preview</div>
       </div>
-      <div class="sheets">
+      <div class="container container--pad-tb-one">
         <div class="sheet">
           <article class="content">
             <img class="example--image" src="./images/iteration-current.png" />
@@ -65,7 +61,7 @@ layout: main
       <div class="container container--pad-t-two">
         <div class="logo logo--padded" id="mission">Mission</div>
       </div>
-      <div class="sheets">
+      <div class="container container--pad-tb-one">
         <div class="sheet">
           <article class="content-padded">
             <%= blog('frontpage').articles[3].body %>
@@ -83,7 +79,7 @@ layout: main
       <div class="container container--pad-t-two">
         <div class="logo logo--padded" id="signup">Signup</div>
       </div>
-      <div class="sheets">
+      <div class="container container--pad-tb-one">
         <div id="join" class="sheet">
           <%= partial("partials/signup-mailchimp") %>
         </div>

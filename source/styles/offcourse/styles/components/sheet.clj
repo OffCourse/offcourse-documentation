@@ -5,11 +5,7 @@
             [offcourse.styles.vocabulary :as v]))
 
 (defn sheet [{:keys [templates borders colors fonts units]}]
-  [[v/sheets            (merge (:column-component templates)
-                               {:padding           [[(:full units) 0 ]]
-                                :display           :block})]
-        
-   [v/sheet             (merge (:row-component templates)
+  [[v/sheet             (merge (:row-component templates)
                                (:sheet templates)
                                {:flex             1
                                 :justify-content  :center

@@ -8,6 +8,7 @@
 (s/defclass grid)
 (s/defclass grid--section)
 (s/defclass container)
+(s/defclass container--pad-tb-one)
 (s/defclass container--pad-t-two)
 (s/defclass container--pad-tb-four)
 
@@ -21,10 +22,6 @@
 (s/defclass logo--padded)
 (s/defclass logo--inverse)
 (s/defclass logo--large)
-
-
-
-
 
 ; Footer
 (s/defclass footer)
