@@ -50,54 +50,66 @@
 
 (def templates-graph
   {
-   ; Color Templates
-   :highlighted      (fnk [colors] {:background-color (:primary colors)
-                                    :color            (:night colors)})
-   :selected         (fnk [colors] {:background-color (:night colors)
-                                    :color            (:day colors)})
-   :paper            (fnk [colors] {:background-color (:day colors)
-                                    :color            (:night colors)})
-   :sheet            (fnk [paper borders] (merge paper
-                                                 {:border-bottom (:default borders)}))
-   :negative         (fnk [colors] {:background-color (:night colors)
-                                    :color            (:day colors)})
 
-   :recycled-paper   (fnk [colors] {:background-color (:light colors)
-                                    :color            (:night colors)})
-   :smudged-paper   (fnk [colors] {:background-color  (:medium colors)
-                                    :color            (:night colors)})
+   ; Color Templates
+   :highlighted       (fnk [colors]                  {:background-color     (:primary colors)
+                                                      :color                (:night colors)})
+   :selected          (fnk [colors]                  {:background-color     (:night colors)
+                                                      :color                (:day colors)})
+   :paper             (fnk [colors]                  {:background-color     (:day colors)
+                                                      :color                (:night colors)})
+   :sheet             (fnk [paper borders] (merge     paper
+                                                     {:border-bottom        (:default borders)}))
+   :negative          (fnk [colors]                  {:background-color     (:night colors)
+                                                      :color                (:day colors)})
+
+   :recycled-paper    (fnk [colors]                  {:background-color     (:light colors)
+                                                      :color                (:night colors)})
+   :smudged-paper     (fnk [colors]                  {:background-color     (:medium colors)
+                                                      :color                (:night colors)})
+
 
    ; Font Templates
-   :tiny-font        (fnk [units fonts] {:font-size   (:tag-font units)
-                                         :font-family (:base fonts)
-                                         :font-weight 300})
-   :banner      (fnk [units fonts] {:font-size     (* 2 (:title-font units))
-                                    :line-height   (* 1.8 (:title-line-height units))
-                                    :margin-bottom (:full units)
-                                    :font-family   (:title fonts)})
-   :title       (fnk [units fonts] {:font-family (:title fonts)
-                                    :font-size   (:title-font units)
-                                    :line-height (:title-line-height units)
-                                    :font-weight 500})
-   :logo        (fnk [fonts units] {:font-family (:logo fonts)
-                                    :font-size   (:title-font units)
-                                    :line-height (:title-line-height units)
-                                    :font-weight 500})
-   :subtitle    (fnk [units fonts] {:font-size   (:subtitle-font units)
-                                    :line-height (:subtitle-line-height units)
-                                    :font-family (:base fonts)
-                                    :font-weight 300})
-   :text    (fnk [units fonts]     {:font-size     (:subtitle-font units)
-                                    :line-height   (:subtitle-line-height units)
-                                    :margin-bottom (:full units)})
+   :tiny-font         (fnk [units fonts]     {:font-size          (:tag-font units)
+                                              :font-family        (:base fonts)
+                                              :font-weight         300})
+
+   :banner            (fnk [units fonts]     {:font-size          (* 2 (:title-font units))
+                                              :line-height        (* 1.8 (:title-line-height units))
+                                              :margin-bottom      (:full units)
+                                              :font-family        (:title fonts)})
+
+   :title             (fnk [units fonts]     {:font-family        (:title fonts)
+                                              :font-size          (:title-font units)
+                                              :line-height        (:title-line-height units)
+                                              :font-weight         500})
+
+   :logo              (fnk [fonts units]     {:font-family        (:logo fonts)
+                                              :font-size          (:title-font units)
+                                              :line-height        (:title-line-height units)
+                                              :font-weight         500})
+
+   :subtitle          (fnk [units fonts]     {:font-size          (:subtitle-font units)
+                                              :line-height        (:subtitle-line-height units)
+                                              :font-family        (:base fonts)
+                                              :font-weight         300})
+
+   :text              (fnk [units fonts]     {:font-size          (:subtitle-font units)
+                                              :line-height        (:subtitle-line-height units)
+                                              :margin-bottom      (:full units)})
+
 
    ; Component Templates
-   :component        (fnk [] {:display        :flex
-                              :flex-direction :column
-                              :padding        0
-                              :margin         0})
-   :column-component (fnk [component] component)
-   :row-component    (fnk [component] (merge component {:flex-direction :row}))
+   :component         (fnk []                {:display        :flex
+                                              :flex-direction :column
+                                              :padding        0
+                                              :margin         0})
+   
+   :column-component  (fnk [component]        component)
+
+   :row-component     (fnk [component] (merge component 
+                                             {:flex-direction :row}))
+
 
    ; Special Templates
    :buttonless       (fnk [units] {:outline          :none
