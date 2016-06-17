@@ -35,15 +35,15 @@
                                   :cursor               :pointer})
     [v/hovered                   {:background          (:night colors)}]]
 
-   [v/form--error     (merge     (:subtitle             templates)
+   [:div
+    [v/and--form--error     (merge    (:subtitle             templates)
                                  {:width               (percent 100)
-                                  :padding-left        (:full units)
+                                  :padding           [[(:third units) (:third units) (:third units) (:full units)]]
                                   :margin               0
                                   :color               (:day colors)
-                                  :background          (:night colors)})]
+                                  :background          (:night colors)})]]
    [v/form--success   (merge     (:title                templates)
-                                 {:color               (:day colors)
-                                  :background          (:night colors)})]
+                                 {:padding-top         (:two-third units)})]
   ]) 
 
    ; [:#mc_embed_signup [:div.mce_inline_error (merge (:subtitle templates)
