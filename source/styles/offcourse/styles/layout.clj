@@ -25,7 +25,4 @@
 
 
    [v/container               (merge (:row-component          templates))]
-   [v/container--pad-tb-one          {:padding             [[(:full units) 0]]}]
-   [v/container--pad-t-two           {:padding-top           (:two units)}]
-   [v/container--pad-tb-four         {:padding             [[(:four units) 0]]}]
    ])

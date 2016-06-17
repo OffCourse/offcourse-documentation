@@ -8,9 +8,11 @@
 (s/defclass grid)
 (s/defclass grid--section)
 (s/defclass container)
-(s/defclass container--pad-tb-one)
-(s/defclass container--pad-t-two)
-(s/defclass container--pad-tb-four)
+
+; Helpers
+(s/defclass padding-tb-one)
+(s/defclass padding-t-two)
+(s/defclass padding-tb-four)
 
 ; Typography
 (s/defclass title)
