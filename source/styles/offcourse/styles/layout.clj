@@ -20,10 +20,13 @@
 
    [v/grid--section           (merge (:column-component  templates)
                                      {:flex              1
-                                      :padding          [[(:full units) 0 (:full units) (:full units)]]})
+                                      :padding        [[(:full units) 0 (:full units) (:full units)]]})
     [v/last                   (merge {:flex              3
                                       :padding          (:full units)})]]
 
    [v/container               (merge (:row-component     templates))]
    
-   [v/container--top-padded          {:padding-top      (:two units)}]])
+   [v/container--pad-t-two           {:padding-top      (:two units)}]
+   [v/container--pad-tb-four         {:padding        [[(:four units) 0]]}]
+   
+   ])

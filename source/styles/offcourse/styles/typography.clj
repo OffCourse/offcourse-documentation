@@ -8,18 +8,7 @@
                  :font-weight 500
                  :src (str "url('/fonts/" file-name ".woff') " "format('woff')")}))
 
-(defn title [{:keys [templates]}]
-  [v/title (:title templates)])
-
-(defn subtitle [{:keys [templates]}]
-  [v/subtitle (:subtitle templates)])
-
-(defn logo [{:keys [templates colors units fonts] :as config}]
-  [v/logo (:textbar templates)
-   [v/hovered (:paper templates)]])
-
-(defn typography [{:keys [fonts] :as config}]
-  (let [components [title subtitle logo]]
-    [(map make-at-font-face (:raw fonts))
-     (for [component components]
-       (component config))]))
+(defn typography [{:keys [templates fonts]}]
+  [(map make-at-font-face (:raw fonts))
+   [v/title (:title templates)]
+   [v/subtitle (:subtitle templates)]])

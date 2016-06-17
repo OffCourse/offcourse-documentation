@@ -8,7 +8,8 @@
 (s/defclass grid)
 (s/defclass grid--section)
 (s/defclass container)
-(s/defclass container--top-padded)
+(s/defclass container--pad-t-two)
+(s/defclass container--pad-tb-four)
 
 ; Header
 (s/defclass header)
