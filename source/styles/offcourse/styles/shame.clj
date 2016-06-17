@@ -77,14 +77,14 @@
    ;responsiveness working
    (let [{:keys [min-width max-width percent]} (first breakpoints)]
      (at-media {:min-width min-width :max-width max-width}
-               [v/header--textbar (merge {:font-size (/ (:header-font units) 2)
-                                          :line-height (/ (:header-line-height units) 2)})]
-               [v/header--textbar-small (merge {:display :none})]
-               [v/header--section (merge {:flex 0})
-                 [v/last {:padding 0}]]
+               ; [v/header--textbar (merge {:font-size (/ (:header-font units) 2)
+                                          ; :line-height (/ (:header-line-height units) 2)})]
+               ; [v/header--textbar-small (merge {:display :none})]
+               ; [v/header--section (merge {:flex 0})
+                 ; [v/last {:padding 0}]]
                [:.main {:flex-direction :column}]
-               [:.dashboard {:width "100%"
-                             :padding [[0 (:full units)]]}]
+               ; [:.dashboard {:width "100%"
+                             ; :padding [[0 (:full units)]]}]
                [:.sheets {:padding (:full units)}]
                [:.layout {:height "unset"}]))])
 

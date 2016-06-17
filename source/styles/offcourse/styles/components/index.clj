@@ -1,6 +1,5 @@
 (ns offcourse.styles.components.index
   (:require [offcourse.styles.components
-             [dashboard :refer [dashboard]]
              [cards :refer [cards]]
              [button :refer [button]]
              [logo :refer [logo]]
@@ -11,5 +10,5 @@
              [header :refer [header]]]))
 
 (defn components [config]
-  (let [components [dashboard sheet button logo label-component list-component header cards footer]]
+  (let [components [sheet button logo label-component list-component header cards footer]]
     (for [component components] (component config))))

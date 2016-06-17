@@ -59,9 +59,6 @@
 (s/defclass labels)
 (s/defclass label)
 
-;; this one must disappear
-(s/defclass dashboard)
-
 (s/defclass button)
 (def textbar-button (button (s/attr :data-button-type := :textbar)))
 (def icon-button (button (s/attr :data-button-type := :icon)))
