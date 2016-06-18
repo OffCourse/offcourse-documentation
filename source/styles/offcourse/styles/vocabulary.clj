@@ -5,11 +5,16 @@
 ; Layout
 (s/defclass layout)
 (s/defclass layout--section)
+
 (s/defclass grid)
 (s/defclass grid--section)
+
+(s/defclass subgrid)
+(s/defclass subgrid--two)
+(s/defclass subgrid--three)
+
 (s/defclass container)
-(s/defclass container--col)
-(s/defclass container--wrap)
+(s/defclass container--fw)
 
 ; Helpers
 (s/defclass padding-b-twothird)

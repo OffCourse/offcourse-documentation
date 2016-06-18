@@ -28,14 +28,14 @@ layout: main
     </div>
 
     <div class="grid--section">
-      <div class="container container--col padding-tb-one">
+      <div class="container container--fw padding-tb-one">
         <div class="card">
           <article class="content">
             <%= blog('frontpage').articles[0].body %>
           </article>
         </div>
       </div>
-      <div class="container container--col padding-tb-one">
+      <div class="container container--fw padding-tb-one">
         <div class="card">
           <%= partial("partials/signup-mailchimp") %>
         </div>
@@ -43,7 +43,7 @@ layout: main
       <div class="container padding-t-two">
         <div class="logo logo--padded" id="features">Features</div>
       </div>
-      <div class="container padding-tb-one">
+      <div class="subgrid subgrid--three padding-tb-one">
         <% for concept in blog('frontpage').articles[1].data.concepts %>
         <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
         <% end %>
@@ -51,7 +51,7 @@ layout: main
       <div class="container padding-t-two">
         <div class="logo logo--padded" id="preview">Preview</div>
       </div>
-      <div class="container container--col padding-tb-one">
+      <div class="container container--fw padding-tb-one">
         <div class="card">
           <article class="content">
             <img class="image image--filtered" src="./images/iteration-current.png" />
@@ -61,7 +61,7 @@ layout: main
       <div class="container padding-t-two">
         <div class="logo logo--padded" id="mission">Mission</div>
       </div>
-      <div class="container container--col padding-tb-one">
+      <div class="container container--fw padding-tb-one">
         <div class="card">
           <article class="content">
             <%= blog('frontpage').articles[3].body %>
@@ -71,7 +71,7 @@ layout: main
       <div class="container padding-t-two">
         <div class="logo logo--padded" id="team">Team</div>
       </div>
-      <div class="container container--wrap padding-tb-one">
+      <div class="subgrid subgrid--two padding-tb-one">
         <% blog('team').articles.reverse_each do |person| %>
         <%= partial("partials/card-person", :locals => { :person => person }) %>
         <% end %>
@@ -79,7 +79,7 @@ layout: main
       <div class="container padding-t-two">
         <div class="logo logo--padded" id="signup">Signup</div>
       </div>
-      <div class="container container--col padding-tb-one">
+      <div class="container container--fw padding-tb-one">
         <div id="join" class="card">
           <%= partial("partials/signup-mailchimp") %>
         </div>

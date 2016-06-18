@@ -24,7 +24,11 @@
                                       :padding               (:full units)})]]
 
 
+   [v/subgrid                 (merge {:display                :block
+                                      :column-gap             (:full units)})]
+   [v/subgrid--two                   {:columns                2}]
+   [v/subgrid--three                 {:columns                3}]
+
    [v/container               (merge (:row-component          templates))]
-   [v/container--col          (merge (:column-component       templates)
-                                     {:align-items            :stretch})]
-   [v/container--wrap         (merge {:flex-wrap              :wrap})]])
+   [v/container--fw           (merge (:column-component       templates)
+                                     {:align-items            :stretch})]])
