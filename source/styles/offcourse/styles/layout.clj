@@ -25,7 +25,8 @@
    [v/subgrid                 (merge {:display                :block
                                       :column-span            :none
                                       :column-gap            (:full units)})
-    [v/container                     {:display                :inline-block}]]
+    [v/container                     {:display                :inline-block
+                                      :width                 (percent 100)}]]
    [v/subgrid--two                   {:columns                2}]
    [v/subgrid--three                 {:columns                3}]
 

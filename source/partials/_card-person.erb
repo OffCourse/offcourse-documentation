@@ -4,10 +4,10 @@
       <img src="/images/people/<%= person.data.img %>" class="image image--filtered">
     </div>
     <div class="card--section">
-      <p class="title">
+      <p class="title padding-b-third">
         <%= person.data.name %>
       </p>
-      <p class="text"><%= person.data.job %></p>
+      <p class="text padding-b-third"><%= person.data.job %></p>
       <div class="labels">
         <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="label">LinkedIn</a>
         <% if person.data.twitter %>

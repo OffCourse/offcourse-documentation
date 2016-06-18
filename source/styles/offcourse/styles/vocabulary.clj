@@ -17,6 +17,7 @@
 (s/defclass container--fw)
 
 ; Helpers
+(s/defclass padding-b-third)
 (s/defclass padding-b-twothird)
 (s/defclass padding-t-twothird)
 (s/defclass padding-tb-one)
