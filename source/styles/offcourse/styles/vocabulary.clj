@@ -9,6 +9,7 @@
 (s/defclass grid--section)
 (s/defclass container)
 (s/defclass container--col)
+(s/defclass container--wrap)
 
 ; Helpers
 (s/defclass padding-b-twothird)

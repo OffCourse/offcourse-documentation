@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="card-person">
+  <div class="card">
     <div class="card--section">
-      <img src="/images/people/<%= person.data.img %>" class="card-person--image">
+      <img src="/images/people/<%= person.data.img %>" class="image">
     </div>
     <div class="card--section">
       <p class="title">
         <%= person.data.name %>
       </p>
-      <p class="content"><%= person.data.job %></p>
+      <p class="text"><%= person.data.job %></p>
       <div class="labels">
         <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="label">LinkedIn</a>
         <% if person.data.twitter %>

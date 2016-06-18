@@ -26,4 +26,5 @@
 
    [v/container               (merge (:row-component          templates))]
    [v/container--col          (merge (:column-component       templates)
-                                     {:align-items            :stretch})]])
+                                     {:align-items            :stretch})]
+   [v/container--wrap         (merge {:flex-wrap              :wrap})]])
