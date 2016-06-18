@@ -52,11 +52,11 @@
 (s/defclass image)
 (s/defclass image--filtered)
 
-; Block
-(s/defclass block)
+; Card
+(s/defclass card)
+(s/defclass card--section)
+(s/defclass card--business)
 
-; Sheet
-(s/defclass sheet)
 
 
 
@@ -73,13 +73,6 @@
 (s/defclass list--item)
 
 
-(s/defclass cards)
-(s/defclass card)
-(s/defclass card--section)
-
-(s/defclass cards-person)
-(s/defclass card-person)
-(s/defclass card-person--image)
 (s/defclass button-container)
 
 (s/defclass labels)

@@ -10,9 +10,7 @@
                                      (:paper                  templates))]
    [v/layout--section         (merge (:recycled-paper         templates)
                                      (:row-component          templates)
-                                     {:justify-content        :center
-                                      :padding-bottom        (:two units)})
-    [v/first                         {:padding-bottom         0}]]
+                                     {:justify-content        :center})]
 
 
    [v/grid                    (merge (:row-component          templates)
@@ -25,7 +23,7 @@
 
 
    [v/subgrid                 (merge {:display                :block
-                                      :column-gap             (:full units)})]
+                                      :column-gap            (:full units)})]
    [v/subgrid--two                   {:columns                2}]
    [v/subgrid--three                 {:columns                3}]
 
