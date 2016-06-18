@@ -20,7 +20,7 @@
 (s/defclass title)
 (s/defclass subtitle)
 (s/defclass text)
-(s/defclass content)
+(s/defclass content) ; Class with child selectors
 
 ; Header
 (s/defclass header)
@@ -33,9 +33,6 @@
 (s/defclass logo--inverse)
 (s/defclass logo--large)
 
-; Sheet
-(s/defclass sheet)
-
 ; Form
 (s/defclass form--row)
 (s/defclass form--input)
@@ -47,6 +44,14 @@
 ; Images
 (s/defclass image)
 (s/defclass image--filtered)
+
+; Block
+(s/defclass block)
+
+; Sheet
+(s/defclass sheet)
+
+
 
 ; Footer
 (s/defclass footer)
