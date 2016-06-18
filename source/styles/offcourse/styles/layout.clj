@@ -24,5 +24,4 @@
                                       :padding               (:full units)})]]
 
 
-   [v/container               (merge (:row-component          templates))]
-   ])
+   [v/container               (merge (:row-component          templates))]])
