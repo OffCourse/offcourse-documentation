@@ -14,7 +14,7 @@
    [v/card--business    (merge (:row-component           templates)
                                {:padding                 0})
     [v/card--section           {:flex                    1} 
-     [v/last                   {:flex                    3
+     [v/last                   {:flex                    2
                                 :padding              [[(:half units)(:half units)(:third units)(:two-third units)]]}]]]])
     
 

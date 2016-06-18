@@ -23,7 +23,9 @@
 
 
    [v/subgrid                 (merge {:display                :block
-                                      :column-gap            (:full units)})]
+                                      :column-span            :none
+                                      :column-gap            (:full units)})
+    [v/container                     {:display                :inline-block}]]
    [v/subgrid--two                   {:columns                2}]
    [v/subgrid--three                 {:columns                3}]
 

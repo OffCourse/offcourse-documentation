@@ -51,6 +51,7 @@
 ; Images
 (s/defclass image)
 (s/defclass image--filtered)
+(s/defclass image--filtered-hover)
 
 ; Card
 (s/defclass card)
