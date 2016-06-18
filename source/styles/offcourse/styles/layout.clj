@@ -24,4 +24,6 @@
                                       :padding               (:full units)})]]
 
 
-   [v/container               (merge (:row-component          templates))]])
+   [v/container               (merge (:row-component          templates))]
+   [v/container--col          (merge (:column-component       templates)
+                                     {:align-items            :stretch})]])

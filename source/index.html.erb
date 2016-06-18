@@ -29,14 +29,14 @@ layout: main
 
     <div class="grid--section">
       <div class="container padding-tb-one">
-        <div class="block">
+        <div class="card">
           <article class="content">
             <%= blog('frontpage').articles[0].body %>
           </article>
         </div>
       </div>
       <div class="container padding-tb-one">
-        <div class="block">
+        <div class="card">
           <%= partial("partials/signup-mailchimp") %>
         </div>
       </div>
@@ -52,7 +52,7 @@ layout: main
         <div class="logo logo--padded" id="preview">Preview</div>
       </div>
       <div class="container padding-tb-one">
-        <div class="block">
+        <div class="card">
           <article class="content">
             <img class="image image--filtered" src="./images/iteration-current.png" />
           </article>
@@ -62,7 +62,7 @@ layout: main
         <div class="logo logo--padded" id="mission">Mission</div>
       </div>
       <div class="container padding-tb-one">
-        <div class="block">
+        <div class="card">
           <article class="content">
             <%= blog('frontpage').articles[3].body %>
           </article>
@@ -80,7 +80,7 @@ layout: main
         <div class="logo logo--padded" id="signup">Signup</div>
       </div>
       <div class="container padding-tb-one">
-        <div id="join" class="block">
+        <div id="join" class="card">
           <%= partial("partials/signup-mailchimp") %>
         </div>
       </div>
