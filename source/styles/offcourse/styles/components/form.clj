@@ -5,10 +5,10 @@
             [offcourse.styles.vocabulary :as v]))
 
 (defn form [{:keys [templates borders colors fonts units]}]
-  [[v/form--row       (merge     (:row-component        templates)
+  [[v/form--row           (merge (:row-component        templates)
                                  {:flex-wrap            :wrap})]
 
-   [v/form--input     (merge     (:subtitle             templates))
+   [v/form--input         (merge (:subtitle             templates))
                                  {:flex                 2
                                   :padding           [[(:half units)(:half units)(:half units)(:full units)]]
 
@@ -19,7 +19,7 @@
                                   :line-height         (:title-line-height units)
                                   :font-weight          300}]
 
-   [v/form--subscribe (merge     (:textbar              templates)
+   [v/form--subscribe     (merge (:textbar              templates)
                                  {:flex 1
                                   :justify-content      :center
                                   :align-items          :center
@@ -36,12 +36,12 @@
     [v/hovered                   {:background          (:night colors)}]]
 
    [:div
-    [v/and--form--error     (merge    (:subtitle             templates)
+    [v/and--form--error   (merge (:subtitle             templates)
                                  {:width               (percent 100)
                                   :padding           [[(:third units) (:third units) (:third units) (:full units)]]
                                   :margin               0
                                   :color               (:day colors)
                                   :background          (:night colors)})]]
-   [v/form--success   (merge     (:title                templates)
+   [v/form--success       (merge (:title                templates)
                                  {:padding-top         (:two-third units)})]
   ]) 
