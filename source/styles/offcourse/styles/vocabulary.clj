@@ -1,3 +1,26 @@
+;;;; Naming Schema ;;;;
+;
+; General:
+; 1. Use flat specificity as much as possible (single class) and limit cascade usage to component
+; 2. Use layout and grid styles to do all major positioning: Components are always full width 
+; 3. Helpers are to be avoided, but are used to avoid the excessive creation of container classes
+; 4. Use Clojure templates and units to decouple markup and design pattern
+;
+; Naming rules:
+; 1. The single dash is used to seperate words
+; 2. The double dash is used to distinguish component elements
+; 3. Data attributes are used to distinguish component variations and modifiers
+;
+; Questions:
+; 1. Component variation and elements work through the cascade right now, but use the same naming convention
+;    as elements. This might be confusing. Using the data attribute however resorts to higher specifity instead,
+;    which I don't like either.
+; 2. Helper usage. Named containers might be semantic in some manner, but they are also difficult to place. 
+;    Especially with demanding designers in mind, padding helpers seemed like a better solution.    
+;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+
 (ns offcourse.styles.vocabulary
   (:refer-clojure :exclude [first second last list])
   (:require [garden.selectors :as s]))
@@ -18,19 +41,20 @@
 
 ; Helpers
 (s/defclass padding-b-third)
-(s/defclass padding-b-twothird)
 (s/defclass padding-t-twothird)
+(s/defclass padding-b-twothird)
 (s/defclass padding-t-one)
 (s/defclass padding-b-one)
 (s/defclass padding-tb-one)
 (s/defclass padding-t-two)
+(s/defclass padding-b-two)
 (s/defclass padding-tb-four)
 
 ; Typography
 (s/defclass title)
 (s/defclass subtitle)
 (s/defclass text)
-(s/defclass content) ; Class with child selectors
+(s/defclass content) ; Class with child selectors for markup that isn't classed 
 
 ; Header
 (s/defclass header)
@@ -49,7 +73,7 @@
 (s/defclass form--subscribe)
 (s/defclass form--success)
 (s/defclass form--error)
-(def and--form--error (s/& (form--error)))
+(def and--form--error (s/& (form--error))) ; Flat specificity avoided because of mailchimp form classes
 
 ; Images
 (s/defclass image)
@@ -83,9 +107,9 @@
 (s/defclass label)
 
 (s/defclass button)
-(def textbar-button (button (s/attr :data-button-type := :textbar)))
-(def icon-button (button (s/attr :data-button-type := :icon)))
-(def checkbox-button (button (s/attr :data-button-type := :checkbox)))
+(def textbar-button   (button (s/attr :data-button-type := :textbar)))
+(def icon-button      (button (s/attr :data-button-type := :icon)))
+(def checkbox-button  (button (s/attr :data-button-type := :checkbox)))
 
 ;; MODIFIERS
 (s/defpseudoclass hover)
