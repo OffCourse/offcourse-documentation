@@ -3,10 +3,9 @@
 
 (defn button [{:keys [templates colors units fonts]}]
   [[v/button                (merge  (:buttonbase            templates))]
-   [v/button-card           (merge  (:paper                 templates)
-                                    (:row-component         templates)
+   [v/button-card           (merge  (:row-component         templates)
+                                    (:sheet                 templates)
                                     (:subtitle              templates)
-                                    (:border-default        templates)
                                     {:padding            [[(:third units) (:half units)]]
                                      :margin             [[ 0 (:sixth units) (:full units) 0]]})
     [v/hovered              (merge  (:border-highlighted    templates))]]

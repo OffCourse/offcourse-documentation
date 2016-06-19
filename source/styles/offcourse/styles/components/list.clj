@@ -4,25 +4,25 @@
 
 (defn list-component [{:keys [templates colors fonts units]}]
 
-  [[v/list        (merge (:column-component templates))]
-   [v/list--item  (:list-item templates)
-    [v/hovered (:selected templates)]]
+  [[v/list              (merge (:column-component     templates))]
+   [v/list--item               (:list-item            templates)
+    [v/hovered                 (:selected             templates)]]
 
    [v/edit-list
-    [v/list--item (merge {:justify-content :space-between
-                          :padding 0
-                          :background-color (:day colors)})
+    [v/list--item       (merge {:justify-content      :space-between
+                                :padding              0
+                                :background-color    (:day colors)})
      [:span
-      [v/first (merge (:recycled-paper templates)
-                      {:flex 1
-                       :display :flex
-                       :padding (:half units)
-                       :align-items :center
-                       :height (:one-and-half units)
-                       :margin-right (:sixth units)})]]]]
+      [v/first          (merge (:recycled-paper       templates)
+                               {:flex                 1
+                                :display              :flex
+                                :padding             (:half units)
+                                :align-items          :center
+                                :height              (:one-and-half units)
+                                :margin-right        (:sixth units)})]]]]
 
    [v/todo-list
-    [v/list--item {:justify-content :flex-start}
-     [v/hovered (:selected templates)]
-     [v/selected (:highlighted templates)]]]])
+    [v/list--item              {:justify-content      :flex-start}
+     [v/hovered                (:selected             templates)]
+     [v/selected               (:highlighted          templates)]]]])
 
