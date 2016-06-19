@@ -90,14 +90,15 @@
 (s/defclass button)
 (def button-card (button (s/attr :data-button-type := :card)))
 
-
-
-
-; Components
+; Lists
 (s/defclass list)
-(def todo-list (list (s/attr :data-list-type := :todo)))
-(def edit-list (list (s/attr :data-list-type := :edit)))
 (s/defclass list--item)
+
+
+
+
+
+
 
 (s/defclass labels)
 (s/defclass label)
