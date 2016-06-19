@@ -31,5 +31,6 @@
    [v/subgrid--three                 {:columns                3}]
 
    [v/container               (merge (:row-component          templates))]
+   [v/container--wrap         (merge (:flex-wrap              :wrap))]
    [v/container--fw           (merge (:column-component       templates)
                                      {:align-items            :stretch})]])

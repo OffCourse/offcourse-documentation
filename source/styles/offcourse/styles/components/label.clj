@@ -2,9 +2,7 @@
   (:require [offcourse.styles.vocabulary :as v]))
 
 (defn label-component [{:keys [templates fonts colors units]}]
-  [v/labels       (merge  (:row-component         templates)
-                          {:flex-wrap             :wrap})
-   [v/label       (merge  (:column-component      templates)
+  [[v/label       (merge  (:column-component      templates)
                           (:tiny-font             templates)
                           (:recycled-paper        templates)
                           {:align-items           :center

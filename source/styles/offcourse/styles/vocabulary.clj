@@ -35,6 +35,7 @@
 
 (s/defclass container)
 (s/defclass container--fw)
+(s/defclass container--wrap)
 
 ; Helpers
 (s/defclass padding-b-third)
