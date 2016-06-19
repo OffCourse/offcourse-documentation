@@ -16,7 +16,7 @@
 ;    as elements. This might be confusing. Using the data attribute however resorts to higher specifity instead,
 ;    which I don't like either.
 ; 2. Helper usage. Named containers might be semantic in some manner, but they are also difficult to place. 
-;    Especially with demanding designers in mind, padding helpers seemed like a better solution.    
+;    Especially with demanding designers in mind, padding helpers seem to be a better solution.    
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
