@@ -125,12 +125,13 @@
                                                 :padding         (:half units)
                                                 :height          (:one-and-half units)}))
    :textbar             (fnk [units component buttonbase logo negative]
-                                         (merge logo
+                                         (merge component
+                                                buttonbase
                                                 negative
-                                                component
-                                                buttonbase))
-   :sheet             (fnk [paper border-default]    (merge paper
-                                                            border-default))})
+                                                logo))
+   :sheet             (fnk [paper border-default]    
+                                         (merge border-default
+                                                paper))})
 
 (def config-graph
   {:colors      (fnk [raw-colors base-color]

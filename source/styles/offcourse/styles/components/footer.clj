@@ -7,5 +7,4 @@
             [offcourse.styles.vocabulary :as v]))
 
 (defn footer [{:keys [templates colors units]}]
-  [[v/footer              (merge {:background        (:night colors)
-                                  :color             (:day colors)})]])
+  [[v/footer              (:negative      templates)]])

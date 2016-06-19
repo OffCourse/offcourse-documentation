@@ -10,7 +10,8 @@
   [[v/content   
     [:h1               (merge  (:title              templates)
                                {:padding-bottom    (:two-third units)})]
-    [:h2                       (:subtitle           templates)]
+    [:h2               (merge  (:subtitle           templates)
+                               {:padding-bottom    (:two-third units)})]
     [:p                (merge  (:text               templates)
                                {:padding-bottom    (:two-third units)})
      [v/last                   {:padding-bottom     0}]]]])
