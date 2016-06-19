@@ -9,7 +9,9 @@
   [[v/padding-b-third         {:padding             [[ 0 0 (:third units) 0]]}]
    [v/padding-t-twothird      {:padding             [[(:two-third units) 0 0 0]]}]
    [v/padding-b-twothird      {:padding             [[ 0 0 (:two-third units) 0]]}]
+   [v/padding-t-one           {:padding             [[(:full units) 0 0 0]]}]
+   [v/padding-b-one           {:padding             [[ 0 0 (:full units) 0]]}]
    [v/padding-tb-one          {:padding             [[(:full units) 0]]}]
-   [v/padding-t-two           {:padding-top           (:two units)}]
+   [v/padding-t-two           {:padding             [[(:two units) 0 0 0]]}]
    [v/padding-tb-four         {:padding             [[(:four units) 0]]}]
   ])

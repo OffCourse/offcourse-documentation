@@ -13,55 +13,6 @@
     [v/hovered                 (:highlighted             borders)]]
    [v/card--business    (merge (:row-component           templates)
                                {:padding                 0})
-    [v/card--section           {:flex                    1} ;1/3 -> 1/4
-     [v/last                   {:flex                    3
+    [v/card--section           {:width                  (* (:atom units) 140)}
+     [v/last                   {:width                   :auto
                                 :padding              [[(:half units)(:half units)(:third units)(:two-third units)]]}]]]])
-    
-
- ; [[v/cards (merge (:row-component templates)
-  ;                  (:recycled-paper templates)
-  ;                  {:padding          [[(:full units) 0]]
-  ;                   :column-gap       (:column-gap units)})
-  ;   [v/container {:display :block}]]
-
-  ;  (for [breakpoint breakpoints] (calculate-breakpoint breakpoint units))
-
-  ;  [v/card (merge (:column-component templates)
-  ;                 (:sheet templates)
-  ;                 {:align-items      :stretch
-  ;                  :padding [[0 (:full units)]]
-  ;                  :flex 1})
-  ;   [v/hovered (:highlighted borders)]
-
-  ;   [v/card--section (merge (:component templates)
-  ;                           {:padding [[0 0 (:full units) 0]]})
-  ;    [v/first {:padding-top    (:two-third units)
-  ;              :padding-bottom (:two-third units)}]
-  ;    [v/last {}]]
-  ;   [v/content (merge (:text templates))]]
-
-  ;  ; Personal cards
-
-  ;  [v/cards-person (merge (:row-component templates)
-  ;                  (:recycled-paper templates)
-  ;                  {:padding          [[(:full units) 0]]
-  ;                   :column-gap       (:column-gap units)})
-  ;   [v/container {:display :inline-block
-  ;                 :width (percent 100)}]]
-
-  ;  (for [breakpoint breakpoints] (calculate-breakpoint-person breakpoint units))
-
-  ;  [v/card-person (merge (:row-component templates)
-  ;                        (:sheet templates)
-  ;                        {:padding [[0]]})
-  ;   [v/hovered (:highlighted borders)]
-  ;   [v/card--section (merge (:column-component templates)
-  ;                           {:padding [[0 (:full units) 0]]})
-  ;    [v/first {:padding-left    0
-  ;              :padding-right   0}]
-  ;    [v/last {:padding [[(:half units)(:half units)(:third units)(:two-third units)]]}]
-  ;    [v/card-person--image {:height (* (:atom units) 140) 
-  ;                           :filter "grayscale(100%)"}]]
-  ;   [v/button-container (merge (:row-component templates))]
-  ;   [v/content (merge (:text templates)
-  ;                     {:margin-bottom (:third units)})]]]
