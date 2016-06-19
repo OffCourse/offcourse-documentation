@@ -88,7 +88,7 @@
 
 ; Buttons
 (s/defclass button)
-(def button-card   (button (s/attr :data-button-type := :textbar)))
+(def button-card (button (s/attr :data-button-type := :card)))
 
 
 

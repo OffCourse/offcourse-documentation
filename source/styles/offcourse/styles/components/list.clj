@@ -12,7 +12,6 @@
     [v/list--item (merge {:justify-content :space-between
                           :padding 0
                           :background-color (:day colors)})
-     [v/icon-button {:font-size (:two-third units)}]
      [:span
       [v/first (merge (:recycled-paper templates)
                       {:flex 1
@@ -25,7 +24,5 @@
    [v/todo-list
     [v/list--item {:justify-content :flex-start}
      [v/hovered (:selected templates)]
-     [v/selected (:highlighted templates)
-      [v/checkbox-button
-       [v/selected {:background-color (:night colors)}]]]]]])
+     [v/selected (:highlighted templates)]]]])
 
