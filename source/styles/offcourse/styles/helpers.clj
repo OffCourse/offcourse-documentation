@@ -14,5 +14,6 @@
    [v/padding-tb-one          {:padding             [[(:full units) 0]]}]
    [v/padding-t-two           {:padding             [[(:two units) 0 0 0]]}]
    [v/padding-b-two           {:padding             [[ 0 0 (:two units) 0]]}]
+   [v/padding-tb-two          {:padding             [[(:two units) 0]]}]
    [v/padding-tb-four         {:padding             [[(:four units) 0]]}]
   ])

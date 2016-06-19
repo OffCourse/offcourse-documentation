@@ -3,7 +3,7 @@
 ; General:
 ; 1. Use flat specificity as much as possible (single class) and limit cascade usage to component
 ; 2. Use layout and grid styles to do all major positioning: Components are always full width 
-; 3. Helpers are to be avoided, but are used to avoid the excessive creation of container classes
+; 3. Helpers are to be avoided, but are used to prevent the excessive creation of container classes
 ; 4. Use Clojure templates and units to decouple markup and design pattern
 ;
 ; Naming rules:
@@ -11,12 +11,9 @@
 ; 2. The double dash is used to distinguish component elements
 ; 3. Data attributes are used to distinguish component variations and modifiers
 ;
-; Questions:
-; 1. Component variation and elements work through the cascade right now, but use the same naming convention
-;    as elements. This might be confusing. Using the data attribute however resorts to higher specifity instead,
-;    which I don't like either.
-; 2. Helper usage. Named containers might be semantic in some manner, but they are also difficult to place. 
-;    Especially with demanding designers in mind, padding helpers seem to be a better solution.    
+; Todo:
+; 1. Seperate component elements from component variations with data attribute
+; 2. Use Clojure subclasses more consitently 
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -48,6 +45,7 @@
 (s/defclass padding-tb-one)
 (s/defclass padding-t-two)
 (s/defclass padding-b-two)
+(s/defclass padding-tb-two)
 (s/defclass padding-tb-four)
 
 ; Typography
@@ -85,14 +83,15 @@
 (s/defclass card--section)
 (s/defclass card--business)
 
-
-
-
 ; Footer
 (s/defclass footer)
-(s/defclass footer--container)
-(s/defclass footer--header)
-(s/defclass footer--textbar)
+
+; Buttons
+(s/defclass button)
+(def button-card   (button (s/attr :data-button-type := :textbar)))
+
+
+
 
 ; Components
 (s/defclass list)
@@ -100,16 +99,10 @@
 (def edit-list (list (s/attr :data-list-type := :edit)))
 (s/defclass list--item)
 
-
-(s/defclass button-container)
-
 (s/defclass labels)
 (s/defclass label)
 
-(s/defclass button)
-(def textbar-button   (button (s/attr :data-button-type := :textbar)))
-(def icon-button      (button (s/attr :data-button-type := :icon)))
-(def checkbox-button  (button (s/attr :data-button-type := :checkbox)))
+
 
 ;; MODIFIERS
 (s/defpseudoclass hover)
