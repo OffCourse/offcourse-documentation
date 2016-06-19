@@ -128,7 +128,8 @@
                                          (merge component
                                                 buttonbase
                                                 negative
-                                                logo))
+                                                logo
+                                                {:padding        [[0 (:third units)]]}))
    :sheet             (fnk [paper border-default]    
                                          (merge border-default
                                                 paper))})
