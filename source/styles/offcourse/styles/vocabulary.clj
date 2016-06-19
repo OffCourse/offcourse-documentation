@@ -12,7 +12,7 @@
 ; 3. Data attributes are used to distinguish component variations and modifiers
 ;
 ; Todo:
-; 1. Seperate component elements from component variations with data attribute
+; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
 ; 2. Use Clojure subclasses more consitently 
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;
