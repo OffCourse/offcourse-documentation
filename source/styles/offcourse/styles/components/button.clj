@@ -1,21 +1,13 @@
 (ns offcourse.styles.components.button
   (:require [offcourse.styles.vocabulary :as v]))
 
-(defn button [{:keys [templates borders colors units fonts]}]
-  [[v/button                (merge  (:buttonless        :templates))]
-   [v/button-card           (merge  (:logo               :templates)
-                                    (:negative           :templates)
-                                    (:component          :templates)
-                                    (:title              templates)
-                                    {:outline            :none
-                                     :flex-direction     :row
-                                     :font-size         (:subtitle-font units)
-                                     :padding         [[(:sixth units) (:half units)]]
-                                     :border-bottom     (:default borders)
-                                     :margin-right      (:sixth units)
-                                     :margin-bottom     (:full units)
-                                     :background        (:day colors)
-                                     :color             (:night colors)
-                                     :cursor             :pointer})
-    [v/hovered              (merge  (:highlighted        borders))]]
+(defn button [{:keys [templates colors units fonts]}]
+  [[v/button                (merge  (:buttonbase            templates))]
+   [v/button-card           (merge  (:paper                 templates)
+                                    (:row-component         templates)
+                                    (:subtitle              templates)
+                                    (:border-default        templates)
+                                    {:padding            [[(:third units) (:half units)]]
+                                     :margin             [[ 0 (:sixth units) (:full units) 0]]})
+    [v/hovered              (merge  (:border-highlighted    templates))]]
   ])

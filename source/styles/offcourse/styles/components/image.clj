@@ -4,7 +4,7 @@
             [garden.units :as u :refer [percent px rem]]
             [offcourse.styles.vocabulary :as v]))
 
-(defn image [{:keys [templates borders colors fonts units]}]
+(defn image [{:keys [templates colors fonts units]}]
   [[v/image                   {:display           :block
                                :width             (percent 100)}]
    [v/image--filtered         {:filter            "grayscale(100%)"

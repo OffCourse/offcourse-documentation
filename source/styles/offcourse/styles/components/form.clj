@@ -4,7 +4,7 @@
             [garden.units :as u :refer [percent px rem]]
             [offcourse.styles.vocabulary :as v]))
 
-(defn form [{:keys [templates borders colors fonts units]}]
+(defn form [{:keys [templates colors fonts units]}]
   [[v/form--row           (merge (:row-component        templates)
                                  {:flex-wrap            :wrap})]
 

@@ -6,11 +6,11 @@
              [stylesheet :refer [at-media]]]
             [offcourse.styles.vocabulary :as v]))
 
-(defn card [{:keys [templates breakpoints borders colors units]}]
+(defn card [{:keys [templates breakpoints colors units]}]
   [[v/card              (merge (:column-component        templates)
                                (:sheet                   templates)
                                {:padding                (:full units)})
-    [v/hovered                 (:highlighted             borders)]]
+    [v/hovered                 (:border-highlighted      templates)]]
    [v/card--business    (merge (:row-component           templates)
                                {:padding                 0})
     [v/card--section           {:width                  (* (:atom units) 140)}
