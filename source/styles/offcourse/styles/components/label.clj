@@ -7,9 +7,7 @@
                           (:recycled-paper        templates)
                           {:align-items           :center
                            :justify-content       :center
-                           :height               (:full units)
                            :margin-bottom        (:sixth units)
                            :margin-right         (:sixth units)
                            :padding            [[(:tenth units) (:half units)]]})
-   [v/selected            (:highlighted           templates)]
-   [v/hovered             (:selected              templates)]]])
+    [v/hovered            (:selected              templates)]]])

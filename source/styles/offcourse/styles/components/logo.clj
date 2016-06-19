@@ -6,9 +6,7 @@
             [offcourse.styles.vocabulary :as v]))
 
 (defn logo [{:keys [templates colors units fonts]}]
-  [[v/logo              (merge (:textbar            templates)
-                               {:font-size          (:subheader-font units)
-                                :line-height        (:subheader-line-height units)})]
+  [[v/logo                     (:textbar            templates)]
 
    [v/logo--padded             {:padding            [[0 (:full units)]]}]
 

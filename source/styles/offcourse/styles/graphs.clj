@@ -33,19 +33,16 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
+   :tag-font                   (fnk [atom]              (* atom 18))
+   :tag-line-height            (fnk [atom]              (* atom 22)) ; unused
    :base-font                  (fnk [atom]              (* atom 16))
    :base-line-height           (fnk [atom]              (* atom 20))
    :subtitle-font              (fnk [atom]              (* atom 22))
    :subtitle-line-height       (fnk [atom]              (* atom 30))
    :title-font                 (fnk [atom]              (* atom 32))
    :title-line-height          (fnk [atom]              (* atom 40))
-
-   :tag-font                   (fnk [atom]              (* atom 18))
    :header-font                (fnk [atom]              (* atom 108))
    :header-line-height         (fnk [atom]              (* atom 136))
-   :subheader-font             (fnk [atom]              (* atom 32))
-   :subheader-line-height      (fnk [atom]              (* atom 40))
-
    })
 
 ; Templates are property to key mappings, do not imply markup yet

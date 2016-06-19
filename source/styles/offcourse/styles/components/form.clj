@@ -35,7 +35,7 @@
                                   :cursor               :pointer})
     [v/hovered                   {:background          (:night colors)}]]
 
-   ; Flat specificity avoided because of mailchimp form classes
+   ; Flat specificity impossible due to mailchimp form classes
    [:div 
     [v/and--form--error   (merge (:subtitle             templates)
                                  {:width               (percent 100)

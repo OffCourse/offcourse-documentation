@@ -9,12 +9,29 @@
 ; Naming rules:
 ; 1. The single dash is used to seperate words
 ; 2. The double dash is used to distinguish component elements
-; 3. Data attributes are used to distinguish component variations and modifiers
+; 3. Data attributes are used to distinguish component variations and state 
 ;
 ; Todo:
 ; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
-; 2. Use Clojure subclasses more consitently 
+; 2. Use Clojure templates more consistently 
 ;
+; Question:
+; 1. Does the use of component variations with the data attr, combined with Clojure templates, 
+;    decrease the need to share properties through subclassing? 
+;    Arguments:    
+;    1. It makes the classname denote an abstraction which is almost equal to the tag attr.
+;       Classnames will not denote components anymore, but the data attr does and that is inconsistent.  
+;    2. It generates a lot of boilerplate by only using components to couple properties to markup.
+;       Templates should be concerned with code that is shared across components, not across component variations. 
+;    3. It will also generate a lot of duplicate properties in the css file 
+;       (even though that barely matters when measuring performance)
+;    4. - global / layout / helpers / shame / typography
+;       - component
+;    ** - component variation ** -> Candidate for removal
+;       - template 
+;       - processed units / colors / fonts 
+;       - raw colors / fonts / breakpoints
+; 
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 
