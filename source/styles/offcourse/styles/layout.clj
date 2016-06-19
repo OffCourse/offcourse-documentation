@@ -24,13 +24,13 @@
 
    [v/subgrid                 (merge {:display                :block
                                       :column-span            :none
-                                      :column-gap            (:full units)})
-    [v/container                     {:display                :inline-block
-                                      :width                 (percent 100)}]]
+                                      :column-gap            (:full units)})]
    [v/subgrid--two                   {:columns                2}]
    [v/subgrid--three                 {:columns                3}]
 
    [v/container               (merge (:row-component          templates))]
    [v/container--wrap         (merge (:flex-wrap              :wrap))]
    [v/container--fw           (merge (:column-component       templates)
-                                     {:align-items            :stretch})]])
+                                     {:align-items            :stretch})]
+   [v/container--subgrid             {:display                :inline-block
+                                      :width                 (percent 100)}]])

@@ -34,6 +34,7 @@
 (s/defclass subgrid--three)
 
 (s/defclass container)
+(s/defclass container--subgrid)
 (s/defclass container--fw)
 (s/defclass container--wrap)
 
