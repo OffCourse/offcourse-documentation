@@ -8,9 +8,8 @@
                                (:recycled-paper       templates)
                                (:title                templates)
                                {:align-items          :center
-                                :height              (:one-and-half units)})
-                                :padding             (:half units)
+                                :padding           [[ 0 (:half units)]]
                                 :margin-bottom       (:sixth units)
-                                :font-size           (:subtitle-font units)
+                                :font-size           (:subtitle-font units)})
     [v/hovered                 (:selected             templates)]
     [v/selected                (:highlighted          templates)]]])

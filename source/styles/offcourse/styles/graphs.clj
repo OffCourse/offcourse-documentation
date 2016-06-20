@@ -34,15 +34,15 @@
    :map                        (fnk [column]            (/ column 2))
 
    :tag-font                   (fnk [atom]              (* atom 18))
-   :tag-line-height            (fnk [atom]              (* atom 22)) ; unused
+   :tag-line-height            (fnk [atom]              (* atom 22))
    :base-font                  (fnk [atom]              (* atom 16))
    :base-line-height           (fnk [atom]              (* atom 20))
    :subtitle-font              (fnk [atom]              (* atom 22))
    :subtitle-line-height       (fnk [atom]              (* atom 30))
    :title-font                 (fnk [atom]              (* atom 32))
    :title-line-height          (fnk [atom]              (* atom 40))
-   :header-font                (fnk [atom]              (* atom 108))
-   :header-line-height         (fnk [atom]              (* atom 136))
+   :banner-font                (fnk [atom]              (* atom 108))
+   :banner-line-height         (fnk [atom]              (* atom 136))
    })
 
 ; Templates are property to key mappings, do not imply markup yet
@@ -64,10 +64,10 @@
                                                             :color                (:night colors)})
 
    ; Font Templates
-   :banner              (fnk [units fonts]     {:font-size          (* 2 (:title-font units))
-                                                :line-height        (* 1.8 (:title-line-height units))
-                                                :margin-bottom      (:full units)
-                                                :font-family        (:title fonts)})
+   :banner              (fnk [units fonts]     {:font-family        (:logo fonts)
+                                                :font-size          (:banner-font units)
+                                                :line-height        (:banner-line-height units)
+                                                :font-weight         500})
 
    :logo                (fnk [fonts units]     {:font-family        (:logo fonts)
                                                 :font-size          (:title-font units)
@@ -79,16 +79,19 @@
                                                 :line-height        (:title-line-height units)
                                                 :font-weight         500})
 
-   :subtitle            (fnk [units fonts]     {:font-size          (:subtitle-font units)
+   :subtitle            (fnk [units fonts]     {:font-family        (:base fonts)
+                                                :font-size          (:subtitle-font units)
                                                 :line-height        (:subtitle-line-height units)
-                                                :font-family        (:base fonts)
                                                 :font-weight         300})
 
-   :text                (fnk [units fonts]     {:font-size          (:subtitle-font units)
-                                                :line-height        (:subtitle-line-height units)})
+   :text                (fnk [units fonts]     {:font-family        (:base fonts)
+                                                :font-size          (:subtitle-font units)
+                                                :line-height        (:subtitle-line-height units)
+                                                :font-weight         300})
 
    :tiny-font           (fnk [units fonts]     {:font-size          (:tag-font units)
                                                 :font-family        (:base fonts)
+                                                ; :line-height        (:tag-line-height units)
                                                 :font-weight         300})
 
 
@@ -124,13 +127,13 @@
 
 (def config-graph
   {:colors      (fnk [raw-colors base-color]
-                  {    :night           (:black raw-colors)
-                       :dark            (:dark-gray   raw-colors)
-                       :medium          (:medium-gray raw-colors)
-                       :light           (:light-gray  raw-colors)
-                       :very-light      (:very-light-gray raw-colors)
-                       :day             (:white raw-colors)
-                       :primary         (base-color raw-colors)})
+                      {:night           (:black             raw-colors)
+                       :dark            (:dark-gray         raw-colors)
+                       :medium          (:medium-gray       raw-colors)
+                       :light           (:light-gray        raw-colors)
+                       :very-light      (:very-light-gray   raw-colors)
+                       :day             (:white             raw-colors)
+                       :primary         (base-color         raw-colors)})
 
    :units       (fnk [base-unit] 
                   (-compose 

@@ -39,5 +39,5 @@
                              :base-color      :blue
                              :raw-fonts       fonts
                              :base-font       :NittiGrotesk
-                             :logo-font       :NittiBold
-                             :title-font      :NittiGroteskBold}))
+                             :title-font      :NittiGroteskBold
+                             :logo-font       :NittiBold}))
