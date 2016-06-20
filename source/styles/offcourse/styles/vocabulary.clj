@@ -20,6 +20,9 @@
 ; 2. Fix responsiveness
 ;
 ; Question:
+; 1. Why use the data attrib to distinguish component variations?
+;    1. Pros: Unburden the classname
+;    2. Cons: Child elements of component variations / submodules must break with flat specificity.
 ; 1. Does the use of component variations with the data attr, combined with Clojure templates, 
 ;    decrease the need to share properties through subclassing? 
 ;    Arguments:    
