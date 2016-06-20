@@ -11,4 +11,5 @@
   [[v/sheet             (merge (:column-component        templates)
                                (:sheet                   templates)
                                {:padding                (:full units)})
-    [v/hovered                 (:border-highlighted      templates)]]])
+    [v/hovered                 (:border-highlighted      templates)]]
+   [v/sheet-sticky             {:position                :fixed}]])

@@ -76,6 +76,7 @@
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
+(def sheet-sticky       (sheet (s/attr :data-sheet-sticky := :true)))
 
 (s/defclass business-card)
 (s/defclass business-card--section)
