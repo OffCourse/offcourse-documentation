@@ -1,6 +1,10 @@
 ;;;; Naming Schema ;;;;
 ;
-; General:
+; General wisdom:
+; 1. Less code is usually better code: only create an abstraction if it removes code.
+; 2. Name things in a meaningful manner, so that comments would state the obvious.
+;
+; Modular rules:
 ; 1. Use flat specificity as much as possible (single class selectors) and limit cascade usage to component.
 ; 2. Use layout and grid styles to do all major positioning: Components are always full width.
 ; 3. Use Clojure templates and units to decouple markup and design pattern.
@@ -9,10 +13,11 @@
 ; Naming rules:
 ; 1. The single dash is used to seperate words
 ; 2. The double dash is used to distinguish component elements
-; 3. The data attributes are used to distinguish component variations and state 
+; 3. The data attributes are used to distinguish component variations and state
 ;
 ; Todo:
 ; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
+; 2. Fix responsiveness
 ;
 ; Question:
 ; 1. Does the use of component variations with the data attr, combined with Clojure templates, 
