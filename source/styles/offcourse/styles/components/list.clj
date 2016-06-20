@@ -4,7 +4,13 @@
 
 (defn list-component [{:keys [templates colors fonts units]}]
   [[v/list              (merge (:column-component     templates))]
-   [v/list--item               (:list-item            templates)
+   [v/list--item        (merge (:row-component        templates)
+                               (:recycled-paper       templates)
+                               (:title                templates)
+                               {:align-items          :center
+                                :height              (:one-and-half units)})
+                                :padding             (:half units)
+                                :margin-bottom       (:sixth units)
+                                :font-size           (:subtitle-font units)
     [v/hovered                 (:selected             templates)]
     [v/selected                (:highlighted          templates)]]])
-

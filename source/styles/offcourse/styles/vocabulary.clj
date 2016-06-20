@@ -1,15 +1,15 @@
 ;;;; Naming Schema ;;;;
 ;
 ; General:
-; 1. Use flat specificity as much as possible (single class) and limit cascade usage to component
-; 2. Use layout and grid styles to do all major positioning: Components are always full width 
-; 3. Helpers are to be avoided, but are used to prevent the excessive creation of container classes
-; 4. Use Clojure templates and units to decouple markup and design pattern
+; 1. Use flat specificity as much as possible (single class selectors) and limit cascade usage to component.
+; 2. Use layout and grid styles to do all major positioning: Components are always full width.
+; 3. Use Clojure templates and units to decouple markup and design pattern.
+; 4. Use helpers to prevent the excessive creation of container classes, but generally avoid them.
 ;
 ; Naming rules:
 ; 1. The single dash is used to seperate words
 ; 2. The double dash is used to distinguish component elements
-; 3. Data attributes are used to distinguish component variations and state 
+; 3. The data attributes are used to distinguish component variations and state 
 ;
 ; Todo:
 ; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
@@ -20,15 +20,19 @@
 ;    decrease the need to share properties through subclassing? 
 ;    Arguments:    
 ;    1. It makes the classname denote an abstraction which is almost equal to the tag attr.
-;       Classnames will not denote components anymore, but the data attr does and that is inconsistent.  
+;       Classnames will not tell everything about the component anymore, splitting meaning.  
 ;    2. It generates a lot of boilerplate by only using components to couple properties to markup.
-;       Templates should be concerned with code that is shared across components, not across component variations. 
-;    3. It will also generate a lot of duplicate properties in the css file 
-;       (even though that barely matters when measuring performance)
-;    4. - global / layout / helpers / shame / typography
-;       - component
-;    ** - component variation ** -> Candidate for removal
-;       - template 
+;       Templates should be concerned with code that is shared across components, not across component variations.
+;       It troubles the idea that all code concerning the component is in one place. 
+;    3. Every component variation will become a component in its own right, which makes you wonder why that wasn't
+;       declared in the first place. Without shared styles, through subclassing, the component class 
+;       is rather meaningless. 
+;   (4. It will also generate a lot of duplicate properties in the css file, 
+;       even though that barely matters when measuring performance.) 
+;
+;       - global / layout / typography / helpers / shame 
+;       - component and component variations
+;       - templates 
 ;       - processed units / colors / fonts 
 ;       - raw colors / fonts / breakpoints
 ; 
