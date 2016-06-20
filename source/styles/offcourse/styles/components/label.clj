@@ -3,11 +3,11 @@
 
 (defn label-component [{:keys [templates fonts colors units]}]
   [[v/label       (merge  (:column-component      templates)
-                          (:tag                   templates)
+                          (:label                 templates)
                           (:recycled-paper        templates)
                           {:align-items           :center
                            :justify-content       :center
                            :margin-bottom        (:sixth units)
                            :margin-right         (:sixth units)
-                           :padding            [[(:tenth units) (:half units)]]})
+                           :padding            [[ 0 (:half units)]]})
     [v/hovered            (:selected              templates)]]])

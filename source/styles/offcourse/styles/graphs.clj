@@ -33,16 +33,16 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
-   :tag-font                   (fnk [atom]              (* atom 18))
-   :tag-line-height            (fnk [atom]              (* atom 22))
-   :base-font                  (fnk [atom]              (* atom 16))
-   :base-line-height           (fnk [atom]              (* atom 20))
-   :subtitle-font              (fnk [atom]              (* atom 22))
-   :subtitle-line-height       (fnk [atom]              (* atom 30))
-   :title-font                 (fnk [atom]              (* atom 32))
-   :title-line-height          (fnk [atom]              (* atom 40))
    :banner-font                (fnk [atom]              (* atom 108))
    :banner-line-height         (fnk [atom]              (* atom 136))
+   :title-font                 (fnk [atom]              (* atom 32))
+   :title-line-height          (fnk [atom]              (* atom 40))
+   :subtitle-font              (fnk [atom]              (* atom 22))
+   :subtitle-line-height       (fnk [atom]              (* atom 30))
+   :base-font                  (fnk [atom]              (* atom 16))
+   :base-line-height           (fnk [atom]              (* atom 20))
+   :label-font                 (fnk [atom]              (* atom 18))
+   :label-line-height          (fnk [atom]              (* atom 26))
    })
 
 ; Templates are property to key mappings, they do not imply markup yet
@@ -50,18 +50,18 @@
   {
 
    ; Color Templates
-   :highlighted       (fnk [colors]                        {:background-color     (:primary colors)
-                                                            :color                (:night colors)})
-   :selected          (fnk [colors]                        {:background-color     (:night colors)
-                                                            :color                (:day colors)})
-   :negative          (fnk [colors]                        {:background-color     (:night colors)
-                                                            :color                (:day colors)})
-   :paper             (fnk [colors]                        {:background-color     (:day colors)
-                                                            :color                (:night colors)})
-   :recycled-paper    (fnk [colors]                        {:background-color     (:light colors)
-                                                            :color                (:night colors)})
-   :smudged-paper     (fnk [colors]                        {:background-color     (:medium colors)
-                                                            :color                (:night colors)})
+   :highlighted         (fnk [colors]          {:background-color     (:primary colors)
+                                                :color                (:day colors)})
+   :selected            (fnk [colors]          {:background-color     (:night colors)
+                                                :color                (:day colors)})
+   :negative            (fnk [colors]          {:background-color     (:night colors)
+                                                :color                (:day colors)})
+   :paper               (fnk [colors]          {:background-color     (:day colors)
+                                                :color                (:night colors)})
+   :recycled-paper      (fnk [colors]          {:background-color     (:light colors)
+                                                :color                (:night colors)})
+   :smudged-paper       (fnk [colors]          {:background-color     (:medium colors)
+                                                :color                (:night colors)})
 
    ; Font Templates
    :banner              (fnk [units fonts]     {:font-family        (:logo fonts)
@@ -79,6 +79,16 @@
                                                 :line-height        (:title-line-height units)
                                                 :font-weight         500})
 
+   :form                (fnk [units fonts]     {:font-family        (:base fonts)
+                                                :font-size          (:title-font units) 
+                                                :line-height        (:title-line-height units)
+                                                :font-weight         300})
+
+   :list                (fnk [units fonts]     {:font-family        (:title fonts)
+                                                :font-size          (:subtitle-font units)
+                                                :line-height        (:title-line-height units)
+                                                :font-weight         300})
+
    :subtitle            (fnk [units fonts]     {:font-family        (:base fonts)
                                                 :font-size          (:subtitle-font units)
                                                 :line-height        (:subtitle-line-height units)
@@ -89,9 +99,9 @@
                                                 :line-height        (:subtitle-line-height units)
                                                 :font-weight         300})
 
-   :tag                 (fnk [units fonts]     {:font-family        (:base fonts)
-                                                :font-size          (:tag-font units)
-                                                ; :line-height        (:tag-line-height units)
+   :label               (fnk [units fonts]     {:font-family        (:base fonts)
+                                                :font-size          (:label-font units)
+                                                :line-height        (:label-line-height units)
                                                 :font-weight         300})
 
 
@@ -117,11 +127,10 @@
 
    :textbar             (fnk [units component buttonbase logo negative]
                                          (merge component
-                                                buttonbase
                                                 negative
                                                 logo
-                                                {:padding        [[0 (:third units)]]}))
-   :sheet             (fnk [paper border-default]    
+                                               {:padding        [[0 (:third units)]]}))
+   :sheet               (fnk [paper border-default]    
                                          (merge border-default
                                                 paper))})
 

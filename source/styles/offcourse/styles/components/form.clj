@@ -8,41 +8,28 @@
   [[v/form--row           (merge (:row-component        templates)
                                  {:flex-wrap            :wrap})]
 
-   [v/form--input         (merge (:subtitle             templates))
+   [v/form--input         (merge (:form                 templates)
+                                 (:recycled-paper       templates)
                                  {:flex                 2
-                                  :padding           [[(:half units)(:half units)(:half units)(:full units)]]
+                                  :padding           [[(:half units)(:half units)(:half units)(:full units)]]})]
 
-                                  :background          (:light colors)
-
-                                  :font-family         (:base fonts)
-                                  :font-size           (:title-font units) 
-                                  :line-height         (:title-line-height units)
-                                  :font-weight          300}]
-
-   [v/form--subscribe     (merge (:textbar              templates)
+   [v/form--subscribe     (merge (:component            templates)
+                                 (:buttonbase           templates)
+                                 (:form                 templates)
+                                 (:highlighted          templates)
                                  {:flex 1
                                   :justify-content      :center
                                   :align-items          :center
-                                  :padding           [[(:half units) 0]]
-                                  
-                                  :background          (:primary colors)
-
-                                  :font-family         (:base fonts)
-                                  :font-weight          300
-                                  :font-size           (:title-font units) 
-                                  :line-height         (:title-line-height units)
-
-                                  :cursor               :pointer})
-    [v/hovered                   {:background          (:night colors)}]]
+                                  :padding           [[(:half units) 0]]})
+    [v/hovered                   (:negative             templates)]]
 
    ; Flat specificity impossible due to mailchimp form classes
    [:div 
     [v/and--form--error   (merge (:subtitle             templates)
+                                 (:negative             templates)
                                  {:width               (percent 100)
                                   :padding           [[(:third units) (:third units) (:third units) (:full units)]]
-                                  :margin               0
-                                  :color               (:day colors)
-                                  :background          (:night colors)})]]
+                                  :margin               0})]]
    [v/form--success       (merge (:title                templates)
                                  {:padding-top         (:two-third units)})]
   ]) 

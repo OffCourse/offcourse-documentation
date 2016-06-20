@@ -79,18 +79,16 @@
 (s/defclass text)
 (s/defclass content) ; Class with child selectors for markup that isn't classed 
 
-; Header
+; Components
 (s/defclass header)
 (s/defclass header--column)
 (s/defclass header--row)
 
-; Logo
 (s/defclass logo)
 (s/defclass logo--padded)
 (s/defclass logo--inverse)
 (s/defclass logo--large)
 
-; Form
 (s/defclass form--row)
 (s/defclass form--input)
 (s/defclass form--subscribe)
@@ -98,37 +96,23 @@
 (s/defclass form--error)
 (def and--form--error (s/& (form--error))) ; Flat specificity avoided because of mailchimp form classes
 
-; Images
 (s/defclass image)
 (s/defclass image--filtered)
 (s/defclass image--filtered-hover)
 
-; Card
 (s/defclass card)
 (s/defclass card--section)
 (s/defclass card--business)
 
-; Footer
 (s/defclass footer)
 
-; Buttons
 (s/defclass button)
 (def button-card (button (s/attr :data-button-type := :card)))
 
-; Lists
 (s/defclass list)
 (s/defclass list--item)
 
-
-
-
-
-
-
-(s/defclass labels)
 (s/defclass label)
-
-
 
 ;; MODIFIERS
 (s/defpseudoclass hover)
