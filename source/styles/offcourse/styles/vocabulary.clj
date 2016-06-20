@@ -40,7 +40,7 @@
 ;       - processed units / colors / fonts 
 ;       - raw colors / fonts / breakpoints
 ;
-;    Decision: Keep component variations to provide default styling and to keep most meaning in one place. 
+;    Decision: Keep component variations to provide default styling and to keep most meaning in one place.
 ; 
 ;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -61,10 +61,10 @@
 (def subgrid-three        (subgrid (s/attr :data-subgrid-columns := "3")))
 
 (s/defclass container)
-(def container-fw         (container (s/attr :data-container-type := "fw")))
-(def container-wrap       (container (s/attr :data-container-type := "wrap")))
-; Subgrid container is needed because CSS columns do not break flexboxes nicely.
-(def container-subgrid    (container (s/attr :data-container-type := "subgrid"))) 
+(def container-column     (container (s/attr :data-container-type := :column)))
+(def container-fw         (container (s/attr :data-container-type := :fw)))
+(def container-wrap       (container (s/attr :data-container-type := :wrap)))
+(def container-subgrid    (container (s/attr :data-container-type := :subgrid))) ; Needed due to broken column break
 
 ; Helpers
 (s/defclass padding-b-third)
@@ -86,13 +86,11 @@
 
 ; Components
 (s/defclass header)
-(s/defclass header--column)
-(s/defclass header--row)
 
 (s/defclass logo)
-(s/defclass logo--padded)
-(s/defclass logo--inverse)
-(s/defclass logo--large)
+(def logo-large           (logo (s/attr :data-logo-size := :large)))
+(def logo-inverse         (logo (s/attr :data-logo-inverse := :true)))
+(def logo-padded          (logo (s/attr :data-logo-padded := :true)))
 
 (s/defclass form--input)
 (s/defclass form--subscribe)
@@ -101,17 +99,17 @@
 (def and--form--error (s/& (form--error))) ; Flat specificity requires non-trivial changes in mailchimp form
 
 (s/defclass image)
-(s/defclass image--filtered)
-(s/defclass image--filtered-hover)
+(def image-filter         (image (s/attr :data-image-filter := :true)))
+(def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass card)
 (s/defclass card--section)
-(s/defclass card--business)
+(def card-business        (card (s/attr :data-card-type := :business)))
 
 (s/defclass footer)
 
 (s/defclass button)
-(def button-card (button (s/attr :data-button-type := :card)))
+(def button-card          (button (s/attr :data-button-type := :card)))
 
 (s/defclass list)
 (s/defclass list--item)

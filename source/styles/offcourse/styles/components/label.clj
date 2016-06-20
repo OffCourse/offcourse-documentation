@@ -9,5 +9,5 @@
                            :justify-content       :center
                            :margin-bottom        (:sixth units)
                            :margin-right         (:sixth units)
-                           :padding            [[ 0 (:half units)]]})
+                           :padding             [[0 (:half units)]]})
     [v/hovered            (:selected              templates)]]])

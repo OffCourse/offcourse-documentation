@@ -7,7 +7,7 @@
 (defn image [{:keys [templates colors fonts units]}]
   [[v/image                   {:display           :block
                                :width             (percent 100)}]
-   [v/image--filtered         {:filter            "grayscale(100%)"
+   [v/image-filter            {:filter            "grayscale(100%)"
                                :transition      [[:all "1s" :ease "1s"]]}]
-   [v/image--filtered-hover
+   [v/image-filter-recolor
     [v/hovered                {:filter            :none}]]]) 
