@@ -45,7 +45,7 @@
    :banner-line-height         (fnk [atom]              (* atom 136))
    })
 
-; Templates are property to key mappings, do not imply markup yet
+; Templates are property to key mappings, they do not imply markup yet
 (def templates-graph
   {
 
@@ -89,8 +89,8 @@
                                                 :line-height        (:subtitle-line-height units)
                                                 :font-weight         300})
 
-   :tiny-font           (fnk [units fonts]     {:font-size          (:tag-font units)
-                                                :font-family        (:base fonts)
+   :tag                 (fnk [units fonts]     {:font-family        (:base fonts)
+                                                :font-size          (:tag-font units)
                                                 ; :line-height        (:tag-line-height units)
                                                 :font-weight         300})
 

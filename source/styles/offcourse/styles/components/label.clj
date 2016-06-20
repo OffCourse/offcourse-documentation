@@ -3,7 +3,7 @@
 
 (defn label-component [{:keys [templates fonts colors units]}]
   [[v/label       (merge  (:column-component      templates)
-                          (:tiny-font             templates)
+                          (:tag                   templates)
                           (:recycled-paper        templates)
                           {:align-items           :center
                            :justify-content       :center
