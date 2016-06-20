@@ -14,36 +14,6 @@
 ; 1. The single dash is used to seperate words
 ; 2. The double dash is used to distinguish component elements
 ; 3. The data attributes are used to distinguish component variations and state
-;
-; Todo:
-; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
-; 2. Fix responsiveness
-;
-; Question:
-; 1. Why use the data attrib to distinguish component variations?
-;    1. Pros: Unburden the classname
-;    2. Cons: Child elements of component variations / submodules must break with flat specificity.
-; 1. Does the use of component variations with the data attr, combined with Clojure templates, 
-;    decrease the need to share properties through subclassing? 
-;    Arguments:    
-;    1. It makes the classname denote an abstraction which is almost equal to the tag attr.
-;       Classnames will not tell everything about the component anymore, splitting meaning.  
-;    2. It generates a lot of boilerplate by only using components to couple properties to markup.
-;       Templates should be concerned with code that is shared across components, not across component variations.
-;       It troubles the idea that all code concerning the component is in one place. 
-;    3. Every component variation will become a component in its own right, which makes you wonder why that wasn't
-;       declared in the first place. Without shared styles, through subclassing, the component class 
-;       is rather meaningless. 
-;   (4. It will also generate a lot of duplicate properties in the css file, 
-;       even though that barely matters when measuring performance.) 
-;
-;       - global / layout / typography / helpers / shame 
-;       - component and component variations
-;       - templates 
-;       - processed units / colors / fonts 
-;       - raw colors / fonts / breakpoints
-;
-;    Decision: Keep component variations to provide default styling and to keep most meaning in one place.
 ; 
 ;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -105,14 +75,15 @@
 (def image-filter         (image (s/attr :data-image-filter := :true)))
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
-(s/defclass card)
-(s/defclass card--section)
-(def card-business        (card (s/attr :data-card-type := :business)))
+(s/defclass sheet)
+
+(s/defclass business-card)
+(s/defclass business-card--section)
 
 (s/defclass footer)
 
 (s/defclass button)
-(def button-card          (button (s/attr :data-button-type := :card)))
+(def button-sheet          (button (s/attr :data-button-type := :sheet)))
 
 (s/defclass list)
 (s/defclass list--item)

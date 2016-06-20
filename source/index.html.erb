@@ -30,19 +30,19 @@ layout: main
   <div class="grid">
 
     <div class="grid--section">
-      <%= partial("partials/card-nav", :locals => { :active => current_page.data.active }) %>
+      <%= partial("partials/sheet-nav", :locals => { :active => current_page.data.active }) %>
     </div>
 
     <div class="grid--section">
       <div class="container padding-tb-one" data-container-type="fw">
-        <div class="card">
+        <div class="sheet">
           <article class="content">
             <%= blog('frontpage').articles[0].body %>
           </article>
         </div>
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
-        <div class="card">
+        <div class="sheet">
           <%= partial("partials/signup-mailchimp") %>
         </div>
       </div>
@@ -51,14 +51,14 @@ layout: main
       </div>
       <div class="subgrid padding-tb-one" data-subgrid-columns="3">
         <% for concept in blog('frontpage').articles[1].data.concepts %>
-        <%= partial("partials/card-concept", :locals => { :concept => concept }) %>
+        <%= partial("partials/sheet-concept", :locals => { :concept => concept }) %>
         <% end %>
       </div>
       <div class="container padding-t-two">
         <div class="logo" data-logo-padded="true" id="preview">Preview</div>
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
-        <div class="card">
+        <div class="sheet">
           <article class="content">
             <img class="image" data-image-filter="true" data-image-filter-recolor="true" src="./images/iteration-current.png" />
           </article>
@@ -68,7 +68,7 @@ layout: main
         <div class="logo" data-logo-padded="true" id="mission">Mission</div>
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
-        <div class="card">
+        <div class="sheet">
           <article class="content">
             <%= blog('frontpage').articles[3].body %>
           </article>
@@ -79,14 +79,14 @@ layout: main
       </div>
       <div class="subgrid padding-tb-one" data-subgrid-columns="2">
         <% blog('team').articles.reverse_each do |person| %>
-        <%= partial("partials/card-person", :locals => { :person => person }) %>
+        <%= partial("partials/business-card", :locals => { :person => person }) %>
         <% end %>
       </div>
       <div class="container padding-t-two">
         <div class="logo" data-logo-padded="true" id="signup">Signup</div>
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
-        <div id="join" class="card">
+        <div id="join" class="sheet">
           <%= partial("partials/signup-mailchimp") %>
         </div>
       </div>
@@ -102,9 +102,9 @@ layout: main
     <div class="grid--section">
       <p class="title padding-b-third">Follow us on:</p>
       <div class="container">
-        <a data-button-type="card" class="button" href="https://github.com/OffCourse/offcourse-frontend">Github</a>   
-        <a data-button-type="card" class="button" href="https://twitter.com/offcourse_">Twitter</a>   
-        <a data-button-type="card" class="button" href="https://www.linkedin.com/company/7962249">LinkedIn</a>   
+        <a data-button-type="sheet" class="button" href="https://github.com/OffCourse/offcourse-frontend">Github</a>   
+        <a data-button-type="sheet" class="button" href="https://twitter.com/offcourse_">Twitter</a>   
+        <a data-button-type="sheet" class="button" href="https://www.linkedin.com/company/7962249">LinkedIn</a>   
       </div>
     </div>
   </div>

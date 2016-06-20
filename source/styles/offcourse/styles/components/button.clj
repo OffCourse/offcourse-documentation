@@ -3,7 +3,7 @@
 
 (defn button [{:keys [templates colors units fonts]}]
   [[v/button                (merge  (:buttonbase            templates))]
-   [v/button-card           (merge  (:row-component         templates)
+   [v/button-sheet          (merge  (:row-component         templates)
                                     (:sheet                 templates)
                                     (:subtitle              templates)
                                     {:padding            [[(:third units) (:half units)]]
