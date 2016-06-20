@@ -45,7 +45,6 @@
    :label-line-height          (fnk [atom]              (* atom 26))
    })
 
-; Templates are property to key mappings, they do not imply markup yet
 (def templates-graph
   {
 

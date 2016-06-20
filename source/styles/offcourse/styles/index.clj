@@ -10,5 +10,5 @@
             [offcourse.styles.components.index :refer [components]]))
 
 (defstyles base
-  (let [modules [global typography layout components helpers shame]]
+  (let [modules [global typography layout components shame helpers]]
     (for [module modules] (module config))))

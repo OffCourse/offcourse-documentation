@@ -2,7 +2,7 @@
 ;
 ; General wisdom:
 ; 1. Less code is usually better code: only create an abstraction if it removes code.
-; 2. Name things in a meaningful manner, so that comments would state the obvious.
+; 2. Name things in a meaningful manner so that comments would state the obvious.
 ;
 ; Modular rules:
 ; 1. Use flat specificity as much as possible (single class selectors) and limit cascade usage to component.
@@ -57,13 +57,14 @@
 (s/defclass grid--section)
 
 (s/defclass subgrid)
-(s/defclass subgrid--two)
-(s/defclass subgrid--three)
+(def subgrid-two          (subgrid (s/attr :data-subgrid-columns := "2")))
+(def subgrid-three        (subgrid (s/attr :data-subgrid-columns := "3")))
 
 (s/defclass container)
-(s/defclass container--subgrid)
-(s/defclass container--fw)
-(s/defclass container--wrap)
+(def container-fw         (container (s/attr :data-container-type := "fw")))
+(def container-wrap       (container (s/attr :data-container-type := "wrap")))
+; Subgrid container is needed because CSS columns do not break flexboxes nicely.
+(def container-subgrid    (container (s/attr :data-container-type := "subgrid"))) 
 
 ; Helpers
 (s/defclass padding-b-third)

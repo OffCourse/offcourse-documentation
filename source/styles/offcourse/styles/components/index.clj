@@ -12,5 +12,5 @@
              [header :refer [header]]]))
 
 (defn components [config]
-  (let [components [content button logo image form label-component list-component header card footer]]
+  (let [components [header logo card content button image form label-component list-component footer]]
     (for [component components] (component config))))

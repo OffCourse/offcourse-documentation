@@ -1,4 +1,4 @@
-<div class="container container--subgrid padding-b-twothird">
+<div class="container padding-b-twothird" data-container-type="subgrid">
   <div class="card card--business">
     <div class="card--section">
       <img src="/images/people/<%= person.data.img %>" class="image image--filtered">
@@ -8,7 +8,7 @@
         <%= person.data.name %>
       </p>
       <p class="text padding-b-third"><%= person.data.job %></p>
-      <div class="container container--wrap">
+      <div class="container" data-container-type="wrap">
         <a href="<%= person.data.linkedin || 'https://www.linkedin.com/vsearch/f?type=all&keywords=' + person.data.name %>" class="label">LinkedIn</a>
         <% if person.data.twitter %>
         <a href="<%= person.data.twitter || 'https://twitter.com/search?q=' + person.data.name %>" data-button-type="textbar" class="label">Twitter</a>
