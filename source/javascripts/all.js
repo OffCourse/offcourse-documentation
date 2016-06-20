@@ -3,7 +3,6 @@ function onScroll(offsets, startPos){
   var scrollPos = window.scrollY;
   var elem = document.querySelector('.js-nav');
   var newOffset = 0;
-  console.log(offsets, startPos)
   offsets.forEach(function(offset){
     if (scrollPos + 400 > offset){
       newOffset = offset;
@@ -23,7 +22,7 @@ function onLoad(){
   window.addEventListener('scroll', onScroll.bind(null, offsets, startPos));
 }
 
-window.onload = onLoad();
+window.onload = onLoad;
 
 // Smooth anchorscroll
 $(function() {
