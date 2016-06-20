@@ -88,12 +88,11 @@
 (s/defclass logo--inverse)
 (s/defclass logo--large)
 
-(s/defclass form--row)
 (s/defclass form--input)
 (s/defclass form--subscribe)
 (s/defclass form--success)
 (s/defclass form--error)
-(def and--form--error (s/& (form--error))) ; Flat specificity avoided because of mailchimp form classes
+(def and--form--error (s/& (form--error))) ; Flat specificity requires non-trivial changes in mailchimp form
 
 (s/defclass image)
 (s/defclass image--filtered)
