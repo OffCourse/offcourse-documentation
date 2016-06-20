@@ -1,4 +1,7 @@
 // Attachment on scroll
+
+// Todo: needs updating on window resize
+// Todo: needs disabling on phones -> fallback to header nav
 function onScroll(offsets, startPos){
   var scrollPos = window.scrollY;
   var elem = document.querySelector('.js-nav');
