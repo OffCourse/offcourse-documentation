@@ -63,7 +63,16 @@
    :smudged-paper       (fnk [colors]          {:background-color     (:medium colors)
                                                 :color                (:night colors)})
 
-   ; Font Templates
+   ;;;;; Font Templates ;;;;;
+   ; 
+   ; Issues:
+   ; 1. Line heights should be set so that multiline looks great. Currently they are
+   ;    used to substitute block-level padding
+   ; 2. Font weights aren't doing much without their corresponding fonts and fontface declarations
+   ; 3. The amount of font templates is growing steadily. Less might be more.
+   ;
+   ;;;;;;;;;;;;;;;;;;;;;;;;;;
+   
    :banner              (fnk [units fonts]     {:font-family        (:logo fonts)
                                                 :font-size          (:banner-font units)
                                                 :line-height        (:banner-line-height units)
