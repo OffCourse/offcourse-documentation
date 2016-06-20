@@ -5,10 +5,7 @@
             [offcourse.styles.vocabulary :as v]))
 
 (defn form [{:keys [templates colors fonts units]}]
-  [[v/form--row           (merge (:row-component        templates)
-                                 {:flex-wrap            :wrap})]
-
-   [v/form--input         (merge (:form                 templates)
+  [[v/form--input         (merge (:form                 templates)
                                  (:recycled-paper       templates)
                                  {:flex                 2
                                   :padding           [[(:half units)(:half units)(:half units)(:full units)]]})]
@@ -22,9 +19,8 @@
                                   :align-items          :center
                                   :padding           [[(:half units) 0]]})
     [v/hovered                   (:negative             templates)]]
-
-   ; Flat specificity impossible due to mailchimp form classes
-   [:div 
+ 
+   [:div ; Flat specificity requires non-trivial changes in mailchimp form
     [v/and--form--error   (merge (:subtitle             templates)
                                  (:negative             templates)
                                  {:width               (percent 100)

@@ -13,7 +13,6 @@
 ;
 ; Todo:
 ; 1. Seperate component elements from component variations with data attribute (avoid double meaning of double dash)
-; 2. Use Clojure templates more consistently 
 ;
 ; Question:
 ; 1. Does the use of component variations with the data attr, combined with Clojure templates, 
