@@ -1,25 +1,31 @@
-// Scrollspy
-function onScroll(){
-  var scrollPosition = window.scrollY;
+// Attachment on scroll
+function onScroll(offsets, startPos){
+  var scrollPos = window.scrollY;
   var elem = document.querySelector('.js-nav');
-  console.log(scrollPosition, elem.offsetTop);
-  if (scrollPosition > elem.offsetTop){
-    console.dir('bigger');
-    elem.setAttribute("data-sheet-sticky", "true");
+  var newOffset = 0;
+  console.log(offsets, startPos)
+  offsets.forEach(function(offset){
+    if (scrollPos + 400 > offset){
+      newOffset = offset;
+    }
+  })
+  if (newOffset <= 0 ){
+    elem.style.marginTop = 0 + "px" ;
   } else {
-    elem.setAttribute("data-sheet-sticky", "false");
+    elem.style.marginTop = (newOffset - startPos) + "px" ;
   }
 }
 
 function onLoad(){
-  window.addEventListener('scroll', onScroll);
+  var startPos = document.querySelector('.js-nav').offsetTop;
+  var offsets = [0];
+  document.querySelectorAll('.js-anchor').forEach(function(value){offsets.push(value.offsetTop)});
+  window.addEventListener('scroll', onScroll.bind(null, offsets, startPos));
 }
 
 window.onload = onLoad();
 
-
-
-// Anchorscroll
+// Smooth anchorscroll
 $(function() {
   $('a[href*="#"]:not([href="#"])').bind('click', function(e) {
     e.preventDefault;
