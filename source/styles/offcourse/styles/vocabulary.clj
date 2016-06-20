@@ -35,6 +35,8 @@
 ;       - templates 
 ;       - processed units / colors / fonts 
 ;       - raw colors / fonts / breakpoints
+;
+;    Decision: Keep component variations to provide default styling and to keep most meaning in one place. 
 ; 
 ;;;;;;;;;;;;;;;;;;;;;;;
 
