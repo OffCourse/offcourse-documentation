@@ -12,9 +12,9 @@ function onScroll(offsets, startPos){
     }
   })
   if (newOffset <= 0 ){
-    elem.style.marginTop = 0 + "px" ;
+    elem.style.marginTop = 0 + 'px' ;
   } else {
-    elem.style.marginTop = (newOffset - startPos) + "px" ;
+    elem.style.marginTop = (newOffset - startPos) + 'px' ;
   }
 }
 
@@ -43,3 +43,26 @@ $(function() {
     }
   });
 });
+
+// Code parsing
+
+function findCSS(selector){
+  var rules = document.styleSheets['1'].cssRules;
+  for (var i = 0; i < rules.length; i++){
+    // console.log(rules[i])
+    if (rules[i].selectorText == selector){
+      return text = rules[i].cssText;
+    }
+  }
+}
+
+$(function() {
+  var elems = document.querySelectorAll('code');
+  for (var i = 0; i < elems.length; i++){
+    var code = findCSS(elems[i].dataset.class);
+    elems[i].innerHTML = code;
+  }
+  hljs.initHighlightingOnLoad();
+});
+
+// Code hightlighting

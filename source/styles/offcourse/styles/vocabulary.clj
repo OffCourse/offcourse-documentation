@@ -82,6 +82,8 @@
 (s/defclass form--error)
 (def and--form--error (s/& (form--error))) ; Flat specificity requires non-trivial changes in mailchimp form
 
+(s/defclass code)
+
 (s/defclass image)
 (def image-filter         (image (s/attr :data-image-filter := :true)))
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))

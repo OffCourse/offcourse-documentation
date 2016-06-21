@@ -7,4 +7,6 @@
              [arithmetic :refer [/ + *]]
              [selectors :as s]]))
 
-(defn shame [{:keys [templates breakpoints colors units fonts]}])
+(defn shame [{:keys [templates breakpoints colors units fonts]}]
+  [[v/code        (merge (:recycled-paper    templates)
+                         {:padding        [[(:half units) (:full units)]]})]])

@@ -1,21 +1,19 @@
-<div class="container padding-b-one" >
+<div class="container padding-b-one" data-container-type="fw">
   <div class="sheet js-anchor">
     <div class="sheet--section">
-      <h1 class="<%= "t--" + template %>"><%= template %></h1>
-      <p class="<%= "t--" + template %>">Bring to the table win-win survival strategies to ensure proactive domination.</p>
+      <h1 class="<%= "t--" + template %> padding-b-twothird"><%= template %></h1>
       <% if long %>
       <p class="<%= "t--" + template %>">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+      <% else %>
+      <p class="<%= "t--" + template %> padding-b-twothird">Bring to the table win-win survival strategies to ensure proactive domination.</p>
       <% end %>
     </div>
     <div class="sheet--section">
-      <code>
-        .<%= template %> {
-          font-family: NittiGrotesk;
-          font-size: 1.375rem;
-          line-height: 1.875rem;
-          font-weight: 300;
-        }
-      </code>
+      <pre class="container padding-t-one" data-container-type="fw">
+        <code class="code js-get-class" data-class=".<%= "t--" + template %>">
+          
+        </code>
+      </pre>
     </div>
   </div>
 </div>
