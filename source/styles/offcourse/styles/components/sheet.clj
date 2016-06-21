@@ -8,10 +8,9 @@
 
 ; Disliking this abstraction!
 (defn sheet [{:keys [templates breakpoints colors units]}]
-  [[v/sheet             (merge (:row-component           templates)
+  [[v/sheet             (merge (:column-component        templates)
                                (:sheet                   templates)
                                {:padding                (:full units)
                                 :transition            [[:margin-top "1s" :ease-in-out]]})
     [v/hovered                 (:border-highlighted      templates)]]
-   [v/sheet--section    (merge (:column-component        templates)
-                               {:flex                    1})]])
+   [v/sheet--section    (merge (:column-component        templates))]])

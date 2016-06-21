@@ -52,10 +52,10 @@
 (s/defclass padding-tb-four)
 
 ; Typography
-(s/defclass t--nittynormal)
-(s/defclass t--nittybold)
-(s/defclass t--nittygrotesk)
-(s/defclass t--nittygroteskbold)
+(s/defclass t--nitty-normal)
+(s/defclass t--nitty-bold)
+(s/defclass t--nitty-grotesk)
+(s/defclass t--nitty-grotesk-bold)
 (s/defclass t--title)
 (s/defclass t--subtitle)
 (s/defclass t--text)
