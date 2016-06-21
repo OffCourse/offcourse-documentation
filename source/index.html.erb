@@ -36,14 +36,16 @@ layout: main
     <div class="grid--section">
       <div class="container padding-tb-one" data-container-type="fw">
         <div class="sheet js-anchor">
-          <article class="content">
+          <div class="sheet--section content">
             <%= blog('frontpage').articles[0].body %>
-          </article>
+          </div>
         </div>
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
         <div class="sheet js-anchor">
-          <%= partial("partials/signup-mailchimp") %>
+          <div class="sheet--section">
+            <%= partial("partials/signup-mailchimp") %>
+          </div>
         </div>
       </div>
       <div class="container padding-t-two">
@@ -59,9 +61,9 @@ layout: main
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
         <div class="sheet js-anchor">
-          <article class="content">
+          <div class="sheet--section content">
             <img class="image" data-image-filter="true" data-image-filter-recolor="true" src="./images/iteration-current.png" />
-          </article>
+          </div>
         </div>
       </div>
       <div class="container padding-t-two">
@@ -69,9 +71,9 @@ layout: main
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
         <div class="sheet js-anchor">
-          <article class="content">
+          <div class="sheet--section content">
             <%= blog('frontpage').articles[3].body %>
-          </article>
+          </div>
         </div>
       </div>
       <div class="container padding-t-two">
@@ -87,7 +89,9 @@ layout: main
       </div>
       <div class="container padding-tb-one" data-container-type="fw">
         <div id="join" class="sheet js-anchor">
-          <%= partial("partials/signup-mailchimp") %>
+          <div class="sheet--section">
+            <%= partial("partials/signup-mailchimp") %>
+          </div>
         </div>
       </div>
     </div>

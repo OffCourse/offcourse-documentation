@@ -52,13 +52,23 @@
 (s/defclass padding-tb-four)
 
 ; Typography
-(s/defclass title)
-(s/defclass subtitle)
-(s/defclass text)
-(s/defclass content) ; Class with child selectors for markup that isn't classed 
+(s/defclass t--nittynormal)
+(s/defclass t--nittybold)
+(s/defclass t--nittygrotesk)
+(s/defclass t--nittygroteskbold)
+(s/defclass t--title)
+(s/defclass t--subtitle)
+(s/defclass t--text)
+(s/defclass t--banner)
+(s/defclass t--logo)
+(s/defclass t--form)
+(s/defclass t--list)
+(s/defclass t--label)
 
 ; Components
 (s/defclass header)
+
+(s/defclass content) ; Class with child selectors for markup that isn't classed 
 
 (s/defclass logo)
 (def logo-large           (logo (s/attr :data-logo-size := :large)))
@@ -76,6 +86,7 @@
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
+(s/defclass sheet--section)
 
 (s/defclass business-card)
 (s/defclass business-card--section)

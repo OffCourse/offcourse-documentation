@@ -9,8 +9,7 @@
   [[:*                {:margin                0
                        :padding               0
                        :box-sizing            :border-box
-                       :outline               :none
-                       :transition            [[:margin-top "1s" :ease-in-out]]}]
+                       :outline               :none}]
 
    [:html             {:position              :relative
                        :font-family          (:base fonts)

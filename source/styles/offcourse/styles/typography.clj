@@ -8,8 +8,18 @@
                  :font-weight 500
                  :src (str "url('/fonts/" file-name ".woff') " "format('woff')")}))
 
+; (s/defclass t--nittynormal)
+; (s/defclass t--nittybold)
+; (s/defclass t--nittygrotesk)
+; (s/defclass t--nittygroteskbold)
+
 (defn typography [{:keys [templates fonts]}]
   [(map make-at-font-face (:raw         fonts))
-   [v/title               (:title       templates)]
-   [v/subtitle            (:subtitle    templates)]
-   [v/text                (:text        templates)]])
+   [v/t--title               (:title          templates)]
+   [v/t--subtitle            (:subtitle       templates)]
+   [v/t--text                (:text           templates)]
+   [v/t--banner              (:banner         templates)]
+   [v/t--logo                (:logo           templates)]
+   [v/t--form                (:form           templates)]
+   [v/t--list                (:list           templates)]
+   [v/t--label               (:label          templates)]])

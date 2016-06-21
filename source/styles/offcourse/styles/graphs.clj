@@ -157,9 +157,10 @@
                       units-graph 
                       {:base-unit        base-unit}))
 
-   :fonts       (fnk [raw-fonts base-font logo-font title-font]
+   :fonts       (fnk [raw-fonts base-font logo-font normal-font title-font]
                       {:base             base-font
                        :logo             logo-font
+                       :normal           normal-font
                        :title            title-font
                        :raw             (vals raw-fonts)})
 

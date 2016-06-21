@@ -1,0 +1,81 @@
+---
+title: Offcourse - Typography
+layout: main
+---
+<div class="layout--section header">
+  <div class="grid">
+    <div class="grid--section"></div>
+    <div class="grid--section">
+     <div class="container padding-tb-four">
+        <ul class="container" data-container-type="column">
+          <li class="container">
+            <div class="logo" data-logo-size="large">Offcourse_</div>
+          </li>
+          <li class="container">
+            <div class="logo" data-logo-size="large" data-logo-inverse="true">Styleguide</div>
+          </li>
+          <li class="container">
+            <div class="logo" data-logo-size="large" data-logo-inverse="true">Typography</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layout--section padding-b-two">
+  <div class="grid">
+
+    <div class="grid--section">
+      <%= partial("partials/sheet-nav", :locals => { :active => current_page.data.active }) %>
+    </div>
+
+    <div class="grid--section">
+      <div class="container padding-tb-one" data-container-type="fw">
+        <div class="container padding-b-one">
+          <h1 class="logo">Philosophy</h1>
+        </div>
+        <div class="container padding-b-one">
+          <div class="sheet js-anchor">
+            <div class="sheet--section">
+               <p class="t--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor optio voluptatibus ad sapiente, veniam nemo minus culpa unde impedit doloribus quis totam quidem, neque aspernatur perferendis provident temporibus voluptatem ab.</p> 
+            </div>
+          </div>
+        </div>
+        <div class="container padding-b-one">
+          <h1 class="logo">Typefaces</h1>
+        </div>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--nitty", :long => true }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--nitty-grotesk", :long => true }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--nitty-bold", :long => true }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--nitty-grotesk-bold", :long => true }) %>
+        <div class="container padding-b-one">
+          <h1 class="logo">Templates</h1>
+        </div>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--title", :long => false }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--subtitle", :long => false }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--text", :long => true }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--banner", :long => false }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--logo", :long => false }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--form", :long => true}) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--list", :long => true }) %>
+        <%= partial("partials/sheet-styleguide", :locals => { :template => "t--label", :long => true }) %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="layout--section footer padding-tb-two">
+  <div class="grid">
+    <div class="grid--section">
+    </div>
+    <div class="grid--section">
+      <p class="title padding-b-third">Follow us on:</p>
+      <div class="container">
+        <a data-button-type="sheet" class="button" href="https://github.com/OffCourse/offcourse-frontend">Github</a>   
+        <a data-button-type="sheet" class="button" href="https://twitter.com/offcourse_">Twitter</a>   
+        <a data-button-type="sheet" class="button" href="https://www.linkedin.com/company/7962249">LinkedIn</a>   
+      </div>
+    </div>
+  </div
