@@ -43,6 +43,7 @@
 (s/defclass padding-b-third)
 (s/defclass padding-t-twothird)
 (s/defclass padding-b-twothird)
+(s/defclass padding-tb-twothird)
 (s/defclass padding-t-one)
 (s/defclass padding-b-one)
 (s/defclass padding-tb-one)
