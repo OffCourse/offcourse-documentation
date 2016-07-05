@@ -2,29 +2,43 @@
 
 // Todo: needs updating on window resize
 // Todo: needs disabling on phones -> fallback to header nav
-function onScroll(offsets, startPos){
+
+var assignedEvents = [];
+
+function initScroll(){
+
+  assignedEvents.forEach(function(func){
+    window.removeEventListener('scroll', func);
+  });
+
   var elem = document.querySelector('.js--nav');
-  var curPos = elem.offsetTop;
-  var scrollPos = window.scrollY;
-  if (scrollPos < startPos) {
-    elem.style.marginTop = 0 + 'px' ;
-  } else {
-    var newOffset = offsets.reduce(function (prev, curr) {
-      return (prev > scrollPos + 30 ? prev : curr);
-    });
-    elem.style.marginTop = (newOffset - startPos) + 'px' ;
-  }
-}
-
-function onLoad(){
+  elem.style.marginTop = 0 + 'px' ;
   var startPos = document.querySelector('.js--nav').offsetTop;
-  var offsets = [0];
+
+  var offsets = [0];  
   document.querySelectorAll('.js--anchor').forEach(function(anchorItem){offsets.push(anchorItem.offsetTop)});
-  window.addEventListener('scroll', onScroll.bind(null, offsets, startPos));
+
+  function onScroll(){
+    var elem = document.querySelector('.js--nav');
+    var scrollPos = window.scrollY;
+    if (scrollPos < startPos) {
+      elem.style.marginTop = 0 + 'px' ;
+    } else {
+      var newOffset = offsets.reduce(function (prev, curr) {
+        return (prev > scrollPos + 30 ? prev : curr);
+      });
+      elem.style.marginTop = (newOffset - startPos) + 'px' ;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll);
+  assignedEvents.push(onScroll);
 }
 
-window.onload = onLoad;
-
+$(function(){
+  initScroll();
+  window.addEventListener('resize', initScroll);
+});
 
 // Smooth anchorscroll
 $(function() {
