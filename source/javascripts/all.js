@@ -6,11 +6,14 @@ function onScroll(offsets, startPos){
   var elem = document.querySelector('.js--nav');
   var curPos = elem.offsetTop;
   var scrollPos = window.scrollY;
-  var newOffset = 0;
-  newOffset = offsets.reduce(function (prev, curr) {
-    return (prev > scrollPos + 50 ? prev : curr);
-  });
-  elem.style.marginTop = (newOffset - startPos) + 'px' ;
+  if (scrollPos < startPos) {
+    elem.style.marginTop = 0 + 'px' ;
+  } else {
+    var newOffset = offsets.reduce(function (prev, curr) {
+      return (prev > scrollPos + 30 ? prev : curr);
+    });
+    elem.style.marginTop = (newOffset - startPos) + 'px' ;
+  }
 }
 
 function onLoad(){
