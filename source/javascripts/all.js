@@ -29,6 +29,7 @@ function initScroll(){
       });
       elem.style.marginTop = (newOffset - startPos) + 'px' ;
     }
+    console.log("newOffset:", newOffset, "startPos:", startPos)
   }
 
   window.addEventListener('scroll', onScroll);
@@ -57,10 +58,9 @@ $(function() {
   });
 });
 
-
 // Code parsing
 function findCSS(selector){
-  var rules = document.styleSheets['1'].cssRules;
+  var rules = document.styleSheets['1'].cssRules; // Stylesheet selection really britte!
   for (var i = 0; i < rules.length; i++){
     if (rules[i].selectorText == selector){
       return text = rules[i].cssText;
