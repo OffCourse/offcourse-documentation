@@ -6,34 +6,35 @@
 var assignedEvents = [];
 
 function initScroll(){
-
   assignedEvents.forEach(function(func){
     window.removeEventListener('scroll', func);
   });
 
   var elem = document.querySelector('.js--nav');
   elem.style.marginTop = 0 + 'px' ;
-  var startPos = document.querySelector('.js--nav').offsetTop;
 
-  var offsets = [0];  
-  document.querySelectorAll('.js--anchor').forEach(function(anchorItem){offsets.push(anchorItem.offsetTop)});
+  window.setTimeout(function(){
+    var startPos = document.querySelector('.js--nav').offsetTop;
+    var offsets = [0];  
+    document.querySelectorAll('.js--anchor').forEach(function(anchorItem){offsets.push(anchorItem.offsetTop)});
 
-  function onScroll(){
-    var elem = document.querySelector('.js--nav');
-    var scrollPos = window.scrollY;
-    if (scrollPos < startPos) {
-      elem.style.marginTop = 0 + 'px' ;
-    } else {
-      var newOffset = offsets.reduce(function (prev, curr) {
-        return (prev > scrollPos + 30 ? prev : curr);
-      });
-      elem.style.marginTop = (newOffset - startPos) + 'px' ;
+    function onScroll(){
+      var elem = document.querySelector('.js--nav');
+      var scrollPos = window.scrollY;
+      if (scrollPos < startPos) {
+        elem.style.marginTop = 0 + 'px' ;
+      } else {
+        var newOffset = offsets.reduce(function (prev, curr) {
+          return (prev > scrollPos + 30 ? prev : curr);
+        });
+        elem.style.marginTop = (newOffset - startPos) + 'px' ;
+      }
+      console.log("newOffset:", newOffset, "startPos:", startPos)
     }
-    console.log("newOffset:", newOffset, "startPos:", startPos)
-  }
 
-  window.addEventListener('scroll', onScroll);
-  assignedEvents.push(onScroll);
+    window.addEventListener('scroll', onScroll);
+    assignedEvents.push(onScroll);
+  }, "1s");
 }
 
 $(function(){
@@ -68,7 +69,7 @@ function findCSS(selector){
   }
 }
 
-// Code hightlighting
+// Code highlighting
 $(function() {
   var elems = document.querySelectorAll('code');
   for (var i = 0; i < elems.length; i++){
