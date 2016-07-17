@@ -40,5 +40,4 @@ configure :build do
     command: "./boot css",
     source: ".build-boot",
     latency: 2
-
 end
