@@ -15,22 +15,11 @@
 
    [v/grid                    (merge (:row-component          templates)
                                      {:width                 (:max-content-width units)})]
-
-   (let [{:keys [min-width max-width]} (first breakpoints)]
-    (at-media                        {:min-width min-width    :max-width max-width}
-     [v/grid                         (:column-component          templates)]))
-
    [v/grid--section           (merge (:column-component       templates)
                                      {:flex                   1
-                                      :padding             [[(:full units) 0 (:full units) (:full units)]]})
+                                      :padding             [[(:full units)]]})
     [v/last                   (merge {:flex                   3
                                       :padding               (:full units)})]]
-    
-   (let [{:keys [min-width max-width]} (first breakpoints)]
-    (at-media                        {:min-width min-width    :max-width max-width}
-     [v/grid--section         (merge {:flex                   :unset})
-      [v/last                 (merge {:flex                   :unset})]]))
-
 
    [v/subgrid                 (merge {:display                :block
                                       :column-span            :none
@@ -44,4 +33,13 @@
                                      {:align-items            :stretch})]
    [v/container-wrap                 (:flex-wrap              :wrap)]
    [v/container-subgrid              {:display                :inline-block
-                                      :width                 (percent 100)}]])
+                                      :width                 (percent 100)}]
+
+   (let [{:keys [min-width max-width]} (first breakpoints)]
+    (at-media                        {:min-width min-width    :max-width max-width}
+     [[v/grid                        (:column-component       templates)]
+      [v/grid--section               {:flex                   :unset}
+       [v/last                       {:flex                   :unset}]]
+      [v/subgrid-two                 {:columns                1}]
+      [v/subgrid-three               {:columns                1}]
+      ]))])
