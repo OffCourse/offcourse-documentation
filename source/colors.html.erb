@@ -35,13 +35,25 @@ layout: main
         <div class="container padding-b-one">
           <h1 class="logo">Raw Colors</h1>
         </div>
-        <%= partial("partials/sheet-colors", :locals => { :template => "night",               :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "dark",                :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "medium",              :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "light",               :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "very-light",          :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "day",                 :text => false }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "primary",             :text => false }) %>
+        <div class="container padding-b-one" data-container-type="fw">
+          <div class="sheet js--anchor">
+            <div class="sheet--section">
+            <% colors = ["night", "dark", "medium", "light", "very-light", "day", "primary"] %>
+            <div style="display: flex; flex-wrap: wrap;">
+              <% for color in colors %>
+              <div style="width: 25%; min-height: 100px; display: flex; justify-content: center; align-items: center;" class="<%= "c--" + color %>"><h1 class="t--title"><%= color %></h1></div>
+              <% end %>
+            </div>
+            </div>
+            <% for color in colors %>
+            <div class="sheet--section">
+              <pre class="container padding-t-one" data-container-type="fw">
+                <code class="code js--css-codeblock" data-class=".<%= "c--" + color %>"></code>
+              </pre>
+            </div>
+            <% end %>
+          </div>
+        </div>
         <div class="container padding-b-one">
           <h1 class="logo">Templates</h1>
         </div>
