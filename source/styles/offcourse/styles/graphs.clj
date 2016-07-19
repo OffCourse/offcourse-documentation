@@ -33,17 +33,18 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
-   :banner-font                (fnk [base-font]         (* base-font          4)) ; title big
+   :banner-font                (fnk [base-font]         (* base-font          4))   ; title big
    :banner-line-height         (fnk [base-line-height]  (* base-line-height   4))
-                        ; title medium
+                                                                                    ; title medium
+                                                                                    
    :title-font                 (fnk [base-font]         (* base-font          1.5)) ; title small 
    :title-line-height          (fnk [base-line-height]  (* base-line-height   1.5))
-   :subtitle-font              (fnk [base-font]         (* base-font          1)) ; title really small
+   :subtitle-font              (fnk [base-font]         (* base-font          1))   ; title very small
    :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   1))
    :base-font                  (fnk [atom]              (* atom 24))
    :base-line-height           (fnk [atom]              (* atom 30))
-   :label-font                 (fnk [base-font]         (* base-font          0.75))
-   :label-line-height          (fnk [base-line-height]  (* base-line-height   0.75))
+   :label-font                 (fnk [base-font]         (* base-font          0.8))
+   :label-line-height          (fnk [base-line-height]  (* base-line-height   0.8))
    })
 
 (def templates-graph
