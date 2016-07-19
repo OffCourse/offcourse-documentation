@@ -33,16 +33,16 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
-   :banner-font                (fnk [atom]              (* atom 108))
-   :banner-line-height         (fnk [atom]              (* atom 136))
-   :title-font                 (fnk [atom]              (* atom 32))
-   :title-line-height          (fnk [atom]              (* atom 40))
-   :subtitle-font              (fnk [atom]              (* atom 22))
-   :subtitle-line-height       (fnk [atom]              (* atom 30))
+   :banner-font                (fnk [base-font]         (* base-font          6))
+   :banner-line-height         (fnk [base-line-height]  (* base-line-height   6))
+   :title-font                 (fnk [base-font]         (* base-font          4))
+   :title-line-height          (fnk [base-line-height]  (* base-line-height   4))
+   :subtitle-font              (fnk [base-font]         (* base-font          2))
+   :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   2))
    :base-font                  (fnk [atom]              (* atom 16))
    :base-line-height           (fnk [atom]              (* atom 20))
-   :label-font                 (fnk [atom]              (* atom 18))
-   :label-line-height          (fnk [atom]              (* atom 26))
+   :label-font                 (fnk [base-font]         (* base-font          0.75))
+   :label-line-height          (fnk [base-line-height]  (* base-line-height   0.75))
    })
 
 (def templates-graph
@@ -71,7 +71,7 @@
    ; 3. The amount of font templates is growing steadily. Less might be more.
    ;
    ;;;;;;;;;;;;;;;;;;;;;;;;;;
-   
+    
    :banner              (fnk [units fonts]     {:font-family        (:logo fonts)
                                                 :font-size          (:banner-font units)
                                                 :line-height        (:banner-line-height units)
@@ -103,8 +103,8 @@
                                                 :font-weight         300})
 
    :text                (fnk [units fonts]     {:font-family        (:base fonts)
-                                                :font-size          (:subtitle-font units)
-                                                :line-height        (:subtitle-line-height units)
+                                                :font-size          (:base-font units)
+                                                :line-height        (:base-line-height units)
                                                 :font-weight         300})
 
    :label               (fnk [units fonts]     {:font-family        (:base fonts)
