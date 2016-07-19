@@ -66,6 +66,22 @@
 (s/defclass t--list)
 (s/defclass t--label)
 
+; Colors
+(s/defclass c--night)
+(s/defclass c--dark)
+(s/defclass c--medium)
+(s/defclass c--light)
+(s/defclass c--very-light)
+(s/defclass c--day)
+(s/defclass c--primary)
+
+(s/defclass c--highlighted)
+(s/defclass c--selected)
+(s/defclass c--negative)
+(s/defclass c--paper)
+(s/defclass c--recycled-paper)
+(s/defclass c--smudged-paper)
+
 ; Components
 (s/defclass header)
 
