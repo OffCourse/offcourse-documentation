@@ -9,9 +9,10 @@
              [label :refer [label-component]]
              [list :refer [list-component]]
              [content :refer [content]]
+             [viewer :refer [viewer]]
              [footer :refer [footer]]
              [header :refer [header]]]))
 
 (defn components [config]
-  (let [components [header logo sheet business-card content button image form label-component list-component footer]]
+  (let [components [header logo sheet business-card content button image form label-component list-component footer viewer]]
     (for [component components] (component config))))
