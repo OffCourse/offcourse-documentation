@@ -13,15 +13,21 @@
                                    :max-width         (:max-content-width   units)
                                    :padding           (:full                units)}
     [v/viewer-header-1    (merge  (:title            templates)
-                                  {:font-size       (* 0.8 (:title-font units))})]
-    [v/viewer-header-2    (merge  (:subtitle         templates)
-                                  {:font-size       (* 0.7 (:title-font units))})]
-    [v/viewer-header-3    (merge  (:subtitle         templates))] 
-    [v/viewer-header-4    (merge  (:subtitle         templates)
-                                  {:font-size       (* 0.8 (:subtitle-font units))})]
-    [v/viewer-header-5    (merge  (:text             templates))]
-    [v/viewer-header-6    (merge  (:text             templates)
-                                  {:font-size       (* 0.8 (:base-font units))})]
+                                  {:font-size       (* 2.2 (:base-font units))
+                                   :line-height     (* 2 (:base-line-height units)) })]
+    [v/viewer-header-2    (merge  (:title            templates)
+                                  {:font-size       (* 1.8 (:base-font units))
+                                   :line-height     (* 1.8 (:base-line-height units))})]
+    [v/viewer-header-3    (merge  (:title            templates))] 
+    [v/viewer-header-4    (merge  (:title            templates)
+                                  {:font-size       (* 1.25 (:base-font units))
+                                   :line-height     (* 1.25 (:base-line-height units))})]
+    [v/viewer-header-5    (merge  (:title             templates)
+                                  {:font-size       (* 1 (:base-font units))
+                                   :line-height     (* 1 (:base-line-height units))})]
+    [v/viewer-header-6    (merge  (:title             templates)
+                                  {:font-size       (* 0.8 (:base-font units))
+                                   :line-height     (* 0.8 (:base-line-height units))})]
     [v/viewer-text        (merge  (:text             templates))]
     [v/viewer-caption     (merge  (:text             templates))]
     [v/viewer-blockquote  (merge  (:text             templates))]

@@ -33,14 +33,15 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
-   :banner-font                (fnk [base-font]         (* base-font          6))
-   :banner-line-height         (fnk [base-line-height]  (* base-line-height   6))
-   :title-font                 (fnk [base-font]         (* base-font          4))
-   :title-line-height          (fnk [base-line-height]  (* base-line-height   4))
-   :subtitle-font              (fnk [base-font]         (* base-font          2))
-   :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   2))
-   :base-font                  (fnk [atom]              (* atom 16))
-   :base-line-height           (fnk [atom]              (* atom 20))
+   :banner-font                (fnk [base-font]         (* base-font          4)) ; title big
+   :banner-line-height         (fnk [base-line-height]  (* base-line-height   4))
+                        ; title medium
+   :title-font                 (fnk [base-font]         (* base-font          1.5)) ; title small 
+   :title-line-height          (fnk [base-line-height]  (* base-line-height   1.5))
+   :subtitle-font              (fnk [base-font]         (* base-font          1)) ; title really small
+   :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   1))
+   :base-font                  (fnk [atom]              (* atom 24))
+   :base-line-height           (fnk [atom]              (* atom 30))
    :label-font                 (fnk [base-font]         (* base-font          0.75))
    :label-line-height          (fnk [base-line-height]  (* base-line-height   0.75))
    })
