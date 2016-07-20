@@ -36,7 +36,7 @@
    :banner-font                (fnk [base-font]         (* base-font          4))   ; title big
    :banner-line-height         (fnk [base-line-height]  (* base-line-height   4))
                                                                                     ; title medium
-                                                                                    
+
    :title-font                 (fnk [base-font]         (* base-font          1.5)) ; title small 
    :title-line-height          (fnk [base-line-height]  (* base-line-height   1.5))
    :subtitle-font              (fnk [base-font]         (* base-font          1))   ; title very small
@@ -99,7 +99,7 @@
                                                 :line-height        (:title-line-height units)
                                                 :font-weight         300})
 
-   :subtitle            (fnk [units fonts]     {:font-family        (:base fonts)
+   :subtitle            (fnk [units fonts]     {:font-family        (:title fonts)
                                                 :font-size          (:subtitle-font units)
                                                 :line-height        (:subtitle-line-height units)
                                                 :font-weight         300})
