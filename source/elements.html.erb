@@ -1,5 +1,5 @@
 ---
-title: Offcourse - Colors
+title: Elements
 layout: main
 ---
 <div class="layout--section header">
@@ -15,7 +15,7 @@ layout: main
             <div class="logo" data-logo-size="large" data-logo-inverse="true">Documentation</div>
           </li>
           <li class="container">
-            <div class="logo" data-logo-size="large" data-logo-inverse="true">Colors</div>
+            <div class="logo" data-logo-size="large" data-logo-inverse="true"><%= current_page.data.title %></div>
           </li>
         </ul>
       </div>
@@ -33,36 +33,14 @@ layout: main
     <div class="grid--section">
       <div class="container padding-tb-one" data-container-type="fw">
         <div class="container padding-b-one">
-          <h1 class="logo">Raw Colors</h1>
+          <h1 class="logo">Cards</h1>
         </div>
         <div class="container padding-b-one" data-container-type="fw">
           <div class="sheet js--anchor">
             <div class="sheet--section">
-            <% colors = ["night", "dark", "medium", "light", "very-light", "day", "primary"] %>
-            <div style="display: flex; flex-wrap: wrap;">
-              <% for color in colors %>
-              <div style="width: 25%; min-height: 100px; display: flex; justify-content: center; align-items: center;" class="<%= "c--" + color %>"><h1 class="t--title"><%= color %></h1></div>
-              <% end %>
             </div>
-            </div>
-            <% for color in colors %>
-            <div class="sheet--section">
-              <pre class="container padding-t-one" data-container-type="fw">
-                <code class="code js--css-codeblock" data-class=".<%= "c--" + color %>"></code>
-              </pre>
-            </div>
-            <% end %>
           </div>
         </div>
-        <div class="container padding-b-one">
-          <h1 class="logo">Templates</h1>
-        </div>
-        <%= partial("partials/sheet-colors", :locals => { :template => "highlighted",         :text => true }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "selected",            :text => true }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "negative",            :text => true }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "paper",               :text => true }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "recycled-paper",      :text => true }) %>
-        <%= partial("partials/sheet-colors", :locals => { :template => "smudged-paper",       :text => true }) %>
       </div>
     </div>
   </div>
