@@ -43,6 +43,8 @@
    :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   1))
    :base-font                  (fnk [atom]              (* atom 24))
    :base-line-height           (fnk [atom]              (* atom 30))
+   :mono-font                  (fnk [atom]              (* atom 18))
+   :mono-line-height           (fnk [atom]              (* atom 22))
    :label-font                 (fnk [base-font]         (* base-font          0.8))
    :label-line-height          (fnk [base-line-height]  (* base-line-height   0.8))
    })
@@ -98,6 +100,11 @@
                                                 :font-size          (:subtitle-font units)
                                                 :line-height        (:title-line-height units)
                                                 :font-weight         300})
+
+   :mono                (fnk [units fonts]     {:font-family        (:mono fonts)
+                                                :font-size          (:mono-font units)
+                                                :line-height        (:mono-line-height units)
+                                                :font-weight         300})   
 
    :subtitle            (fnk [units fonts]     {:font-family        (:title fonts)
                                                 :font-size          (:subtitle-font units)
@@ -159,10 +166,10 @@
                       units-graph 
                       {:base-unit        base-unit}))
 
-   :fonts       (fnk [raw-fonts base-font logo-font normal-font title-font]
+   :fonts       (fnk [raw-fonts base-font logo-font mono-font title-font]
                       {:base             base-font
                        :logo             logo-font
-                       :normal           normal-font
+                       :mono             mono-font
                        :title            title-font
                        :raw             (vals raw-fonts)})
 

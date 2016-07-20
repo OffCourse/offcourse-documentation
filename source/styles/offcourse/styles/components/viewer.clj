@@ -10,8 +10,7 @@
                                   {:overflow-y         :auto
                                    :flex               1})]
    [v/viewer--content             {:display            :block
-                                   :max-width         (:max-content-width   units)
-                                   :padding           (:full                units)}
+                                   :max-width         (:max-content-width   units)}
     [v/viewer-header-1    (merge  (:title              templates)
                                   {:font-size         (* 2.2               (:base-font units))
                                    :line-height       (* 2                 (:base-line-height units)) })]
@@ -29,10 +28,21 @@
                                   {:font-size         (* 0.8               (:base-font units))
                                    :line-height       (* 0.8               (:base-line-height units))})]
     [v/viewer-text        (merge  (:text               templates))]
-    [v/viewer-caption     (merge  (:text               templates))]
-    [v/viewer-blockquote  (merge  (:text               templates))]
-    [v/viewer-code        (merge  (:text               templates))]
-    [v/viewer-fieldset    (merge  (:text               templates))]
+    [v/viewer-image       (merge  {:display            :block
+                                   :width             (percent 100)})]
+    [v/viewer-figcaption  (merge  (:text               templates)
+                                  {:font-size         (* 0.8               (:base-font units))
+                                   :line-height       (* 0.8               (:base-line-height units))
+                                   :padding           [[(:half units) (:full units)]]
+                                   })]
+    [v/viewer-blockquote  (merge  (:text               templates)
+                                  (:recycled-paper     templates)
+                                  {:padding           (:full                units)})]
+    [v/viewer-code        (merge  (:mono               templates)
+                                  (:recycled-paper     templates)
+                                  {:padding           (:full                units)})]
+    [v/viewer-fieldset    (merge  (:text               templates)
+                                  {:border             :unset})]
     [v/viewer-legend      (merge  (:text               templates))]
     [v/viewer-input       (merge  (:text               templates))]
     [v/viewer-select      (merge  (:text               templates))]

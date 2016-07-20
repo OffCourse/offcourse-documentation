@@ -10,7 +10,7 @@
 
 (defn typography [{:keys [templates fonts]}]
   [(map make-at-font-face    (:raw         fonts))
-   [v/t--nitty-normal        {:font-family   (:normal fonts)}]
+   [v/t--nitty-normal        {:font-family   (:mono fonts)}]
    [v/t--nitty-bold          {:font-family   (:logo fonts)}]
    [v/t--nitty-grotesk       {:font-family   (:base fonts)}]
    [v/t--nitty-grotesk-bold  {:font-family   (:title fonts)}]
