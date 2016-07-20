@@ -40,10 +40,28 @@
                                   {:padding           (:full                units)})]
     [v/viewer-code        (merge  (:mono               templates)
                                   (:recycled-paper     templates)
-                                  {:padding           (:full                units)})]
+                                  {:white-space       :pre-wrap
+                                   :padding           (:full                units)})]
     [v/viewer-fieldset    (merge  (:text               templates)
                                   {:border             :unset})]
     [v/viewer-legend      (merge  (:text               templates))]
-    [v/viewer-input       (merge  (:text               templates))]
-    [v/viewer-select      (merge  (:text               templates))]
-    [v/viewer-textarea    (merge  (:text               templates))]]])
+    [v/viewer-input       (merge  (:text               templates)
+                                  (:recycled-paper     templates)
+                                  {:padding         [[(:half units) (:full units)]] 
+                                   :width             (percent 100)})]
+    [v/viewer-select      (merge  (:text               templates)
+                                  (:recycled-paper     templates)
+                                  {:padding         [[(:half units) (:full units)]] 
+                                   :border             :unset
+                                   :appearance         :none
+                                   :border-radius      0
+                                   :width             (percent 100)})]
+    [v/viewer-textarea    (merge  (:text               templates)
+                                  (:recycled-paper     templates)
+                                  {:padding         [[(:half units) (:full units)]] 
+                                   :border             :unset
+                                   :width             (percent 100)})]]])
+
+
+
+

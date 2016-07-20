@@ -9,4 +9,6 @@
 
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
   [[v/code        (merge (:recycled-paper    templates)
-                         {:padding        [[(:half units) (:full units)]]})]])
+                         (:mono              templates)
+                         {:padding        [[(:half units) (:full units)]]})]
+   [v/code-pre    (merge {:white-space       :pre-wrap})]])
