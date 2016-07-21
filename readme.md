@@ -2,12 +2,12 @@
 
 This is the repository for the Offcourse informational site. With this site we hope to present ourselves and contribute to the discourse on online learning.
 
-Production branch builds automatically to: [http://offcourse.io](http://offcourse.io) [![Build Status](https://travis-ci.org/OffCourse/offcourse-info-user.svg?branch=production)](https://travis-ci.org/OffCourse/offcourse-info-user)
+Production branch builds automatically to: [http://offcourse.io](http://offcourse.io) [![Build Status](https://travis-ci.org/OffCourse/offcourse-info-user.svg?branch=production)](https://travis-ci.org/OffCourse/offcourse-documentation)
 
 Master branch builds automatically to: [http://user-staging.offcourse.io](http://user-staging.offcourse.io)
-[![Build Status](https://travis-ci.org/OffCourse/offcourse-info-user.svg?branch=master)](https://travis-ci.org/OffCourse/offcourse-info-user)
+[![Build Status](https://travis-ci.org/OffCourse/offcourse-info-user.svg?branch=master)](https://travis-ci.org/OffCourse/documentation)
 
-The builds will take about 5 minutes to complete. After a succesfull build Github pages has to regenerate the site, which might take a bit of time too.
+The builds will take about 5 minutes to complete. After a successful build Github pages has to regenerate the site, which might take a bit of time too.
 
 ## Technical info
 
