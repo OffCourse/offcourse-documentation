@@ -1,7 +1,7 @@
 # Map branch to repo and set the correct domain
 if [ $TRAVIS_BRANCH = "master" ]
 then
-  GH_REF="github.com/offcourse/offcourse-info.git"
+  GH_REF="github.com/offcourse/offcourse-info-user.git"
   echo user-staging.offcourse.io > build/CNAME
 elif [ $TRAVIS_BRANCH = "production" ]
 then
