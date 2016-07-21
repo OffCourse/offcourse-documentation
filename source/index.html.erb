@@ -2,75 +2,74 @@
 title: Offcourse
 layout: main
 ---
-<div class="layout--section main padding-b-two">
-  <div class="grid">
-
-    <div class="grid--section">
-      <%= partial("partials/sheet-nav", :locals => { :active => current_page.data.active }) %>
+<div class="container padding-tb-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section content">
+      <%= blog('frontpage').articles[0].body %>
     </div>
+  </div>
+</div>
 
-    <div class="grid--section">
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section content">
-            <%= blog('frontpage').articles[0].body %>
-          </div>
-        </div>
-      </div>
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section">
-            <%= partial("partials/signup-mailchimp") %>
-          </div>
-        </div>
-      </div>
-      <div class="container padding-t-two">
-        <div class="logo" data-logo-padded="true" id="features">Features</div>
-      </div>
-      <div class="subgrid padding-tb-one" data-subgrid-columns="3">
-        <% for concept in blog('frontpage').articles[1].data.concepts %>
-        <%= partial("partials/sheet-concept", :locals => { :concept => concept }) %>
-        <% end %>
-      </div>
-      <div class="container padding-t-two">
-        <div class="logo" data-logo-padded="true" id="preview">Preview</div>
-      </div>
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section content">
-            <img class="image" data-image-filter="true" data-image-filter-recolor="true" src="./images/iteration-current.png" />
-          </div>
-        </div>
-      </div>
-      <div class="container padding-t-two">
-        <div class="logo" data-logo-padded="true" id="mission">Mission</div>
-      </div>
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section content">
-            <%= blog('frontpage').articles[3].body %>
-          </div>
-        </div>
-      </div>
-      <div class="container padding-t-two">
-        <div class="logo" data-logo-padded="true" id="team">Team</div>
-      </div>
-      <div class="subgrid padding-tb-one" data-subgrid-columns="2">
-        <% blog('team').articles.reverse_each do |person| %>
-        <%= partial("partials/business-card", :locals => { :person => person }) %>
-        <% end %>
-      </div>
-      <div class="container padding-t-two">
-        <div class="logo" data-logo-padded="true" id="signup">Signup</div>
-      </div>
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div id="join" class="sheet js--anchor">
-          <div class="sheet--section">
-            <%= partial("partials/signup-mailchimp") %>
-          </div>
-        </div>
-      </div>
+<div class="container padding-tb-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section">
+      <%= partial("partials/signup-mailchimp") %>
     </div>
+  </div>
+</div>
 
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="features">Features</div>
+</div>
+
+<div class="subgrid padding-tb-one" data-subgrid-columns="3">
+  <% for concept in blog('frontpage').articles[1].data.concepts %>
+  <%= partial("partials/sheet-concept", :locals => { :concept => concept }) %>
+  <% end %>
+</div>
+
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="preview">Preview</div>
+</div>
+
+<div class="container padding-tb-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section content">
+      <img class="image" data-image-filter="true" data-image-filter-recolor="true" src="./images/iteration-current.png" />
+    </div>
+  </div>
+</div>
+
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="mission">Mission</div>
+</div>
+
+<div class="container padding-tb-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section content">
+      <%= blog('frontpage').articles[3].body %>
+    </div>
+  </div>
+</div>
+
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="team">Team</div>
+</div>
+
+<div class="subgrid padding-tb-one" data-subgrid-columns="2">
+  <% blog('team').articles.reverse_each do |person| %>
+  <%= partial("partials/business-card", :locals => { :person => person }) %>
+  <% end %>
+</div>
+
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="signup">Signup</div>
+</div>
+
+<div class="container padding-tb-one" data-container-type="fw">
+  <div id="join" class="sheet js--anchor">
+    <div class="sheet--section">
+      <%= partial("partials/signup-mailchimp") %>
+    </div>
   </div>
 </div>

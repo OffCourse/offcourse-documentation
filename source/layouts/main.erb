@@ -1,7 +1,41 @@
 <%= partial "partials/head" %>
 <div id="container">
   <div class="layout">
-    <%= yield %>
+    <div class="layout--section header">
+      <div class="grid">
+        <div class="grid--section"></div>
+        <div class="grid--section">
+         <div class="container padding-tb-four">
+            <ul class="container" data-container-type="column">
+              <li class="container">
+                <div class="logo" data-logo-size="large">Offcourse_</div>
+              </li>
+              <li class="container">
+                <div class="logo" data-logo-size="large" data-logo-inverse="true">Organize Your</div>
+              </li>
+              <li class="container">
+                <div class="logo" data-logo-size="large" data-logo-inverse="true">Learning</div>
+                <div class="container" data-container-type="column">
+                  <div class="logo">Offcourse.io</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layout--section main padding-b-two">
+      <div class="grid">
+
+        <div class="grid--section">
+          <%= partial("partials/nav", :locals => { :active => current_page.data.active }) %>
+        </div>
+
+        <div class="grid--section">
+        <%= yield %>
+        </div>
+      </div>
+    </div>
     <div class="layout--section footer padding-tb-two">
       <div class="grid">
         <div class="grid--section">
