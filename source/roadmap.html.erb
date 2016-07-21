@@ -2,6 +2,11 @@
 title: Roadmap
 layout: docs
 features: 
+- name: Twitter bucket
+- name: Browsing content map
+- name: Personal profile / dashboard
+- name: Entry for curation
+- name: tbd
 ---
 <div class="container padding-b-one">
   <h1 class="logo">Introduction</h1>
@@ -20,14 +25,9 @@ features:
   <h1 class="logo">Features</h1>
 </div>
 
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-<%= partial("partials/roadmap-item", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
+<% for feature in current_page.data.features %>
+<%= partial("partials/roadmap-item", :locals => { :feature => feature }) %>
+<% end %>
 
 <div class="container padding-b-one">
   <h1 class="logo">Want to contribute? </h1>
