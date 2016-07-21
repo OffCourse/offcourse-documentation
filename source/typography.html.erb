@@ -1,126 +1,79 @@
 ---
 title: Typography
-layout: main
+layout: docs
 ---
-<div class="layout--section header">
-  <div class="grid">
-    <div class="grid--section"></div>
-    <div class="grid--section">
-     <div class="container padding-tb-four">
-        <ul class="container" data-container-type="column">
-          <li class="container">
-            <div class="logo" data-logo-size="large">Offcourse_</div>
-          </li>
-          <li class="container">
-            <div class="logo" data-logo-size="large" data-logo-inverse="true">Documentation</div>
-          </li>
-          <li class="container">
-            <div class="logo" data-logo-size="large" data-logo-inverse="true"><%= current_page.data.title %></div>
-          </li>
-        </ul>
-      </div>
+<div class="container padding-b-one">
+  <h1 class="logo">Typefaces</h1>
+</div>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-normal", :long => true }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-grotesk", :long => true }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-bold", :long => true }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
+<div class="container padding-b-one">
+  <h1 class="logo">Templates</h1>
+</div>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "banner", :long => false }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "logo", :long => false }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "title", :long => false }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "form", :long => true}) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "list", :long => true }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "subtitle", :long => false }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "text", :long => true }) %>
+<%= partial("partials/sheet-styleguide", :locals => { :template => "label", :long => true }) %>
+
+<div class="container padding-b-one">
+  <h1 class="logo">Content</h1>
+</div>
+<div class="container padding-b-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section viewer--content">
+      <h1> Hamburgefontstiv - Header One   </h1>
+      <h2> Hamburgefontstiv - Header Two   </h2>
+      <h3> Hamburgefontstiv - Header Three </h3>
+      <h4> Hamburgefontstiv - Header Four  </h4>
+      <h5> Hamburgefontstiv - Header Five  </h5>
+      <h6> Hamburgefontstiv - Header Six   </h6>
+
+      <p> Paragraph: Lorem <strong> strong </strong> sit amet, consectetur <i> italics </i> elit. Nesciunt rem quos, <b> bold </b> officiis eveniet. <a> Link </a> Ex illum magnam sint exercitationem excepturi, perferendis eligendi, quo nihil voluptatem nam, repudiandae nulla in praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, molestias architecto. Voluptatum commodi dolores, eos necessitatibus aliquam voluptates eum magni, quos, architecto quas voluptas, quod aut ut aperiam nihil itaque. </p>
+
+      <blockquote> Blockquote: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore libero fugit quo reprehenderit odio. Ipsam aliquid, vel blanditiis aperiam, delectus maiores nam porro sed accusantium quo, ducimus quis est hic?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eos, itaque id illo veniam veritatis, aliquam, dolore natus autem a vero at sit omnis dicta! Nisi ea, totam harum ad?</blockquote>
+
+      <p> Paragraph: Lorem <strong> strong </strong> sit amet, consectetur <i> italics </i> elit. Nesciunt rem quos, <b> bold </b> officiis eveniet. <a> Link </a> Ex illum magnam sint exercitationem excepturi, perferendis eligendi, quo nihil voluptatem nam, repudiandae nulla in praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, molestias architecto. Voluptatum commodi dolores, eos necessitatibus aliquam voluptates eum magni, quos, architecto quas voluptas, quod aut ut aperiam nihil itaque. </p>
+
+      <pre><code> Codeblock: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium reiciendis impedit iure nam dolore ipsum ad ipsa doloremque voluptas necessitatibus natus animi minus nulla at perspiciatis similique consequatur, aut iste.</code></pre>
+
+      <img src="./images/iteration-current.png" alt="">
+
+      <figcaption> Caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repellendus ab, earum culpa consectetur reiciendis excepturi hic dolor voluptatem! Vel temporibus, at soluta officia sint omnis voluptate nostrum blanditiis quaerat?</figcaption>
     </div>
   </div>
 </div>
+<div class="container padding-b-one">
+  <h1 class="logo">Form</h1>
+</div>
+<div class="container padding-b-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <div class="sheet--section viewer--content">
+      <form>
+        <fieldset>
+          <legend>Legend element</legend>
+          <input type="text">
+        </fieldset>
 
-<div class="layout--section padding-b-two">
-  <div class="grid">
+        <fieldset>
+          <legend>Legend element</legend>
+          <select name="Select" id="">
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2 </option>
+            <option value="Option 3">Option 3</option>
+          </select>
+        </fieldset>
 
-    <div class="grid--section">
-      <%= partial("partials/sheet-nav-style", :locals => { :active => current_page.data.active }) %>
-    </div>
-
-    <div class="grid--section">
-      <div class="container padding-tb-one" data-container-type="fw">
-        <div class="container padding-b-one">
-          <h1 class="logo">Typefaces</h1>
-        </div>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-normal", :long => true }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-grotesk", :long => true }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-bold", :long => true }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "nitty-grotesk-bold", :long => true }) %>
-        <div class="container padding-b-one">
-          <h1 class="logo">Templates</h1>
-        </div>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "banner", :long => false }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "logo", :long => false }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "title", :long => false }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "form", :long => true}) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "list", :long => true }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "subtitle", :long => false }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "text", :long => true }) %>
-        <%= partial("partials/sheet-styleguide", :locals => { :template => "label", :long => true }) %>
-      </div>
-      <div class="container padding-b-one">
-        <h1 class="logo">Content</h1>
-      </div>
-      <div class="container padding-b-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section viewer--content">
-            <h1> Hamburgefontstiv - Header One   </h1>
-            <h2> Hamburgefontstiv - Header Two   </h2>
-            <h3> Hamburgefontstiv - Header Three </h3>
-            <h4> Hamburgefontstiv - Header Four  </h4>
-            <h5> Hamburgefontstiv - Header Five  </h5>
-            <h6> Hamburgefontstiv - Header Six   </h6>
-
-            <p> Paragraph: Lorem <strong> strong </strong> sit amet, consectetur <i> italics </i> elit. Nesciunt rem quos, <b> bold </b> officiis eveniet. <a> Link </a> Ex illum magnam sint exercitationem excepturi, perferendis eligendi, quo nihil voluptatem nam, repudiandae nulla in praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, molestias architecto. Voluptatum commodi dolores, eos necessitatibus aliquam voluptates eum magni, quos, architecto quas voluptas, quod aut ut aperiam nihil itaque. </p>
-
-            <blockquote> Blockquote: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore libero fugit quo reprehenderit odio. Ipsam aliquid, vel blanditiis aperiam, delectus maiores nam porro sed accusantium quo, ducimus quis est hic?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eos, itaque id illo veniam veritatis, aliquam, dolore natus autem a vero at sit omnis dicta! Nisi ea, totam harum ad?</blockquote>
-
-            <p> Paragraph: Lorem <strong> strong </strong> sit amet, consectetur <i> italics </i> elit. Nesciunt rem quos, <b> bold </b> officiis eveniet. <a> Link </a> Ex illum magnam sint exercitationem excepturi, perferendis eligendi, quo nihil voluptatem nam, repudiandae nulla in praesentium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, molestias architecto. Voluptatum commodi dolores, eos necessitatibus aliquam voluptates eum magni, quos, architecto quas voluptas, quod aut ut aperiam nihil itaque. </p>
-
-            <pre><code> Codeblock: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium reiciendis impedit iure nam dolore ipsum ad ipsa doloremque voluptas necessitatibus natus animi minus nulla at perspiciatis similique consequatur, aut iste.</code></pre>
-
-            <img src="./images/iteration-current.png" alt="">
-
-            <figcaption> Caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repellendus ab, earum culpa consectetur reiciendis excepturi hic dolor voluptatem! Vel temporibus, at soluta officia sint omnis voluptate nostrum blanditiis quaerat?</figcaption>
-          </div>
-        </div>
-      </div>
-      <div class="container padding-b-one">
-        <h1 class="logo">Form</h1>
-      </div>
-      <div class="container padding-b-one" data-container-type="fw">
-        <div class="sheet js--anchor">
-          <div class="sheet--section viewer--content">
-            <form>
-              <fieldset>
-                <legend>Legend element</legend>
-                <input type="text">
-              </fieldset>
-
-              <fieldset>
-                <legend>Legend element</legend>
-                <select name="Select" id="">
-                  <option value="Option 1">Option 1</option>
-                  <option value="Option 2">Option 2 </option>
-                  <option value="Option 3">Option 3</option>
-                </select>
-              </fieldset>
-
-              <fieldset>
-                <legend>Legend element</legend>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
+        <fieldset>
+          <legend>Legend element</legend>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+      </form>
     </div>
   </div>
 </div>
-
-<div class="layout--section footer padding-tb-two">
-  <div class="grid">
-    <div class="grid--section">
-    </div>
-    <div class="grid--section">
-      <p class="title padding-b-third">Follow us on:</p>
-      <div class="container">
-        <a data-button-type="sheet" class="button" href="https://github.com/OffCourse/offcourse-frontend">Github</a>   
-        <a data-button-type="sheet" class="button" href="https://twitter.com/offcourse_">Twitter</a>   
-        <a data-button-type="sheet" class="button" href="https://www.linkedin.com/company/7962249">LinkedIn</a>   
-      </div>
-    </div>
-  </div
