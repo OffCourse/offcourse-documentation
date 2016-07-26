@@ -14,4 +14,5 @@
                                 :transition            [[:margin-top "1s" :ease-in-out]]
                                 })
     [v/hovered                 (:border-highlighted      templates)]]
-   [v/sheet--section    (merge (:column-component        templates))]])
+   [v/sheet--title      (merge (:title                   templates))]
+   [v/sheet--text       (merge (:text                    templates))]])

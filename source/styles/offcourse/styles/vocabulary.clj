@@ -108,7 +108,8 @@
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
-(s/defclass sheet--section)
+(s/defclass sheet--title)
+(s/defclass sheet--text)
 
 (s/defclass business-card)
 (s/defclass business-card--section)
