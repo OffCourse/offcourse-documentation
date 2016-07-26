@@ -24,12 +24,10 @@ templates:
 
 <section class="container padding-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
-    <div class="sheet--section">
     <div style="display: flex; flex-wrap: wrap;">
       <% for color in current_page.data.colors %>
       <div style="width: 25%; min-height: 100px; display: flex; justify-content: center; align-items: center;" class="<%= "c--" + color %>"><h1 class="t--title"><%= color %></h1></div>
       <% end %>
-    </div>
     </div>
     <% for color in current_page.data.colors %>
     <div class="sheet--section">
