@@ -103,7 +103,8 @@
 (s/defclass code-pre)
 
 (s/defclass image)
-(def image-filter         (image (s/attr :data-image-filter := :true)))
+(def image-size-10        (image (s/attr :data-image-size           := "10")))
+(def image-filter         (image (s/attr :data-image-filter         := :true)))
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
