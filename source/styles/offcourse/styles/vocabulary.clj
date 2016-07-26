@@ -86,7 +86,7 @@
 ; Components
 (s/defclass header)
 
-(s/defclass content) ; Class with child selectors for markup that isn't classed 
+(s/defclass markdown) ; Class with child selectors for markup that isn't classed 
 
 (s/defclass logo)
 (def logo-large           (logo (s/attr :data-logo-size := :large)))

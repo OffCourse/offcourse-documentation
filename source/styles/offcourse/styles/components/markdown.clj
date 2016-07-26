@@ -1,4 +1,4 @@
-(ns offcourse.styles.components.content
+(ns offcourse.styles.components.markdown
   (:refer-clojure :exclude [first last + - * /])
   (:require [garden
               [arithmetic :refer [* + - /]]
@@ -6,8 +6,8 @@
             [offcourse.styles.vocabulary :as v]))
 
 ; Child element selectors unavoidable due to markdown parsing
-(defn content [{:keys [templates colors units fonts]}]
-  [[v/content   
+(defn markdown [{:keys [templates colors units fonts]}]
+  [[v/markdown   
     [:h1               (merge  (:title              templates)
                                {:padding-bottom    (:two-third units)})]
     [:h2               (merge  (:subtitle           templates)
