@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: writing
 date: 01-06-2016
-title: Manifest
+title: Content Requirements
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
 
