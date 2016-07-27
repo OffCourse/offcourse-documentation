@@ -13,35 +13,45 @@
                                    :max-width         (:max-content-width   units)}
     [v/viewer-header-1    (merge  (:title              templates)
                                   {:font-size         (* 2.2               (:base-font units))
-                                   :line-height       (* 2                 (:base-line-height units)) })]
+                                   :line-height       (* 2                 (:base-line-height units))
+                                   :margin          [[0 0 (:two-third units) 0]]
+                                   })]
     [v/viewer-header-2    (merge  (:title              templates)
                                   {:font-size         (* 1.8               (:base-font units))
-                                   :line-height       (* 1.8               (:base-line-height units))})]
-    [v/viewer-header-3    (merge  (:title              templates))] 
+                                   :line-height       (* 1.8               (:base-line-height units))
+                                   :margin          [[0 0 (:two-third units) 0]]})]
+    [v/viewer-header-3    (merge  (:title              templates)
+                                  {:margin          [[0 0 (:two-third units) 0]]})] 
     [v/viewer-header-4    (merge  (:title              templates)
                                   {:font-size         (* 1.25              (:base-font units))
-                                   :line-height       (* 1.25              (:base-line-height units))})]
+                                   :line-height       (* 1.25              (:base-line-height units))
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-header-5    (merge  (:title              templates)
                                   {:font-size         (* 1                 (:base-font units))
-                                   :line-height       (* 1                 (:base-line-height units))})]
+                                   :line-height       (* 1                 (:base-line-height units))
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-header-6    (merge  (:title              templates)
                                   {:font-size         (* 0.8               (:base-font units))
-                                   :line-height       (* 0.8               (:base-line-height units))})]
-    [v/viewer-text        (merge  (:text               templates))]
+                                   :line-height       (* 0.8               (:base-line-height units))
+                                   :margin          [[0 0 (:two-third units) 0]]})]
+    [v/viewer-text        (merge  (:text               templates)
+                                  {:margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-image       (merge  {:display            :block
-                                   :width             (percent 100)})]
+                                   :width             (percent 100)
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-figcaption  (merge  (:text               templates)
                                   {:font-size         (* 0.8               (:base-font units))
                                    :line-height       (* 0.8               (:base-line-height units))
-                                   :padding           [[(:half units) (:full units)]]
-                                   })]
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-blockquote  (merge  (:text               templates)
                                   (:recycled-paper     templates)
-                                  {:padding           (:full                units)})]
+                                  {:padding          (:two-third units)
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-code        (merge  (:mono               templates)
                                   (:recycled-paper     templates)
                                   {:white-space       :pre-wrap
-                                   :padding           (:full                units)})]
+                                   :padding          (:two-third units)
+                                   :margin          [[0 0 (:two-third units) 0]]})]
     [v/viewer-fieldset    (merge  (:text               templates)
                                   {:border             :unset})]
     [v/viewer-legend      (merge  (:text               templates))]
