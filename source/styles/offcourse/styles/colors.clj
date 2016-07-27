@@ -17,4 +17,5 @@
    [v/c--negative            (:negative           templates)]
    [v/c--paper               (:paper              templates)]
    [v/c--recycled-paper      (:recycled-paper     templates)]
-   [v/c--smudged-paper       (:smudged-paper      templates)]])
+   [v/c--smudged-paper       (:smudged-paper      templates)]
+   [v/c--darkend-paper       (:darkend-paper      templates)]])

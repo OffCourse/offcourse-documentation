@@ -76,7 +76,7 @@ function findCSS(selector){
 
 // Code highlighting
 $(function() {
-  var elems = document.querySelectorAll('code');
+  var elems = document.querySelectorAll('.js--css-codeblock');
   for (var i = 0; i < elems.length; i++){
     var code = findCSS(elems[i].dataset.class);
     elems[i].innerHTML = code;

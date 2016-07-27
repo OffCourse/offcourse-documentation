@@ -33,18 +33,18 @@
    :max-content-width          (fnk [full]              (* 53 full))
    :map                        (fnk [column]            (/ column 2))
 
-   :banner-font                (fnk [base-font]         (* base-font          4))   ; title big
+   :banner-font                (fnk [base-font]         (* base-font          4))
    :banner-line-height         (fnk [base-line-height]  (* base-line-height   4))
-                                                                                    ; title medium
-
-   :title-font                 (fnk [base-font]         (* base-font          1.5)) ; title small 
+   :large-font                 (fnk [base-font]         (* base-font          2.2))
+   :large-line-height          (fnk [base-line-height]  (* base-line-height   2.0))
+   :title-font                 (fnk [base-font]         (* base-font          1.5))
    :title-line-height          (fnk [base-line-height]  (* base-line-height   1.5))
-   :subtitle-font              (fnk [base-font]         (* base-font          1))   ; title very small
+   :subtitle-font              (fnk [base-font]         (* base-font          1))
    :subtitle-line-height       (fnk [base-line-height]  (* base-line-height   1))
    :base-font                  (fnk [atom]              (* atom 24))
    :base-line-height           (fnk [atom]              (* atom 30))
-   :mono-font                  (fnk [atom]              (* atom 18))
-   :mono-line-height           (fnk [atom]              (* atom 22))
+   :mono-font                  (fnk [atom]              (* atom 15))
+   :mono-line-height           (fnk [atom]              (* atom 26))
    :label-font                 (fnk [base-font]         (* base-font          0.8))
    :label-line-height          (fnk [base-line-height]  (* base-line-height   0.8))
    })
@@ -65,7 +65,8 @@
                                                 :color                (:night colors)})
    :smudged-paper       (fnk [colors]          {:background-color     (:medium colors)
                                                 :color                (:night colors)})
-
+   :darkend-paper       (fnk [colors]          {:background-color     (:dark colors)
+                                                :color                (:day colors)})
    ;;;;; Font Templates ;;;;;
    ; 
    ; Issues:
@@ -124,6 +125,7 @@
 
    ; Border Templates
    :border-default      (fnk [units colors]    {:border-bottom      [[:solid (:sixth units) (:medium colors)]]})
+   :border-quotes       (fnk [units colors]    {:border-left        [[:solid (:sixth units) (:medium colors)]]})
    :border-highlighted  (fnk [units colors]    {:border-color       [(:primary colors)]})
 
 

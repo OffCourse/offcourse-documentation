@@ -82,6 +82,7 @@
 (s/defclass c--paper)
 (s/defclass c--recycled-paper)
 (s/defclass c--smudged-paper)
+(s/defclass c--darkend-paper)
 
 ; Components
 (s/defclass header)
@@ -116,6 +117,7 @@
 
 (s/defclass viewer)
 (s/defclass viewer--content)
+(def viewer-headers      [:h1 :h2 :h3 :h4 :h5 :h6])
 (def viewer-header-1      :h1)
 (def viewer-header-2      :h2)
 (def viewer-header-3      :h3)
@@ -123,15 +125,23 @@
 (def viewer-header-5      :h5)
 (def viewer-header-6      :h6)
 (def viewer-text          :p)
+(def viewer-strong        :strong)
+(def viewer-em            :em)
+(def viewer-ul            :ul)
+(def viewer-ol            :ol)
+(def viewer-li            :li)
 (def viewer-image         :img)
 (def viewer-figcaption    :figcaption)
 (def viewer-blockquote    :blockquote)
+(def viewer-pre           :pre)
 (def viewer-code          :code)
 (def viewer-fieldset      :fieldset)
 (def viewer-legend        :legend)
 (def viewer-input         :input)
 (def viewer-textarea      :textarea)
 (def viewer-select        :select)
+
+; OL UL LI STRONG EM 
 
 (s/defclass footer)
 
