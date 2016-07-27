@@ -15,7 +15,7 @@
     
     (for [header v/viewer-headers]   
     [[header                 (merge  (:title              templates)
-                                     {:margin          [[(:two units) 0 (:sixth units) 0]]})
+                                     {:margin          [[(:one-and-half units) 0 (:sixth units) 0]]})
       [v/first                       {:margin           [[0 0 (:sixth units) 0]]}]]
      (for [subheader v/viewer-headers]
      [(s/+ header subheader)         {:margin           [[0 0 (:sixth units) 0]]}])])
@@ -60,7 +60,8 @@
                                      (:border-quotes      templates)
                                      {:padding           (- (:full units) (:sixth units))
                                       :margin           [[0 0 (:two-third units) 0]]})]
-    [v/viewer-pre            (merge  (:darkend-paper      templates)
+    [v/viewer-pre            (merge  (:mono               templates)
+                                     (:darkend-paper      templates)
                                      (:border-quotes      templates)
                                      (:border-highlighted templates)
                                      {:white-space        :pre-wrap
