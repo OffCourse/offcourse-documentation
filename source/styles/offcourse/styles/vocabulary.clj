@@ -125,6 +125,7 @@
 (def viewer-header-5      :h5)
 (def viewer-header-6      :h6)
 (def viewer-text          :p)
+(def viewer-anchor        :a)
 (def viewer-strong        :strong)
 (def viewer-em            :em)
 (def viewer-ul            :ul)
