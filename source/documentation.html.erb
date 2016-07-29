@@ -1,7 +1,10 @@
 ---
-title: Animations
-page: animations
-layout: docs
+title: Category
+layout: main
 ---
-<% current_page.data.page = page %>
-<% current_page.data.title = title %>
+HEEELLLOO
+
+<% for article in blog('documentation').articles %>
+  <%= "hi" %>
+  <%= article.body %>
+<% end %>

@@ -4,7 +4,7 @@ partial: sheet
 page: platform
 order: 3
 title: Why Clojure
-date: 2016/10/13
+date: 2016-10-13
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
 
