@@ -14,5 +14,6 @@
                                      (:border-highlighted templates)
                                      {:white-space        :pre-wrap
                                       :padding          [[(:third units) (:full units) (:third units) (- (:full units) (:sixth units))]]})
-    [v/code               (merge     (:darkend-paper      templates)
+    [v/code               (merge     (:mono               templates)
+                                     (:darkend-paper      templates)
                                      {:display            :block})]]])
