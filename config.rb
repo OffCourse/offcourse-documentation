@@ -23,9 +23,9 @@ activate :blog do |blog|
   blog.permalink = "documentation/{title}.html"
 end
 
-pages = ["animations", "assets", "colors", "elements", "email", "logos", "manifest", "marketing", "platform", "presentations", "rewards", "typography", "writing"]
+pages = ["animations", "assets", "colors", "modules", "email", "logos", "manifest", "infosite", "platform", "presentations", "rewards", "typography", "writing"]
 pages.each do |page|
-  proxy "/documentation/#{name}.html", "/documentation.html", :locals => { :page => page, :title => page }, :ignore => true
+  proxy "/documentation/#{page}.html", "/documentation.html", :locals => { :page => page, :title => page }, :ignore => true
 end
 
 # General configuration
