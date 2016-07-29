@@ -9,7 +9,7 @@ for category in categories
   <div class="sheet js--nav" data-sheet-sticky="false">
     
     <div class="padding-b-twothird">
-      <a href="#" class="t--title"><%= category %></a>
+      <a href="#" class="t--title"><%= category.titleize %></a>
     </div>
     <ul data-list-type="todo" class="list">
       <%
@@ -20,7 +20,7 @@ for category in categories
       pages = pages.uniq
       for page in pages
       %>
-      <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page %></li></a>
+      <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page.titleize %></li></a>
       <% end %>
     </ul>
   </div>
