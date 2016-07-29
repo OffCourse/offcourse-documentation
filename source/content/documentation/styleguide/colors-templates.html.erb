@@ -1,0 +1,22 @@
+---
+layout: post
+partial: erb
+page: colors
+title: Templates
+date: 2016/10/13
+templates:
+- paper
+- recycled-paper
+- smudged-paper
+- darkend-paper
+- selected
+- negative
+- highlighted
+---
+<div class="container padding-b-one">
+  <h1 class="logo">Templates</h1>
+</div>
+
+<% for template in current_page.data.templates %>
+<%= partial("partials/_color-item", :locals => { :template => template,         :text => true }) %>
+<% end %>

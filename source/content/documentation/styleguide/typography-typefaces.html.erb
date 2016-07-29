@@ -1,0 +1,19 @@
+---
+layout: post
+partial: erb
+page: typography
+title: Typefaces
+date: 2016/10/13
+typefaces:
+- nitty-normal
+- nitty-grotesk
+- nitty-bold
+- nitty-grotesk-bold
+---
+<div class="container padding-b-one">
+  <h1 class="logo">Typefaces</h1>
+</div>
+
+<% for typeface in current_page.data.typefaces %>
+<%= partial("partials/typography-item", :locals => { :template => typeface, :long => true }) %>
+<% end %>

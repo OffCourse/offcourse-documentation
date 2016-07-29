@@ -1,0 +1,23 @@
+---
+layout: post
+partial: erb
+page: typography
+title: Templates
+date: 2016/10/13
+templates: 
+- banner
+- logo
+- title
+- form
+- list
+- subtitle
+- text
+- label
+---
+<div class="container padding-b-one">
+  <h1 class="logo">Templates</h1>
+</div>
+
+<% for template in current_page.data.templates %>
+<%= partial("partials/typography-item", :locals => { :template => template, :long => false }) %>
+<% end %>

@@ -30,6 +30,16 @@
 
         <div class="grid--section">
           <div class="container padding-tb-one" data-container-type="fw">
+            <% for article in blog('documentation').articles %>
+              <% if article.data.page == current_page.data.page %>
+                <% if "sheet" == article.data.partial %>
+                  <%= partial("partials/sheet-with-title", :locals => { :title => article.title, :markdown => article.body }) %>
+                <% end %>
+                <% if "erb" == article.data.partial %>
+                  <%= article.body %>
+                <% end %>
+              <% end %>
+            <% end %>
             <%= yield %>
           </div>
         </div>
