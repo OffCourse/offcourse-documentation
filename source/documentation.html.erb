@@ -1,16 +1,14 @@
 ---
 layout: docs
 ---
-<div class="container padding-tb-one" data-container-type="fw">
-  <% sortedArticles = blog('documentation').articles.sort {|x, y| x.data.order <=> y.data.order} %>
-  <% for article in sortedArticles %>
-    <% if article.data.page == page %>
-      <% if "sheet" == article.data.partial %>
-        <%= partial("partials/sheet-with-title", :locals => { :title => article.title, :markdown => article.body }) %>
-      <% end %>
-      <% if "erb" == article.data.partial %>
-        <%= article.body %>
-      <% end %>
+<% sortedArticles = blog('documentation').articles.sort {|x, y| x.data.order <=> y.data.order} %>
+<% for article in sortedArticles %>
+  <% if article.data.page == page %>
+    <% if "sheet" == article.data.partial %>
+      <%= partial("partials/sheet-with-title", :locals => { :title => article.title, :markdown => article.body }) %>
+    <% end %>
+    <% if "erb" == article.data.partial %>
+      <%= article.body %>
     <% end %>
   <% end %>
-</div>
+<% end %>
