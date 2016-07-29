@@ -3,8 +3,8 @@ layout: post
 partial: sheet
 page: infosite
 order: 2
-title: General
-date: 31-10-2016
+title: Styleguide
+date: 31-10-2015
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
 

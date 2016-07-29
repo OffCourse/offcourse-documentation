@@ -21,29 +21,23 @@ activate :blog do |blog|
   blog.name = "documentation"
   blog.sources = "content/documentation/{title}.html"
   blog.permalink = "documentation/{title}.html"
+  blog.custom_collections = {
+    page: {
+      link: "/documentation/:page.html",
+      template: "/documentation.html"
+    }
+  }
 end
-
-  # blog.custom_collections = {
-  #   page: {
-  #     link: "/documentation/:pages.html",
-  #     template: "/documentation.html"
-  #   }
-  # }
-
-# pages = ["animations", "assets", "colors", "modules", "email", "logos", "manifest", "infosite", "platform", "presentations", "rewards", "typography", "writing"]
-# pages.each do |page|
-#   proxy "/documentation/#{page}.html", "/documentation.html", :locals => { :page => page, :pages => pages }, :ignore => true
-# end
 
 # General configuration
 configure :development do
   
   # Integrate Clojure Garden CSS Transpilation
-  # activate :external_pipeline,
-  #   name: :garden,
-  #   command: "boot dev",
-  #   source: ".build-boot",
-  #   latency: 2
+  activate :external_pipeline,
+    name: :garden,
+    command: "boot dev",
+    source: ".build-boot",
+    latency: 2
 
   # Live reload
   activate :livereload
@@ -53,10 +47,10 @@ end
 configure :build do
 
   # Integrate Clojure Garden CSS Transpilation
-  # activate :external_pipeline,
-  #   name: :garden,
-  #   command: "boot css",
-  #   # command: "./boot css",
-  #   source: ".build-boot",
-  #   latency: 2
+  activate :external_pipeline,
+    name: :garden,
+    # command: "boot css",
+    command: "./boot css",
+    source: ".build-boot",
+    latency: 2
 end

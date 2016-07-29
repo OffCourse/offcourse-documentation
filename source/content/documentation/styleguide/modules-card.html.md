@@ -4,7 +4,7 @@ partial: sheet
 page: modules
 order: 1
 title: Cards
-date: 31-10-2016
+date: 31-10-2015
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
 

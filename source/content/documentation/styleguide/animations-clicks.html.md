@@ -1,6 +1,6 @@
 ---
 title: Clicks
-date: 31-10-2016
+date: 31-10-2015
 partial: sheet
 layout: post
 page: animations

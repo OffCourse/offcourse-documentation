@@ -30,8 +30,12 @@
     <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#000000">
     <!-- end favicons -->
-
-    <title><%= "Offcourse - " + current_page.data.title || "Offcourse" %></title>
+    
+    <% if current_page.data.title || page %>
+    <title>Offcourse - <%= current_page.data.title || page %></title>
+    <% else %>
+    <title>Offcourse</title>
+    <% end %>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
     <%= stylesheet_link_tag :main %>
