@@ -17,6 +17,12 @@ activate :blog do |blog|
   blog.permalink = "team/{title}.html"
 end
 
+activate :blog do |blog|
+  blog.name = "documentation"
+  blog.sources = "content/documentation/{title}.html"
+  blog.permalink = "documentation/{title}.html"
+end
+
 # General configuration
 configure :development do
   
@@ -37,7 +43,8 @@ configure :build do
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
-    command: "./boot css",
+    command: "boot css",
+    # command: "./boot css",
     source: ".build-boot",
     latency: 2
 end
