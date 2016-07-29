@@ -4,15 +4,7 @@ partial: sheet
 page: infosite
 tags: technical
 order: 2
-title: Styleguide
+title: Editing
 date: 31-10-2015
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
-
-## We are terribly cool people!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga, impedit vitae laudantium nulla illo repellat dolorem odio accusamus, tenetur quidem quae quas ut numquam nostrum soluta eum labore molestiae?
-
-## Really, we are!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis voluptatem nisi aliquam vel illum minima voluptate maiores, culpa, porro, exercitationem dolorem quisquam sapiente itaque nulla amet ducimus. Blanditiis, enim, dolore.
+The content is quite easy to edit as the build step is automated with Travis CI. Just edit anywhere in the Github repository, and the site is regenerated. You can do so [here](https://github.com/OffCourse/offcourse-documentation/tree/master/source/content). Most of the files are in the markdown format. [Github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) has a nice cheatsheet if you’re unfamiliar with it. Some files are in the erb format, which is HTML embedded with Ruby code. Unfortunately there is no markdown parsing in these files. If you want to see how long you still need to wait to see your edit live on [staging server](user-staging.github.io) you can check [Travis](https://travis-ci.org/OffCourse/offcourse-documentation) yourself. 

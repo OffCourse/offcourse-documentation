@@ -7,12 +7,4 @@ order: 1
 title: General
 date: 31-10-2015
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
-
-## We are terribly cool people!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga, impedit vitae laudantium nulla illo repellat dolorem odio accusamus, tenetur quidem quae quas ut numquam nostrum soluta eum labore molestiae?
-
-## Really, we are!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis voluptatem nisi aliquam vel illum minima voluptate maiores, culpa, porro, exercitationem dolorem quisquam sapiente itaque nulla amet ducimus. Blanditiis, enim, dolore.
+The goal of the informational site is to provide a portal and documentation for the Offcourse. It currently has three major features: Firstly it is the current portal for Offcourse. Secondly it provides extensive documentation like a style guide, assets, technical clarification and the explains what we stand for. Thirdly it serves a communicative function with the roadmap, making it easier for people to get involved and voice feedback.  

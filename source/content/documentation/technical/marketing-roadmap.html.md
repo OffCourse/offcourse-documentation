@@ -4,15 +4,19 @@ partial: sheet
 page: infosite
 tags: technical
 order: 3
-title: Roadmap
+title: Technical
 date: 31-10-2015
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
+Should more invasive changed be made some technical information might be handy. The site is build with the Middleman static site generator. This system does most of the heavy lifting generating all the pages. It is build in Ruby, but it’s not all that intimidating. To give yourself a local staging environment you have to go through several steps:
 
-## We are terribly cool people!
+- Clone the repository from [github](https://github.com/OffCourse/offcourse-documentation)
+- Install [boot](https://github.com/boot-clj/boot#install)
+- Install the dependencies
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga, impedit vitae laudantium nulla illo repellat dolorem odio accusamus, tenetur quidem quae quas ut numquam nostrum soluta eum labore molestiae?
+```bundle install```
 
-## Really, we are!
+- Run the server
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis voluptatem nisi aliquam vel illum minima voluptate maiores, culpa, porro, exercitationem dolorem quisquam sapiente itaque nulla amet ducimus. Blanditiis, enim, dolore.
+```bundle exec middleman server```
+
+Should you want to edit the stylesheets you’re in for a surprise: they’re written in Clojure extended with Garden. It’s a bit of work to get into, but for larger projects the freedom of expression is limitless.
