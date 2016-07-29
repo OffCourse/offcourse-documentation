@@ -77,7 +77,7 @@
                                      {:display            :inline-block
                                       :color             (:dark colors)})]
     [v/viewer-fieldset       (merge  (:text               templates)
-                                     {:border             :unset})]
+                                     {:border             :none})]
     [v/viewer-legend         (merge  (:text               templates))]
     [v/viewer-input          (merge  (:text               templates)
                                      (:recycled-paper     templates)
@@ -86,12 +86,12 @@
     [v/viewer-select         (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      {:padding         [[(:half units) (:full units)]] 
-                                      :border             :unset
+                                      :border             :none
                                       :appearance         :none
                                       :border-radius      0
                                       :width             (percent 100)})]
     [v/viewer-textarea       (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      {:padding         [[(:half units) (:full units)]] 
-                                      :border             :unset
+                                      :border             :none
                                       :width             (percent 100)})]]])
