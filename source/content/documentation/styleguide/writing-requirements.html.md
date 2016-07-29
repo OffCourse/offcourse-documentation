@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: writing
+order: 2
 title: Writing Style
 date: 2016/10/13
 ---

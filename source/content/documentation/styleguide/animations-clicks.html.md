@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: animations
+order: 1
 title: Clicks
 date: 2016/10/13
 ---

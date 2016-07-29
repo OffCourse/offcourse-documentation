@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: email
+order: 1
 title: Mailchimp Templates
 date: 2016/10/13
 ---

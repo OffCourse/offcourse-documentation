@@ -30,7 +30,8 @@
 
         <div class="grid--section">
           <div class="container padding-tb-one" data-container-type="fw">
-            <% for article in blog('documentation').articles %>
+            <% sortedArticles = blog('documentation').articles.sort {|x, y| x.data.order <=> y.data.order} %>
+            <% for article in sortedArticles %>
               <% if article.data.page == current_page.data.page %>
                 <% if "sheet" == article.data.partial %>
                   <%= partial("partials/sheet-with-title", :locals => { :title => article.title, :markdown => article.body }) %>

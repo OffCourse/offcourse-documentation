@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: presentations
+order: 2
 title: Google Slides
 date: 2016/10/13
 ---

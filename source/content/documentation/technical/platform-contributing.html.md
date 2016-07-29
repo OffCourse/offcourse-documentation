@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: platform
+order: 4
 title: Contribution workflow
 date: 2016/10/13
 ---

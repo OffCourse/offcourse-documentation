@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: rewards
+order: 3
 title: Contributions
 date: 2016/10/13
 ---

@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: logos
+order: 3
 title: Favicons
 date: 2016/10/13
 ---

@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: logos
+order: 4
 title: Banners
 date: 2016/10/13
 ---

@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: logos
+order: 2
 title: Logo Variations
 date: 2016/10/13
 ---

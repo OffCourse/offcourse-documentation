@@ -1,7 +1,8 @@
 ---
 layout: post
 partial: sheet
-page: marketing
+page: infosite
+order: 1
 title: General
 date: 2016/10/13
 ---

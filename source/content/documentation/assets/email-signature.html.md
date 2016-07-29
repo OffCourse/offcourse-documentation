@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: email
+order: 2
 title: Email Signatures
 date: 2016/10/13
 ---

@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: modules
+order: 2
 title: Strips
 date: 2016/10/13
 ---

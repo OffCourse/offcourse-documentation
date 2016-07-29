@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: rewards
+order: 2
 title: Distributed Autonomous Organisation
 date: 2016/10/13
 ---

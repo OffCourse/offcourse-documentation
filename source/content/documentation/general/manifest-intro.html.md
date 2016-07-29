@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: manifest
+order: 1
 title: Manifest
 date: 2016/10/13
 ---

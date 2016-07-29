@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: platform
+order: 2
 title: Coding Philosophy
 date: 2016/10/13
 ---

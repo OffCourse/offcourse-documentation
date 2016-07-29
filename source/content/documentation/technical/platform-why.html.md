@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: platform
+order: 3
 title: Why Clojure
 date: 2016/10/13
 ---

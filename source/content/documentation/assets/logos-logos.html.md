@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: logos
+order: 1
 title: Logo
 date: 2016/10/13
 ---
