@@ -38,7 +38,7 @@
     [v/viewer-anchor         (merge  (:text               templates)
                                      (:border-default     templates)
                                      {:cursor             :pointer
-                                      :padding          [[0 (:sixth units) 0 (:sixth units)]]})
+                                      :padding          [[0 0 0 0]]})
      [v/hovered              (merge  (:border-highlighted templates))]]
     [v/viewer-strong         (merge  (:subtitle           templates)
                                      {:padding          [[0 0 (:two-third units) 0]]})]
