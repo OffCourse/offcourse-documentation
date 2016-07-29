@@ -2,6 +2,7 @@
 layout: post
 partial: erb
 page: logos
+tags: assets
 order: 1
 title: Logo
 date: 31-10-2015

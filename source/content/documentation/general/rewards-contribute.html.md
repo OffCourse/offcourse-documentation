@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: rewards
+tags: general
 order: 3
 title: Contributions
 date: 31-10-2015

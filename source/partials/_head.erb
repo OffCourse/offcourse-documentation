@@ -31,11 +31,16 @@
     <meta name="theme-color" content="#000000">
     <!-- end favicons -->
     
-    <% if current_page.data.title || page %>
-    <title>Offcourse - <%= current_page.data.title || page %></title>
-    <% else %>
-    <title>Offcourse</title>
-    <% end %>
+    <% 
+    if current_page.data.title
+        title = current_page.data.title
+    elsif page
+        title = page
+    else
+        title = "Offcourse"
+    end
+    %>
+    <title><%= title %></title>
     
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
     <%= stylesheet_link_tag :main %>

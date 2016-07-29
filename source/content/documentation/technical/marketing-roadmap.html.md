@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: infosite
+tags: technical
 order: 3
 title: Roadmap
 date: 31-10-2015

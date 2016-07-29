@@ -1,10 +1,11 @@
 ---
+layout: post
+partial: sheet
+page: animations
+tags: styleguide
+order: 1
 title: Clicks
 date: 31-10-2015
-partial: sheet
-layout: post
-page: animations
-order: 1
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum hic labore architecto aspernatur consequatur vitae. Quam, numquam debitis! Porro, reprehenderit sed enim. Aspernatur quidem quam ea et, repellat laborum molestias.
 

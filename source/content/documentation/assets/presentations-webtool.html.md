@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: presentations
+tags: assets
 order: 3
 title: Webtool
 date: 31-10-2015

@@ -2,6 +2,7 @@
 layout: post
 partial: erb
 page: logos
+tags: assets
 order: 3
 title: Favicons
 date: 31-10-2015

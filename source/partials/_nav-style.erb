@@ -1,40 +1,28 @@
-<section class="container padding-tb-one" role="navigation" data-container-type="fw">
+<div class="container padding-t-one">
+  <h1 class="logo">Documentation</h1>
+</div>
+<% 
+categories = ["general", "styleguide", "technical", "assets"]
+for category in categories
+%>
+<section class="container padding-t-one" role="navigation" data-container-type="fw">
   <div class="sheet js--nav" data-sheet-sticky="false">
+    
     <div class="padding-b-twothird">
-      <a href="#" class="sheet--title">Documentation</a>
-    </div>
-    <div class="padding-b-twothird">
-      <a href="#" class="t--subtitle">General</a>
-    </div>
-      <ul data-list-type="todo" class="list">
-        <a href="/documentation/manifest.html"><li data-item-type="todo" class="list--item">Manifest</li></a>
-        <a href="/documentation/rewards.html"><li data-item-type="todo" class="list--item">Reward Structure</li></a>
-        <a href="/roadmap.html"><li data-item-type="todo" class="list--item">Roadmap</li></a>
-      </ul>
-    <div class="padding-tb-twothird">
-      <a href="#" class="t--subtitle">Styleguide</a>
+      <a href="#" class="t--title"><%= category %></a>
     </div>
     <ul data-list-type="todo" class="list">
-      <a href="/documentation/typography.html"><li data-item-type="todo" class="list--item">Typography</li></a>
-      <a href="/documentation/colors.html"><li data-item-type="todo" class="list--item">Colors</li></a>
-      <a href="/documentation/modules.html"><li data-item-type="todo" class="list--item">Modules</li></a>
-      <a href="/documentation/animations.html"><li data-item-type="todo" class="list--item">Animations</li></a>
-      <a href="/documentation/writing.html"><li data-item-type="todo" class="list--item">Writing</li></a>
+      <%
+      pages = []
+      for article in blog('documentation').tags[category]
+        pages.push(article.data.page)
+      end
+      pages = pages.uniq
+      for page in pages
+      %>
+      <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page %></li></a>
+      <% end %>
     </ul>
-    <div class="padding-tb-twothird">
-      <a href="#" class="t--subtitle">Technical</a>
-    </div>
-    <ul data-list-type="todo" class="list">
-      <a href="/documentation/platform.html"><li data-item-type="todo" class="list--item">Platform</li></a>
-      <a href="/documentation/infosite.html"><li data-item-type="todo" class="list--item">Infosite</li></a>
-    </ul>
-    <div class="padding-tb-twothird">
-      <a href="#" class="t--subtitle">Assets</a>
-    </div>
-    <ul data-list-type="todo" class="list">
-      <a href="/documentation/presentations.html"><li data-item-type="todo" class="list--item">Presentations</li></a>
-      <a href="/documentation/logos.html"><li data-item-type="todo" class="list--item">Logo's and Banners</li></a>
-      <a href="/documentation/email.html"><li data-item-type="todo" class="list--item">Email</li></a>
-    </ul>
-  </div>    
+  </div>
 </section>
+<% end %>

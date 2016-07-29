@@ -2,6 +2,7 @@
 layout: post
 partial: sheet
 page: infosite
+tags: technical
 order: 1
 title: General
 date: 31-10-2015
