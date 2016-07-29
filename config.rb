@@ -23,6 +23,11 @@ activate :blog do |blog|
   blog.permalink = "documentation/{title}.html"
 end
 
+pages = ["animations", "assets", "colors", "elements", "email", "logos", "manifest", "marketing", "platform", "presentations", "rewards", "typography", "writing"]
+pages.each do |page|
+  proxy "/documentation/#{name}.html", "/documentation.html", :locals => { :page => page, :title => page }, :ignore => true
+end
+
 # General configuration
 configure :development do
   
@@ -43,8 +48,8 @@ configure :build do
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
-    command: "boot css",
-    # command: "./boot css",
+    # command: "boot css",
+    command: "./boot css",
     source: ".build-boot",
     latency: 2
 end
