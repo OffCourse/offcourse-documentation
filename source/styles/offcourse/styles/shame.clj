@@ -4,11 +4,15 @@
             [garden
              [units :as u :refer [rem percent px]]
              [stylesheet :refer [at-media]]
-             [arithmetic :refer [/ + *]]
+             [arithmetic :refer [+ - * /]]
              [selectors :as s]]))
 
 (defn shame [{:keys [templates breakpoints colors units fonts]}]
-  [[v/code        (merge (:recycled-paper    templates)
-                         (:mono              templates)
-                         {:padding        [[(:half units) (:full units)]]})]
-   [v/code-pre    (merge {:white-space       :pre-wrap})]])
+  [[v/code-pre            (merge     (:mono               templates)
+                                     (:darkend-paper      templates)
+                                     (:border-quotes      templates)
+                                     (:border-highlighted templates)
+                                     {:white-space        :pre-wrap
+                                      :padding          [[(:third units) (:full units) (:third units) (- (:full units) (:sixth units))]]})
+    [v/code               (merge     (:darkend-paper      templates)
+                                     {:display            :block})]]])

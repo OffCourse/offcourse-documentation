@@ -1,18 +1,14 @@
 <section class="container padding-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
-    <div class="sheet--section">
-      <h1 class="sheet--title padding-b-twothird"><%= template %></h1>
+    <h1 class="sheet--title padding-b-twothird"><%= template %></h1>
+    <div style="width: 100%; min-height: 100px; display: flex; justify-content: center; flex-direction: column;" class="<%= "c--" + template %> padding-trbl-one">
+    <% if text %>
+      <h1 class="sheet--title padding-b-third">Header</h1>
+      <p class="sheet--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quibusdam labore. Aut cumque vitae, autem tenetur voluptate. Quod ut, dolores debitis, corporis enim unde! In at commodi reprehenderit, quasi eum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quia nesciunt quaerat minima, praesentium et, dolor quas dignissimos, eos aliquid doloribus animi! Suscipit quia nobis recusandae dolorum, optio non numquam!</p>
+    <% end %>
     </div>
-    <div class="sheet--section">
-      <div style="width: 100%; min-height: 100px; display: flex; justify-content: center; flex-direction: column;" class="<%= "c--" + template %> padding-trbl-one">
-      <% if text %>
-        <h1 class="sheet--title padding-b-third">Header</h1>
-        <p class="sheet--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, quibusdam labore. Aut cumque vitae, autem tenetur voluptate. Quod ut, dolores debitis, corporis enim unde! In at commodi reprehenderit, quasi eum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quia nesciunt quaerat minima, praesentium et, dolor quas dignissimos, eos aliquid doloribus animi! Suscipit quia nobis recusandae dolorum, optio non numquam!</p>
-      <% end %>
-      </div>
-    </div>
-    <div class="sheet--section">
-      <pre class="code-pre container padding-t-one" data-container-type="fw">
+    <div class="padding-t-twothird">
+      <pre class="code-pre container" data-container-type="fw">
         <code class="code js--css-codeblock" data-class=".<%= "c--" + template %>">
           
         </code>
