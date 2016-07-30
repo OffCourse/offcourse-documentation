@@ -1,8 +1,19 @@
+<%
+require 'Time'
+%>
+
 <section class="container padding-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
     <a href="<%= feature.html_url %>"><h1 class="sheet--title"><%= feature.title %></h1></a>
     <p class="sheet--text"><%= feature.body %></p>
-    <p class="sheet--text"> Created: <time><%= feature.created_at %></time></p>
-    <p class="sheet--text"> Planned: <time><%= feature.created_at %></time></p>
+    <p class="sheet--text"> Created: <time><%= Time.parse(feature.created_at).strftime('%x') %></time></p>
+    <p class="sheet--text"> Updated: <time><%= Time.parse(feature.updated_at).strftime('%x') %></time></p>
+    <% if feature.milestone %>
+    <p class="sheet--text"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
+    <% end %>
+    <% if feature.assignee %>
+    <p class="sheet--text"> Assignee: <%= feature.assignee.login %></p>
+    <% end %>
+    <p class="sheet--text"> Activity: <%= data.events.length %></p>
   </div>
 </section>
