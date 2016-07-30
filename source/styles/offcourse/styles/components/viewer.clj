@@ -51,7 +51,8 @@
                                      {:list-style       [[:decimal :outside]]
                                       :padding          [[0 (:five units) (:two-third units) (:full units)]]})]
     [v/viewer-li             (merge  (:text               templates)
-                                     {:padding          [[0 0 (:two-third units) 0]]})]
+                                     {:padding          [[0 0 (:two-third units) 0]]})
+     [v/last                         {:padding          [[0 0 0 0]]}]]
     [v/viewer-image          (merge  {:display            :block
                                       :width             (percent 100)
                                       :padding          [[0 0 (:two-third units) 0]]})]
@@ -78,20 +79,24 @@
                                       :color             (:dark colors)})]
     [v/viewer-fieldset       (merge  (:text               templates)
                                      {:border             :none})]
-    [v/viewer-legend         (merge  (:text               templates))]
+    [v/viewer-legend         (merge  (:text               templates)
+                                     {:margin           [[0 0 (:third units) 0]]})]
     [v/viewer-input          (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      {:padding         [[(:half units) (:full units)]] 
-                                      :width             (percent 100)})]
+                                      :width             (percent 100)
+                                      :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-select         (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      {:padding         [[(:half units) (:full units)]] 
                                       :border             :none
                                       :appearance         :none
                                       :border-radius      0
-                                      :width             (percent 100)})]
+                                      :width             (percent 100)
+                                      :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-textarea       (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      {:padding         [[(:half units) (:full units)]] 
                                       :border             :none
-                                      :width             (percent 100)})]]])
+                                      :width             (percent 100)
+                                      :margin           [[0 0 (:two-third units) 0]]})]]])
