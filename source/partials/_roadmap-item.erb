@@ -9,11 +9,15 @@ require 'Time'
     <p class="sheet--text"> Created: <time><%= Time.parse(feature.created_at).strftime('%x') %></time></p>
     <p class="sheet--text"> Updated: <time><%= Time.parse(feature.updated_at).strftime('%x') %></time></p>
     <% if feature.milestone %>
+    <p class="sheet--text"> Milestone: <time><%= feature.milestone.title %><%=  %></time></p>
     <p class="sheet--text"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
     <% end %>
     <% if feature.assignee %>
     <p class="sheet--text"> Assignee: <%= feature.assignee.login %></p>
     <% end %>
-    <p class="sheet--text"> Activity: <%= data.events.length %></p>
+    <% if feature.comments %>
+    <p class="sheet--text"> Comments: <%= feature.comments %></p>
+    <% end %>
+    <p class="sheet--text"> Other Activity: <%= data.events.length %></p>
   </div>
 </section>
