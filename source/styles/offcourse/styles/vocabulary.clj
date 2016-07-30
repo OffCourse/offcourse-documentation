@@ -41,6 +41,7 @@
 
 ; Helpers
 (s/defclass padding-b-third)
+(s/defclass padding-b-half)
 (s/defclass padding-t-twothird)
 (s/defclass padding-b-twothird)
 (s/defclass padding-tb-twothird)
@@ -109,6 +110,8 @@
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
+(def sheet-collapsable      (sheet (s/attr :data-collapsable := :true)))
+(s/defclass sheet--section)
 (s/defclass sheet--title)
 (s/defclass sheet--text)
 

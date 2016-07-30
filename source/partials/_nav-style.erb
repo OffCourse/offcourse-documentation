@@ -1,27 +1,25 @@
 <div class="container padding-t-one">
   <h1 class="logo">Documentation</h1>
 </div>
-<% 
-categories = ["general", "styleguide", "technical", "assets"]
-for category in categories
-%>
+<% categories = ["general", "styleguide", "technical", "assets"]
+for category in categories %>
 <section class="container padding-t-one" role="navigation" data-container-type="fw">
-  <div class="sheet js--nav" data-sheet-sticky="false">
-    <div class="padding-b-one">
-      <a href="#" class="t--title"><%= category.titleize %></a>
+  <div class="sheet js--nav" data-collapsable="true">
+    <div class="sheet--section" data-padded="true">
+      <h1 class="sheet--title"><%= category.titleize %></h1>
     </div>
-    <ul data-list-type="todo" class="list">
-      <%
-      pages = []
-      for article in blog('documentation').tags[category]
-        pages.push(article.data.page)
-      end
-      pages = pages.uniq
-      for page in pages
-      %>
-      <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page.titleize %></li></a>
-      <% end %>
-    </ul>
+    <div class="sheet--section">
+      <ul class="list" data-list-type="todo">
+        <% pages = []
+        for article in blog('documentation').tags[category]
+          pages.push(article.data.page)
+        end
+        pages = pages.uniq
+        for page in pages %>
+        <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page.titleize %></li></a>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </section>
 <% end %>
