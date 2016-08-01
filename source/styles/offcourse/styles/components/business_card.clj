@@ -6,7 +6,6 @@
              [stylesheet :refer [at-media]]]
             [offcourse.styles.vocabulary :as v]))
 
-; Disliking this abstraction!
 (defn business-card [{:keys [templates breakpoints colors units]}]
   [[v/business-card     (merge (:row-component           templates)
                                (:sheet                   templates))

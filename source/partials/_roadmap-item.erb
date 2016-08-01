@@ -1,19 +1,34 @@
 <section class="container padding-b-one" data-container-type="fw">
-  <div class="sheet js--anchor">
-    <a href="<%= feature.html_url %>"><h1 class="sheet--title"><%= feature.title %></h1></a>
-    <p class="sheet--text"><%= feature.body %></p>
-    <p class="sheet--text"> Created: <time><%= Time.parse(feature.created_at).strftime('%x') %></time></p>
-    <p class="sheet--text"> Updated: <time><%= Time.parse(feature.updated_at).strftime('%x') %></time></p>
-    <% if feature.milestone %>
-    <p class="sheet--text"> Milestone: <time><%= feature.milestone.title %><%=  %></time></p>
-    <p class="sheet--text"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
-    <% end %>
-    <% if feature.assignee %>
-    <p class="sheet--text"> Assignee: <%= feature.assignee.login %></p>
-    <% end %>
-    <% if feature.comments %>
-    <p class="sheet--text"> Comments: <%= feature.comments %></p>
-    <% end %>
-    <p class="sheet--text"> Other Activity: <%= data.events.length %></p>
+  <div class="roadmap-sheet js--anchor">
+    <div class="roadmap-sheet--header">
+      <a href="<%= feature.html_url %>"><h1 class="sheet--title"><%= feature.title %></h1></a>
+      <p class="roadmap-sheet--text"><%= feature.body %></p>
+    </div>
+    <div class="roadmap-sheet--meta">
+      <div class="roadmap-sheet--assignee">
+        <% if feature.assignee %>
+        <img src="/images/people/donald.jpg" class="image" data-image-filter="true">
+        <p class="roadmap-sheet--text"> Assignee: <%= feature.assignee.login %></p>
+        <% else %>
+        <p> No assignee </p>
+        <% end %>
+      </div>
+      <div class="roadmap-sheet--milestone">
+        <% if feature.milestone %>
+        <p class="roadmap-sheet--text"> Milestone: <time><%= feature.milestone.title %><%=  %></time></p>
+        <p class="roadmap-sheet--text"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
+        <% else %>
+        <p> No milestone </p>
+        <% end %>
+      </div>
+      <div class="roadmap-sheet--activity">
+        <p class="roadmap-sheet--text"> Created: <time><%= Time.parse(feature.created_at).strftime('%x') %></time></p>
+        <p class="roadmap-sheet--text"> Updated: <time><%= Time.parse(feature.updated_at).strftime('%x') %></time></p>
+        <p class="roadmap-sheet--text"> Comments: <%= feature.comments %></p>
+        <p class="roadmap-sheet--text"> Other Activity: <%= data.events.length %></p>
+      </div>
+    </div>
+    <div class="roadmap-sheet--body">
+    </div>
   </div>
 </section>

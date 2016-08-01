@@ -119,6 +119,16 @@
 (s/defclass business-card)
 (s/defclass business-card--section)
 
+(s/defclass roadmap-item)
+(s/defclass roadmap-item--meta)
+(s/defclass roadmap-item--assignee)
+(s/defclass roadmap-item--milestone)
+(s/defclass roadmap-item--activity)
+(s/defclass roadmap-item--body)
+(s/defclass roadmap-item--title)
+(s/defclass roadmap-item--text)
+(s/defclass roadmap-item--tiny)
+
 (s/defclass viewer)
 (s/defclass viewer--content)
 (def viewer-headers      [:h1 :h2 :h3 :h4 :h5 :h6])
