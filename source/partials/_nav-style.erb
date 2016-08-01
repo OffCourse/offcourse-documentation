@@ -1,14 +1,14 @@
-<div class="container padding-t-one">
-  <h1 class="logo">Documentation</h1>
-</div>
-<% categories = ["general", "styleguide", "technical", "assets"]
-for category in categories %>
 <section class="container padding-t-one" role="navigation" data-container-type="fw">
-  <div class="sheet js--nav" data-collapsable="true">
-    <div class="sheet--section" data-padded="true">
-      <h1 class="sheet--title"><%= category.titleize %></h1>
-    </div>
+  <div class="sheet js--nav">
     <div class="sheet--section">
+      <h1 class="sheet--title">Documentation</h1>
+    </div>
+  <% categories = ["general", "styleguide", "technical", "assets"]
+  for category in categories %>
+    <div class="sheet--section">
+      <h1 class="sheet--subtitle"><%= category.titleize %></h1>
+    </div>
+    <div class="sheet--section" data-collapsable="true">
       <ul class="list" data-list-type="todo">
         <% pages = []
         for article in blog('documentation').tags[category]
@@ -20,6 +20,6 @@ for category in categories %>
         <% end %>
       </ul>
     </div>
+  <% end %>
   </div>
 </section>
-<% end %>

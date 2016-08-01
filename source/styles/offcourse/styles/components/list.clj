@@ -4,7 +4,7 @@
 
 (defn list-component [{:keys [templates colors fonts units]}]
   [[v/list              (merge (:column-component     templates)
-                               {:padding               [[(:half units) 0 0 0]]})]
+                               {:padding               [[0 0 (:half units) 0]]})]
    [v/list--item        (merge (:row-component        templates)
                                (:recycled-paper       templates)
                                (:list                 templates)

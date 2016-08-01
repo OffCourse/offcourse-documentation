@@ -9,7 +9,6 @@ date: 31-10-2015
 ---
 [![Basic Logo](/images/documentation/logos/off_logo_basis.png)](/images/documentation/logos/off_logo_basis.png)
 
-### Download
 - [Basic - PNG](/images/documentation/logos/off_logo_basis.png)
 - [Basic - SVG](/images/documentation/logos/off_logo_basis.svg)
 - [Basic - EPS](/images/documentation/logos/off_logo_basis.eps)

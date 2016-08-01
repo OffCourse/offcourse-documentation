@@ -110,9 +110,10 @@
 (def image-filter-recolor (image (s/attr :data-image-filter-recolor := :true)))
 
 (s/defclass sheet)
-(def sheet-collapsable      (sheet (s/attr :data-collapsable := :true)))
 (s/defclass sheet--section)
+(def sheet--section-collapsable      (sheet--section (s/attr :data-collapsable := :true)))
 (s/defclass sheet--title)
+(s/defclass sheet--subtitle)
 (s/defclass sheet--text)
 
 (s/defclass business-card)
