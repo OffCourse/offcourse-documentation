@@ -10,7 +10,14 @@
   [[v/roadmap-item                  (merge (:column-component        templates)
                                            (:sheet                   templates)
                                            {:padding                (:full units)})
-    [v/hovered                             (:border-highlighted      templates)]]
+    [v/hovered                             (:border-highlighted      templates)
+     [v/roadmap-item--collapsable          {:max-height             (* (:full units) 10)
+                                            :transition            [[:max-height "0.5s" :ease-in-out "0.5s"]]}]]]
+   [v/roadmap-item--collapsable     (merge {:padding               [[0 0 0 0]]
+                                            :overflow                :hidden
+                                            :transition            [[:max-height "0.5s" :ease-in-out]]
+                                            :max-height              0})]
+
    [v/roadmap-item--header          (merge (:row-component           templates)
                                            {:justify-content         :space-between
                                             :padding               [[0 0 (:full units) 0]]})]
@@ -26,7 +33,7 @@
                                            {:padding               [[0 (:three units) 0 0]]})]
    [v/roadmap-item--row-container   (merge (:row-component           templates)       
                                            {})]
-   [v/roadmap-item--profile-img     (merge {:padding              [[(:sixth units) (:sixth units) 0 0 ]]
+   [v/roadmap-item--profile-img     (merge {:padding              [[(:sixth units) (:third units) (:sixth units) 0 ]]
                                             :width                  (:two units)
                                             :height                 (:two units)})]
    [v/roadmap-item--milestone       (merge (:column-component        templates)  

@@ -22,7 +22,7 @@
 
    ; cleanup this selector
    [(v/sheet--section-collapsable v/hover) (s/+ ".sheet--section:hover" v/sheet--section-collapsable) {:max-height             (* (:full units) 10)
-                                                                                                           :transition            [[:max-height "0.5s" :ease-in-out "0.5s"]]}]
+                                                                                                       :transition            [[:max-height "0.5s" :ease-in-out "0.5s"]]}]
 
    [v/sheet--section              (merge {:padding               [[0 0 (:half units) 0]]})]
 

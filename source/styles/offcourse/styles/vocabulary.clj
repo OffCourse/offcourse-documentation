@@ -120,6 +120,7 @@
 (s/defclass business-card--section)
 
 (s/defclass roadmap-item)
+(s/defclass roadmap-item--collapsable)
 (s/defclass roadmap-item--header)
 (s/defclass roadmap-item--issue-number)
 (s/defclass roadmap-item--meta)
