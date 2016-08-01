@@ -125,6 +125,7 @@
 
    ; Border Templates
    :border-default      (fnk [units colors]    {:border-bottom      [[:solid (:sixth units) (:medium colors)]]})
+   :border-thin         (fnk [units colors]    {:border-bottom      [[:solid (:atom units)  (:medium colors)]]})
    :border-quotes       (fnk [units colors]    {:border-left        [[:solid (:sixth units) (:medium colors)]]})
    :border-highlighted  (fnk [units colors]    {:border-color       [(:primary colors)]})
 

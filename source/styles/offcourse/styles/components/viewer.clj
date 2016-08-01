@@ -38,7 +38,7 @@
     [v/viewer-anchor         (merge  (:text               templates)
                                      {:color             (:primary colors)
                                       :cursor             :pointer})
-     [v/hovered              (merge  (:border-default     templates)
+     [v/hovered              (merge  (:border-thin        templates)
                                      (:border-highlighted templates))]]
     [v/viewer-strong         (merge  (:subtitle           templates)
                                      {:padding          [[0 0 (:two-third units) 0]]})]
@@ -63,7 +63,7 @@
     [v/viewer-blockquote     (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      (:border-quotes      templates)
-                                     {:padding           (- (:full units) (:sixth units))
+                                     {:padding          [[(:full units) (:five units) (:full units) (- (:full units) (:sixth units))]]
                                       :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-pre            (merge  (:mono               templates)
                                      (:darkend-paper      templates)
