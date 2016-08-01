@@ -2,32 +2,39 @@
   <div class="roadmap-item js--anchor">
     <div class="roadmap-item--header">
       <a href="<%= feature.html_url %>"><h1 class="roadmap-item--title"><%= feature.title %></h1></a>
-      <a href="<%= feature.html_url %>"><h1 class="roadmap-item--issue-number">#<%= feature.number %></h1></a>
+      <div class="roadmap-item--row-container">
+        <a data-button-type="smudged" class="button" href="https://github.com/OffCourse/offcourse-frontend">View on Github</a>   
+        <a href="<%= feature.html_url %>"><h1 class="roadmap-item--issue-number">#<%= feature.number %></h1></a>
+      </div>
     </div>
     <div class="roadmap-item--meta">
       <div class="roadmap-item--assignee">
         <% if feature.assignee %>
-        <img src="/images/people/robertjan.png" class="image" data-image-filter="true">
-        <p class="roadmap-item--text" >Assignee: </p>
-        <p class="roadmap-item--tiny"> <%= feature.assignee.login %></p>
+        <h6 class="roadmap-item--smalltitle roadmap-item--assignee-title">Assignee</h6>
+        <div class="roadmap-item--row-container">
+          <img src="/images/people/robertjan.png" class="roadmap-item--profile-img" data-image-filter="true">
+          <p class="roadmap-item--tiny"> <%= feature.assignee.login %></p>
+        </div>
         <% else %>
-        <p> No assignee </p>
-        <% end %>
-      </div>
-      <div class="roadmap-item--milestone">
-        <h1>Milestone:</h1>
-        <% if feature.milestone %>
-        <p class="roadmap-item--text"> <%= feature.milestone.title %><%=  %></p>
-        <p class="roadmap-item--tiny"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
-        <% else %>
-        <p> No milestone </p>
+        <h6 class="roadmap-item--smalltitle">Assignee</h6>
+        <p class="roadmap-item--tiny"> No assignee </p>
         <% end %>
       </div>
       <div class="roadmap-item--activity">
+        <h6 class="roadmap-item--smalltitle">Activity</h6>
         <p class="roadmap-item--tiny"> Created: <time><%= Time.parse(feature.created_at).strftime('%x') %></time></p>
         <p class="roadmap-item--tiny"> Updated: <time><%= Time.parse(feature.updated_at).strftime('%x') %></time></p>
         <p class="roadmap-item--tiny"> Comments: <%= feature.comments %></p>
         <p class="roadmap-item--tiny"> Other Activity: <%= data.events.length %></p>
+      </div>
+      <div class="roadmap-item--milestone">
+        <h6 class="roadmap-item--smalltitle">Milestone</h6>
+        <% if feature.milestone %>
+        <p class="roadmap-item--tiny"> <%= feature.milestone.title %><%=  %></p>
+        <p class="roadmap-item--tiny"> Due: <time><%= Time.parse(feature.milestone.due_on).strftime('%x') %><%=  %></time></p>
+        <% else %>
+        <p class="roadmap-item--tiny"> No milestone </p>
+        <% end %>
       </div>
     </div>
     <div class="roadmap-item--body">

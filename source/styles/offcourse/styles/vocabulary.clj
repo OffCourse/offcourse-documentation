@@ -123,12 +123,15 @@
 (s/defclass roadmap-item--header)
 (s/defclass roadmap-item--issue-number)
 (s/defclass roadmap-item--meta)
+(s/defclass roadmap-item--row-container)
+(s/defclass roadmap-item--assignee-title)
 (s/defclass roadmap-item--assignee)
+(s/defclass roadmap-item--profile-img)
 (s/defclass roadmap-item--milestone)
 (s/defclass roadmap-item--activity)
 (s/defclass roadmap-item--body)
 (s/defclass roadmap-item--title)
-(s/defclass roadmap-item--subtitle)
+(s/defclass roadmap-item--smalltitle)
 (s/defclass roadmap-item--text)
 (s/defclass roadmap-item--tiny)
 
@@ -164,6 +167,7 @@
 (s/defclass footer)
 
 (s/defclass button)
+(def button-smudged        (button (s/attr :data-button-type := :smudged)))
 (def button-sheet          (button (s/attr :data-button-type := :sheet)))
 
 (s/defclass list)

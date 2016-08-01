@@ -11,8 +11,8 @@
 
 (def units-graph
   {
-   :four                       (fnk [full]              (* full 4))
    :five                       (fnk [full]              (* full 5))
+   :four                       (fnk [full]              (* full 4))
    :three                      (fnk [full]              (* full 3))
    :two                        (fnk [full]              (* full 2))
    :one-and-half               (fnk [full]              (* full 1.5))
@@ -47,7 +47,7 @@
    :mono-line-height           (fnk [atom]              (* atom 30))
    :label-font                 (fnk [base-font]         (* base-font          0.8))
    :label-line-height          (fnk [base-line-height]  (* base-line-height   0.8))
-   })
+  })
 
 (def templates-graph
   {
@@ -115,6 +115,11 @@
    :text                (fnk [units fonts]     {:font-family        (:base fonts)
                                                 :font-size          (:base-font units)
                                                 :line-height        (:base-line-height units)
+                                                :font-weight         300})
+
+   :smalltitle          (fnk [units fonts]     {:font-family        (:title fonts)
+                                                :font-size          (:label-font units)
+                                                :line-height        (:label-line-height units)
                                                 :font-weight         300})
 
    :label               (fnk [units fonts]     {:font-family        (:base fonts)
