@@ -36,10 +36,10 @@
     [v/viewer-text           (merge  (:text               templates)
                                      {:padding          [[0 0 (:two-third units) 0]]})]
     [v/viewer-anchor         (merge  (:text               templates)
-                                     (:border-default     templates)
-                                     {:cursor             :pointer
-                                      :padding          [[0 0 0 0]]})
-     [v/hovered              (merge  (:border-highlighted templates))]]
+                                     {:color             (:primary colors)
+                                      :cursor             :pointer})
+     [v/hovered              (merge  (:border-default     templates)
+                                     (:border-highlighted templates))]]
     [v/viewer-strong         (merge  (:subtitle           templates)
                                      {:padding          [[0 0 (:two-third units) 0]]})]
     [v/viewer-em             (merge  (:text               templates)
