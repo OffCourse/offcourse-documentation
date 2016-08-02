@@ -13,10 +13,10 @@
                                       :flex               1})]
    [v/viewer--content                {:display            :block
                                       :max-width         (:max-content-width   units)}
-    
+
     (for [header v/viewer-headers]   
     [[header                 (merge  (:title              templates)
-                                     {:padding          [[(:one-and-half units) 0 (:sixth units) 0]]})
+                                     {:padding         [[(:one-and-half units) 0 (:sixth units) 0]]})
       [v/first                       {:padding          [[0 0 (:sixth units) 0]]}]]
      (for [next-header v/viewer-headers]
      [(s/+ header next-header)       {:padding          [[0 0 (:sixth units) 0]]}])])
@@ -63,14 +63,14 @@
     [v/viewer-blockquote     (merge  (:text               templates)
                                      (:recycled-paper     templates)
                                      (:border-quotes      templates)
-                                     {:padding          [[(:full units) (:five units) (:full units) (- (:full units) (:sixth units))]]
+                                     {:padding         [[(:full units) (:five units) (:full units) (- (:full units) (:sixth units))]]
                                       :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-pre            (merge  (:mono               templates)
                                      (:darkend-paper      templates)
                                      (:border-quotes      templates)
                                      (:border-highlighted templates)
                                      {:white-space        :pre-wrap
-                                      :padding          [[(:third units) (:full units) (:third units) (- (:full units) (:sixth units))]]
+                                      :padding         [[(:third units) (:full units) (:third units) (- (:full units) (:sixth units))]]
                                       :margin           [[0 0 (:two-third units) 0]]})
      [v/viewer-code          (merge  (:darkend-paper      templates)
                                      {:display            :block})]]
@@ -99,4 +99,7 @@
                                      {:padding         [[(:half units) (:full units)]] 
                                       :border             :none
                                       :width             (percent 100)
-                                      :margin           [[0 0 (:two-third units) 0]]})]]])
+                                      :margin           [[0 0 (:two-third units) 0]]})]]
+   [(s/> v/viewer--content :*) 
+    [v/last                        {:padding-bottom     0
+                                    :margin             0}]]])
