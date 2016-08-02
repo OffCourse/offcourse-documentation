@@ -9,7 +9,7 @@
 (defn roadmap-item [{:keys [templates breakpoints colors units]}]
   [[v/roadmap-item                  (merge (:column-component        templates)
                                            (:sheet                   templates)
-                                           {:padding                (:full units)})
+                                           {:padding               [[(:full units) (:full units) 0 (:full units)]]})
     [v/hovered                             (:border-highlighted      templates)
      [v/roadmap-item--collapsable          {:max-height             (* (:full units) 10)
                                             :transition            [[:max-height "0.5s" :ease-in-out "0.5s"]]}]]]
@@ -41,7 +41,7 @@
    [v/roadmap-item--activity        (merge (:column-component        templates)
                                            {:padding               [[0 (:three units) 0 0]]})]
    [v/roadmap-item--body            (merge (:row-component           templates)      
-                                           {:padding              [[(:full units) 0 0 0]]})]
+                                           {:padding              [[(:full units) 0]]})]
    [v/roadmap-item--title           (merge (:title                   templates))]
    [v/roadmap-item--smalltitle      (merge (:smalltitle              templates))]
    [v/roadmap-item--text            (merge (:text                    templates))]
