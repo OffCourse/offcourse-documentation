@@ -44,6 +44,6 @@ date: 31-10-2015
   html { font-size: 55%; line-height: 1.875rem; }
 }</code></pre>
 
-<img src="/images/iteration-current.png" alt="">
+<div><img src="/images/iteration-current.png" alt="" /></div>
 
 <figcaption> Caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit repellendus ab, earum culpa consectetur reiciendis excepturi hic dolor voluptatem! Vel temporibus, at soluta officia sint omnis voluptate nostrum blanditiis quaerat?</figcaption>
