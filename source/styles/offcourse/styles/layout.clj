@@ -19,7 +19,7 @@
                                      {:flex                   1
                                       :padding             [[(:full units)]]})
     [v/last                   (merge {:flex                   3
-                                      :padding               (:full units)})]]
+                                      :padding              [[0 (:full units)]]})]]
 
    [v/subgrid                 (merge {:display                :block
                                       :column-span            :none
