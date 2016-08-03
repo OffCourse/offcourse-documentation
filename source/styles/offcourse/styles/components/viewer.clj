@@ -54,7 +54,7 @@
                                      {:padding          [[0 0 (:two-third units) 0]]})
      [v/last                         {:padding          [[0 0 0 0]]}]]
     [v/viewer-image          (merge  {:display            :block
-                                      :width             (percent 100)
+                                      :max-width         (percent 100)
                                       :padding          [[0 0 (:two-third units) 0]]})]
     [v/viewer-figcaption     (merge  (:text               templates)
                                      {:font-size         (* 0.8               (:base-font units))
