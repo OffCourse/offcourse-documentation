@@ -42,15 +42,17 @@
           <p class="roadmap-item--tiny"> No milestone </p>
           <% end %>
         </div>
-        <div class="roadmap-item--labels">
-          <h6 class="roadmap-item--smalltitle">Labels</h6>
-          <% if feature.labels.length != 0 %>
-          <% for label in feature.labels %>
-            <p class="roadmap-item--tiny"> <%= label.name %><%=  %></p>
-          <% end %>
-          <% else %>
-          <p class="roadmap-item--tiny"> No labels </p>
-          <% end %>
+      </div>
+      <div class="roadmap-item--labels">
+        <h6 class="roadmap-item--smalltitle">Labels</h6>
+        <div class="roadmap-item--labels-container">
+        <% if feature.labels.length != 0 %>
+        <% for label in feature.labels %>
+          <a class="roadmap-item--tiny label" data-label-type="smudged"> <%= label.name %></a>
+        <% end %>
+        <% else %>
+        <p class="roadmap-item--tiny"> No labels </p>
+        <% end %>
         </div>
       </div>
       <div class="roadmap-item--body viewer--content">

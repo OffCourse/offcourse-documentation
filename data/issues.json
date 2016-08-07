@@ -45,11 +45,6 @@
         "color": "0e8a16"
       },
       {
-        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/stage:%20conceptual",
-        "name": "stage: conceptual",
-        "color": "b60205"
-      },
-      {
         "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/stage:%20sidetracked",
         "name": "stage: sidetracked",
         "color": "b60205"
@@ -102,7 +97,7 @@
     "milestone": null,
     "comments": 0,
     "created_at": "2016-08-06T14:47:25Z",
-    "updated_at": "2016-08-07T11:29:59Z",
+    "updated_at": "2016-08-07T11:30:53Z",
     "closed_at": null,
     "body_html": "<h2>Motivation</h2>\n\n<p>We often encounter awesome links and share them with the team through Slack. But like all good programmers, we’re lazy. We’d love to have it loaded in Offcourse right away when posting it to Slack. But we always sidetrack this feature as it is not core functionality, but we’d love for anyone to pick it up! </p>\n\n<h2>Clarification</h2>\n\n<p>On a conceptual level this feature will connect the Slack API to the Offcourse API. These are both JSON endpoints, one to get from and one to post to. To get the data you’ll either need to poll Slack at a certain interval or use web hooks. Once you’ve figured out how to get the data, you’ll need to process the link to add some meta-data from it. Finally you will post it to the Offcourse API. The code will be hosted on Amazon Lambda as a separate function. </p>\n\n<h2>Documentation</h2>\n\n<p>This is a server-side function working in conjunction with the API, so a good look at our <a href=\"http://user-staging.offcourse.io/documentation/platform.html\">API-docs</a> might be useful. Also check our general <a href=\"http://user-staging.offcourse.io/documentation/contribute.html\">contribution workflow</a>. Thirdly it might be interesting to take a look at another similar service: <a href=\"https://github.com/OffCourse/offcourse-serverless/tree/master/notify-slack\">notify-slack</a>. In this particular case the <a href=\"https://api.slack.com/\">Slack API docs</a> might also be interesting. </p>\n\n<h2>Breakdown</h2>\n\n<ul>\n<li>Clone <a href=\"https://github.com/OffCourse/offcourse-serverless\">offcourse-serverless</a>\n</li>\n<li>Set up local API calls to Slack to get the messages from the <a href=\"https://offcourse.slack.com/archives/random\">channel</a>.</li>\n<li>Process the data to a valid post request for Offcourse</li>\n<li>Post the JSON document to the Offcourse API</li>\n<li>Automatize the process with web hooks</li>\n<li>Set up a Lambda environment to do the same</li>\n<li>Test, test, test</li>\n<li>Write up and submit a pull request. </li>\n</ul>\n\n<h2>Specifics</h2>\n\n<p>Deliver via pull request to the the <a href=\"https://github.com/OffCourse/offcourse-serverless\">offcourse-serverless</a> repository: <a href=\"\"><strong>Code is not stubbed yet</strong></a>.</p>\n\n<p><strong>Knowledge requirement:</strong> Basic knowledge of API’s, Amazon Lambda and Clojure<br>\n<strong>Time requirement:</strong> approx. 1 day depending on familiarity. <br>\n<strong>Mentor:</strong> Yeehaa (Jan Hein Hoogstad)</p>"
   },

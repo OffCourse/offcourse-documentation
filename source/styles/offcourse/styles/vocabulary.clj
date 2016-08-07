@@ -132,6 +132,7 @@
 (s/defclass roadmap-item--milestone)
 (s/defclass roadmap-item--activity)
 (s/defclass roadmap-item--labels)
+(s/defclass roadmap-item--labels-container)
 (s/defclass roadmap-item--body)
 (s/defclass roadmap-item--title)
 (s/defclass roadmap-item--smalltitle)
@@ -177,6 +178,7 @@
 (s/defclass list--item)
 
 (s/defclass label)
+(def label-smudged  (label (s/attr :data-label-type := :smudged)))
 
 ;; MODIFIERS
 (s/defpseudoclass hover)
