@@ -17,25 +17,25 @@ Topical tags:
 
 Skill tags:
 
-## Introduction - Motivation
+## Motivation
 
 ...
 
-## Tech - Clarification
+## Clarification
 
 ...
 
-## Docs
+## Documentation
 
 This is a (api/platform/content) feature, so a good look at our [(api/platform/content) documentation](…) might be useful. Also check our general [contribution workflow](http://user-staging.offcourse.io/documentation/contribute.html). 
 
-## Todo - Practical
+## Breakdown
 
 - ..
 - ..
 - ..
 
-## Contribution Specifics
+## Specifics
 
 Deliver via pull request to the the […](…) repository. 
 
