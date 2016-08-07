@@ -9,15 +9,9 @@ date: 8-10-2015
 ---
 If you think a new feature should be added to the roadmap, that is a possiblity too. A new submission should adhere to the following format: 
 
+---
+
 # (api/platform/content) - Feature Name
-
-Stage tag: Conceptual
-
-Tech tags:
-
-Topical tags:
-
-Skill tags:
 
 ## Motivation
 
@@ -46,3 +40,7 @@ Deliver via pull request to the the […](…) repository.
 **Time requirement:**
 
 **Mentor:**
+
+---
+
+Do not forget the tags: assign a stage, project, technology and topic
