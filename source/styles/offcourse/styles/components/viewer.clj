@@ -18,6 +18,7 @@
     [[header                 (merge  (:title              templates)
                                      {:padding         [[(:one-and-half units) 0 (:sixth units) 0]]})
       [v/first                       {:padding          [[0 0 (:sixth units) 0]]}]]
+     [(s/+ v/viewer-hr header)       {:padding          [[0 0 (:sixth units) 0]]}]
      (for [next-header v/viewer-headers]
      [(s/+ header next-header)       {:padding          [[0 0 (:sixth units) 0]]}])])
 
@@ -44,6 +45,9 @@
                                      {:padding          [[0 0 (:two-third units) 0]]})]
     [v/viewer-em             (merge  (:text               templates)
                                      {:margin           [[0 0 (:two-third units) 0]]})]
+    [v/viewer-hr             (merge  {:padding          [[0 0 (:two-third units) 0]]
+                                      :border             :none
+                                      :border-top       [[:solid (:sixth units) (:night colors)]]})]
     [v/viewer-ul             (merge  (:text               templates)
                                      {:list-style       [[:square :outside]]
                                       :padding          [[0 (:five units) (:two-third units) (:full units)]]})]

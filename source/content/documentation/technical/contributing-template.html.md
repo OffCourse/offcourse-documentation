@@ -33,7 +33,7 @@ This is a (api/platform/content) feature, so a good look at our [(api/platform/c
 
 ## Specifics
 
-Deliver via pull request to the the […](…) repository. 
+Deliver via pull request to the the […](…) repository: [Link to stub](). 
 
 **Knowledge requirement:** 
 
