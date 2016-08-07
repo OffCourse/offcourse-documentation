@@ -1,6 +1,11 @@
 <section class="container padding-b-one" data-container-type="fw">
   <div class="roadmap-item js--anchor">
     <div class="roadmap-item--header">
+        <%
+        require 'nokogiri'
+        require 'open-uri'
+        doc = Nokogiri::HTML(feature.body_html)
+        %> 
       <h1 class="roadmap-item--title"><%= feature.title %></h1>
       <div class="roadmap-item--row-container">
         <a data-button-type="smudged" class="button" href="<%= feature.html_url %>">View on Github</a>   
@@ -37,9 +42,19 @@
           <p class="roadmap-item--tiny"> No milestone </p>
           <% end %>
         </div>
+        <div class="roadmap-item--labels">
+          <h6 class="roadmap-item--smalltitle">Labels</h6>
+          <% if feature.labels.length != 0 %>
+          <% for label in feature.labels %>
+            <p class="roadmap-item--tiny"> <%= label.name %><%=  %></p>
+          <% end %>
+          <% else %>
+          <p class="roadmap-item--tiny"> No labels </p>
+          <% end %>
+        </div>
       </div>
-      <div class="roadmap-item--body">
-        <p class="roadmap-item--text"><%= feature.body %></p>
+      <div class="roadmap-item--body viewer--content">
+        <%= doc.css('p').first %>
       </div>
     </div>
   </div>

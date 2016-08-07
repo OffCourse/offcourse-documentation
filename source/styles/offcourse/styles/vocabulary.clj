@@ -131,6 +131,7 @@
 (s/defclass roadmap-item--profile-img)
 (s/defclass roadmap-item--milestone)
 (s/defclass roadmap-item--activity)
+(s/defclass roadmap-item--labels)
 (s/defclass roadmap-item--body)
 (s/defclass roadmap-item--title)
 (s/defclass roadmap-item--smalltitle)

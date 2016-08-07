@@ -16,3 +16,6 @@ gem "middleman-blog"
 gem 'middleman-livereload'
 gem 'middleman-autoprefixer'
 gem 'middleman-sprockets', '~> 4.0.0.rc.2'
+
+# Utils
+gem 'nokogiri'

@@ -1,5 +1,112 @@
 [
   {
+    "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/6",
+    "repository_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap",
+    "labels_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/6/labels{/name}",
+    "comments_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/6/comments",
+    "events_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/6/events",
+    "html_url": "https://github.com/OffCourse/offcourse-roadmap/issues/6",
+    "id": 169749688,
+    "number": 6,
+    "title": "API - Slack Bookmarker",
+    "user": {
+      "login": "Zaturrby",
+      "id": 7668506,
+      "avatar_url": "https://avatars.githubusercontent.com/u/7668506?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Zaturrby",
+      "html_url": "https://github.com/Zaturrby",
+      "followers_url": "https://api.github.com/users/Zaturrby/followers",
+      "following_url": "https://api.github.com/users/Zaturrby/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Zaturrby/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Zaturrby/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Zaturrby/subscriptions",
+      "organizations_url": "https://api.github.com/users/Zaturrby/orgs",
+      "repos_url": "https://api.github.com/users/Zaturrby/repos",
+      "events_url": "https://api.github.com/users/Zaturrby/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Zaturrby/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/autonomy:%20full",
+        "name": "autonomy: full",
+        "color": "1d76db"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/level:%20beginner",
+        "name": "level: beginner",
+        "color": "1d76db"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/project:%20api",
+        "name": "project: api",
+        "color": "0e8a16"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/stage:%20conceptual",
+        "name": "stage: conceptual",
+        "color": "b60205"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/stage:%20sidetracked",
+        "name": "stage: sidetracked",
+        "color": "b60205"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/tech:%20clojurescript",
+        "name": "tech: clojurescript",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/tech:%20crud",
+        "name": "tech: crud",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/tech:%20lambda",
+        "name": "tech: lambda",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/tech:%20rest",
+        "name": "tech: rest",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/tech:%20serverless",
+        "name": "tech: serverless",
+        "color": "fbca04"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/time%20requirement:%20hours",
+        "name": "time requirement: hours",
+        "color": "1d76db"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/topic:%20serverside",
+        "name": "topic: serverside",
+        "color": "0e8a16"
+      },
+      {
+        "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/labels/topic:%20slack",
+        "name": "topic: slack",
+        "color": "0e8a16"
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [],
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2016-08-06T14:47:25Z",
+    "updated_at": "2016-08-07T11:29:59Z",
+    "closed_at": null,
+    "body_html": "<h2>Motivation</h2>\n\n<p>We often encounter awesome links and share them with the team through Slack. But like all good programmers, we’re lazy. We’d love to have it loaded in Offcourse right away when posting it to Slack. But we always sidetrack this feature as it is not core functionality, but we’d love for anyone to pick it up! </p>\n\n<h2>Clarification</h2>\n\n<p>On a conceptual level this feature will connect the Slack API to the Offcourse API. These are both JSON endpoints, one to get from and one to post to. To get the data you’ll either need to poll Slack at a certain interval or use web hooks. Once you’ve figured out how to get the data, you’ll need to process the link to add some meta-data from it. Finally you will post it to the Offcourse API. The code will be hosted on Amazon Lambda as a separate function. </p>\n\n<h2>Documentation</h2>\n\n<p>This is a server-side function working in conjunction with the API, so a good look at our <a href=\"http://user-staging.offcourse.io/documentation/platform.html\">API-docs</a> might be useful. Also check our general <a href=\"http://user-staging.offcourse.io/documentation/contribute.html\">contribution workflow</a>. Thirdly it might be interesting to take a look at another similar service: <a href=\"https://github.com/OffCourse/offcourse-serverless/tree/master/notify-slack\">notify-slack</a>. In this particular case the <a href=\"https://api.slack.com/\">Slack API docs</a> might also be interesting. </p>\n\n<h2>Breakdown</h2>\n\n<ul>\n<li>Clone <a href=\"https://github.com/OffCourse/offcourse-serverless\">offcourse-serverless</a>\n</li>\n<li>Set up local API calls to Slack to get the messages from the <a href=\"https://offcourse.slack.com/archives/random\">channel</a>.</li>\n<li>Process the data to a valid post request for Offcourse</li>\n<li>Post the JSON document to the Offcourse API</li>\n<li>Automatize the process with web hooks</li>\n<li>Set up a Lambda environment to do the same</li>\n<li>Test, test, test</li>\n<li>Write up and submit a pull request. </li>\n</ul>\n\n<h2>Specifics</h2>\n\n<p>Deliver via pull request to the the <a href=\"https://github.com/OffCourse/offcourse-serverless\">offcourse-serverless</a> repository: <a href=\"\"><strong>Code is not stubbed yet</strong></a>.</p>\n\n<p><strong>Knowledge requirement:</strong> Basic knowledge of API’s, Amazon Lambda and Clojure<br>\n<strong>Time requirement:</strong> approx. 1 day depending on familiarity. <br>\n<strong>Mentor:</strong> Yeehaa (Jan Hein Hoogstad)</p>"
+  },
+  {
     "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/5",
     "repository_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap",
     "labels_url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/5/labels{/name}",
@@ -28,9 +135,7 @@
       "type": "User",
       "site_admin": false
     },
-    "labels": [
-
-    ],
+    "labels": [],
     "state": "open",
     "locked": false,
     "assignee": {
@@ -112,7 +217,7 @@
     "created_at": "2016-07-29T18:03:36Z",
     "updated_at": "2016-07-30T11:19:21Z",
     "closed_at": null,
-    "body": "You're more the content person right? We need you too, desperately!"
+    "body_html": "<p>You're more the content person right? We need you too, desperately!</p>"
   },
   {
     "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/4",
@@ -143,21 +248,17 @@
       "type": "User",
       "site_admin": false
     },
-    "labels": [
-
-    ],
+    "labels": [],
     "state": "open",
     "locked": false,
     "assignee": null,
-    "assignees": [
-
-    ],
+    "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2016-07-29T18:03:03Z",
     "updated_at": "2016-07-29T18:03:03Z",
     "closed_at": null,
-    "body": "Are you the person in desperate need for personalization? Grab your chance!"
+    "body_html": "<p>Are you the person in desperate need for personalization? Grab your chance!</p>"
   },
   {
     "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/3",
@@ -188,21 +289,17 @@
       "type": "User",
       "site_admin": false
     },
-    "labels": [
-
-    ],
+    "labels": [],
     "state": "open",
     "locked": false,
     "assignee": null,
-    "assignees": [
-
-    ],
+    "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2016-07-29T18:02:14Z",
     "updated_at": "2016-07-29T18:02:14Z",
     "closed_at": null,
-    "body": "Want to make exploration look way cooler than it does? Than this is your feature."
+    "body_html": "<p>Want to make exploration look way cooler than it does? Than this is your feature.</p>"
   },
   {
     "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/2",
@@ -233,21 +330,17 @@
       "type": "User",
       "site_admin": false
     },
-    "labels": [
-
-    ],
+    "labels": [],
     "state": "open",
     "locked": false,
     "assignee": null,
-    "assignees": [
-
-    ],
+    "assignees": [],
     "milestone": null,
     "comments": 0,
     "created_at": "2016-07-29T18:01:42Z",
     "updated_at": "2016-07-29T18:01:42Z",
     "closed_at": null,
-    "body": "This feature really advances the curation workflow"
+    "body_html": "<p>This feature really advances the curation workflow</p>"
   },
   {
     "url": "https://api.github.com/repos/OffCourse/offcourse-roadmap/issues/1",
@@ -278,9 +371,7 @@
       "type": "User",
       "site_admin": false
     },
-    "labels": [
-
-    ],
+    "labels": [],
     "state": "open",
     "locked": false,
     "assignee": {
@@ -358,10 +449,10 @@
       "due_on": "2016-08-30T22:00:00Z",
       "closed_at": null
     },
-    "comments": 0,
+    "comments": 2,
     "created_at": "2016-07-29T18:01:21Z",
-    "updated_at": "2016-07-30T11:16:56Z",
+    "updated_at": "2016-08-05T13:27:18Z",
     "closed_at": null,
-    "body": "Very cool feature to develop!"
+    "body_html": "<h1>Feature Draft: Responsiveness</h1>\n\n<h2>Introduction</h2>\n\n<p>Currently the styles are written without specific media queries for mobile screen sizes. It would be awesome if mobile users can use Offcourse, or at least part of it. This specification is on how to do this.</p>\n\n<h2>Tech</h2>\n\n<p>Currently there are 10 breakpoints defined in the configuration of the stylesheets. While these are mostly used for typographic definitions, the lowest few need specific attention, changing the layout. Most modules are already defined in a flexible manner, but some have a fixed width or are compressing the content beyond recognition. Mobile screen sizes also have different UI/UX concerns in some cases. For instance to keep the collection pages easily browsable it might be desirable to hide some content on the card, and make it available on click/tap. </p>\n\n<h2>Docs</h2>\n\n<p>These are changes to the styles: Check the <a href=\"http://user-staging.offcourse.io/documentation/modules.html\">modules</a> of the style guide. Also check the <a href=\"http://user-staging.offcourse.io/documentation/platform.html\">Styles</a> section of the  docs for general information about the styles. Thirdly check the  <a href=\"http://user-staging.offcourse.io/documentation/platform.html\">contribution workflow</a>. </p>\n\n<h2>Todo</h2>\n\n<ul>\n<li>Check one or all modules for responsive issues</li>\n<li>Try to resolve them without media queries if possible</li>\n<li>Switch to adding a media queries if the layout needs to be significantly changed</li>\n<li>Implement UI/UX concerns, like collapsable on hover/active. </li>\n<li>Test you implementation on all screen sizes and zoom levels. </li>\n<li>Write up to contextualize your changes and submit a pull request</li>\n</ul>\n\n<p>As this feature could also be split up into multiple pull requests, depending on you knowledgeability with this issue, you could also choose to submit this on a module by module basis and ask for reviews on specific code changes. </p>\n\n<h2>Contribution Specifics</h2>\n\n<p>Deliver via pull request to the the <a href=\"https://github.com/OffCourse/offcourse-frontend\">offcourse-frontend</a> repository. </p>\n\n<p><strong>Knowledge requirement:</strong> Basic Clojure and Garden + Advanced (modular) CSS<br>\n<strong>Time requirement:</strong> approx. 1 day. </p>"
   }
 ]
