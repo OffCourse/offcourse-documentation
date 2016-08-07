@@ -1,10 +1,10 @@
 ---
 layout: post
 partial: sheet
-page: platform
+page: general
 tags: technical
-order: 3
-title: Why Clojure
-date: 2016-10-13
+order: 2
+title: Benefits of Clojure
+date: 10-10-2015
 ---
 Not available at this time.

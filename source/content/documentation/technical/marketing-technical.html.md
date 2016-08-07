@@ -5,7 +5,7 @@ page: infosite
 tags: technical
 order: 3
 title: Technical
-date: 31-10-2015
+date: 3-10-2015
 ---
 Should more invasive changes need to be made some technical information might be handy. The site is build with the [Middleman](https://middlemanapp.com/) static site generator. This system does most of the heavy lifting generating all the pages. It is build in Ruby, but it’s not at all that intimidating. To set a development environment up you have to go through several steps:
 

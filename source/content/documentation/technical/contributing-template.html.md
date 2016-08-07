@@ -5,14 +5,16 @@ page: contribute
 tags: technical
 order: 5
 title: New Feature Template
-date: 31-10-2015
+date: 8-10-2015
 ---
-New features should adhere to the following template:
+If you think a new feature should be added to the roadmap, that is a possiblity too. A new submission should adhere to the following format: 
 
-# Template Draft
+# (api/platform/content) - Feature Name
 
 Tech tags:
+
 Topical tags:
+
 Skill tags:
 
 ## Introduction - Motivation
@@ -25,7 +27,7 @@ Skill tags:
 
 ## Docs
 
-This is a … , so a good look at our […](…) might be useful. Also check our general [contribution workflow](http://user-staging.offcourse.io/documentation/platform.html). 
+This is a (api/platform/content) feature, so a good look at our [(api/platform/content) documentation](…) might be useful. Also check our general [contribution workflow](http://user-staging.offcourse.io/documentation/contribute.html). 
 
 ## Todo - Practical
 
