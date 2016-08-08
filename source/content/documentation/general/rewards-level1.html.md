@@ -4,10 +4,9 @@ partial: sheet
 page: rewards
 tags: general
 order: 2
-title: Distributed Autonomous Organisation
+title: Level 1
 date: 31-10-2015
 ---
-## Level 1
 
 In the first level, there is only one role. That is the role of the learner/contributor. Everybody that wants to be part of Offcourse starts at level 1; regardless of your experience, age or skills.
 
