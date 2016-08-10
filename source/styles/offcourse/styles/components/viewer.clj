@@ -23,7 +23,7 @@
      [(s/+ header next-header)       {:padding          [[0 0 (:sixth units) 0]]}])])
 
     [v/viewer-header-1       (merge  {:font-size         (* 2.2 (:base-font units))
-                                      :line-height       (* 2.0 (:base-line-height units))})]
+                                      :line-height       (* 1.8 (:base-line-height units))})]
     [v/viewer-header-2       (merge  {:font-size         (* 1.8 (:base-font units))
                                       :line-height       (* 1.8 (:base-line-height units))})]
     [v/viewer-header-3       (merge  {:font-size         (* 1.5 (:base-font units))
