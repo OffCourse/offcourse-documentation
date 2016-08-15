@@ -27,3 +27,15 @@
   (println "Task: Development (dev)")
   (comp (watch)
         (css)))
+
+; (def styleList offcourse.styles.index/base)
+(deftask printJar []
+  ; (println "   Stylelist follows:    " offcourse.styles.index/base)
+  ; (println "   Stylelist type follows:    " (type offcourse.styles.index/base))
+  (println "   Stylelist quote follows:    " 'offcourse.styles.index/base)
+  (println "   Stylelist quote type follows:    " (type 'offcourse.styles.index/base))
+  ; (println "   Stylelist backtick follows:    " `offcourse.styles.index/base)
+  ; (println "   Stylelist backtick type follows:    " (type `offcourse.styles.index/base))
+  ; (println "   Stylelist deref follows:    " @offcourse.styles.index/base)
+  ; (println "   Stylelist deref type follows:    " (type @offcourse.styles.index/base))
+)

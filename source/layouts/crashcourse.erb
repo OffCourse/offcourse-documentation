@@ -3,7 +3,6 @@
   <div class="layout">
     <div class="layout--section header">
       <div class="grid">
-        <div class="grid--section"></div>
         <div class="grid--section">
          <div class="container padding-tb-four">
             <ul class="container" data-container-type="column">
@@ -11,8 +10,9 @@
                 <div class="logo" data-logo-size="large"><a href="/">Offcourse_</a></div>
               </li>
               <li class="container">
-                <div class="logo" data-logo-size="large" data-logo-inverse="true">Crash</div>
-                <div class="logo" data-logo-size="large" data-logo-inverse="true">Course</div>
+                <div class="logo" data-logo-size="large" data-logo-inverse="true">Learn</div>
+                <div class="logo" data-logo-size="large" data-logo-inverse="true">Code</div>
+                <div class="logo" data-logo-size="large" data-logo-inverse="true">Contribute</div>
               </li>
             </ul>
           </div>
@@ -21,11 +21,6 @@
     </div>
     <div class="layout--section main padding-b-two">
       <div class="grid">
-
-        <div class="grid--section">
-          <%= partial("partials/nav", :locals => { :active => current_page.data.active }) %>
-        </div>
-
         <div class="grid--section">
           <%= yield %>
         </div>

@@ -4,6 +4,10 @@ title: header
 date: 31-12-2015
 anchor: Home
 ---
-# There’s an easy way to organize your own learning. One that's simple and fun. One that allows you to learn any skill from anywhere with an internet connection and maps it all.
+## Learn ClojureScript and contribute to an Open Source project in 8 weeks. 
 
-It’s called Offcourse and we are building it. Offcourse will allow you to collect, share and track the best content in one place. Offcourse is free, open source, and designed to recommend learning tracks specifically for you. 
+Become a better programmer by learning functional programming and make your first open source contribution during during an 8-week program. 
+
+- ClojureScript crash course: learn ClojureScript through a series of the best, hand picked resources on the topic
+- Group mentoring: receive 2 hours of free group mentoring per week at a value of $1280 in return for your open source contribution
+- Personal feedback on pull requests: unlike other open source projects, we are easy to approach and give you personal feedback on your pull requests

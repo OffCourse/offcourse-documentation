@@ -4,4 +4,4 @@ title: Start organizing your learning today
 date: 27-12-2015
 anchor: Signup
 ---
-Offcourse is WIP, but join our mailing list and be the first to know about a release. In the mean time, you’ll receive hand picked lists on topics ranging from how to learn Clojure to become a functional programmer.
+The next group starts at Oct 1st, 2016. Apply before September 15th to claim your seat. A short Skype interview is part of the application procedure. If you apply, you get instant access to the ClojureScript resources and the technical documentation.
