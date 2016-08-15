@@ -1,8 +1,7 @@
 ---
 layout: post
-title: header
-date: 31-12-2015
-anchor: Home
+title: Program
+date: 30-12-2015
 ---
 ## Learn ClojureScript and contribute to an Open Source project in 8 weeks. 
 
