@@ -32,7 +32,7 @@
    [v/container-fw            (merge (:column-component       templates)
                                      {:align-items            :stretch})]
    [v/container-wrap                 (:flex-wrap              :wrap)]
-   [v/container-subgrid              {:display                :inline-block
+   [v/container-subgrid              {:display                :block
                                       :width                 (percent 100)}]
 
    (let [{:keys [min-width max-width]} (first breakpoints)]

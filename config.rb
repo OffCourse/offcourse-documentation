@@ -12,6 +12,12 @@ activate :blog do |blog|
 end
 
 activate :blog do |blog|
+  blog.name = "clojurecourse"
+  blog.sources = "content/clojurecourse/{title}.html"
+  blog.permalink = "clojurecourse/{title}.html"
+end
+
+activate :blog do |blog|
   blog.name = "team"
   blog.sources = "content/team/{title}.html"
   blog.permalink = "team/{title}.html"

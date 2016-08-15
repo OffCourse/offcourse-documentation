@@ -21,6 +21,8 @@
    [:a                {:color                 :inherit
                        :text-decoration       :inherit}]
    
+   [:textarea         {:resize                :none}]
+
    [:input            {:border                :none}]
 
    (for [{:keys [min-width max-width percent]} breakpoints]
