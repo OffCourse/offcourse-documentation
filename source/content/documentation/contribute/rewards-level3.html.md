@@ -2,7 +2,7 @@
 layout: post
 partial: sheet
 page: rewards
-tags: general
+tags: contribute
 order: 4
 title: Level 3
 date: 31-10-2015
