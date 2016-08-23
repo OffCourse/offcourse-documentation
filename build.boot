@@ -1,5 +1,5 @@
 (set-env!
- :source-paths    #{"source/styles/", "../offcourse-styles/src"}
+ :source-paths #{"source/styles/", "../offcourse-styles/src"}
  :dependencies '[[offcourse/styles              "0.1.8-SNAPSHOT"]
                  [org.martinklepsch/boot-garden "1.3.0-0"]
                  [prismatic/plumbing          "0.5.2"]
@@ -10,15 +10,14 @@
  '[danielsz.autoprefixer :refer [autoprefixer]])
 
 (deftask css []
-  (task-options! garden {:styles-var   'documentation-styles.index/documentation
+  (task-options! garden {:styles-var   'documentation-styles.index/documentation-styles
                          :output-to    "main.css"
                          :pretty-print true}
                  target {:dir #{".build-boot/stylesheets/"}}
                  autoprefixer {:files ["main.css"]
                                :browsers "last 5 versions"})
   (println "Task: CSS")
-  (comp (println "HI THERE IKMASDGFIHDFALGHSDFGLKDS")
-        (garden)
+  (comp (garden)
         (autoprefixer)
         (target)))
 
