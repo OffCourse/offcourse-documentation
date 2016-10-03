@@ -1,13 +1,12 @@
---- 
+---
 layout: post
 partial: sheet
-page: courses
-tags: course
+page: home
 order: 2
 title: html/css/js
 date: 2-10-2016
 ---
-# HTML/CSS/JS 
+# HTML/CSS/JS
 
 *8 weeks, 8-12 hours per week, no programming knowledge required*
 
@@ -16,4 +15,3 @@ Dive into the essentials of building an interactive web application. Through an 
 (Link to MailChimp - forthcoming)
 
 This course is also available with coaching. For more information, take a look at our barter bootcamp.
-

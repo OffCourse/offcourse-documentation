@@ -1,8 +1,7 @@
---- 
+---
 layout: post
 partial: sheet
 page: home
-tags: contribute
 order: 3
 title: contribute
 date: 2-10-2016

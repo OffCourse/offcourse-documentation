@@ -1,8 +1,7 @@
---- 
+---
 layout: post
 partial: sheet
 page: courses
-tags: course
 order: 3
 title: clojure(script)
 date: 2-10-2016
@@ -15,4 +14,4 @@ Through an 8-week program, you will learn about Clojure and ClojureScript and be
 
 (Link to MailChimp - forthcoming)
 
-This course is also available with coaching. For more information, take a look at our barter bootcamp. 
+This course is also available with coaching. For more information, take a look at our barter bootcamp.

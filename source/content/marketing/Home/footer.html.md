@@ -1,8 +1,7 @@
 ---
 layout: post
 partial: sheet
-page: footer
-tags: footer
+page: home
 order: 1
 title: footer
 date: 2-10-2016

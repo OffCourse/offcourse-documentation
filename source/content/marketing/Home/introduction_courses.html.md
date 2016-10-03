@@ -1,8 +1,7 @@
---- 
+---
 layout: post
 partial: sheet
-page: courses
-tags: introduction
+page: home
 order: 1
 title: introduction
 date: 2-10-2016

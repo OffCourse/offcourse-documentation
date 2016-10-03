@@ -1,8 +1,7 @@
---- 
+---
 layout: post
 partial: sheet
 page: courses
-tags: contribute
 order: 4
 title: contribute
 date: 2-10-2016
