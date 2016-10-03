@@ -35,9 +35,21 @@ activate :blog do |blog|
   }
 end
 
+activate :blog do |blog|
+  blog.name = "marketing"
+  blog.sources = "content/marketing/{title}.html"
+  blog.permalink = "marketing/{title}.html"
+  blog.custom_collections = {
+    page: {
+      link: "/marketing/:page.html",
+      template: "/marketing.html"
+    }
+  }
+end
+
 # General configuration
 configure :development do
-  
+
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
