@@ -1,25 +1,40 @@
-<section class="container padding-t-one" role="navigation" data-container-type="fw">
-  <div class="sheet js--nav">
+<section class="container padding-tb-one" role="navigation" data-container-type="fw">
+  <div class="sheet js--nav" data-sheet-sticky="false">
     <div class="sheet--section">
-      <h1 class="sheet--title">Documentation</h1>
+      <div class="padding-b-twothird">
+          <a href="#" class="t--title">
+              Offcourse
+          </a>
+      </div>
+      <div id="nav">
+        <ul data-list-type="todo" class="list">
+          <a href="/marketing/home.html">
+          <li data-item-type="todo" class="list--item"  >
+              <span>Home</span>
+          </li>
+          </a>
+          <a href="/marketing/courses.html">
+          <li data-item-type="todo" class="list--item"  >
+              <span>Courses</span>
+          </li>
+          </a>
+          <a href="/marketing/team.html" >
+          <li data-item-type="todo" class="list--item">
+              <span>Team</span>
+          </li>
+          </a>
+          <a href="/marketing/about.html" >
+          <li data-item-type="todo" class="list--item" >
+              <span>About</span>
+          </li>
+          </a>
+          <a href="/marketing/contribute.html" >
+          <li data-item-type="todo" class="list--item" >
+              <span>Contribute</span>
+          </li>
+          </a>
+        </ul>
+      </div>
     </div>
-  <% categories = ["contribute", "styleguide", "technical", "assets"]
-  for category in categories %>
-    <div class="sheet--section">
-      <h1 class="sheet--subtitle"><%= category.titleize %></h1>
-    </div>
-    <div class="sheet--section" data-collapsable="true">
-      <ul class="list" data-list-type="todo">
-        <% pages = []
-        for article in blog('documentation').tags[category]
-          pages.push(article.data.page)
-        end
-        pages = pages.uniq
-        for page in pages %>
-        <a href="/documentation/<%= page %>.html"><li data-item-type="todo" class="list--item"><%= page.titleize %></li></a>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
   </div>
 </section>
