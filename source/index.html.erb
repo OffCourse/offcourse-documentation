@@ -1,53 +1,26 @@
 ---
 title: Offcourse
-layout: main
+layout: marketing
 ---
+
 <% selectedArticles = blog('marketing').articles.select { |article| article.data.page == "home"  }%>
 <% sortedArticles = selectedArticles.sort {|x, y| x.data.order <=> y.data.order} %>
 
-<div class="container padding-t-two-b-one" data-container-type="fw">
-  <div class="sheet js--anchor">
-    <div class="markdown">
-      <%= blog('marketing').articles[0].body %>
-    </div>
-  </div>
-</div>
+<%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[0].data.title, :markdown => sortedArticles[0].body }) %>
 
 <div class="container padding-t-two">
-  <div class="logo" data-logo-padded="true" id="features">Features</div>
+  <div class="logo" data-logo-padded="true" id="preview">Features</div>
 </div>
 
 <div class="subgrid padding-tb-one" data-subgrid-columns="3">
-  <% for concept in blog('marketing').articles[1].data.concepts %>
+  <% for concept in sortedArticles[1].data.concepts %>
   <%= partial("partials/sheet-concept", :locals => { :concept => concept }) %>
   <% end %>
 </div>
 
-<div class="container padding-t-two">
-  <div class="logo" data-logo-padded="true" id="preview">Preview</div>
-</div>
-
-<div class="container padding-tb-one" data-container-type="fw">
-  <div class="sheet js--anchor">
-    <div class="markdown">
-      <a href="http://platform.offcourse.io">
-        <img class="image" data-image-filter="true" data-image-filter-recolor="true" src="./images/iteration-current.png" />
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="container padding-t-two">
-  <div class="logo" data-logo-padded="true" id="mission">Mission</div>
-</div>
-
-<div class="container padding-tb-one" data-container-type="fw">
-  <div class="sheet js--anchor">
-    <div class="markdown">
-      <%= blog('marketing').articles[3].body %>
-    </div>
-  </div>
-</div>
+<%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[2].data.title, :markdown => sortedArticles[2].body }) %>
+<%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[3].data.title, :markdown => sortedArticles[3].body }) %>
+<%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[4].data.title, :markdown => sortedArticles[4].body }) %>
 
 <div class="container padding-t-two">
   <div class="logo" data-logo-padded="true" id="team">Team</div>
@@ -57,14 +30,4 @@ layout: main
   <% blog('team').articles.reverse_each do |person| %>
   <%= partial("partials/business-card", :locals => { :person => person }) %>
   <% end %>
-</div>
-
-<div class="container padding-t-two">
-  <div class="logo" data-logo-padded="true" id="signup">Signup</div>
-</div>
-
-<div class="container padding-tb-one" data-container-type="fw">
-  <div id="join" class="sheet js--anchor">
-    <%= partial("partials/signup-mailchimp") %>
-  </div>
 </div>

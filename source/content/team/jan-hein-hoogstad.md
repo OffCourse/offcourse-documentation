@@ -3,7 +3,6 @@ layout: post
 title: team
 date: 2-10-2016
 name: Jan Hein Hoogstad
-summary:
 job: founder
 linkedin: https://www.linkedin.com/in/yeehaa
 twitter: https://twitter.com/yeehaa

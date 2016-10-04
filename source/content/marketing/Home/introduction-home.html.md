@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: home
 order: 1
-title: introduction
+title: Platform
 date: 2-10-2016
 ---
 # When you find the right resources at the right time, you can master any skill you want.
@@ -12,4 +12,4 @@ Almost anything people may want to learn is posted online every minute of every 
 
 Offcourse is an online tool that helps people to collect links to the best learning resources on the web and share them with others. Offcoure makes learning as simple as possible.
 
-[View platform](http://platform.offcourse.io/) | [View source code](https://github.com/OffCourse)
+[View platform](http://platform.offcourse.io/) -- [View source code](https://github.com/OffCourse)
