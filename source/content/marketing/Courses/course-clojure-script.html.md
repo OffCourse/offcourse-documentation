@@ -2,7 +2,7 @@
 layout: post
 partial: sheet
 page: courses
-order: 2
+order: 3
 title: clojure(script)
 date: 2-10-2016
 ---

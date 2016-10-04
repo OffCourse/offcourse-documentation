@@ -9,13 +9,13 @@ concepts:
 - concept: Collect, share and edit
   summery: |
     Offcourse will enable you to collect, share and edit collections of links to the best content on the web. You can do this to teach or simply to keep track of what you learn.
-  image: images/35.png
+  image: images/77.png
 - concept: Share your collections with peers
   summery: |
     Offcourse will allow you to track your progress and create a personal learning profile that you can use to show your (future) employer for a promotion or new position.
-  image: images/40.png
+  image: images/35.png
 - concept: Track your progress for future employers
   summery: |
     Offcourse will give you the possibility to receive personal learning recommendations based on your learning activity and your learning profile.
-  image: images/77.png
+  image: images/40.png
 ---
