@@ -1,7 +1,8 @@
 ---
 layout: marketing
 ---
-<% for article in blog('marketing').articles %>
+<% sortedArticles = blog('marketing').articles.sort {|x, y| x.data.order <=> y.data.order} %>
+<% for article in sortedArticles %>
   <% if article.data.page == page %>
     <% if "sheet" == article.data.partial %>
       <%= partial("partials/sheet-with-title", :locals => { :title => article.title, :markdown => article.body }) %>

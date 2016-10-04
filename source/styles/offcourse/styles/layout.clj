@@ -23,25 +23,23 @@
                                       :padding              [[0 (:full units)]]})]]
 
    [v/subgrid                 (merge (:row-component          templates)
-                                     {:display                :flex})]
-
-   [v/subgrid-two                    {:columns                2}]
-   [v/subgrid-three                  {:columns                3}]
+                                     {:display                :flex
+                                      :flex-wrap              :wrap})]
 
    [v/container                      (:row-component          templates)]
    [v/container-column               (:column-component       templates)]
    [v/container-fw            (merge (:column-component       templates)
                                      {:align-items            :stretch})]
    [v/container-wrap                 (:flex-wrap              :wrap)]
-   [v/container-subgrid              {:display                :block
-                                      :width                 (percent 100)}]
-
-   [(s/+ v/container-subgrid v/container-subgrid)  (merge {:margin-left (:full units)})]
+   [v/subgrid-two
+    [v/container-subgrid             {:width                 (percent 50)}]]
+   [v/subgrid-three
+    [v/container-subgrid             {:width                 (percent 33.33333)}]]
+   [(s/+ v/container-subgrid v/container-subgrid)  (merge {:padding-left (:full units)})]
 
    (let [{:keys [min-width max-width]} (first breakpoints)]
     (at-media                        {:min-width min-width    :max-width max-width}
      [[v/grid                        (:column-component       templates)]
       [v/grid--section               {:flex                   :unset}
-       [v/last                       {:flex                   :unset}]]
-      [v/subgrid-two                 {:columns                1}]
-      [v/subgrid-three               {:columns                1}]]))])
+       [v/last                       {:flex                   :unset}]
+       [v/subgrid                    (:row-component          templates)]]]))])

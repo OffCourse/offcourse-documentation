@@ -3,7 +3,6 @@ layout: post
 partial: sheet
 page: courses
 order: 2
-title: html/css/js
 date: 2-10-2016
 ---
 # HTML/CSS/JS
