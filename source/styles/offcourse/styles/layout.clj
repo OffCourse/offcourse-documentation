@@ -3,6 +3,7 @@
   (:require [garden
               [arithmetic :refer [* + - /]]
               [stylesheet :refer [at-media]]
+              [selectors :as s]
               [units :as u :refer [percent vh px]]]
             [offcourse.styles.vocabulary :as v]))
 
@@ -21,9 +22,9 @@
     [v/last                   (merge {:flex                   3
                                       :padding              [[0 (:full units)]]})]]
 
-   [v/subgrid                 (merge {:display                :block
-                                      :column-span            :none
-                                      :column-gap            (:full units)})]
+   [v/subgrid                 (merge (:row-component          templates)
+                                     {:display                :flex})]
+
    [v/subgrid-two                    {:columns                2}]
    [v/subgrid-three                  {:columns                3}]
 
@@ -35,11 +36,12 @@
    [v/container-subgrid              {:display                :block
                                       :width                 (percent 100)}]
 
+   [(s/+ v/container-subgrid v/container-subgrid)  (merge {:margin-left (:full units)})]
+
    (let [{:keys [min-width max-width]} (first breakpoints)]
     (at-media                        {:min-width min-width    :max-width max-width}
      [[v/grid                        (:column-component       templates)]
       [v/grid--section               {:flex                   :unset}
        [v/last                       {:flex                   :unset}]]
       [v/subgrid-two                 {:columns                1}]
-      [v/subgrid-three               {:columns                1}]
-      ]))])
+      [v/subgrid-three               {:columns                1}]]))])

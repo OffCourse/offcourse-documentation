@@ -2,7 +2,6 @@
 title: Offcourse
 layout: marketing
 ---
-
 <% selectedArticles = blog('marketing').articles.select { |article| article.data.page == "home"  }%>
 <% sortedArticles = selectedArticles.sort {|x, y| x.data.order <=> y.data.order} %>
 
