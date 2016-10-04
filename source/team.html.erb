@@ -1,0 +1,14 @@
+---
+title: Offcourse
+layout: marketing
+---
+
+<div class="container padding-t-two">
+  <div class="logo" data-logo-padded="true" id="team">Team</div>
+</div>
+
+<div class="subgrid padding-tb-one" data-subgrid-columns="2">
+  <% blog('team').articles.reverse_each do |person| %>
+  <%= partial("partials/business-card", :locals => { :person => person }) %>
+  <% end %>
+</div>
