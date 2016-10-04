@@ -55,7 +55,7 @@ configure :build do
   # Integrate Clojure Garden CSS Transpilation
   activate :external_pipeline,
     name: :garden,
-    # command: "boot css",
+    command: "boot css",
     command: "./boot css",
     source: ".build-boot",
     latency: 2

@@ -1,6 +1,7 @@
 ---
 layout: post
 partial: sheet
+title: ""
 page: courses
 order: 2
 date: 2-10-2016
