@@ -2,21 +2,14 @@
 title: Offcourse
 layout: main
 ---
-
-
+<% selectedArticles = blog('marketing').articles.select { |article| article.data.page == "home"  }%>
+<% sortedArticles = selectedArticles.sort {|x, y| x.data.order <=> y.data.order} %>
 
 <div class="container padding-t-two-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
     <div class="markdown">
       <%= blog('marketing').articles[0].body %>
     </div>
-  </div>
-</div>
-
-
-<div class="container padding-tb-one" data-container-type="fw">
-  <div class="sheet js--anchor">
-    <%= partial("partials/signup-mailchimp") %>
   </div>
 </div>
 

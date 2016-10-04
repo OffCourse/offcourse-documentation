@@ -2,7 +2,7 @@
 layout: post
 partial: sheet
 page: home
-tags: introduction
+order: 1
 title: introduction
 date: 2-10-2016
 ---

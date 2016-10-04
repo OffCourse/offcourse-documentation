@@ -2,7 +2,7 @@
 layout: post
 partial: sheet
 page: home
-order: 1
+order: 3
 title: introduction
 date: 2-10-2016
 ---

@@ -2,7 +2,7 @@
 layout: post
 partial: sheet
 page: home
-order: 2
+order: 4
 title: html/css/js
 date: 2-10-2016
 ---
