@@ -5,7 +5,7 @@ layout: main
 <div class="container padding-t-two-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
     <div class="markdown">
-      <%= blog('frontpage').articles[0].body %>
+      <%= blog('marketing').articles[0].body %>
     </div>
   </div>
 </div>
@@ -22,7 +22,7 @@ layout: main
 </div>
 
 <div class="subgrid padding-tb-one" data-subgrid-columns="3">
-  <% for concept in blog('frontpage').articles[1].data.concepts %>
+  <% for concept in blog('marketing').articles[1].data.concepts %>
   <%= partial("partials/sheet-concept", :locals => { :concept => concept }) %>
   <% end %>
 </div>
@@ -48,7 +48,7 @@ layout: main
 <div class="container padding-tb-one" data-container-type="fw">
   <div class="sheet js--anchor">
     <div class="markdown">
-      <%= blog('frontpage').articles[3].body %>
+      <%= blog('marketing').articles[3].body %>
     </div>
   </div>
 </div>

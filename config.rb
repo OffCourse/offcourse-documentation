@@ -6,18 +6,6 @@ page '/*.txt', layout: false
 
 # Activate blog gems
 activate :blog do |blog|
-  blog.name = "frontpage"
-  blog.sources = "content/frontpage/{title}.html"
-  blog.permalink = "frontpage/{title}.html"
-end
-
-activate :blog do |blog|
-  blog.name = "clojurecourse"
-  blog.sources = "content/clojurecourse/{title}.html"
-  blog.permalink = "clojurecourse/{title}.html"
-end
-
-activate :blog do |blog|
   blog.name = "team"
   blog.sources = "content/team/{title}.html"
   blog.permalink = "team/{title}.html"
@@ -41,7 +29,7 @@ activate :blog do |blog|
   blog.permalink = "marketing/{title}.html"
   blog.custom_collections = {
     page: {
-      link: "/marketing/:page.html",
+      link: "/:page.html",
       template: "/marketing.html"
     }
   }
