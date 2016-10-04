@@ -8,7 +8,8 @@
 
 (defn business-card [{:keys [templates breakpoints colors units]}]
   [[v/business-card     (merge (:row-component           templates)
-                               (:sheet                   templates))
+                               (:sheet                   templates)
+                               {:width                   "100%"})
     [v/hovered                 (:border-highlighted      templates)]]
    [v/business-card--section   {:width                  (* (:atom units) 140)}
     [v/last                    {:width                   :auto
