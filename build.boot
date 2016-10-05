@@ -14,12 +14,12 @@
   (task-options! garden {:styles-var   'offcourse.styles.index/base
                          :output-to    "main.css"
                          :pretty-print true}
-                 target {:dir #{".build-boot/stylesheets/"}}
-                 autoprefixer {:files ["main.css"]
-                               :browsers "last 5 versions"})
+                 target {:dir #{".build-boot/stylesheets/"}})
+                ;  autoprefixer {:files ["main.css"]
+                ;                :browsers "last 5 versions"})
   (println "Task: CSS")
   (comp (garden)
-        (autoprefixer)
+        ; (autoprefixer)
         (target)))
 
 (deftask dev []
