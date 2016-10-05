@@ -2,11 +2,11 @@
 layout: post
 partial: sheet
 page: contribute
-order: 2
-title: html-css-js
+order: 3
+title: Barter Bootcamps
 date: 2-10-2016
 ---
-## HTML/CSS/JS
+# Basic Webdevelopment
 
 *Remote, 8 weeks, 12-16 hours per week, continuous enrollment, no programming knowledge required*
 
