@@ -2,11 +2,11 @@
 layout: post
 partial: sheet
 page: contribute
-order: 3
+order: 2
 title: Barter Bootcamps
 date: 2-10-2016
 ---
-# Basic Webdevelopment
+# Basic Web Development
 
 *Remote, 8 weeks, 12-16 hours per week, continuous enrollment, no programming knowledge required*
 

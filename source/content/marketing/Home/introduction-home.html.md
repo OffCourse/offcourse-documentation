@@ -12,4 +12,4 @@ Almost anything people may want to learn is posted online every minute of every 
 
 Offcourse is an online tool that helps people to collect links to the best learning resources on the web and share them with others. Offcourse makes learning as simple as possible.
 
-[View platform](http://platform.offcourse.io/) | [View source code](https://github.com/OffCourse)
+[View platform](http://platform.offcourse.io/) \| [View source code](https://github.com/OffCourse)
