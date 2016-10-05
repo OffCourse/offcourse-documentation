@@ -6,4 +6,4 @@ order: 4
 title: Create Your Course
 date: 2-10-2016
 ---
-Interested in creating a featured course yourself? Send an email to Charlotte [charlotte@offcourse.io](mailto:charlotte@offcourse.io) with a short description of who you are and what you would like to teach.
+Interested in creating an e-mail course yourself? Send a message to [charlotte@offcourse.io](mailto:charlotte@offcourse.io) with a short description of who you are and what you would like to teach.
