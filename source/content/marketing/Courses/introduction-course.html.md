@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: courses
 order: 1
-title: 
+title: ""
 date: 2-10-2016
 ---
 # Featured Courses

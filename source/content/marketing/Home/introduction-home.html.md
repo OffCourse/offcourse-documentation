@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: home
 order: 1
-title: 
+title: ""
 date: 2-10-2016
 ---
 ## When you find the right resources at the right time, you can master any skill you want.

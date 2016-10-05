@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: courses
 order: 3
-title: 
+title: ""
 date: 2-10-2016
 ---
 # ClojureScript (forthcoming)
