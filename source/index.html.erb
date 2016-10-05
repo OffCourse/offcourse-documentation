@@ -23,4 +23,10 @@ layout: marketing
   <% end %>
 </div>
 
+<div class="container padding-tb-one" data-container-type="fw">
+  <div class="sheet js--anchor">
+    <%= partial("partials/signup-mailchimp") %>
+  </div>
+</div>
+
 <%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[2].data.title, :markdown => sortedArticles[2].body }) %>
