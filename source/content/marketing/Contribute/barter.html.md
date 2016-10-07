@@ -11,7 +11,7 @@ Offcourse is looking for professionals – yes, you are a professional too! Most
 Here’s where our barter bootcamp comes in. We offer two 8-week remote coding courses free of charge in exchange for your skill. During the Barter Bootcamp you:
 
 - Learn coding through a specially curated curriculum
-- Receive professional coaching from our developers as well as others in our community
+- Receive professional coaching [from our developers](http://offcourse.io/contribute) as well as others in our community
 - Boost your CV with a personal recommendation from Offcourse
 - Connect with peers in a dedicated Slack channel
 - Are involved in a real-world project

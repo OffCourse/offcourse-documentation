@@ -11,7 +11,7 @@ date: 2-10-2016
 </div>
 
 <div class="subgrid padding-tb-one" data-subgrid-columns="2">
-  <% blog('team').articles.reverse_each do |person| %>
+  <% blog('team').articles.each do |person| %>
   <%= partial("partials/business-card", :locals => { :person => person }) %>
   <% end %>
 </div>
