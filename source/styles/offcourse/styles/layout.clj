@@ -37,10 +37,10 @@
      [(s/& (s/nth-child "2n"))       {:padding-left          (:half   units)}]]]
    [v/subgrid-three
     [v/container-subgrid             {:width                 (percent 33.33333)}
-     [(s/& (s/nth-child "3n-1"))    {:padding-right         (:half   units)}]
-     [(s/& (s/nth-child "3n"))      {:padding-left          (:half   units)}]
-     [(s/& (s/nth-child "3n-2"))    {:padding-right         (:half   units)}]
-     [(s/& (s/nth-child "3n-1"))    {:padding-left          (:half   units)}]]]
+     [(s/& (s/nth-child "3n-1"))     {:padding-right         (:half   units)}]
+     [(s/& (s/nth-child "3n"))       {:padding-left          (:half   units)}]
+     [(s/& (s/nth-child "3n-2"))     {:padding-right         (:half   units)}]
+     [(s/& (s/nth-child "3n-1"))     {:padding-left          (:half   units)}]]]
 
    (let [{:keys [min-width max-width]} (first breakpoints)]
     (at-media                        {:min-width min-width    :max-width max-width}
@@ -49,6 +49,12 @@
        [v/last                       {:flex                   :unset}]
        [v/subgrid                    (:row-component          templates)]]
       [v/subgrid-two
-       [v/container-subgrid          {:width                 (percent 100)}]]
+       [v/container-subgrid          {:width                 (percent 100)}
+        [(s/& (s/nth-child "2n-1"))  {:padding-right          0}]
+        [(s/& (s/nth-child "2n"))    {:padding-left           0}]]]
       [v/subgrid-three
-       [v/container-subgrid          {:width                 (percent 100)}]]]))])
+       [v/container-subgrid          {:width                 (percent 100)}
+        [(s/& (s/nth-child "3n-1"))  {:padding-right          0}]
+        [(s/& (s/nth-child "3n"))    {:padding-left           0}]
+        [(s/& (s/nth-child "3n-2"))  {:padding-right          0}]
+        [(s/& (s/nth-child "3n-1"))  {:padding-left           0}]]]]))])

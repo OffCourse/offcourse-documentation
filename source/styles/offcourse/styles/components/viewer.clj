@@ -14,20 +14,20 @@
    [v/viewer--content                {:display            :block
                                       :max-width         (:max-content-width   units)}
 
-    (for [header v/viewer-headers]   
-    [[header                 (merge  (:title              templates)
-                                     {:padding         [[(:one-and-half units) 0 (:sixth units) 0]]})
-      [v/first                       {:padding          [[0 0 (:sixth units) 0]]}]]
-     [(s/+ v/viewer-hr header)       {:padding          [[0 0 (:sixth units) 0]]}]
-     (for [next-header v/viewer-headers]
-     [(s/+ header next-header)       {:padding          [[0 0 (:sixth units) 0]]}])])
+    (for [header v/viewer-headers]
+     [[header                 (merge  (:title              templates)
+                                      {:padding         [[(:one-and-half units) 0 (:sixth units) 0]]})
+       [v/first                       {:padding          [[0 0 (:sixth units) 0]]}]]
+      [(s/+ v/viewer-hr header)       {:padding          [[0 0 (:sixth units) 0]]}]
+      (for [next-header v/viewer-headers]
+       [(s/+ header next-header)       {:padding          [[0 0 (:sixth units) 0]]}])])
 
     [v/viewer-header-1       (merge  {:font-size         (* 2.2 (:base-font units))
                                       :line-height       (* 1.8 (:base-line-height units))})]
     [v/viewer-header-2       (merge  {:font-size         (* 1.8 (:base-font units))
                                       :line-height       (* 1.8 (:base-line-height units))})]
     [v/viewer-header-3       (merge  {:font-size         (* 1.5 (:base-font units))
-                                      :line-height       (* 1.5 (:base-line-height units))})] 
+                                      :line-height       (* 1.5 (:base-line-height units))})]
     [v/viewer-header-4       (merge  {:font-size         (* 1.25 (:base-font units))
                                       :line-height       (* 1.25 (:base-line-height units))})]
     [v/viewer-header-5       (merge  {:font-size         (* 1 (:base-font units))
@@ -87,12 +87,12 @@
                                      {:margin           [[0 0 (:third units) 0]]})]
     [v/viewer-input          (merge  (:text               templates)
                                      (:recycled-paper     templates)
-                                     {:padding         [[(:half units) (:full units)]] 
+                                     {:padding         [[(:half units) (:full units)]]
                                       :width             (percent 100)
                                       :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-select         (merge  (:text               templates)
                                      (:recycled-paper     templates)
-                                     {:padding         [[(:half units) (:full units)]] 
+                                     {:padding         [[(:half units) (:full units)]]
                                       :border             :none
                                       :appearance         :none
                                       :border-radius      0
@@ -100,10 +100,10 @@
                                       :margin           [[0 0 (:two-third units) 0]]})]
     [v/viewer-textarea       (merge  (:text               templates)
                                      (:recycled-paper     templates)
-                                     {:padding         [[(:half units) (:full units)]] 
+                                     {:padding         [[(:half units) (:full units)]]
                                       :border             :none
                                       :width             (percent 100)
                                       :margin           [[0 0 (:two-third units) 0]]})]]
-   [(s/> v/viewer--content :*) 
+   [(s/> v/viewer--content :*)
     [v/last                        {:padding-bottom     0
                                     :margin             0}]]])

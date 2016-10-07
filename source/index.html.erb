@@ -5,7 +5,9 @@ layout: marketing
 <% selectedArticles = blog('marketing').articles.select { |article| article.data.page == "home"  }%>
 <% sortedArticles = selectedArticles.sort {|x, y| x.data.order <=> y.data.order} %>
 
-<%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[0].data.title, :markdown => sortedArticles[0].body }) %>
+<div class="padding-t-one">
+  <%= partial("partials/sheet-with-title", :locals => { :title => sortedArticles[0].data.title, :markdown => sortedArticles[0].body }) %>
+</div>
 
 <section class="container padding-b-one" data-container-type="fw">
   <div class="sheet js--anchor">
