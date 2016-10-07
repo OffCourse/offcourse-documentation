@@ -3,7 +3,7 @@ layout: post
 title: team
 date: 2-10-2016
 name: Greg Rodriguez Varias
-job: front-end developer
+job: front-end developer and coach
 linkedin: https://www.linkedin.com/in/gregrv/nl
 img: greg.jpg
 ---

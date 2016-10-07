@@ -3,7 +3,7 @@ layout: post
 partial: sheet
 page: contribute
 order: 2
-title: Barter Bootcamps
+title: ""
 date: 2-10-2016
 ---
 # Basic Web Development
